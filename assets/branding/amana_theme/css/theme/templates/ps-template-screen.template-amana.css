@@ -1,0 +1,16 @@
+ps-template-screen .widget-menu-icon {
+    background-color: transparent !important;
+}
+
+ps-template-screen .widget-menu-icon .menu-icon ion-icon {
+    color: #fffffff0 !important;
+}
+
+ps-template-screen .widget-style {
+    background: var(--ps-header-background-color) !important;
+}
+
+ps-template-screen .widget-menu-icon .home_icon{
+    display:none;
+
+}

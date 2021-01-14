@@ -1,0 +1,9 @@
+ps-form-map .gmnoprint {
+    display: none;
+}
+ps-form-map .gm-fullscreen-control{
+    display: none;
+}
+ps-form-map .modal-wrapper .ion-page{
+    height:100vh;
+}

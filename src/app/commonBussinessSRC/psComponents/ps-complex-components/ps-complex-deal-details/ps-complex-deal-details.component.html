@@ -1,0 +1,4 @@
+<ps-container-lookup-option [id]="'deals-list-' + id" [options]="containerLookUpOptions" *ngFor="let item of options.itemList" [itemCard]="item"
+    (clickedCard)="updateCard($event)">
+
+</ps-container-lookup-option>

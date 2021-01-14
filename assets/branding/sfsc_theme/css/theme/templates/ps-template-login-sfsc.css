@@ -1,0 +1,17 @@
+ps-template-login ps-container-card .ps-container-card {
+    height: 100vh !important;
+    display: flex;
+    align-items: center;
+    box-shadow: none;
+    border: none;
+    justify-content: center;
+}
+
+ps-template-login .ps-template-login-card {
+    background-image: linear-gradient(to bottom, var(--ps-secondary-degree-1-color), var(--ps-secondary-degree-4-color));
+}
+
+ps-template-login .bank-logo {
+    height: 10vh;
+    background-image: url(/assets/branding/sfsc_theme/imgs/BankLogo.png);
+}

@@ -1,0 +1,17 @@
+<div class="action-image-cust-icon">
+    <ps-icon-customization *ngIf="custMode" [id]="'cust_icon_'+ id" [options]="custIconOptions"></ps-icon-customization>
+</div>
+<div class="container-fluid ps-action-icon-container" *ngIf="custMode || visible">
+    <div class="row ps-action-image-row">
+        <div class="col col-auto ps-action-image-label">
+            <ps-label [id]="id +'_label'" *ngIf="options?.labelOptions" [options]="options.labelOptions">
+            </ps-label>
+        </div>
+
+        <div class="col col-auto ps-action-image-image" *ngIf="imageURL">
+            <ion-img [id]="id" [src]="imageURL" (click)="onActionImageClick($event)" [class]="options.psClass"
+                [ngClass]="{'disableContent': disabled}">
+            </ion-img>
+        </div>
+    </div>
+</div>

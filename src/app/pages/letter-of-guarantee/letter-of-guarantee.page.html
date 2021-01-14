@@ -1,0 +1,82 @@
+<ps-template-stepper [options]="stepperOptions" [id]="stepperOptions.stepperName">
+    <ps-form-step step1 [id]="stepperOptions.namesofSteps[0]">
+
+        <ps-container-panel [options]="panelOptions1Step1" id="lg_panel1">
+
+            <ps-date-day-month-year-future [options]="effictiveDateOptions">
+            </ps-date-day-month-year-future>
+
+
+            <ps-date-day-month-year-future [options]="expiryDateOptions">
+            </ps-date-day-month-year-future>
+
+
+            <ps-date-day-month-year-future [options]="claimEndDateOptions" (onPsChange)="onclaimEndDateChange($event)">
+            </ps-date-day-month-year-future>
+
+
+            <ps-input-numeric [options]="periodDays" (onPsChange)="onPeriodDaysChange($event)"></ps-input-numeric>
+
+
+            <ps-dropdown-tfs-document-type [options]="tfsOptions"></ps-dropdown-tfs-document-type>
+
+
+            <ps-complex-amount [options]="complexAmountOptions">
+            </ps-complex-amount>
+
+
+            <ps-lov-charges-borne-by [options]="chargesBorneByOptions" (onPsChange)="onchargesBorneByChange($event)">
+            </ps-lov-charges-borne-by>
+
+
+            <ps-input-varchar *ngIf="isBeneficiaryChargesAccount" id="'accountName' + id"
+                [options]="accountNameOptions"></ps-input-varchar>
+
+
+            <ps-lookup-own-accounts *ngIf="isApplicantChargesAccount" id="'chargesAccount'+ id"
+                [options]="chargesAccountListOptions">
+            </ps-lookup-own-accounts>
+
+
+
+
+
+
+        </ps-container-panel>
+
+    </ps-form-step>
+    <ps-form-step step2 [id]="stepperOptions.namesofSteps[1]">
+        <ps-container-panel [options]="panel1OptionsStep2" id="lg_panel1">
+
+
+            <ps-input-varchar id="'beneficiaryName' + id" [options]="beneficiaryNameOptions"></ps-input-varchar>
+
+
+            <ps-dropdown-country [options]="beneficiaryCountriesOptions"></ps-dropdown-country>
+
+
+            <ps-input-varchar id="'beneficiaryName' + id" [options]="beneficiaryAddressOptions"></ps-input-varchar>
+
+
+        </ps-container-panel>
+        <ps-container-panel [options]="panel2OptionsStep2" id="lg_panel2">
+
+            <ps-input-varchar id="'purpose1' + id" [options]="purpose1Options"></ps-input-varchar>
+            <ps-input-varchar id="'purpose2' + id" [options]="purpose2Options"></ps-input-varchar>
+            <ps-input-varchar id="'purpose3' + id" [options]="purpose3Options"></ps-input-varchar>
+
+        </ps-container-panel>
+        <ps-container-panel [options]="panelOptions3Step2" id="lg_panel2">
+
+            <ps-file-upload [options]="fileUploadOptions">
+            </ps-file-upload>
+
+
+            <ps-input-free-text id="comment_input" [options]="commentOptions">
+            </ps-input-free-text>
+
+        </ps-container-panel>
+
+
+    </ps-form-step>
+</ps-template-stepper>

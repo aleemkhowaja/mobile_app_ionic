@@ -1,0 +1,29 @@
+ps-template-landing-web {
+    width: 100vw;
+    height: 100vh;
+    background-image: none !important;
+    /* DK */
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ps-template-landing-web .left-section .main-header,
+ps-template-landing-web .main-section .home-banners,
+ps-template-landing-web .main-section .home-banners * {
+    height: 22vh;
+    /* DK */
+    border-radius: var(--ps-section-border-radius) !important;
+}
+
+ps-template-landing-web .right-section ps-container-panel .ps-container-panel-item ion-label,
+ps-template-landing-web .right-section ps-container-panel .ps-container-panel-item ion-icon {
+    --color: white !important;
+    color: white !important;
+}
+
+ps-template-landing-web .right-section .web-map-panel-widget ps-container-panel .ps-container-panel-content {
+    padding: 0px !important;
+}

@@ -1,0 +1,8 @@
+<ps-container-html-viewer [options]="htmlViewerOptions" *ngIf="dataWasLoaded">
+</ps-container-html-viewer>
+
+<ng-container *ngIf="!dataWasLoaded">
+    <div class="inline-loading-image">
+        <ps-action-image [options]="actionImageOptions"></ps-action-image>
+    </div>
+</ng-container>

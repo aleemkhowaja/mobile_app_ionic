@@ -1,0 +1,8 @@
+ps-select-segment .ps-select-segment {
+  color: var(--ps-font-color-opp-primary-color) !important;
+}
+
+ps-select-segment .segment-button-checked {
+  background: transparent !important;
+  border-bottom: 5px solid #845EA4 !important;
+}

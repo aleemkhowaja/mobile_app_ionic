@@ -1,0 +1,107 @@
+.profile-pic-user {
+    border-radius: 50%;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    margin: 0 auto;
+    /* width: calc(5.5em * var(--ps-font-size-ratio) * var(--ps-font-size-ratio-initial)) !important;
+    height: calc(5.5em * var(--ps-font-size-ratio) * var(--ps-font-size-ratio-initial)) !important; */
+    overflow: hidden;
+    position: relative;
+    /* object-fit: fill; */
+    cursor: pointer;
+    width: 42pt !important;
+    height: 42pt !important;
+}
+
+.ps-complex-profile-img {
+    padding: 0px;
+    padding-top: 2px;
+}
+
+.ps-complex-profile-info {
+    display: flex;
+    flex-direction: column;
+    padding-inline-start: 0.5em !important;
+    color: white !important;
+    font-size: var(--ps-lg-font);
+    text-align: start;
+    justify-content: center;
+}
+
+
+.isMobile-Layout .ps-complex-profile {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    align-items: center;
+    /* margin: 1em 0; */
+    color: var(--ps-font-light-color);
+}
+
+ps-complex-profile .verticalFlip {
+    transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+}
+
+ps-complex-profile .ps-complex-profile_container_complex_col_12 {
+    height: 100% !important;
+}
+
+.isMobile-Layout ps-complex-profile .ps-complex-profile>* {
+    width: 100% !important;
+}
+
+.ps-dropdown-allowed-languages-wrapper {
+    align-self: flex-end;
+}
+
+.ps-user-info-wrapper {
+    font-size: 15px;
+}
+
+ps-complex-profile ps-dropdown-allowed-languages ps-container-item ion-item.item {
+    background: none !important;
+    --background: none !important;
+    margin: 0px !important;
+    border-bottom: hsla(0, 0%, 100%, 0.851) 2px solid !important;
+    border-radius: 0px !important;
+    --padding-end: 0px;
+    --inner-padding-end: 0px;
+}
+
+
+ps-complex-profile ps-dropdown-allowed-languages ps-container-item ps-base-container ps-base>.container-fluid {
+    /* padding-inline-start: 0px !important; */
+}
+
+ps-complex-profile .ps-complex-profile-row {
+    align-items: center;
+}
+
+.isMobile-Layout ps-complex-profile .welcome-label {
+    display: none;
+}
+
+.isMobile-Layout ps-complex-profile .last-login-value {
+    opacity: 0.5;
+    font-size: 9px;
+    flex: 0 0 50%;
+}
+
+.isMobile-Layout ps-complex-profile .last-login-label {
+    opacity: 0.5;
+    font-size: 9px;
+    flex: 0 0 50%;
+    padding-inline-end:2px;
+}
+.isMobile-Layout ps-label-user-last-login {
+    display: flex;
+} 
+.isMobile-Layout ps-complex-profile{
+    padding:10px;
+}
+.isMobile-Layout ps-complex-profile .upload-profile-overlay{
+    display:none
+}

@@ -1,0 +1,5 @@
+/* Newly added by DK */
+ps-complex-preview .ps-container-panel-content ion-text {
+    color: var(--ps-preview-value-color) !important;
+    font-weight:500;
+}

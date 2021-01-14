@@ -1,0 +1,69 @@
+ps-hyperlink-anchor {
+    width: 100% !important;
+    cursor: pointer;
+}
+
+ps-hyperlink-anchor .ps-anchor-panel-data {
+    /* align-self: center;
+    padding-inline-start: 20px !important; */
+    align-self: center;
+    color: var(--ps-font-color-opp-primary-color);
+}
+
+ps-hyperlink-anchor .ps-action-anchor-panel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid var(--ps-degree-2-color);
+}
+
+ps-hyperlink-anchor .ps-action-icon-avatar {
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    border: 2px solid var(--ps-highlight-background-color);
+    background: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: var(--ps-font-light-color);
+    display: flex;
+    min-width: 3.5em !important;
+    min-height: 3.5em !important;
+    max-width: 3.5vw !important;
+    max-height: 3.5vh !important;
+}
+
+ps-hyperlink-anchor .ps-action-icon-avatar ion-icon {
+    color: var(--ps-highlight-background-color) !important;
+    font-size: 2em;
+}
+
+ps-hyperlink-anchor .ps-anchor-description {
+    font-size: var(--ps-sm-font) !important;
+    white-space: pre-line !important;
+}
+
+ps-hyperlink-anchor .ps-anchor-title {
+    font-size: var(--ps-lg-font) !important;
+}
+
+
+ps-hyperlink-anchor .ps-anchor-panel-data {
+    display: flex;
+    flex-direction: column;
+}
+
+ps-hyperlink-anchor .ps-anchor-panel-data .title,
+ps-hyperlink-anchor .ps-anchor-panel-data .description {
+    -webkit-box-flex: 0;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+ps-hyperlink-anchor .ps-anchor-panel-image {
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+    padding: 0.2em !important;
+}

@@ -1,0 +1,41 @@
+{
+    "MAIN_CONFIG": {
+        "MAIN_PATH": "https://omniservices.path-solutions.com/",
+        "PACKAGE_NAME": "omni_services_omni_qa_jaiz_o19",
+        "COMP_CODE": 1,
+        "APP_VERSION": "3.1.0.13.0.1",
+        "APP_ID": 1,
+        "LOG_LEVEL_INTERVAL": 300,
+        "MINIFIED_CLIENT_CSS_FILE_NAME": "/assets/ps-css-files.all.css",
+        "__SERVER_URLS_TO_BE_REMOVED__": {
+            "JAIZ": {
+                "MAIN_PATH": "https://omniservices.path-solutions.com/",
+                "PACKAGE_NAME": "omni_services_omni_qa_jaiz_o19"
+            },
+            "SFSC": {
+                "MAIN_PATH": "https://omnisfsc.path-solutions.com:8456/",
+                "PACKAGE_NAME": "omni_services_omni_qa_sfsc_o18"
+            },
+            "AMANA": {
+                "MAIN_PATH": "https://omniservices.path-solutions.com/",
+                "PACKAGE_NAME": "omni_services_omni_qa_amana_o18"
+            }
+        }
+    },
+    "CLIENT_ASSETS_CONFIG": {
+        "ASSETS_URL": "/assets/branding/presales_theme/",
+        "MAIN_CSS_FILE_NAME": "ps-css-files-presales.css",
+        "IMGS_FOLDER_URL": "imgs/",
+        "CSS_FOLDER_URL": "css/",
+        "FONTS_URL": "fonts/",
+        "ICONS_URL": "icon/",
+        "HTML_URL": "/assets/html/",
+        "FONT_FAMILY": "Montserrat/Montserrat.css",
+        "SVG_URL": "svg/",
+        "BANNERS_FILE_URL": null,
+        "UI_CONFIGURATION": {
+            "LANDING_UI_TYPE": 3,
+            "DISPLAY_SLIDER_ON_LOGIN": false
+        }
+    }
+}

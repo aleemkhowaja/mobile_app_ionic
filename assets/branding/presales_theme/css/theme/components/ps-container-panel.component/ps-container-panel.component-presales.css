@@ -1,0 +1,28 @@
+ps-container-panel .ps-container-panel-description-icon .arrowClr {
+  color: var(--ps-panel-title-color) !important;
+  font-size: 1.6rem !important;
+  vertical-align: middle;
+}
+
+ps-container-panel .ps-container-panel-item ion-item {
+
+  --background: hsla(0, 0%, 100%, 1) !important;
+}
+
+.ps-container-panel-title .ps-label-nav {
+  /* the styles of the panel header title goes here */
+  text-align: center;
+  /* DK */
+  font-size: 1rem !important;
+  color: var(--ps-panel-title-color);
+  /* --ps-font-light-color variable replaced by newly added one by DK */
+  font-weight: bold;
+}
+
+.ps-container-panel-expandable-icon .arrowClr {
+  /* the styles of the expandable icon goes here */
+  color: var(--ps-panel-title-color) !important;
+  /* DK */
+  font-size: 1.6rem !important;
+  vertical-align: middle;
+}

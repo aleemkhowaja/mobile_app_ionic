@@ -1,0 +1,558 @@
+ps-template-landing-web {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/assets/branding/default_theme/imgs/Background-image-web.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+ps-template-landing-web .main-web-content {
+    --background: transparent;
+}
+
+ps-template-landing-web .ps-complex-menu-reach_container_complex_base_container_body_container_body_row {
+    justify-content: center;
+    align-items: center;
+}
+
+ps-template-landing-web .page-content {
+    margin-top: var(--ps-section-padding);
+    margin-bottom: var(--ps-section-padding);
+}
+
+ps-template-landing-web .left-section {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    -ms-flex-flow: column;
+    -webkit-box-shadow: 0px 20px 15px 2px var(--ps-shadow-color);
+    box-shadow: 0px 20px 15px 2px var(--ps-shadow-color);
+    background: linear-gradient(to bottom, var(--ps-gradient-color-1), var(--ps-gradient-color-2)) !important;
+    padding-inline-end: var(--ps-section-padding) !important;
+    padding: 0px !important;
+}
+
+ps-template-landing-web .left-section .main-header,
+ps-template-landing-web .main-section .home-banners,
+ps-template-landing-web .main-section .home-banners * {
+    height: 15vh;
+    border-radius: var(--ps-section-border-radius) !important;
+}
+
+.main-web-content>.container-fluid {
+    padding: var(--ps-section-padding) !important;
+}
+
+.main-web-content>.container-fluid>.row {
+    width: 100% !important;
+    margin: auto !important;
+}
+
+ps-template-landing-web .main-section {
+    padding-inline-end: var(--ps-section-padding) !important;
+    padding: 0px !important;
+}
+
+ps-template-landing-web .right-section {
+    border-radius: var(--ps-section-border-radius);
+    overflow-y: scroll !important;
+    height: calc(100vh - (2 * var(--ps-section-padding)));
+    scrollbar-width: var(--ps-scrollbar-width);
+    scrollbar-color: var(--ps-scrollbar-color-firefox);
+}
+
+ps-template-landing-web .main-section .main-section-row {
+    height: auto !important;
+}
+
+#temp_web_prayer_panel ps-complex-prayer-time {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+#temp_web_prayer_panel ps-complex-prayer-time .countdown {
+    font-size: 0.625em;
+}
+
+.navbar-header {
+    height: var(--ps-nav-header-height) !important;
+    background: linear-gradient(to right, var(--ps-gradient-color-1), var(--ps-gradient-color-2));
+}
+
+ps-template-landing-web .main-section ps-base-container-body .container-fluid {
+    height: inherit !important;
+
+}
+
+ps-template-landing-web .main-section ps-container-form .ps-container-form-content {
+    padding-top: var(--ps-form-content-padding) !important;
+    padding-bottom: var(--ps-form-content-padding) !important;
+}
+
+ps-template-landing-web ps-template-base .main-header {
+    background: var(--ps-main-title-background) !important;
+}
+
+.isWeb-Layout .navbar-header ion-fab-list {
+    min-height: 160px !important;
+}
+
+.navbar-header .ps-complex-menu-reach {
+    width: 100%;
+}
+
+.navbar-header .ps-complex-menu-reach_container_complex_base_container_body_container_body_row {
+    width: 75%;
+}
+
+.navbar-header .ps-complex-menu-reach_container_complex_base_container_body_container_body_row * {
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    max-width: 100%;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+.navbar-header .ps-complex-menu-reach_container_complex_col_12 {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.navbar-header ps-complex-menu-reach ion-button.ps-menu-reach-background {
+    background-color: transparent !important;
+    min-height: 50px !important;
+    height: 50px !important;
+    width: auto;
+    margin: 0px !important;
+}
+
+/* 
+.navbar-header ps-complex-menu-reach ps-action-icon .ps-action-icon-label ps-label {
+    display: none !important;
+} */
+.navbar-header ps-complex-menu-reach ion-button ps-action-icon .ps-action-image-container .ps-action-icon-icon,
+.navbar-header ps-complex-menu-reach ion-button ps-action-icon .ps-action-image-container .ps-action-icon-label {
+    flex: unset !important;
+    max-width: unset !important;
+}
+
+.navbar-header ps-complex-menu-reach ps-action-icon .ps-action-icon-label ps-label {
+    font-weight: 400;
+    font-size: 11px;
+    color: #f1f1f1;
+}
+
+.navbar-header ps-complex-menu-reach ion-button.ps-menu-reach-background ion-icon {
+    width: 30px;
+}
+
+.navbar-header ps-label-user-last-login {
+    display: none
+}
+
+.navbar-header ps-label-welcome {
+    display: inline-flex;
+}
+
+.navbar-header .profile-pic-user {
+    border-radius: 0px !important;
+    width: 35px;
+    height: 35px;
+}
+
+.wrapper {
+    position: relative;
+    top: 0;
+    overflow: hidden;
+}
+
+
+.right-floating-section .toggle {
+    position: absolute;
+    top: 45%;
+    width: 2.7rem;
+    height: 2.7rem;
+    left: -2.75rem;
+    text-align: center;
+    line-height: 2.7rem;
+    cursor: pointer;
+    border-top-left-radius: .35rem;
+    border-bottom-left-radius: .35rem;
+    box-shadow: -3px 0 8px rgba(0, 0, 0, .1);
+    background-color: var(--ps-secondary-color) !important
+}
+
+[dir='rtl'] .right-floating-section .toggle {
+    right: -2.75rem;
+    left: unset;
+    border-radius: 0 .35rem .35rem 0 !important;
+}
+
+[dir='ltr'] .right-floating-section .toggle {
+    left: -2.75rem;
+    right: unset;
+}
+
+
+.right-floating-section .floating-content {
+    position: relative;
+    height: 100vh;
+    height: calc(var(--vh, 1vh)*100);
+    padding: 1.5rem !important;
+    overflow: scroll !important;
+    background: var(--ps-gradient-color-opposite);
+}
+
+.right-floating-section .floating-content .floating-content-panels {
+    margin-top: 10% !important;
+}
+
+[dir='rtl'] .right-floating-section.open {
+    left: 0;
+    right: unset;
+}
+
+[dir='ltr'] .right-floating-section.open {
+    right: 0;
+    left: unset;
+}
+
+.toggle-icon ion-icon {
+    display: inline-block;
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+    animation-duration: 2s;
+    vertical-align: middle !important;
+    color: var(--ps-font-light-color);
+    font-size: 2.1rem !important;
+
+}
+
+.isWeb-Layout .main-web-content>.container-fluid {
+    padding: 0px !important;
+}
+
+ps-template-landing-web .menu-container .hidden-content-wrapper {
+    padding: 0px 0px !important;
+}
+
+ps-template-landing-web .main-section .main-section-page {
+    margin: 25px auto !important;
+    max-width: 50%;
+    -webkit-box-shadow: 0px 0px 15px 2px var(--ps-shadow-color);
+    box-shadow: 0px 0px 15px 2px var(--ps-shadow-color);
+}
+
+ps-template-landing-web .main-section .main-section-page .ion-page .main-content {
+    /* margin-bottom: -25px !important; */
+}
+
+ps-template-landing-web .main-section .main-section-page ps-template-report {
+    height: 100% !important;
+}
+
+ps-template-landing-web .main-section .main-content ion-router-outlet ps-container-form .ps-container-form-content,
+ps-template-landing-web ps-template-base .main-header,
+ps-template-landing-web ps-template-base .main-footer ps-template-landing-web .main-section .main-content ion-router-outlet .ion-page {
+    background: var(--ps-web-background-color);
+}
+
+ps-template-landing-web ps-complex-menu .ps-complex-menu .ps-complex-menu-widget-container::-webkit-scrollbar,
+ps-template-landing-web ps-complex-menu .ps-complex-menu::-webkit-scrollbar {
+    width: 1px !important;
+    background: linear-gradient(to bottom, var(--ps-gradient-color-1), var(--ps-gradient-color-2)) !important;
+}
+
+/* ps-template-landing-web ps-complex-menu .ps-complex-menu .ps-complex-menu-widget-container::-webkit-scrollbar-track,
+ps-template-landing-web ps-complex-menu .ps-complex-menu .ps-complex-menu-widget-container::-webkit-scrollbar-thumb,
+ps-template-landing-web ps-complex-menu .ps-complex-menu::-webkit-scrollbar-track,
+ps-template-landing-web ps-complex-menu .ps-complex-menu::-webkit-scrollbar-thumb {
+    box-shadow: var(--scroll-bar-track-box-shadow);
+    border-radius: var(--scroll-bar-border-radius);
+    background: linear-gradient(to bottom, var(--ps-gradient-color-1), var(--ps-gradient-color-2)) !important;
+} */
+ps-template-landing-web ::-webkit-scrollbar {
+    height: 5px;
+}
+
+ps-template-landing-web ::-webkit-scrollbar-track,
+ps-template-landing-web ::-webkit-scrollbar-thumb,
+ps-template-landing-web ::-webkit-scrollbar-track,
+ps-template-landing-web ::-webkit-scrollbar-thumb {
+    box-shadow: var(--scroll-bar-track-box-shadow);
+    border-radius: var(--scroll-bar-border-radius);
+    background: transparent;
+}
+
+ps-template-landing-web .ps-container-form-content-wrapper {
+    background: var(--ps-form-content-background-color);
+    /* padding: 20px !important; */
+}
+
+.navbar-header {
+    height: 50px !important;
+    background: linear-gradient(to right, var(--ps-gradient-color-1), var(--ps-gradient-color-2));
+}
+
+[dir='rtl'] .navbar-header {
+    background: linear-gradient(to right, var(--ps-gradient-color-2), var(--ps-gradient-color-1));
+}
+
+.navbar-header * {
+    max-height: 50px !important;
+}
+
+.navbar-header ps-input-varchar ion-item {
+    max-height: 30px !important;
+}
+
+ps-template-landing-web .main-section ps-base-container-body .container-fluid {
+    height: 100% !important;
+
+}
+
+ps-template-landing-web .main-section ps-container-form .ps-container-form-content {
+    padding-top: var(--ps-form-content-padding) !important;
+    padding-bottom: var(--ps-form-content-padding) !important;
+}
+
+.navbar-header ps-label-welcome {
+    display: inline-flex;
+}
+
+ps-template-landing-web .left-section.menu-landing-web .main-header {
+    height: auto !important;
+    min-height: 180px !important;
+}
+
+.right-floating-section {
+    width: 400px;
+    right: -400px;
+    padding: 0;
+    z-index: 1052;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    height: calc(var(--vh, 1vh)*100);
+    transition: right .4s cubic-bezier(.05, .74, .2, .99);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-left: 1px solid rgba(0, 0, 0, .05);
+    box-shadow: 2 0 8px rgba(0, 0, 0, .1);
+}
+
+[dir='rtl'] .right-floating-section {
+    left: -400px;
+    right: unset;
+}
+
+[dir='ltr'] .right-floating-section {
+    right: -400px;
+    left: unset;
+}
+
+ps-template-landing-web .main-section,
+ps-template-landing-web .left-section {
+    padding: 0px !important
+}
+
+ps-template-landing-web .left-section .main-header,
+ps-template-landing-web .left-section .main-content,
+ps-template-landing-web .left-section .main-footer,
+ps-template-landing-web .left-section .menu-container .flip-card,
+ps-template-landing-web ps-complex-menu-reach,
+ps-template-landing-web ps-drafts-report .report {
+    background: transparent !important;
+}
+
+ps-template-landing-web .main-section .main-content {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-radius: var(--ps-section-border-radius);
+    overflow-y: auto;
+    /* margin-top: var(--ps-section-padding); */
+}
+
+.navbar-header .ps-dropdown-allowed-languages-wrapper mat-form-field * {
+    color: var(--ps-font-light-color) !important;
+    font-size: 13px !important;
+}
+
+.navbar-header .ps-dropdown-allowed-languages-wrapper {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    padding: 0px 15px !important;
+}
+
+.navbar-header-row {
+    align-items: center;
+}
+
+.navbar-header .reach-menu-header ps-complex-profile {
+    display: flex;
+    align-items: center;
+    margin-right: 5px !important;
+}
+
+.navbar-header .reach-menu-header .ps-user-info-wrapper,
+.navbar-header .reach-menu-header .ps-complex-profile-img {
+    display: none;
+}
+
+.navbar-header ps-dropdown-allowed-languages ps-select-dropdown ion-item {
+    min-width: 80px !important;
+}
+
+
+/* to do list */
+.right-side-bar {
+    width: 400px;
+    right: -405px;
+    padding: 0;
+    z-index: 1051;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    height: calc(var(--vh, 1vh)*100);
+    transition: right .6s cubic-bezier(.05, .74, .2, .99);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.right-side-bar.open {
+    right: 0;
+    box-shadow: -8px 8px 14px 0 rgba(25, 42, 70, .11);
+}
+
+ps-template-landing-web .reach-menu-header {
+    display: inline-flex;
+    justify-content: flex-end;
+}
+
+ps-template-landing-web .reach-menu-header ps-complex-menu-reach {
+    width: 100%;
+    justify-content: flex-start;
+    display: flex;
+}
+
+ps-template-landing-web .cif-verify-reset-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ps-template-landing-web .cif-hint-message-label ion-label {
+    font-size: 9px !important;
+}
+
+ps-template-landing-web .cif-switcher {
+    color: var(--ps-cif-content-color);
+}
+
+ps-template-landing-web .main-section.landing-web {
+    margin: 0px !important;
+    max-width: 100%;
+}
+
+/* ps-template-landing-web .ps-dropdown-allowed-languages-wrapper,
+ps-template-landing-web ps-dropdown-allowed-languages */
+ps-template-landing-web .ps-complex-profile-img,
+ps-template-landing-web .ps-complex-profile-info,
+ps-template-landing-web .ps-user-info-wrapper,
+ps-template-landing-web .left-section .ps-dropdown-allowed-languages-wrapper {
+    max-width: 100%;
+    flex: 0 0 100%;
+    justify-content: center;
+    margin: 5px 0px !important;
+}
+
+ps-template-landing-web .left-section .ps-dropdown-allowed-languages-wrapper {
+    margin: 0px !important;
+}
+
+ps-template-landing-web .left-section ps-dropdown-allowed-languages {
+    display: flex;
+    justify-content: center;
+}
+
+ps-template-landing-web .left-section ps-dropdown-allowed-languages * {
+    color: var(--ps-font-light-color);
+    font-size: 11px;
+    max-width: fit-content;
+}
+
+ps-template-landing-web ps-label-welcome,
+ps-template-landing-web ps-label-user-last-login {
+    display: flex;
+    justify-content: center;
+    margin: 5px 0px !important;
+}
+
+.isWeb-Layout ps-template-landing-web ps-label-user-last-login ion-label {
+    font-size: 10px !important;
+    margin: 0px 1px !important;
+}
+
+ps-template-landing-web .is-tree-view .ps-complex-menu .ps-action-menu-item ps-label-input ion-label {
+    padding-inline-start: 10px !important;
+}
+
+ps-template-landing-web .cif-number,
+ps-template-landing-web .cif-id-number {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+ps-template-landing-web ion-button.ps-find-CIF-search .container-fluid.ps-action-image-container,
+ps-template-landing-web ion-button.ps-find-CIF-reset .container-fluid.ps-action-image-container {
+    padding: 0px !important;
+}
+
+.navbar-header-row .ps-complex-profile-info {
+    margin: 0px !important;
+}
+
+ps-template-landing-web .left-section .main-content {
+    margin-top: 20px !important;
+}
+
+/*space between name and welcome */
+ps-template-landing-web ps-label-welcome ps-label {
+    padding: 0px 1px !important;
+}
+
+/* remove label key from right section, just placeholder */
+.right-floating-section ps-label-input {
+    display: none;
+}
+
+/*when chng to arabic, wsitcher icon from left to right*/
+[dir="rtl"] ps-template-landing-web .cif-switcher {
+    margin-right: 80% !important;
+    margin-left: 0px !important;
+}
+
+.navbar-header .ps-complex-menu-reach .ps-base-container-body-row>* {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+}
+
+.right-floating-section ps-select-segment ps-container-item ion-item,
+.right-floating-section ps-select-segment ps-container-item .item {
+    background: transparent !important;
+    --background: transparent !important;
+}

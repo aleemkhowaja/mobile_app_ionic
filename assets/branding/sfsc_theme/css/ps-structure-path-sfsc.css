@@ -1,0 +1,11 @@
+.isWeb-Layout.userIsNotLoggedIn body {
+  background-image: none !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.isMobile-Layout body {
+  background-image: url(/assets/branding/sfsc_theme/imgs/Background-image.png) !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}

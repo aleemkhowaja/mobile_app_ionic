@@ -1,0 +1,10 @@
+
+
+ps-button-logout .ps-button-cancel .ps-action-icon-icon ion-icon,
+ps-button-logout .ps-button-cancel ion-label {
+    color: var(--ps-button-logout-font-color) !important;
+}
+
+ps-button-logout ion-icon {
+    font-size: 25px !important;
+}

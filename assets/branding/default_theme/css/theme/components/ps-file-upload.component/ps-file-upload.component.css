@@ -1,0 +1,63 @@
+ps-file-upload .chooseFile ion-button {
+    font-size: small !important;
+    box-shadow: 0px 2px 5px 2px var(--ps-button-cancel-background-color-hover) !important;
+    border-radius: var(--ps-button-border-radius) !important;
+}
+
+ps-file-upload .no-file-choosen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+ps-file-upload .description-section {
+    max-height: 100px;
+    overflow-y: auto;
+    -webkit-box-flex: 0;
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+}
+
+ps-file-upload .file-upload-padding {
+    -webkit-box-flex: 0;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+}
+
+
+ps-file-upload .no-file-choosen ion-label {
+    text-align: center;
+}
+
+ps-file-upload ps-action-icon ion-icon:not(.psCustIcon) {
+    font-size: var(--ps-xxl-font);
+    color: var(--ps-highlight-background-color) !important;
+}
+
+ps-file-upload ion-item {
+    margin-top: 0px !important;
+}
+
+ps-file-upload .file-upload-padding ion-input {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    z-index: 9999;
+}
+
+
+ps-file-upload .file-is-present .file-upload-padding {
+    -webkit-box-flex: 0;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+ps-file-upload .file-is-present .description-section {
+    -webkit-box-flex: 0;
+    flex: 0 0 100%;
+    max-width: 100%;
+}

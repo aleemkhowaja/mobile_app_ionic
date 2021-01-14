@@ -1,0 +1,9 @@
+*[ng-reflect-placeholder],
+*[ng-reflect-form-control-name],
+*[psFcName],
+.ng-touched,
+.ng-untouched {
+    --placeholder-color: var(--ps-input-placeholder-font-color) !important;
+    color: var(--ps-input-placeholder-font-color) !important;
+    --placeholder-opacity: 1 !important;
+}

@@ -1,0 +1,6 @@
+.parent-div,
+ps-container-stepper,
+ps-container-stepper .mat-horizontal-stepper-content,
+ps-container-stepper .mat-stepper-horizontal {
+    height: 100%;
+}

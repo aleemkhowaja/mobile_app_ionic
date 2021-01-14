@@ -1,0 +1,62 @@
+ps-template-login .ps-template-login-links {
+    display: none !important;
+}
+
+ps-template-login .ps-template-login-submit {
+    width: 100% !important;
+}
+
+
+ps-template-login .ps-template-login-logo {
+    order: 1;
+}
+
+
+ps-template-login .additional-links {
+    order: 6;
+}
+
+ps-template-login #ps-container-login-form {
+    order: 3;
+}
+
+ps-template-login .additional-links .ps-action-anchor,
+ps-template-login .ps-template-login-help .ps-action-anchor {
+    border-radius: 0px !important;
+}
+
+ps-template-login ps-input-username .ps-keyin-input,
+ps-template-login ps-input-password .ps-keyin-input {
+    display: flex;
+}
+
+ps-template-login .bank-logo {
+    background-image: url('/assets/branding/amana_theme/imgs/BankLogo.png');
+}
+
+
+ps-template-login .ps-template-login-help {
+    font-size: 0.7em;
+}
+
+
+ps-template-login .ps-template-login-help ps-action-hyperlink .ps-action-image-row {
+    padding: 0px;
+}
+
+ps-template-login .ps-template-login-rememberMe .ps-select-toggle-item {
+    padding-bottom: 20px;
+}
+
+
+ps-template-login ps-template-base .main-content {
+    margin-bottom: 0px !important;
+}
+
+ps-template-login ps-label{
+    font-size:15px !important;
+}
+
+ ps-template-login .ps-template-login-rememberMe ion-label{
+    --color: #D5BFE0 !important;
+ }

@@ -1,0 +1,15 @@
+<ps-icon-customization *ngIf="custMode" [id]="'cust_icon_'+ id" [options]="custIconOptions"></ps-icon-customization>
+<ng-content *ngIf="!custMode && screenDispElt?.IS_VISIBLE === 0 ? false : true">
+</ng-content>
+<ng-container *ngIf="isHelpEnabled && helpMessage && helpType =='hint'">
+    <p class="hint-message">
+        {{helpMessage}}
+    </p>
+</ng-container>
+
+<ng-container *ngIf="showError">
+    <p *ngFor="let e of errorMsgs" class="validation-message">
+        <ps-label [options]="{labelKey: e.msgKey}"></ps-label>
+        <ps-label [options]="{labelKey: e.param, translate: false}"></ps-label>
+    </p>
+</ng-container>

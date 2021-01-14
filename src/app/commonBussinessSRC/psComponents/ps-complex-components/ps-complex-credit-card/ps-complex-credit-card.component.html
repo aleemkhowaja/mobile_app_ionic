@@ -1,0 +1,24 @@
+<ps-container-complex [id]="'container_complex_' + id">
+
+
+    <ps-input-card-number [id]="'card_number_' + id" [options]="defaultOptions.cardNumber"
+        (onPsChange)="onChangeCardNumber($event)"></ps-input-card-number>
+
+
+
+    <ps-input-free-text [id]="'container_complex_' + id" (onPsChange)="onChangeOwnerNumber($event)"
+        [options]="defaultOptions.cardOwner">
+    </ps-input-free-text>
+
+
+
+    <ps-input-card-cvv [id]="'container_complex_' + id" [options]="defaultOptions.cardCVV"
+        (onPsChange)="onChangeCvvNumber($event)">
+    </ps-input-card-cvv>
+
+
+    <ps-date-month-year-future [id]="'container_complex_' + id" [options]="defaultOptions.dateOptions"
+        (onPsChange)="onChangeDate($event)">
+    </ps-date-month-year-future>
+
+</ps-container-complex>

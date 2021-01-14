@@ -1,0 +1,47 @@
+<ps-template-stepper [options]="stepperOptions" [id]="stepperOptions.stepperName">
+  <ps-form-step step1 [id]="stepperOptions.namesofSteps[0]">
+    <ps-container-panel [options]="panelOptions1Step1" id="banker_cheque_panel1">
+      <ps-lookup-own-accounts id="'transferFrom'+ id" [options]="accountListOptions"></ps-lookup-own-accounts>
+      <ps-container-item class="ps-complex-card-details-branch-item">
+        <ps-label [options]="effectiveDateLabelOptions">
+        </ps-label>
+        <ps-label [options]="effectiveDateLabelValueOptions">
+        </ps-label>
+      </ps-container-item>
+      <ps-container-item class="ps-complex-card-details-branch-item">
+        <ps-label [options]="submittedDateLabelOptions">
+        </ps-label>
+        <ps-label [options]="submittedDateLabelValueOptions">
+        </ps-label>
+      </ps-container-item>
+
+      <ps-dropdown-currencies id="'currency' + id" [options]="currencyOptions"></ps-dropdown-currencies>
+      <ps-input-amount id="banker_cheq_input_amount" [options]="inputAmountOptions">
+      </ps-input-amount>
+      <ps-input-varchar id="'purpose' + id" [options]="purposeOptions"></ps-input-varchar>
+
+    </ps-container-panel>
+  </ps-form-step>
+  <ps-form-step step2 [id]="stepperOptions.namesofSteps[1]">
+    <ps-container-panel [options]="panelOptions1Step2" id="banker_cheque_panel2">
+      <ps-input-varchar id="'beneficiaryName' + id" [options]="beneficiaryNameOptions"></ps-input-varchar>
+      <ps-input-varchar id="'beneficiaryBank' + id" [options]="beneficiaryBankOptions"></ps-input-varchar>
+      <ps-input-varchar id="'beneficiaryAcNumber' + id" [options]="beneficiaryAcNumberOptions"></ps-input-varchar>
+
+      <!--
+                      <ps-input-varchar id="'beneficiaryBranch' + id" [options]="beneficiaryBranchOptions"></ps-input-varchar>
+                  -->
+      <ps-input-varchar id="'beneficiaryICNumber' + id" [options]="beneficiaryICNumberOptions"></ps-input-varchar>
+    </ps-container-panel>
+  </ps-form-step>
+  <ps-form-step step3 [id]="stepperOptions.namesofSteps[2]">
+    <ps-container-panel [options]="panelOptions1Step3" id="banker_cheque_panel3">
+
+      <ps-input-varchar id="'addressline1' + id" [options]="addressline1Options"></ps-input-varchar>
+      <ps-input-varchar id="'addressline2' + id" [options]="addressline2Options"></ps-input-varchar>
+      <ps-input-varchar id="'addressline3' + id" [options]="addressline3Options"></ps-input-varchar>
+      <ps-dropdown-country [options]="countriesOptions"></ps-dropdown-country>
+
+    </ps-container-panel>
+  </ps-form-step>
+</ps-template-stepper>

@@ -1,0 +1,18 @@
+.isWeb-Layout.userIsNotLoggedIn body {
+  background-image: none !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.isMobile-Layout body {
+  background-image: none !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+html,
+body {
+  font-size: 14px;
+  /* Newly added by DK */
+}

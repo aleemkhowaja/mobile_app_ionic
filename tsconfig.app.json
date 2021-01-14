@@ -1,0 +1,47 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/app",
+    "types": []
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "src/test.ts",
+    "src/**/*.spec.ts",
+    "src/app/commonBussinessSRC/component-test",
+    "src/app/commonBussinessSRC/psComponents/ps-action-anchor/ps-anchor-switcher",
+    "src/app/commonBussinessSRC/psComponents/ps-complex-components/ps-complex-account-statement-report",
+    "src/app/commonBussinessSRC/psComponents/ps-complex-components/ps-complex-bill-list",
+    "src/app/commonBussinessSRC/psComponents/ps-keyin-input/ps-input-card-cvv",
+    "src/app/commonBussinessSRC/psComponents/ps-keyin-input/ps-date-month-year/ps-date-month-year-future",
+    "src/app/commonBussinessSRC/psComponents/ps-complex-components/ps-complex-credit-card",
+    "src/app/commonBussinessSRC/psComponents/ps-complex-components/ps-complex-currency-exchange-report",
+    "src/app/commonBussinessSRC/psComponents/ps-select-dropdown/ps-dropdown-lov/ps-lov-ab-orignal-for",
+    "src/app/commonBussinessSRC/psComponents/ps-complex-components/ps-complex-lc-document-details",
+    "src/app/commonBussinessSRC/psComponents/ps-complex-components/ps-complex-info/ps-complex-info.component.interface.ts",
+    "src/app/commonBussinessSRC/psComponents/ps-complex-components/ps-complex-landmark-compass/ps-complex-landmark-compass.interfaces.ts",
+    "src/app/commonBussinessSRC/psComponents/ps-complex-components/ps-complex-notification/ps-complex-notification.component.interfaces.ts",
+    "src/app/commonBussinessSRC/psComponents/ps-image-camera",
+    "src/app/commonBussinessSRC/psComponents/ps-select-dropdown/ps-dropdown-lov/ps-lov-delivery-options",
+    "src/app/commonBussinessSRC/psComponents/ps-select-dropdown/ps-dropdown-periodicity-factor",
+    "src/app/commonBussinessSRC/psServices/ps-common-bussiness-services.ts",
+    "src/app/commonSRC/psComponents/ps-base/ps-base-action/ps-action-gallery/ps-gallery-banners/ps-gallery-banners.component.interfaces.ts",
+    "src/app/commonSRC/psComponents/ps-base/ps-base-container/ps-container-slider/ps-container-slider.component.interfaces.ts",
+    "src/app/commonSRC/psPages/modal",
+    "src/app/commonSRC/psServices/authentication/authentication.service.ts",
+    "src/app/commonSRC/psServices/models/stack.ts",
+    "src/app/commonSRC/psTemplates/ps-template-popup-message/ps-template-popup-message.interfaces.ts",
+    "src/app/pages/account-statement-report",
+    "src/app/pages/card-request",
+    "src/app/pages/components",
+    "src/app/pages/exchange-rates-report",
+    "src/app/pages/financial-calculator-schedule-report",
+    "src/app/pages/gilbert-component",
+    "src/app/pages/omni-base/omni-base.module.ts",
+    "src/app/pages/saved-drafts-report",
+    "src/app/pages/terms-and-conditions/terms-and-conditions.interface.ts",
+    "src/app/pages/transfers-list-report"
+  ]
+}

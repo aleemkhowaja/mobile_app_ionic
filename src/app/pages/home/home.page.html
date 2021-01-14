@@ -1,0 +1,8 @@
+<ps-template-landing-main *ngIf="commonProv.isMobile()">
+</ps-template-landing-main>
+<ng-container *ngIf="commonProv.isWeb()">
+        <video autoplay muted loop id="myVideo" style="width: 100%;
+                height: 100%;">
+                <source [src]="videoUrl" type="video/mp4">
+        </video>
+</ng-container>

@@ -1,0 +1,36 @@
+<ps-template-screen>
+    <div class="ps-template-report">
+        <div class="ps-template-report-search">
+            <ps-input-search-html [options]="searchOptions" id="search_in_reports"></ps-input-search-html>
+        </div>
+
+
+        <ps-complex-report-filter-criteria (onPsChange)="filterCriteria($event)" [options]="reportFilterOptions"
+            [id]="'filter_criteria_' + id">
+        </ps-complex-report-filter-criteria>
+
+
+        <div class="ps-template-report-viewer" id="div-content" *ngIf="displayDiv">
+            <ps-container-report-viewer [options]="reportViewerOptions" [id]="'report_viewer_' + id">
+            </ps-container-report-viewer>
+        </div>
+    </div>
+    <ng-container psFooter>
+
+        <ps-button-cancel class="footer-buttons" [options]="cancelOptions" [id]="'rep_cancel_' + id"></ps-button-cancel>
+
+        <!--
+            As per discussion with Ali, currently we no need print button
+            <ps-button-print [options]="printOptions" [id]="'rep_print_' + id"></ps-button-print>
+         -->
+
+        <ps-button-export class="footer-buttons" [options]="exportOptions" [id]="'rep_export_' + id"></ps-button-export>
+
+
+        <ps-button-submit class="footer-buttons" *ngIf='options.dynamicOperId' [options]="options.submitOptions"
+            [id]="'rep_submit_' + id">
+        </ps-button-submit>
+
+
+    </ng-container>
+</ps-template-screen>

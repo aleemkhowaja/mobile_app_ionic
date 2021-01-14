@@ -1,0 +1,5 @@
+ps-container-panel .ps-container-panel-title ps-label ion-label,
+ps-container-panel .ps-container-item-main-content ion-icon {
+  color: white !important;
+  font-size: var(--ps-xl-font) !important;
+}

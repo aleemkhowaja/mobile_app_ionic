@@ -1,0 +1,61 @@
+ps-template-base>*,
+ps-template-base>.container-fluid {
+    display: block !important;
+    height: auto !important;
+}
+
+.main-footer,
+.main-content,
+.main-header {
+    width: 100%;
+    position: relative;
+}
+
+ps-template-base .main-header {
+    padding: 0px !important;
+    background: var(--ps-app-opaque-background-color) !important;
+    border-radius: var(--ps-section-border-radius) !important;
+}
+
+
+ps-template-base .main-header>*,
+ps-template-base .main-content>*,
+ps-template-base .main-header>* {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    /* position: relative; */
+}
+
+ps-template-base .main-content {
+    padding-top: var(--ps-section-padding) !important;
+    padding-bottom: var(--ps-section-padding) !important;
+}
+
+.isMobile-Layout ps-template-base .template-base-row,
+.isWeb-Layout.userIsNotLoggedIn ps-template-base .template-base-row {
+    /* background: white; */
+    background: var(--ps-app-opaque-background-color);
+    overflow-y: hidden;
+    overflow-x: hidden;
+    /*     background-image: url(../../../imgs/Background-image.jpg) !important;*/
+    /* --padding-end: var(--ps-section-padding);
+    --padding-start: var(--ps-section-padding);
+    --padding-top: var(--ps-section-padding);
+    --padding-bottom: var(--ps-section-padding); */
+}
+
+.isWeb-Layout.userIsNotLoggedIn ps-template-base .main-content {
+    --padding-end: var(--ps-section-padding);
+    --padding-start: var(--ps-section-padding);
+    --padding-top: var(--ps-section-padding);
+    --padding-bottom: var(--ps-section-padding);
+}
+
+ps-template-base .main-footer {
+    padding-left: var(--ps-section-padding) !important;
+    padding-right: var(--ps-section-padding) !important;
+    padding-bottom: var(--ps-section-padding) !important;
+    position: fixed;
+    bottom: 0;
+}

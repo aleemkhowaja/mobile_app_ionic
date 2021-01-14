@@ -1,0 +1,30 @@
+<ps-field-entity [options]="options">
+  <ps-container-item #phoneItem id="'complexPhone_' + id " class="ps-field-item-wrapper ps-entity-phone-number"
+    [options]="itemOptions" (ionFocus)="onFocus()"
+    [ngClass]="{'was-focused' : hasFocus, 'isValid': isValid, 'notValid': !isValid && !hasFocus && touched,'disableContent':disabled}"
+    (ionBlur)="onBlur()" [attr.psFcName]="options.fcName" (click)="itemWasClicked(phoneItem, $event)">
+
+    <div class="col-6 ps-dropdown-country-code-wrapper">
+      <ps-dropdown-country-code [id]="'dropdown_country_code_' + id" class="complex-phone"
+        (onPsChange)="onCountryCodeChange($event)" [options]="defaultCountriesOptions">
+      </ps-dropdown-country-code>
+    </div>
+
+    <div class="col-6 ps-keyin-input-wrapper">
+      <ps-keyin-input [id]="'keyin_input_' + id" (onPsChange)="subscriberNumberChange($event)"
+        [options]="subscriberNumberOptions">
+      </ps-keyin-input>
+    </div>
+
+  </ps-container-item>
+
+</ps-field-entity>
+
+<div class="ps-custom-component-preview" psPreviewEngine>
+  <ps-label-input *ngIf="previewLblOptions.labelKey" [id]="'lbl_'+ id" [options]="previewLblOptions"
+    class="ps-lbl-preview">
+  </ps-label-input>
+  <span [innerHTML]="delimiter"></span>
+  <ps-label-input [id]="'value_preview_'+ id " [options]="previewValOptions" class="ps-value-preview">
+  </ps-label-input>
+</div>

@@ -1,0 +1,89 @@
+<ps-template-screen (click)='checkDraftPage(true)'>
+  <!-- <ps-complex-drafts-reports-loader [options]="draftLoaderOptions">
+
+  </ps-complex-drafts-reports-loader> -->
+  <ng-container saveAsDraftButton *ngIf="navService.isUserLoggedIn && options.showReport">
+    <div class="widget-menu-icon border-start widget-menu-icon-draft" (click)='loadDrafts(null, $event)'>
+      <ps-action-icon class="menu-icon save-as-draft" [options]='headerIconOptions'>
+      </ps-action-icon>
+    </div>
+  </ng-container>
+  <ng-container extraHeader *ngIf="showReport">
+    <!-- <div class="row draftReportModal"> -->
+    <ps-drafts-report class="inline-draft-report" (onPsChange)="loadDrafts($event)" [options]="draftsOptions"
+      [ngClass]="(showReportFlag)?'isOpened':'isClosed'" #report>
+    </ps-drafts-report>
+    <!-- </div> -->
+  </ng-container>
+  <!--   <ps-container-flip [options]="psContainerFlip">
+    <ps-complex-menu visibleSection> -->
+  <ng-container>
+
+    <div class="parent-div" (swiperight)="triggerNext($event)" (swipeleft)="triggerPrevious($event)"
+      [ngClass]="{'trigger-disable-field':showReportFlag}">
+      <div class="main-form"
+        [ngClass]="stepper?._steps?.length==(stepper?.selectedIndex+1)? 'hide-stepper': 'show-stepper'">
+        <ps-container-stepper [options]="stepperOptions" (onPsInit)="stepperInit($event)" [id]="id">
+          <ng-content select="[step1]" mat-step-1></ng-content>
+          <ng-content select="[step2]" mat-step-2></ng-content>
+          <ng-content select="[step3]" mat-step-3></ng-content>
+          <ng-content select="[step4]" mat-step-4></ng-content>
+          <ng-content select="[step5]" mat-step-5></ng-content>
+          <ng-content select="[step6]" mat-step-6></ng-content>
+          <ng-content select="[step7]" mat-step-7></ng-content>
+          <ng-content select="[step8]" mat-step-8></ng-content>
+          <ng-content select="[step9]" mat-step-9></ng-content>
+          <ng-content select="[step10]" mat-step-10></ng-content>
+          <!-- <ng-content select="[step10]" step10></ng-content> -->
+
+          <ps-form-step mat-step-11 [id]="id + '_terms'">
+            <ps-complex-terms-and-conditions [options]="termsAndConditionsOptions" [id]="id + '_terms_and_conditions'">
+            </ps-complex-terms-and-conditions>
+          </ps-form-step>
+          <ps-form-step mat-step-12 [id]="id + '_preview'">
+            <ps-complex-preview *ngIf="stepper?._steps?.length==(stepper?.selectedIndex+1)" [options]="options">
+            </ps-complex-preview>
+          </ps-form-step>
+        </ps-container-stepper>
+      </div>
+    </div>
+  </ng-container>
+  <!--   </ps-complex-menu> -->
+  <!-- <ng-container hiddenSection>
+      <ps-drafts-report></ps-drafts-report>
+    </ng-container> -->
+  <!--   </ps-container-flip> -->
+  <ng-container psFooter>
+    <ps-button-cancel class="footer-buttons" [id]="id + '_cancel_btn'"></ps-button-cancel>
+
+    <ps-button-previous class="footer-buttons" #previous [options]="previousOptions"
+      (onClick)="onNextAndPrevious(stepper)" [id]="id + '_previous_btn'" *ngIf="stepper?.selectedIndex!=0">
+    </ps-button-previous>
+
+    <ps-button-next class="footer-buttons" *ngIf="stepper?._steps?.length!=(stepper?.selectedIndex+1)"
+      [id]="id + '_next_btn'" [options]="nextOptions" (onClick)="onNextAndPrevious(stepper)" #next>
+    </ps-button-next>
+
+    <ps-button-save class="footer-buttons"
+      *ngIf="(!readOnlyMode && navService.isUserLoggedIn && (isMakerAndReportSelected || !isCheckerAndReportSelected))"
+      [options]="saveAsDraftOptions" [id]="id + '_save_btn'">
+    </ps-button-save>
+
+    <ps-button-approve class="footer-buttons" *ngIf="(isCheckerAndReportSelected && !isDraft)"
+      [options]="approveOptions" id="step_approve" (onClick)="refreshToDoList()">
+    </ps-button-approve>
+
+    <ps-button-reject class="footer-buttons" *ngIf="(isCheckerAndReportSelected && !isDraft)" [options]="rejectOptions"
+      id="stepper_reject" (onClick)="refreshToDoList()">
+    </ps-button-reject>
+
+    <ps-button-submit class="footer-buttons"
+      *ngIf="(!readOnlyMode && (stepper?._steps?.length==(stepper?.selectedIndex+1)) && (isMakerAndReportSelected || !isCheckerAndReportSelected))"
+      #submit [options]="submitOptions" [id]="id + '_submit_btn'">
+    </ps-button-submit>
+
+    <!-- <div (click)="onFooterClick()">
+
+    </div> -->
+  </ng-container>
+</ps-template-screen>

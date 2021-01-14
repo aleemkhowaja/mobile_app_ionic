@@ -1,0 +1,30 @@
+<ps-template-stepper [options]="stepperOptions" [id]="stepperOptions.stepperName">
+  <ps-form-step step1 [id]="stepperOptions.namesofSteps[0]">
+    <ps-container-panel [options]="panelOptions1Step1" id="sec_renewal_panel">
+      <ps-option-expired-security id="ps-option-security-list" *ngFor="let security of securityOptions"
+        [options]="security" click="onclick"></ps-option-expired-security>
+
+      <ps-input-display-only id="'newIsdaraNumber' + id" [options]="newIsdaraNumberOptions">
+      </ps-input-display-only>
+
+
+      <ps-input-numeric *ngIf="showAvailableBal" id="'availableBal' + id" (onPsChange)="onavailableAmountChange($event)"
+        [options]="availableBalOptions"></ps-input-numeric>
+
+
+      <ps-input-numeric id="'sukukLiquidation' + id" (onPsChange)="onsukukLiquidationAmountChange($event)"
+        [options]="sukukLiquidationOptions"></ps-input-numeric>
+
+
+      <ps-input-numeric id="'sukukRenewal' + id" (onPsChange)="onsukukRenewalAmountChange($event)"
+        [options]="sukukRenewalOptions"></ps-input-numeric>
+
+
+      <ps-input-numeric id="'remaining' + id" [options]="remainingOptions"></ps-input-numeric>
+
+      <ps-complex-amount id="'valueOfLiquidation' + id" [options]="valueOfLiquidationOptions">
+      </ps-complex-amount>
+
+    </ps-container-panel>
+  </ps-form-step>
+</ps-template-stepper>

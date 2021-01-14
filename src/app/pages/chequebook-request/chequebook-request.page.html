@@ -1,0 +1,91 @@
+<ps-template-stepper [options]="stepperOptions" [id]="stepperOptions.stepperName">
+  <ps-form-step step1 [id]="stepperOptions.namesofSteps[0]">
+    <ps-container-panel [options]="panelOptions1Step1" id="cheq_req_panel1">
+
+      <ps-input-display-only id="name_to_be_printed" [options]="nameOptions">
+      </ps-input-display-only>
+
+
+      <ps-lookup-own-accounts id="cheq_req_transfer_from" [options]="accountListOptions"
+        (onAccountChange)="onAccountChange($event)"></ps-lookup-own-accounts>
+
+
+      <ps-dropdown-chequebook-types id="'cheq_req_transfer_to" [options]="chequebookTypeOptions"
+        (onPsChange)="ontypesChange($event)">
+      </ps-dropdown-chequebook-types>
+
+
+      <ps-input-display-only *ngIf="enableCifBranch" id="account_cif_branch" [options]="branchOptions">
+
+      </ps-input-display-only>
+
+
+      <ps-lov-destination-branch *ngIf="!enableCifBranch" id="cheq_destination_branch"
+        [options]="destinationBranchOptions" (onPsChange)="onBranchChange($event)">
+      </ps-lov-destination-branch>
+
+
+      <ps-input-display-only id="no_of_leaves_cheq" [options]="noOfLeaves"></ps-input-display-only>
+
+
+      <!-- <ps-lov-preferred-language id="lov_preferred_language" [options]="preferredLanguageOptions" class="ps-lov-lang"
+            (onPsChange)="onChange($event)">
+          </ps-lov-preferred-language>  -->
+      <ps-dropdown-allowed-languages [options]="optionsPreferredLanguage">
+      </ps-dropdown-allowed-languages>
+
+
+      <ps-input-numeric id="number_of_cheqbooks" [options]="noOfchequeBooks"></ps-input-numeric>
+
+    </ps-container-panel>
+    <ps-container-panel [options]="panelOptions2Step1" id="cheq_req_panel3"
+      *ngIf="!enableCifBranch && showDestinationBranch">
+      <ps-complex-select-branch [options]="selectBranchOptions" (onPsChange)="onSelectBranch($event)">
+      </ps-complex-select-branch>
+    </ps-container-panel>
+    <ps-container-panel [options]="panelOptions1Step2" id="cheq_req_panel2">
+
+      <ps-input-varchar id="collector_name" [options]="collecterNameOptions"></ps-input-varchar>
+
+
+      <ps-complex-id-details id="complex_id_details" [options]="complexIdDetailsOptions"
+        (onPsChange)="onItemChange($event)">
+      </ps-complex-id-details>
+
+    </ps-container-panel>
+    <!-- <div>
+          <ps-lookup-own-accounts id="'transferFrom'+ id" [options]="accountListOptions"></ps-lookup-own-accounts>
+        </div> -->
+    <!-- <ps-input-amount id="input_amount" [options]="inputAmountOptions">
+        </ps-input-amount>
+        <div>
+          <ps-dropdown-currencies id="'currency' + id" [options]="currencyOptions"></ps-dropdown-currencies>
+        </div>
+        <div>
+          <ps-complex-amount></ps-complex-amount>
+        </div> -->
+    <!-- <div>
+          <ps-input-numeric id="'leaveNosFrom' + id" [options]="leaveNosFromOptions"></ps-input-numeric>
+        </div>
+        <div>
+          <ps-input-numeric id="'leaveNosTo' + id" [options]="leaveNosToOptions"></ps-input-numeric>
+        </div> -->
+    <!-- <div>
+          <ps-input-varchar id="'collecterName' + id" [options]="collecterNameOptions"></ps-input-varchar>
+        </div> -->
+    <!-- <div>
+        <ps-lov-preferred-language id="lov_preferred_language" [options]="preferredLanguageOptions" class="ps-lov-lang"
+          (onPsChange)="onChange($event)">
+        </ps-lov-preferred-language> 
+          </div>-->
+    <!-- <ps-dropdown-id-types id="id_types" [options]="idTypeOptions"></ps-dropdown-id-types> -->
+
+
+  </ps-form-step>
+  <ps-form-step step2 [id]="stepperOptions.namesofSteps[1]" *ngIf="!enableCifBranch && showDestinationBranch">
+    <ps-map-atm-branches class="component-map-container" [options]="mapAtmBranchesOptions"></ps-map-atm-branches>
+  </ps-form-step>
+  <!-- <ps-form-step step3  [id]="stest">
+   
+  </ps-form-step> -->
+</ps-template-stepper>

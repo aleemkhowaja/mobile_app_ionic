@@ -1,0 +1,7 @@
+{
+    "banner-files":[
+        "default_banners/housing.html",
+        "default_banners/Car.html",
+        "default_banners/Personal.html"
+    ]
+}

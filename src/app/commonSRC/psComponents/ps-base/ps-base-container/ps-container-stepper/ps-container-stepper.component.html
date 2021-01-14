@@ -1,0 +1,95 @@
+<ng-container>
+  <mat-horizontal-stepper *ngIf="options?.isHorizontalStepper" linear #stepper
+    (selectionChange)="onSelectionChange($event)">
+    <ps-icon-customization [hidden]="true" id="stepper_cust_icon" #custIcon [options]="custIconOptions">
+    </ps-icon-customization>
+    <ng-template matStepperIcon="edit">
+      <mat-icon (click)="onClickIcon($event, null)">{{ matIconName }}</mat-icon>
+    </ng-template>
+    <ng-template matStepperIcon="CUST" let-index="index">
+      <mat-icon (click)="onClickIcon($event, index)">{{ matIconName }}</mat-icon>
+    </ng-template>
+    <ng-container *ngIf="custMode ||  formGroupArray">
+      <mat-step *ngIf="options.numberOfSteps >= 1 && showSteps.step1" [stepControl]="formGroupArray[0]" state="CUST">
+        <ng-content select="[mat-step-1]"></ng-content>
+      </mat-step>
+      <mat-step *ngIf="options.numberOfSteps >= 2 && showSteps.step2" [stepControl]="formGroupArray[1]" state="CUST">
+        <ng-content select="[mat-step-2]"></ng-content>
+      </mat-step>
+      <mat-step *ngIf="options.numberOfSteps >= 3 && showSteps.step3" [stepControl]="formGroupArray[2]" state="CUST">
+        <ng-content select="[mat-step-3]"></ng-content>
+      </mat-step>
+      <mat-step *ngIf="options.numberOfSteps >= 4 && showSteps.step4" [stepControl]="formGroupArray[3]" state="CUST">
+        <ng-content select="[mat-step-4]"></ng-content>
+      </mat-step>
+      <mat-step *ngIf="options.numberOfSteps >= 5 && showSteps.step5" [stepControl]="formGroupArray[4]" state="CUST">
+        <ng-content select="[mat-step-5]"></ng-content>
+      </mat-step>
+      <mat-step *ngIf="options.numberOfSteps >= 6 && showSteps.step6" [stepControl]="formGroupArray[5]" state="CUST">
+        <ng-content select="[mat-step-6]"></ng-content>
+      </mat-step>
+      <mat-step *ngIf="options.numberOfSteps >= 7 && showSteps.step7" [stepControl]="formGroupArray[6]" state="CUST">
+        <ng-content select="[mat-step-7]"></ng-content>
+      </mat-step>
+      <mat-step *ngIf="options.numberOfSteps >= 8 && showSteps.step8" [stepControl]="formGroupArray[7]" state="CUST">
+        <ng-content select="[mat-step-8]"></ng-content>
+      </mat-step>
+      <mat-step *ngIf="options.numberOfSteps >= 9 && showSteps.step9" [stepControl]="formGroupArray[8]" state="CUST">
+        <ng-content select="[mat-step-9]"></ng-content>
+      </mat-step>
+      <mat-step *ngIf="options.numberOfSteps >= 10 && showSteps.step10" [stepControl]="formGroupArray[9]" state="CUST">
+        <ng-content select="[mat-step-10]"></ng-content>
+      </mat-step>
+
+      <mat-step [stepControl]="formGroupArray[stepperLength - 2]" state="CUST" *ngIf="showTerms || custMode">
+        <!-- This step is reserved for terms and conditions -->
+        <ng-content select="[mat-step-11]"></ng-content>
+      </mat-step>
+      <mat-step state="CUST" *ngIf="showPreview || custMode">
+        <!-- This step is reserved for preview -->
+        <ng-content select="[mat-step-12]"></ng-content>
+      </mat-step>
+    </ng-container>
+  </mat-horizontal-stepper>
+</ng-container>
+
+<ng-container *ngIf="!options?.isHorizontalStepper" linear #stepper>
+  <mat-vertical-stepper linear="true" #stepper>
+    <ng-template matStepperIcon="edit">
+      <mat-icon>done</mat-icon>
+    </ng-template>
+    <mat-step *ngIf="options.numberOfSteps >= 1">
+      <ng-content select="[step1]"></ng-content>
+    </mat-step>
+    <mat-step *ngIf="options.numberOfSteps >= 2">
+      <ng-content select="[step2]"></ng-content>
+    </mat-step>
+    <mat-step *ngIf="options.numberOfSteps >= 3">
+      <ng-content select="[step3]"></ng-content>
+    </mat-step>
+    <mat-step *ngIf="options.numberOfSteps >= 4">
+      <ng-content select="[step4]"></ng-content>
+    </mat-step>
+    <mat-step *ngIf="options.numberOfSteps >= 5">
+      <ng-content select="[step5]"></ng-content>
+    </mat-step>
+    <mat-step *ngIf="options.numberOfSteps >= 6">
+      <ng-content select="[step6]"></ng-content>
+    </mat-step>
+    <mat-step *ngIf="options.numberOfSteps >= 7">
+      <ng-content select="[step7]"></ng-content>
+    </mat-step>
+    <mat-step *ngIf="options.numberOfSteps >= 8">
+      <ng-content select="[step8]"></ng-content>
+    </mat-step>
+    <mat-step *ngIf="options.numberOfSteps >= 9">
+      <ng-content select="[step9]"></ng-content>
+    </mat-step>
+    <mat-step *ngIf="options.numberOfSteps == 10">
+      <ng-content select="[step10]"></ng-content>
+    </mat-step>
+    <mat-step>
+      <ng-content select="[step11]"></ng-content>
+    </mat-step>
+  </mat-vertical-stepper>
+</ng-container>

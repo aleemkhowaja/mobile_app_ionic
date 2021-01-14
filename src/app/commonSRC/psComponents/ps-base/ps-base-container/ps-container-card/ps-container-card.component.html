@@ -1,0 +1,11 @@
+<ps-icon-customization *ngIf="custMode" [id]="'cust_icon_'+ id" [options]="custIconOptions"></ps-icon-customization>
+<ps-base-container>
+
+  <ion-card class="ps-container-card" *ngIf="(visible||custMode) && !previewMode">
+    <ps-base-container-body>
+      <ng-content>
+      </ng-content>
+    </ps-base-container-body>
+  </ion-card>
+
+</ps-base-container>

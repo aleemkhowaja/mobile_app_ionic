@@ -1,0 +1,38 @@
+ps-button-notification .notification-badge {
+    display: flex;
+    padding: .25em .4em;
+    font-size: 60%;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+    -webkit-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    background-color: var(--ps-highlight-background-color) !important;
+    color: var(--ps-font-color-opp-highlight-color) !important;
+
+    position: absolute;
+    z-index: 100;
+    right: -5px;
+}
+
+ps-button-notification ion-icon {
+    width: 25px !important;
+    height: 25px !important;
+}
+
+ps-button-notification ion-button {
+    --background-hover: transparent !important;
+}
+.isMobile-Layout ps-button-notification ps-action-button ion-button ps-action-icon .ps-action-image-container{
+    padding:0px !important;
+}
+
+.isMobile-Layout ps-button-notification ps-action-button ion-button ps-action-icon .ps-action-image-container .ps-action-icon-icon{
+    margin-inline-end:0px
+}

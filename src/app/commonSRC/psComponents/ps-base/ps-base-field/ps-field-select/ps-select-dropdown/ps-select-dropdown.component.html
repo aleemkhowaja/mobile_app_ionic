@@ -1,0 +1,7 @@
+<ps-icon-customization *ngIf="custMode" [options]="custIconOptions"></ps-icon-customization>
+
+<div class="ps-pointer" (click)="showDropdownCheck($event)">
+    <ps-select-dropdown-base [options]="options" (onPsChange)="onChange($event)" (onPsInit)="onInit($event)"
+        (onPsEmpty)="onEmpty($event)">
+    </ps-select-dropdown-base>
+</div>

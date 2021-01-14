@@ -1,0 +1,25 @@
+<ps-icon-customization *ngIf="custMode" [id]="'cust_icon_'+ id" [options]="custIconOptions"></ps-icon-customization>
+<ng-container *ngIf="(visible||custMode) && !previewMode">
+    <div [id]="id" class="container-fluid" (click)="onButtonClick(options.anchorValue)">
+        <div class="row">
+            <div class="ps-anchor-panel-image col-3">
+                <ps-action-icon class="ps-action-icon-avatar" *ngIf="options?.iconOptions"
+                    [options]="options.iconOptions">
+                </ps-action-icon>
+            </div>
+            <div class="ps-anchor-panel-data col-9">
+                <ps-label class="title" *ngIf="options.titleOptions" [options]="options.titleOptions"></ps-label>
+                <ps-label class="description" *ngIf="options.descriptionOptions" [options]="options.descriptionOptions">
+                </ps-label>
+            </div>
+        </div>
+    </div>
+    <!-- <a [id]="id" class="ps-action-anchor-panel">
+
+        <div class="ps-anchor-panel-data">
+            <ps-label *ngIf="options.titleOptions" [options]="options.titleOptions"></ps-label>
+            <ps-label *ngIf="options.descriptionOptions" [options]="options.descriptionOptions"></ps-label>
+
+        </div>
+    </a> -->
+</ng-container>

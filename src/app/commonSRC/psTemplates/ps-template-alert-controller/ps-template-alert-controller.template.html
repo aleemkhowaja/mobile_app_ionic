@@ -1,0 +1,53 @@
+<ng-template #buttonDefinition let-button="button" let-role="role" let-class="class">
+  <div class="{{class}} buttons" *ngIf="role != 'submit'">
+    <ps-action-button [options]="button.options" (onClick)="role ==='cancel'? dismiss(button):button.handler()">
+    </ps-action-button>
+  </div>
+
+  <div class="{{class}} buttons" *ngIf="role == 'submit'">
+    <ps-button-submit [options]="button.options" (onClick)="dismiss(button);">
+    </ps-button-submit>
+  </div>
+</ng-template>
+
+<div class="container-fluid ps-template-alert-controller-container center-header-img" [ngClass]='options.cssClass'>
+  <div class="row ps-template-alert-controller-row">
+    <div class="col-12 header" *ngIf="headerOptions.labelKey">
+      <ps-label-header class="col-8 offset-2" [options]="headerOptions">
+
+      </ps-label-header>
+      <!-- <div class="col-12"> -->
+      <ps-action-image
+        *ngIf="options.headerImageOptions && (options.headerImageOptions.imageName || options.headerImageOptions.imageBase64Url)"
+        class="profile-image" [options]="options.headerImageOptions">
+      </ps-action-image>
+      <!-- </div> -->
+    </div>
+    <div class="col-12 fields" *ngFor="let field of options.inputs; let i = index">
+      <ng-container *ngIf="field.type =='keyin'">
+        <ps-keyin-input [options]="field.options" [id]="field.options.fcName">
+
+        </ps-keyin-input>
+      </ng-container>
+      <ng-container *ngIf="field.type =='dropdown'">
+        <ps-select-dropdown [options]="field.options" [id]="field.options.fcName">
+
+        </ps-select-dropdown>
+      </ng-container>
+    </div>
+
+
+    <ng-container *ngFor="let button of options.buttons">
+      <ng-container *ngIf="options.buttons.length==1">
+        <ng-container
+          *ngTemplateOutlet="buttonDefinition; context:{ button: button, role: button.role, class:'col-12' }">
+        </ng-container>
+      </ng-container>
+      <ng-container *ngIf="options.buttons.length>1">
+        <ng-container
+          *ngTemplateOutlet="buttonDefinition; context:{ button: button, role: button.role, class:button.buttonSize?button.buttonSize:'col-6' }">
+        </ng-container>
+      </ng-container>
+    </ng-container>
+  </div>
+</div>

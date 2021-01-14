@@ -1,0 +1,47 @@
+:root {
+    --ps-button-border-radius: 10pt;
+    --ps-button-border-width: 0px;
+    --ps-button-submit-background-color: #A566C4;
+    --ps-button-next-background-color: #c8a4db;
+    --ps-button-cancel-background-color: var(--ps-highlight-background-color);
+    --ps-button-submit-background-color-hover: #9247b8; 
+    --ps-button-cancel-background-color-hover: white;
+    --ps-button-cancel-font-color: white;
+    --ps-button-next-background-color-hover: #b17fcc;
+    --ps-button-back-background-color-hover: white;
+
+    
+}
+
+ps-action-button ion-button ps-action-icon .ps-action-image-container {
+    padding: 0px !important;
+}
+
+.ps-button-back ps-action-icon .ps-action-icon-icon {
+    display: none;
+}
+
+.ps-button-next ps-action-icon .ps-action-icon-icon {
+    display: none;
+}
+
+.ps-button-submit ps-action-icon .ps-action-icon-icon {
+    display: none;
+}
+
+.ps-button-cancel ps-action-icon .ps-action-icon-icon {
+    display: none;
+}
+
+ps-button-previous ps-action-icon .ps-action-icon-icon {
+    display: none;
+}
+
+ps-button-save ps-action-icon .ps-action-icon-icon {
+    display: none;
+}
+
+ps-action-button ion-button{
+    min-height: 48px !important;
+}
+

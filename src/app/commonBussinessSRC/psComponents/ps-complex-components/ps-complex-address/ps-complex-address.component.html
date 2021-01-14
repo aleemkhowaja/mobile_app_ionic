@@ -1,0 +1,38 @@
+<ps-container-complex>
+  <!-- <ps-dropdown-country id="input_country" [options]="defaultOptions.countriesOptions"
+      (onPsChange)="countryChanged($event)"></ps-dropdown-country> -->
+  <ps-complex-country-regions-cities [id]="id" [options]="defaultOptions" (onPsChange)="onRegionDDChanged($event)">
+  </ps-complex-country-regions-cities>
+
+  <!-- Author: GRadwan 16/01/2020 -->
+  <!-- 
+    <ps-dropdown-regions  id="input_region" [options]="defaultOptions.regionOptions"
+      (onPsChange)="regionChanged($event)">
+    </ps-dropdown-regions>
+   -->
+
+  <!-- Author: GRadwan 16/01/2020 -->
+  <!--
+    <ps-dropdown-cities id="input_city" [options]="defaultOptions.cityOptions">
+    </ps-dropdown-cities>
+  -->
+  <ps-input-free-text id="input_free_text" [options]="defaultOptions.streetOptions">
+  </ps-input-free-text>
+
+  <!-- 
+    <ps-input-free-text id="input_free_text" [options]="defaultOptions.areaOptions">
+    </ps-input-free-text>
+   -->
+
+  <ps-input-free-text id="input_free_text" [options]="defaultOptions.buildingOptions">
+  </ps-input-free-text>
+
+  <!-- <ps-complex-po-box  [options]="defaultOptions.poBoxOptions"></ps-complex-po-box> -->
+  <ps-input-varchar [options]="defaultOptions.poBoxInputOptions"></ps-input-varchar>
+
+
+  <ps-dropdown-postal-codes *ngIf="defaultOptions.postalCodesOptions" [options]="defaultOptions.postalCodesOptions">
+  </ps-dropdown-postal-codes>
+
+
+</ps-container-complex>

@@ -1,0 +1,10 @@
+<ps-container-complex [options]="defaultOptions">
+
+    <ps-input-varchar id="'userCifNo' + id" [options]="defaultOptions.varcharOptions"></ps-input-varchar>
+
+    <ps-input-account-number id="'input_account_number_' + id" [options]="defaultOptions.acNumOptions">
+    </ps-input-account-number>
+
+    <ps-input-card-number [id]="'card_number_' + id" [options]="options?.cardNumberOptions">
+    </ps-input-card-number>
+</ps-container-complex>

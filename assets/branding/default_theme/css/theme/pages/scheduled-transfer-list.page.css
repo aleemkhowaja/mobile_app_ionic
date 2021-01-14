@@ -1,0 +1,10 @@
+.no-transfers-text {
+    text-align: center;
+    padding-top: 20%;
+    color: var(--ps-error-color);
+}
+
+.no-transfers-text ion-label {
+    margin-top: 2rem;
+}
+

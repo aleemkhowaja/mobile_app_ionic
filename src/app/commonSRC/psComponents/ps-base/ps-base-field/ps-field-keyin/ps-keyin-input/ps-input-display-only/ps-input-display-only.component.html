@@ -1,0 +1,23 @@
+<!-- <ps-keyin-input [id]="id" [options]="defaultConf">
+</ps-keyin-input> -->
+<ps-icon-customization *ngIf="custMode" [options]="custIconOptions"></ps-icon-customization>
+<ps-container-item [formGroup]="options.group" class="ps-custom-component" [ngClass]="options.psClass"
+    [options]="options" *ngIf="fieldVisibility">
+
+
+    <ps-label-input class="ps-keyin-input-label" [options]="labelOptions">
+    </ps-label-input>
+
+
+
+    <ps-label class="ps-input-display-only-value" [options]="displayValue">
+    </ps-label>
+
+</ps-container-item>
+
+<div *ngIf="previewMode && !options.disablePreview" class="ps-custom-component-preview" psPreviewEngine>
+    <ps-label-input *ngIf="options.labelKey" [id]="'lbl_'+ id" [options]="labelOptions" class="ps-lbl-preview">
+    </ps-label-input>
+    <span [innerHTML]="delimiter"></span>
+    <ps-label-input [id]="'value_preview_'+ id " [options]="displayValue" class="ps-value-preview"></ps-label-input>
+</div>

@@ -1,0 +1,15 @@
+.ps-button-logout {
+    --border-width: 1px !important;
+    font-weight: bold !important;
+    font-size: var(--ps-md-font) !important;
+    margin: 0px !important;
+    --border: red;
+    --border-style: solid;
+    --border-width: 3px !important;
+    --border-radius: var(--ps-section-border-radius) !important;
+}
+
+ps-button-logout ion-icon {
+    /* color: red;
+    font-size: 25px; */
+}

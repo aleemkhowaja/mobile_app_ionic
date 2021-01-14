@@ -1,0 +1,269 @@
+ps-complex-landmark-compass .landmark-compass-title {
+    color: white;
+}
+
+
+.landmark-compass-wrapper {
+    position: relative;
+    width: 95%;
+    padding-bottom: 100%;
+}
+
+.landmark-compass-wrapper .compass-background {
+    position: absolute;
+    width: 105%;
+    height: 100%;
+    background: var(--ps-font-light-color);
+    border-radius: 50%;
+    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); */
+    left: -4%;
+    margin: 15px !important;
+    box-shadow: 0 0 4px #000, 0 0 1px 8px #ccc, 5px 10px 15px #48436f;
+    border: 10px solid #777;
+}
+
+
+.landmark-compass-wrapper .compass-background:before {
+    z-index:100;
+    content: '';
+    border: 2px dashed #444;
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    top: 10px;
+    border-radius: 50%;
+    z-index: 100;
+}
+.landmark-compass-wrapper .compass-background:after {
+    z-index: 100;
+    content: '';
+    position: absolute;
+    left: 7px;
+    right: 7px;
+    bottom: 7px;
+    top: 7px;
+    border-radius: 50%;
+    background: linear-gradient( -45deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.3) 47%, rgba(255,255,255,0) 48%, rgba(255,255,255,0) 100% );
+}
+
+
+.landmark-compass-wrapper .compass-background .direction {
+    position: absolute;
+}
+
+.landmark-compass-wrapper .compass-background .direction.light {
+    color: #777;
+}
+
+.landmark-compass-wrapper .compass-background .direction.direction-n {
+    top: 14%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: red !important;
+}
+
+.landmark-compass-wrapper .compass-background .direction.direction-ne {
+    display: block;
+    -webkit-transform: rotate(40deg);
+
+    /* Firefox */
+    -moz-transform: rotate(40deg);
+
+    /* IE */
+    -ms-transform: rotate(-40deg);
+
+    /* Opera */
+    -o-transform: rotate(40deg);
+    top: 18%;
+    right: 15%;
+}
+
+.landmark-compass-wrapper .compass-background .direction.direction-e {
+    top: 50%;
+    right: 13%;
+    transform: translate(50%, -50%);
+    color: var(--ps-debit-font-color);
+}
+
+.landmark-compass-wrapper .compass-background .direction.direction-se {
+    display: block;
+    -webkit-transform: rotate(-45deg);
+
+    /* Firefox */
+    -moz-transform: rotate(-45deg);
+
+    /* IE */
+    -ms-transform: rotate(-45deg);
+
+    /* Opera */
+    -o-transform: rotate(-45deg);
+    bottom: 18%;
+    right: 13%;
+}
+
+.landmark-compass-wrapper .compass-background .direction.direction-s {
+    bottom: 13%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    color: var(--ps-debit-font-color);
+}
+
+.landmark-compass-wrapper .compass-background .direction.direction-sw {
+    display: block;
+    -webkit-transform: rotate(38deg);
+
+    /* Firefox */
+    -moz-transform: rotate(38deg);
+
+    /* IE */
+    -ms-transform: rotate(38deg);
+
+    /* Opera */
+    -o-transform: rotate(38deg);
+    bottom: 19%;
+    left: 13%;
+}
+
+.landmark-compass-wrapper .compass-background .direction.direction-w {
+    top: 50%;
+    left: 13%;
+    transform: translate(-50%, -50%);
+    color: var(--ps-debit-font-color);
+}
+
+.landmark-compass-wrapper .compass-background .direction.direction-nw {
+    display: block;
+    -webkit-transform: rotate(-38deg);
+
+    /* Firefox */
+    -moz-transform: rotate(-38deg);
+
+    /* IE */
+    -ms-transform: rotate(-38deg);
+
+    /* Opera */
+    -o-transform: rotate(-38deg);
+    top: 18%;
+    left: 18%;
+}
+
+.landmark-compass-wrapper .compass-background .landmark-icon-wrapper .landmark-icon,
+.main-pointing-arrow {
+    position: absolute;
+    top: 4%;
+    left: 50%;
+    transform: translateX(-50%);
+    transform-origin: 50% 50%;
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+}
+
+.landmark-compass-wrapper .compass-background .landmark-icon-wrapper .landmark-icon {
+    background: url('/assets/branding/default_theme/imgs/qibla-icon.png') center no-repeat;
+}
+
+.landmark-icon-arrow {
+    text-align: center;
+    height: 1.5em;
+    margin-top: -0.5em;
+}
+
+.landmark-icon-arrow .important-text-color {
+    display: inline-block;
+    transform: rotate(180deg);
+}
+
+.landmark-icon-arrow .important-text-color ion-icon {
+    color: white !important;
+    transform: rotate(180deg);
+}
+
+.landmark-compass-wrapper .compass-inner-circle .compass-arrow {
+    color: var(--ps-font-dark-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -4px;
+    transform: translate(-50%, -50%);
+}
+
+.landmark-compass-wrapper .compass-inner-circle .compass-arrow:before {
+    font-size: 4em;
+}
+
+.coordinates-upcase {
+    text-transform: uppercase;
+}
+
+.landmark-icon-main {
+    width: 40px;
+    height: 40px;
+    background: url('/assets/branding/default_theme/imgs/qibla-icon.png') center no-repeat;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 2vh;
+    display: block;
+}
+
+.main-pointing-arrow {
+    display: block;
+    background: url('/assets/branding/default_theme/svg/landmark-direction.svg') center no-repeat;
+    transform: rotate(0deg);
+    width: 70%;
+    height: 55%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-size: contain;
+}
+
+.landmark-compass-wrapper .compass-background .landmark-icon-wrapper .landmark-icon {
+    display: none;
+}
+
+.landmark-compass-wrapper .compass-background .landmark-icon-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #e6e6e6;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.direction {
+    z-index: 2;
+}
+
+.landmark-compass-wrapper .compass-inner-circle {
+    display: none;
+}
+
+.landmark-compass-icon-arrow {
+    top: 50%;
+    right: -50%;
+    position: relative !important;
+    color: black;
+    width: 108%;
+    font-size: 2em;
+}
+
+.landmark-compass-icon-arrow ps-action-icon {
+    transform: rotate(-99deg);
+    position: absolute;
+}
+.landmark-icon-arrow{
+    display:none;
+}

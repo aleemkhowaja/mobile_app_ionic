@@ -1,0 +1,19 @@
+ps-container-swiper {
+    display: block;
+}
+
+ps-container-swiper .overlay-style .main-content,
+ps-container-swiper .overlay-style .sub-content {
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+ps-container-swiper .overlay-style .main-content {
+    z-index: 1;
+}
+
+ps-container-swiper .overlay-style .sub-content {
+    z-index: 2;
+    opacity: 0.1;
+}

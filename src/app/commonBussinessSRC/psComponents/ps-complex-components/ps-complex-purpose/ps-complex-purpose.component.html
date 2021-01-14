@@ -1,0 +1,9 @@
+<ps-container-complex [id]="'purpose_select' + id">
+
+  <ps-dropdown-purpose [options]="purpose" (onPsChange)="onChangePurpose($event)"></ps-dropdown-purpose>
+
+
+
+  <ps-dropdown-purpose [options]="subPurpose" (onPsChange)="onChangeSubPurpose($event)"></ps-dropdown-purpose>
+
+</ps-container-complex>

@@ -1,0 +1,19 @@
+<ps-container-complex class="ps-complex-credit-availability">
+
+
+  <ps-lov-credit-availability [options]="options.creditAvailabilityOptions"
+    (onPsChange)="onCreditAvailableChange($event)"></ps-lov-credit-availability>
+
+
+
+
+  <ps-input-numeric *ngIf="showCreditAvailDet" id="input_free_text" [options]="options.payableAtOptions">
+  </ps-input-numeric>
+
+
+
+  <ps-input-numeric *ngIf="showCreditAvailDet" id="daysFrom" [options]="options.daysFromOptions">
+  </ps-input-numeric>
+
+
+</ps-container-complex>

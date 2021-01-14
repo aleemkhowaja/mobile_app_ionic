@@ -1,0 +1,7 @@
+ <ps-container-complex [id]="'ps-image-camera' + id">
+  <div [ngClass]="actionImageOptions.psClass" (click)="selectImages()">
+    <ps-action-image class="profile-image" [options]="actionImageOptions" >
+    </ps-action-image>
+    <ps-label class="upload-profile-overlay" *ngIf="options.uploadEnable"  [options]="labelOptions" > </ps-label>
+  </div>
+</ps-container-complex> 

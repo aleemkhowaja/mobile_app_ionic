@@ -1,0 +1,19 @@
+.ps-button-logout {
+    --border-style: none !important;
+    /* border-bottom: 2px solid var(--ps-primary-degree-1-color) !important; */
+    color: white;
+    --background: transparent;
+    --background-activated: transparent;
+}
+
+ps-button-logout ion-icon {
+    color: white !important;
+}
+
+ps-button-logout ps-action-icon .ps-action-icon-icon {
+    display: block !important;
+}
+
+ps-button-logout ps-action-icon .ps-action-icon-label {
+    display: none;
+}

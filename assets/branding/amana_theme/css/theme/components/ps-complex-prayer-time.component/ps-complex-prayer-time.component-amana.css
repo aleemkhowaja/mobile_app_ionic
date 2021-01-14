@@ -1,0 +1,82 @@
+/* ps-complex-prayer-time .prayer-reminder-button {
+    --border-radius: 0px !important;
+    --background: none !important;
+} */
+
+ps-complex-prayer-time .prayer-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+ps-complex-prayer-time .set-reminder {
+    order: 2;
+}
+
+ps-complex-prayer-time .ps-complex-prayer-time-prayerTiming .items .ps-container-item-img-icon {
+    display: none;
+}
+
+ps-complex-prayer-time .ps-complex-prayer-time-prayerTiming .items .ps-container-item-main-content {
+    -webkit-box-flex: 0;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+ps-complex-prayer-time .ps-complex-prayer-time-prayerTiming .items .prayer-name {
+    display: flex;
+    align-items: center;
+}
+
+ps-complex-prayer-time .ps-complex-prayer-time-prayerTiming .items .prayer-time {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: var(--borderps-button-submit-background-color) !important;
+}
+
+ps-complex-prayer-time .ps-complex-prayer-time-body .prayerTime,
+ps-complex-prayer-time .ps-complex-prayer-time-body .nextPrayer,
+ps-complex-prayer-time .ps-complex-prayer-time-body .prayer-title ion-label {
+    color: var(--ps-button-submit-background-color) !important;
+}
+
+ps-complex-prayer-time .ps-complex-prayer-time-body .prayer-remaining {
+    color: var(--ps-button-submit-background-color) !important;
+}
+
+ps-complex-prayer-time .ps-complex-prayer-time-body .gregorianDate {
+    color: white !important;
+    font-weight: bold;
+}
+
+ps-complex-prayer-time .ps-complex-prayer-time-body .hijiridate {
+    color: white !important;
+    font-weight: bold;
+}
+
+ps-complex-prayer-time .ps-complex-prayer-time-body .prayer-current-time {
+    color: white !important;
+    font-weight: bold;
+}
+
+
+ps-complex-prayer-time .set-reminder .ps-container-item-img-icon {
+    display: none;
+}
+
+ps-complex-prayer-time .prayer-clock-icon {
+    display: none;
+}
+
+ps-complex-prayer-time .prayer-button-wrapper {
+    -webkit-box-flex: 0;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+ps-complex-prayer-time .prayer-reminder-button .ps-action-image-row {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    justify-content: center;
+}

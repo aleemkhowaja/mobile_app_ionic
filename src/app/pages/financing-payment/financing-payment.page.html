@@ -1,0 +1,21 @@
+<ps-template-stepper [options]="stepperOptions" [id]="stepperOptions.stepperName">
+  <ps-form-step step1 [id]="stepperOptions.namesofSteps[0]">
+    <ps-container-panel [options]="panelOptionsPayment" id="paymnt_details_panel">
+
+
+
+      <ps-lookup-own-deals id="dealsList" [options]="ownDealsListOptions" (onDealChange)='onDealChange($event)'>
+      </ps-lookup-own-deals>
+
+      <ps-lookup-own-accounts id="'transferFrom'+ id" #fromAccountRef [options]="ownAccountListOptions"
+        (onAccountChange)="onSettlAccountChange($event)"></ps-lookup-own-accounts>
+
+
+      <ps-complex-exchange [options]="complexExchangeOptions"></ps-complex-exchange>
+
+
+
+
+    </ps-container-panel>
+  </ps-form-step>
+</ps-template-stepper>

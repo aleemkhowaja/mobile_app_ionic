@@ -1,0 +1,14 @@
+.mapAtmBranchModal ps-container-item.ps-container-panel-item{
+    background-color: #5B3A6C;
+}
+
+.mapAtmBranchModal ps-container-item.ps-container-panel-content{
+    background-color: #341C46 !important;
+}
+.mapAtmBranchModal{
+    background-color: #00000082;
+}
+.mapAtmBranchModal .map-atm-branch-details-bottom {
+    background-color: #311852 !important;
+}
+

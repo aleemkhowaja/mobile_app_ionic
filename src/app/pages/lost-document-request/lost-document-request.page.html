@@ -1,0 +1,22 @@
+<ps-template-stepper [options]="stepperOptions" [id]="stepperOptions.stepperName">
+  <ps-form-step step1 [id]="stepperOptions.namesofSteps[0]">
+    <ps-dropdown-document-types id="lost_document_types" [options]="lostDocumentTypesOptions"
+      (onPsChange)="onDocTypeChange($event)"></ps-dropdown-document-types>
+    <ps-lookup-chequebooks *ngIf="showChequebooklookup" [options]="chequeBookLookupOptions"></ps-lookup-chequebooks>
+	 <ps-lov-card-types [options]="cardsLookupOptiops" *ngIf="showCardTypelookup" (onPsChange)="onChange($event)"></ps-lov-card-types>
+    <ps-lookup-debit-cards [options]="debitCardsLookupOptiops" *ngIf="showDebitCardlookup" ></ps-lookup-debit-cards>
+    <ps-lookup-credit-cards [options]="creditCardsLookupOptiops" *ngIf="showCreditCardlookup"></ps-lookup-credit-cards>
+
+    <ps-input-varchar [options]="documentNumberOptions" (onPsChange)="checkLostDocNumber($event)"></ps-input-varchar>
+    <ps-input-varchar [options]="fromDocumentNumberOptions"></ps-input-varchar>
+    <ps-input-varchar [options]="toDocumentNumberOptions"></ps-input-varchar>
+
+    <ps-dropdown-core-reasons id="keyin_select_dropdown" [options]="stopReasonsOptions">
+    </ps-dropdown-core-reasons>
+    <ps-input-free-text id="input_free_text" [options]="briefExplanationOptions">
+    </ps-input-free-text>
+
+  </ps-form-step>
+  <ps-form-step step2 [id]="stepperOptions.namesofSteps[1]">
+  </ps-form-step>
+</ps-template-stepper>

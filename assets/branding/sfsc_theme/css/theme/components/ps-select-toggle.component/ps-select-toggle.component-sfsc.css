@@ -1,0 +1,61 @@
+ps-select-toggle .ps-select-toggle {
+  --background: var(--ps-secondary-degree-4-color);
+  /* DK */
+  --background-checked: var(--ps-secondary-color);
+  /* DK */
+  --handle-background: var(--ps-font-light-color);
+  --handle-background-checked: var(--ps-font-light-color);
+}
+
+ps-select-toggle .ps-select-toggle-item {
+  display: flex;
+  align-items: center;
+  /* justify-content: flex-end; */
+  color: var(--ps-label-color);
+  /* --ps-highlight-background-color replaced by new variable added by DK */
+}
+
+ps-select-toggle .ps-select-toggle-item .ps-item-wrapper {
+  display: flex;
+}
+
+ps-select-toggle .ps-select-toggle-label {
+  flex: inherit;
+  /* order: 2; */
+}
+
+ps-select-toggle .ps-select-toggle-item ion-label {
+  order: 2;
+  color: var(--ps-label-color) !important;
+}
+
+ps-select-toggle ion-toggle .toggle-inner {
+  border-radius: 35% !important;
+  top: 0px !important;
+  margin-left: 2px !important;
+  height: 15px !important;
+  background: var(--ps-font-light-color) !important;
+  background-color: var(--ps-secondary-color) !important;
+}
+
+ps-select-toggle ion-toggle toggle-icon {
+  height: 22px !important;
+}
+
+ps-select-toggle ion-toggle.toggle-checked .toggle-inner {
+  border-radius: 35% !important;
+  top: 0px !important;
+  transform: translate3d(14px, 0px, 0px) !important;
+  height: 15px !important;
+  background: var(--ps-font-light-color) !important;
+  background-color: #7ff488 !important;
+}
+
+ps-select-toggle ps-container-item .item {
+  background: none !important;
+  --background: none !important;
+}
+
+ps-container-item .item:not(.item-has-focus) {
+  border-bottom: none !important;
+}

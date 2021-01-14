@@ -1,0 +1,34 @@
+ps-template-screen .widget-header-title {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--ps-md-font) !important;
+    /* DK */
+}
+
+ps-template-screen .widget-style {
+    margin: 0 !important;
+    background: transparent !important;
+    /* Moved to ps-template-base .main-header */
+    /* background-image: linear-gradient(to right, var(--ps-app-header-color-stop1), var(--ps-app-header-color-stop2)); */
+    /* Newly added by DK */
+    height: 45px !important;
+    /* Provide header height */
+}
+
+ps-template-screen .widget-menu-icon .menu-icon ion-icon {
+    color: var(--ps-app-header-icon-color) !important;
+    /* --ps-button-cancel-font-color variable was replaced by DK */
+    padding-left: 5px;
+    /* Newly added by DK */
+}
+
+ps-template-screen .widget-menu-icon {
+    background-color: transparent;
+    border: none !important;
+}
+
+ps-template-screen .widget-menu-icon.border-start {
+    border: none !important;
+}

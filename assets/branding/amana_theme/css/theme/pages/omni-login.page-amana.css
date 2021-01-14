@@ -1,0 +1,22 @@
+omni-login ps-action-hyperlink ion-icon,
+omni-login ps-action-hyperlink ion-label,
+omni-login ps-action-hyperlink .ps-action-icon-icon ion-icon {
+    color: white !important;
+}
+
+omni-login ps-action-hyperlink .ps-action-image-row {
+    padding: 15px;
+}
+
+omni-login .ps-action-anchor {
+    background: transparent !important;
+}
+
+omni-login ps-select-toggle.ps-template-login-rememberMe-toggle .ps-container-item-img-icon {
+    display: none !important;
+}
+
+omni-login ps-select-toggle ps-container-item .item {
+    background: none !important;
+    --background: none !important;
+}

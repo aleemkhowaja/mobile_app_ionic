@@ -1,0 +1,100 @@
+/**
+    Reports Theming
+*/
+
+.report-header {
+  background: var(--ps-report-header-color) !important;
+  border-top-left-radius: var(--ps-card-header-border-radius) !important;
+  border-bottom-right-radius: var(--ps-card-header-border-radius) !important;
+  height: 6.5em;
+}
+
+.report-header-title span {
+  color: var(--ps-report-header-title-color) !important;
+  font-size: var(--ps-report-header-title-size) !important;
+  font-weight: bold !important;
+  text-transform: uppercase !important;
+}
+
+.report-header-label span {
+  color: var(--ps-report-header-label-color) !important;
+}
+
+.report-header-value span {
+  color: var(--ps-report-header-value-color) !important;
+  /* font-size: 0.7em !important; */
+}
+
+.report-content {
+  background: var(--ps-report-content-color) !important;
+  border-radius: 10px !important;
+  /*border-bottom: 2px solid var(--ps-report-content-border-color);*/
+  /* -webkit-box-shadow: 0px 10px 13px -7px var(--ps-font-dark-color), 7px 10px 10px 8px rgba(147, 144, 144, 0);
+  box-shadow: 0px 10px 13px -7px var(--ps-font-dark-color), 7px 10px 10px 8px rgba(147, 144, 144, 0); */
+}
+
+.report-content-label span {
+  color: var(--ps-report-content-label-color) !important;
+  font-size: 1em !important;
+}
+
+.report-content-value span {
+  color: var(--ps-report-content-label-value-color) !important;
+  font-size: 1em !important;
+}
+
+.report-content-value2 span {
+  color: var(--ps-report-content-label-value2-color) !important;
+  font-size: 1em !important;
+}
+
+.report-content-value3 span {
+  color: var(--ps-report-content-label-value3-color) !important;
+  font-size: 1em !important;
+}
+
+.report-sep-line {
+  border: none !important;
+  height: 10px !important;
+  background-color: var(--ps-highlight-background-color) !important;
+}
+
+.report-header-image img {
+  width: var(--ps-report-header-image-width);
+}
+
+.jrPage {
+  background-color: transparent !important;
+}
+
+.jrPage table:nth-of-type(1) tbody:nth-of-type(1)>tr {
+  -webkit-animation-name: flipInX;
+  animation-name: flipInX;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  /* zoom: 1.2; */
+  background: var(--ps-report-content-color) !important;
+}
+
+
+.report-content-value {
+  padding-inline-start: 5px;
+}
+
+.report-content-value2 {
+  padding-inline-start: 5px;
+}
+
+.report-content-value3 {
+  padding-inline-start: 5px;
+}
+
+.report-content-value4 span {
+  font-size: 0.8em !important;
+}
+
+.ps-template-report-filter .row , .ps-template-report-filter .container-fluid {
+  height: auto !important;
+}

@@ -1,0 +1,10 @@
+/* Newly added by DK */
+
+ps-label-input ps-label ion-label,
+ps-select-toggle ps-label ion-label {
+    color: var(--ps-input-label-font-color) !important;
+}
+
+ps-label ion-label {
+    font-family: var(--ion-font-family, inherit) !important;
+}

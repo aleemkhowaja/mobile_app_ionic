@@ -1,0 +1,47 @@
+.report-sep-line {
+    background: unset;
+    background-color: transparent !important;
+}
+
+.report-content-value4 span {
+    color: white !important;
+}
+
+ps-template-landing-fab-ui ps-template-base .trigger-disable-field {
+    opacity: 1
+}
+
+.jrPage table:nth-of-type(1) tbody:nth-of-type(1)>tr{
+    background: transparent !important;
+}
+.jrPage table:nth-of-type(1) tbody:nth-of-type(1)>tr td :not(.report-sep-line) :not(.highlight) {
+  background: var(--ps-report-content-color) !important;
+}
+
+ps-container-report-viewer ps-container-html-viewer .highlight {
+    background: #ffffff75 !important;
+}
+/* 
+.report-content-value2 span {
+    font-size: var(--ps-lg-font) !important;
+}
+.report-content-value3{
+    font-size: var(--ps-lg-font) !important;
+}
+.report-content-value6 span {
+    color: white !important;
+    font-size: var(--ps-xl-font) !important;
+    font-weight: 400 !important;
+}
+.report-content-value3 span {
+    font-size: var(--ps-xl-font) !important;
+    font-weight: 500 !important;
+}
+.report-content-value5 span{
+    color:white !important;
+    line-height:0.1 !important;
+    font-weight: 200 !important;
+}
+.report-content-value5{
+    line-height:0.1 !important;
+} */

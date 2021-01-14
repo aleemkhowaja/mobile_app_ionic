@@ -1,0 +1,67 @@
+/* ps-map-atm-branches,
+ps-map-atm-branches .ps-map-map-section {
+    height: 100%;
+} */
+
+ps-map-atm-branches {
+    height: 100%;
+    width: 100%;
+}
+
+.mapAtmBranchModal .modal-close-icon-container {
+    height: auto !important;
+}
+
+.mapAtmBranchModal .modal-close-icon-row {
+    justify-content: flex-start !important;
+    background: var(--ps-app-opaque-background-color) !important;
+    color:white;
+}
+.mapAtmBranchModal .modal-close-icon-row ps-label {
+   margin:10px;
+}
+
+.mapAtmBranchModal .modal-close-icon ion-icon {
+    color: white;
+    background: var(--ps-highlight-background-color);
+    margin:5px 0px;
+}
+
+.mapAtmBranchModal .modal-wrapper .ion-page{
+    height: 100vh;
+    width:auto;
+}
+.isWeb-Layout.userIsLoggedIn .mapAtmBranchModal .modal-wrapper .ion-page{
+    height: calc(100vh - calc( calc(2 * var(--ps-page-margin)) + var(--ps-nav-header-height)));
+}
+
+.mapAtmBranchModal .modal-close-icon ion-icon {
+    background: transparent;
+}
+.mapAtmBranchModal .modal-wrapper .ion-page{
+    padding:0px;
+}
+.mapAtmBranchModal .ps-complex-card-details-branch-opening-hours-list-item ps-icon-available, ps-icon-unavailable{
+    display:none !important;
+}
+
+ion-segment-button ion-icon{
+    background-color:transparent !important;
+
+}
+
+.mapAtmBranchModal .card{
+    background-color:transparent !important;
+}
+
+.dcMapLocator ps-map-atm-branches .ps-map-map-section {
+    height: 100%;
+    width: 100vw;
+}
+
+.mapAtmBranchModal .modal-wrapper{
+    width: auto
+}
+.mapAtmBranchModal .modal-close-icon-row {
+    background: var(--ps-header-background) !important;
+}

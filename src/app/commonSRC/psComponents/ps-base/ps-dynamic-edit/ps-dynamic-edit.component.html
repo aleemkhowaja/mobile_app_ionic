@@ -1,0 +1,14 @@
+<div class="ps-dynamic-edit">
+  <div class="dynmaic-edit-label">
+    <span *ngIf="!showEdit">
+      <ps-label [options]="labelOption"></ps-label>
+    </span>
+    <span *ngIf="showEdit" class="lookup-dynamic-edit-field">
+      <ps-keyin-input [options]="inputEditOptions"></ps-keyin-input>
+    </span>
+  </div>
+  <div *ngIf="options.isEditable" class="dynamic-edit-action">
+    <ps-action-icon [options]="editIconOptions" class="edit-button" (onClick)="showEditInput()"  *ngIf="options.actionUrl !== undefined && options.actionUrl !== '' && !showEdit"></ps-action-icon>
+    <ps-action-icon [options]="submitIconOptions" class="save-button" (onClick)="submit()" *ngIf="options.actionUrl !== undefined && options.actionUrl !== '' && showEdit"></ps-action-icon>
+  </div>
+</div>

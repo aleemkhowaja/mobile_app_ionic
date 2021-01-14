@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "779939261395",
+    "firebase_url": "https://omnibk-path.firebaseio.com",
+    "project_id": "omnibk-path",
+    "storage_bucket": "omnibk-path.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:779939261395:android:9fa03bf7d91e3b16a01d26",
+        "android_client_info": {
+          "package_name": "com.path.omnibk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "779939261395-hihf3jeb5rj3g1ruo7uugseuv0k84ued.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUuh08ulABws-w3AGI6SdczireuAnZuts"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "779939261395-hihf3jeb5rj3g1ruo7uugseuv0k84ued.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

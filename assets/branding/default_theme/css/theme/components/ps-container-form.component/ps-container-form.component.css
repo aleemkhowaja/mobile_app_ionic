@@ -1,0 +1,19 @@
+ps-container-form .ps-container-form-content {
+    padding-top: var(--ps-section-padding) !important;
+    padding-left: var( --ps-form-content-padding) !important;;
+    padding-right: var( --ps-form-content-padding) !important;
+    background: var(--ps-form-container-background-color) !important;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: auto !important;
+    scrollbar-color: var(--ps-scrollbar-color-firefox);
+    scrollbar-width: var(--ps-scrollbar-width);
+}
+
+ps-container-form .ps-container-form-content-wrapper {
+    height: 100%;
+}
+
+ps-container-form ps-complex-terms-and-conditions .ps-complex-terms-and-conditions .ps-terms-cond-file {
+    overflow-y: hidden !important;
+}

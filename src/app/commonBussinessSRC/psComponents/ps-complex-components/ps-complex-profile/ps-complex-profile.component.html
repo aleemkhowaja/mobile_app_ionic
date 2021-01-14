@@ -1,0 +1,23 @@
+<ps-container-complex class="ps-complex-profile">
+    <div class="container-fluid ps-complex-profile-row-container-fluid">
+        <div class="row ps-complex-profile-row">
+            <div class="col-3 ps-complex-profile-img">
+                <ps-hyperlink-inline-labeled [options]="optionsActionImage"></ps-hyperlink-inline-labeled>
+            </div>
+            <div class="col-9 ps-complex-profile-info">
+                <div class="container-fluid">
+                    <div class="row ps-complex-profile-info-row">
+                        <div class="col-9 ps-user-info-wrapper">
+                            <ps-label-welcome></ps-label-welcome>
+                            <ps-label-user-last-login></ps-label-user-last-login>
+                        </div>
+                        <div class="col-3 ps-dropdown-allowed-languages-wrapper">
+                            <ps-dropdown-allowed-languages [options]="optionsPreferredLanguage">
+                            </ps-dropdown-allowed-languages>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ps-container-complex>

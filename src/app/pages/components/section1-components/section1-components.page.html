@@ -1,0 +1,92 @@
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <ps-button-standard [options]="goToReport" [routerLink]="['/home']"></ps-button-standard>
+      <!-- <ps-template-report [options]="reportTemplateOptions"></ps-template-report> -->
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ps-container-panel [options]="datesComponentsPanelOptions">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ps-keyin-date id="keyin_date" [options]="psKeyinDateOptions" (onPsChange)="onChange($event)">
+              </ps-keyin-date>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ps-date-month-year id="date_month_year" [options]="psDateMonthYearOptions"
+                (onPsChange)="onChange($event)"></ps-date-month-year>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ps-date-month-year-future id="date_month_year_future" [options]="psDateMonthYearFutureOptions"
+                (onPsChange)="onChange($event)"></ps-date-month-year-future>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ps-date-month-year-past id="date_month_year_past" [options]="psDateMonthYearPastOptions"
+                (onPsChange)="onChange($event)"></ps-date-month-year-past>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ps-date-day-month-year id="date_day_month_year" [options]="psDateDayMonthYearOptions"
+                (onPsChange)="onChange($event)"></ps-date-day-month-year>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ps-date-day-month-year-future id="date_day_month_year_future" [options]="psDateDayMonthYearFutureOptions"
+                (onPsChange)="onChange($event)"></ps-date-day-month-year-future>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ps-date-day-month-year-past id="date_day_month_year_past" [options]="psDateDayMonthYearPastOptions"
+                (onPsChange)="onChange($event)"></ps-date-day-month-year-past>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ps-container-panel>
+    </ion-col>
+  </ion-row>
+
+  <p>ps-select-toggle :</p>
+  <ion-row>
+    <ion-col>
+      <ps-select-toggle [options]="toggleOptions" (onPsChange)="onChange($event)"></ps-select-toggle>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ps-container-panel [options]="cardDetailsPanelOptions">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ps-complex-card-details-atm-cdm [options]="atmCdmOptions" id="omniATM"></ps-complex-card-details-atm-cdm>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ps-container-panel>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ps-container-panel [options]="branchDetailsPanelBranchOptions">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ps-complex-card-details-branch [options]="branchOptions" id="omniBranch">
+              </ps-complex-card-details-branch>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ps-container-panel>
+    </ion-col>
+  </ion-row>
+</ion-grid>

@@ -1,0 +1,50 @@
+ps-container-flip {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+ps-container-flip .flip-card {
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+}
+
+ps-container-flip .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+ps-container-flip .flip-card-front,
+ps-container-flip .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+
+}
+
+ps-container-flip .flip-card-front {
+    display: block;
+}
+
+ps-container-flip .flip-card-front.hideVisibleArea {
+    display: none;
+}
+
+ps-container-flip .flip-card-back.hideHiddenArea {
+    display: none;
+
+}
+
+ps-container-flip .flip-card-back.flip-card-back-default-animation,
+ps-container-flip .flip-card.isFlipped .flip-card-inner.flip-card-inner-default-animation {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+}

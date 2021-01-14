@@ -1,0 +1,195 @@
+<ps-template-stepper [options]="stepperOptions" id="stepperOptions.stepperName">
+    <ps-form-step step1 [id]="stepperOptions.namesofSteps[0]">
+        <ps-container-panel [options]="lcPanelOptions" id="lc_request_panel">
+            <ps-input-display-only id="documentInNameRO" [options]="documentInNameReadOnlyOptions">
+            </ps-input-display-only>
+
+
+            <ps-input-display-only-cif-address-home id="applicantAddressDetails"
+                [options]="applicantHomeAddressReadOnlyOptions">
+            </ps-input-display-only-cif-address-home>
+            <ps-dropdown-tfs-document-type id="tfs_document_types" [options]="tfsDocumentTypeOptions"
+                (onPsChange)="onLCTypeChange($event)"></ps-dropdown-tfs-document-type>
+            <ps-lov-form-of-documentary-credit [options]="formOfDocumentaryOptions">
+            </ps-lov-form-of-documentary-credit>
+
+
+        </ps-container-panel>
+
+        <ps-container-panel [options]="validityDetailsPanelOptions" id="validity_details_panel">
+
+
+            <ps-date-day-month-year-future id="issueDate" [options]="issueDateOptions">
+            </ps-date-day-month-year-future>
+
+
+
+            <ps-date-day-month-year-future id="expiryDate" [options]="lcExpireDateOptions">
+            </ps-date-day-month-year-future>
+
+
+
+            <ps-dropdown-country id="placeOfExpiry" [options]="placeOfExpiryOptions"></ps-dropdown-country>
+        </ps-container-panel>
+
+        <ps-container-panel [options]="amountDetailsPanelOptions" id="account_details_panel">
+
+
+            <ps-complex-amount [options]="amountDetailsOptions"></ps-complex-amount>
+            <ps-lov-charges-borne-by [options]="chargesBorneByOptions" (onPsChange)="onChargesBorneByChange($event)">
+            </ps-lov-charges-borne-by>
+
+
+            <ps-input-account-number *ngIf="isBeneficiaryChargesAccount" id="'accountName' + id"
+                [options]="accountNumberOptions">
+            </ps-input-account-number>
+
+
+            <ps-lookup-own-accounts *ngIf="isApplicantChargesAccount" id="'chargesAccount'+ id" #fromAccountRef
+                [options]="chargesAccountListOptions">
+            </ps-lookup-own-accounts>
+
+
+
+            <ps-lov-amount-tolerance [options]="amountToleranceOptions" (onPsChange)="onAmountToleranceChange($event)">
+            </ps-lov-amount-tolerance>
+
+
+
+            <ps-input-numeric *ngIf="showToleranceValue" id="toleranceValue" [options]="toleranceValueOptions">
+            </ps-input-numeric>
+
+        </ps-container-panel>
+
+        <ps-container-panel [options]="creditDetailsPanelOptions" id="credit_details_panel">
+
+
+            <ps-complex-credit-availability [options]="creditAvailabilityOptions"></ps-complex-credit-availability>
+            <ps-input-free-text id="creditAvailableWith" [options]="creditAvailableWithOptions">
+            </ps-input-free-text>
+
+
+        </ps-container-panel>
+
+        <ps-container-panel [options]="settlMethodDetailsPanelOptions" id="settlement_method_details_panel">
+
+
+            <ps-lov-settlement-method [options]="settlementMethodOptions"
+                (onPsChange)="onSettlementMethodChange($event)">
+            </ps-lov-settlement-method>
+
+
+
+            <ps-lookup-own-accounts class="accounts" *ngIf="showSettlementAccount" id="'settelmentMethod'+ id"
+                #fromAccountRef [options]="settlementAccountListOptions">
+            </ps-lookup-own-accounts>
+
+
+
+            <ps-lookup-facility-details *ngIf="showFacility" [options]="facilityDetailsOptions">
+            </ps-lookup-facility-details>
+
+
+        </ps-container-panel>
+    </ps-form-step>
+
+    <ps-form-step step2 [id]="stepperOptions.namesofSteps[1]">
+        <ps-container-panel [options]="benefPanelOptions" id="beneficiaries_panel">
+
+            <ps-select-toggle [id]="'sameBankBenef'" [options]="sameBankToggleOptions"
+                (onPsChange)="onSameBankToggleChange($event)">
+            </ps-select-toggle>
+            <ps-banks [options]="beneficiaryBankCifOptions">
+            </ps-banks>
+            <ps-input-varchar id="benefAccount" [options]="benefAccountOptions"></ps-input-varchar>
+            <ps-input-varchar id="benefName" [options]="benefNameOptions"></ps-input-varchar>
+            <ps-complex-address [options]="benefAddressOptions"></ps-complex-address>
+        </ps-container-panel>
+
+        <ps-container-panel [options]="participantAdditionalPanelOptions" id="participant_panel">
+
+
+            <ps-input-varchar id="benefBanker" [options]="benefBankerOptions"></ps-input-varchar>
+            <ps-input-free-text id="benefSwift" [options]="benefSwiftOptions"></ps-input-free-text>
+            <ps-lov-confirmation-instruction [options]="confirmationInstructionOptions">
+            </ps-lov-confirmation-instruction>
+
+        </ps-container-panel>
+
+        <ps-container-panel [options]="localInsuranceDetailsPanelOptions" id="local_insurance_details_panel">
+
+
+            <ps-dropdown-insurance-company [options]="insuranceCompanyOptions"></ps-dropdown-insurance-company>
+            <ps-date-day-month-year-future id="insurencePolicyDate" [options]="localInsuranceDateOptions">
+            </ps-date-day-month-year-future>
+
+
+
+            <ps-input-numeric id="localInsuranceNumber" [options]="localInsuranceNumberOptions">
+            </ps-input-numeric>
+
+        </ps-container-panel>
+
+        <ps-container-panel [options]="shipmentPanelOptions" id="shipment_panel">
+
+
+            <ps-select-checkbox id="partialShipment" [options]="partialShipmentOptions"
+                (onPsChange)="onPartialShipmentChecked($event)">
+            </ps-select-checkbox>
+
+
+
+            <ps-select-checkbox id="transShipment" [options]="transShipmentOptions"
+                (onPsChange)="onTransShipmentChecked($event)">
+            </ps-select-checkbox>
+
+
+
+            <ps-input-varchar id="portLoading" [options]="portLoadingOptions"></ps-input-varchar>
+            <ps-date-day-month-year-future id="lastDateOfShipment" [options]="lastDateOfShipmentOptions">
+            </ps-date-day-month-year-future>
+
+
+
+            <ps-input-varchar id="portDischarge" [options]="portDischargeOptions"></ps-input-varchar>
+            <ps-lov-incoterms id="incotermsLov" [options]="incotermsOptions">
+            </ps-lov-incoterms>
+
+
+            <ps-input-varchar *ngIf="showShipmentTerms" id="shipmentTerms" [options]="shipmentTermsOptions">
+            </ps-input-varchar>
+
+
+
+            <ps-dropdown-country id="placeFinalDest" [options]="placeFinalDestOptions">
+            </ps-dropdown-country>
+
+
+
+            <ps-input-varchar id="portShipment" [options]="portShipmentOptions"></ps-input-varchar>
+            <ps-input-varchar id="descriptionGoods1" [options]="descriptionGoodsOptions"></ps-input-varchar>
+            <ps-input-varchar id="descriptionGoods2" [options]="descriptionGoods2Options"></ps-input-varchar>
+            <ps-label [options]="meansOfTransLabelOptions"></ps-label>
+            <ps-select-checkbox *ngFor="let att of meansOfTransArray; let idx=
+                index" [id]="att.fcName" [options]="att" (onPsChange)="onMeansOfTransChanged($event)">
+            </ps-select-checkbox>
+
+
+
+        </ps-container-panel>
+        <ps-container-panel [options]="documentDetailsPanelOptions" id="document_details_panel">
+
+
+            <ps-complex-bill-item *ngFor="let att of documentDetailsListOptions;
+                let idx= index" [options]="att" (CheckChange)="onDocumentChecked($event)"></ps-complex-bill-item>
+            <ps-select-dropdown id="setOfDcument" [options]="SetOfDocumentsSelectOptions"></ps-select-dropdown>
+        </ps-container-panel>
+
+        <ps-container-panel [options]="attachmentPanelOptions" id="attachment_panel">
+
+
+            <ps-file-upload id="ps-complex-file-upload" [options]="fileUploadOptions"></ps-file-upload>
+            <ps-input-varchar [options]="commentOptions"></ps-input-varchar>
+        </ps-container-panel>
+    </ps-form-step>
+</ps-template-stepper>

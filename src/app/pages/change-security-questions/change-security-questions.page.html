@@ -1,0 +1,7 @@
+<ps-template-form [options]="options">
+  <ps-container-panel [options]="panelChangeSecurityQuestionsOptions" id="pin_panel">
+    <ps-complex-security-questions id="complex_security_questions" [options]="securityQueOptions"
+        (onSecurityQuestionChange)="onSecurityQuestionChange($event)" (onAnswerChange)="onAnswerChange($event)">
+      </ps-complex-security-questions>
+</ps-container-panel>
+</ps-template-form>

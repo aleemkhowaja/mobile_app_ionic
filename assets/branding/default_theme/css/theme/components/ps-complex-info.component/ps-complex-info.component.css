@@ -1,0 +1,168 @@
+ps-complex-info {
+    height: 100%;
+}
+
+ps-complex-info ps-action-button ion-button {
+    --border-style: none !important;
+    --box-shadow: none !important;
+}
+
+ps-complex-info .ps-complex-info-container-list {
+    width: 100% !important;
+}
+
+ps-complex-info .ps-container-list {
+    display: flex;
+    width: 100% !important;
+    background: transparent;
+    border-radius: var(--ps-section-border-radius) !important;
+    overflow: hidden;
+    height: fit-content;
+    margin: 0px !important;
+    flex-wrap: wrap;
+}
+@-moz-document url-prefix() {
+    ps-complex-info .ps-container-list {
+        height: -moz-fit-content !important;
+    }
+}
+
+ps-complex-info .ps-info-animation {
+    -webkit-backface-visibility: visible !important;
+    backface-visibility: visible !important;
+    -webkit-animation-name: flipInX;
+    animation-name: flipInX;
+    -webkit-box-flex: 0;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.isMobile-Layout ps-complex-info .ps-container-list ion-item {
+    padding: 10px;
+}
+
+ps-complex-info .ps-container-list ion-item {
+    margin: 0px !important;
+    --padding-end: 0px;
+    --inner-padding-end: 0px;
+    background: none !important;
+    --background: none !important;
+    /* border-radius: var(--ps-section-border-radius) !important;
+    --border-radius: var(--ps-section-border-radius) !important; */
+    border-bottom: 5px solid var(--ps-highlight-background-color) !important;
+    --border-radius: 0px !important;
+    border-radius: 0px !important;
+}
+
+ps-complex-info .ps-anchor-panel-image {
+    -webkit-box-flex: 0 !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 10px 0px 0px 0px !important; */
+}
+
+ps-complex-info .ps-anchor-panel-data {
+    -webkit-box-flex: 0 !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px !important;
+}
+
+ps-complex-info ps-hyperlink-anchor {
+    padding-top: 0px !important;
+}
+
+ps-complex-info ps-hyperlink-anchor .ps-anchor-panel-data ion-label {
+    white-space: normal !important;
+    text-align: center !important;
+}
+
+ps-complex-info .tree-view .ps-info-animation {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+ps-complex-info .tree-view .ps-anchor-panel-image,
+ps-complex-info .tree-view .ps-anchor-panel-data {
+    align-items: start !important;
+    justify-content: start !important;
+}
+
+ps-complex-info .tree-view .ps-anchor-panel-image {
+    flex: 0 0 25% !important;
+    max-width: 25% !important;
+}
+
+ps-complex-info .tree-view .ps-anchor-panel-data {
+    flex: 0 0 75% !important;
+    max-width: 75% !important;
+}
+
+ps-complex-info .tree-view ps-hyperlink-anchor .ps-action-icon-avatar {
+    background: transparent;
+    border: 2px solid white;
+}
+
+ps-complex-info .tree-view ps-hyperlink-anchor .ps-action-icon-avatar ion-icon {
+    color: white !important;
+}
+
+ps-complex-info ps-hyperlink-anchor .ps-anchor-panel-data ion-label {
+    white-space: normal !important;
+    text-align: center !important;
+}
+
+ps-complex-info .widget-view ps-hyperlink-anchor .ps-anchor-panel-data ion-label {
+    font-weight: 600;
+}
+
+ps-complex-info .widget-view ps-container-item {
+    height: 110pt !important;
+    background: var(--ps-menu-box-background);
+    border-radius: 7pt;
+    -webkit-box-flex: 0;
+    flex: 0 0 45.5% !important;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    padding: 10px 0px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3%;
+}
+
+[dir=rtl] .ps-complex-info .widget-view ps-container-item {
+
+    margin-right: 3% !important;
+}
+
+[dir=ltr] .ps-complex-info .widget-view ps-container-item {
+
+    margin-left: 3% !important;
+}
+
+ps-complex-info ps-hyperlink-anchor .ps-action-icon-avatar {
+    border-radius: 0px !important;
+    border: 0px !important;
+    background: transparent !important;
+
+}
+
+.isMobile-Layout ps-complex-info ps-hyperlink-anchor .ps-action-icon-avatar ion-icon {
+    color: var(--ps-font-light-color) !important;
+    font-size: calc(var(--ps-font-size-ratio) * var(--ps-root-font-size)) !important
+}
+
+.menu-container .container-fluid.hidden-content-wrapper {
+    padding: 0px !important
+}
+
+.menu-container .current-opened-page .ps-action-image-row {
+    justify-content: center;
+}

@@ -1,0 +1,76 @@
+:root {
+    --ps-stepper-step-done-background-color: var(--ps-button-submit-background-color);
+    --ps-stepper-step-selected-background-color: var(--ps-highlight-background-color);
+}
+
+ps-container-stepper .mat-step-header .mat-step-icon.mat-step-icon-selected {
+    background-color: var(--ps-stepper-step-selected-background-color) !important;
+}
+
+ps-container-stepper .mat-step-header .mat-step-icon.mat-step-icon-state-edit {
+    background-color: var(--ps-stepper-step-done-background-color) !important;
+}
+
+
+ps-container-stepper .mat-horizontal-stepper-header-container {
+    height: 15%;
+}
+
+
+ps-container-stepper .mat-horizontal-content-container {
+    height: 85%;
+    padding-top: 10px !important;
+    scrollbar-color: var(--ps-scrollbar-color-firefox);
+    scrollbar-width: var(--ps-scrollbar-width);
+}
+
+ps-container-stepper .mat-step-header .mat-step-icon.mat-step-icon-selected {
+    width: 3em;
+    height: 3em;
+}
+
+/* fix for bug 930180 */
+ps-container-stepper .mat-step-header .mat-step-header-ripple {
+    display: none;
+}
+
+ps-container-stepper .mat-stepper-horizontal-line {
+    background-color: #959595 !important;
+}
+
+ps-container-stepper .mat-step-header .mat-step-icon {
+    background-color: #757575 !important;
+    font-size: 13px;
+}
+
+
+ps-container-stepper .mat-horizontal-content-container {
+    padding: 0 !important;
+}
+
+ps-container-stepper .mat-stepper-horizontal,
+ps-container-stepper .mat-stepper-vertical {
+    background: transparent !important;
+}
+
+ps-container-stepper .mat-stepper-horizontal .mat-horizontal-stepper-header {
+    padding: 10px 0px;
+    height: auto;
+}
+
+ps-container-stepper .mat-step-label {
+    display: none;
+}
+
+mat-step-header[ng-reflect-state='edit']+.mat-stepper-horizontal-line {
+    background-color: var(--ps-stepper-step-done-background-color) !important;
+}
+
+ps-container-stepper ps-complex-terms-and-conditions .ps-complex-terms-and-conditions .ps-terms-cond-file {
+    overflow-y: hidden !important;
+}
+
+
+ps-container-stepper .mat-horizontal-stepper-content {
+    overflow-y: auto;
+}

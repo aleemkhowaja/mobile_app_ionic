@@ -1,0 +1,21 @@
+<ps-icon-customization *ngIf="custMode" [options]="custIconOptions"></ps-icon-customization>
+<ps-container-item *ngIf="custMode || visible" [formGroup]="options.group"
+    class="ps-field-item-wrapper ps-select-checkbox__item">
+    <!-- <ps-label-input [options]="labelOptions"></ps-label-input> -->
+    <ps-label class="ps-select-checkbox-label" [options]="{labelKey: options.labelKey, translate: true}">
+    </ps-label>
+    <ion-checkbox class="ps-select-checkbox" [attr.psFcName]="options.fcName" [formControlName]="options.fcName"
+        [(ngModel)]="value"></ion-checkbox>
+</ps-container-item>
+<ng-container *ngIf="showError">
+    <p *ngFor="let e of errorMsgs" class="validation-message">
+        <ps-label [options]="{labelKey: e.msgKey, translate: true}"></ps-label>
+        <ps-label [options]="{labelKey: e.param, translate: false}"></ps-label>
+    </p>
+</ng-container>
+<div *ngIf="previewMode && value" class="ps-custom-component-preview" psPreviewEngine>
+    <ps-label-input [id]="'lbl_'+id" class="ps-lbl-preview" *ngIf="labelOptions.labelKey" [options]="previewLblOptions">
+    </ps-label-input>
+    <span [innerHTML]="delimiter"></span>
+    <ps-label-input [id]="'value_preview_'+ id " [options]="previewValOptions"></ps-label-input>
+</div>

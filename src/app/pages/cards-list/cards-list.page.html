@@ -1,0 +1,17 @@
+<ps-template-view [options]="templateViewOptions">
+    <ps-select-segment (segmentButtonClicked)="onClickSegment($event)" [options]="segmentOptions">
+    </ps-select-segment>
+    <div *ngIf="showCreditCards">
+        <ps-option-card id="ps-option-cards-list" [options]="creditCardOptions"></ps-option-card>
+        <div *ngIf="nocreditcards" class="no-account-text">
+            <ps-label [options]="creditCardLabelOptions"></ps-label>
+        </div>
+    </div>
+    <div *ngIf="showDebitCards">
+        <ps-option-card id="ps-option-cards-list" [options]="debitCardOptions"></ps-option-card>
+        <div *ngIf="nodebitcards" class="no-account-text">
+            <ps-label [options]="debitCardLabelOptions"></ps-label>
+        </div>
+    </div>
+
+</ps-template-view>

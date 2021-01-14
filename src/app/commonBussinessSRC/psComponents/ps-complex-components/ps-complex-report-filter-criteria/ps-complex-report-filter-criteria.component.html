@@ -1,0 +1,77 @@
+<!-- added so that panel can also be hidden if filters are not available -->
+<ps-container-panel [options]="filterCriteriaPanelOptions" id="online_reg_panel1">
+
+    <!-- <ps-keyin-input id="marketDate" [options]='marketDate'></ps-keyin-input> -->
+    <ps-keyin-date [options]="marketDate" id="marketDate"></ps-keyin-date>
+
+    <!-- STATEMENT -->
+
+    <ps-lov-transaction-type id="filterTransactionType" [options]="transactionTypesOptions">
+    </ps-lov-transaction-type>
+
+
+    <!-- TRANSFERS -->
+
+    <ps-input-numeric id="filterReferenceNumber" [options]="filterReferenceNumberOptions"></ps-input-numeric>
+
+
+    <!-- TRANSFERS -->
+
+    <!-- <ps-select-dropdown id="filterStatus" [options]="filterStatusOptions"></ps-select-dropdown> -->
+
+    <!-- STATUS -->
+    <ps-lov-status id="status" [options]="filterStatusOptions" (onPsChange)="onChangeLov($event)"></ps-lov-status>
+
+
+    <!-- STATEMENT || TRANSFERS -->
+
+    <ps-complex-date-filter id="filterDate" [options]="filterDate" *ngIf="showDate"></ps-complex-date-filter>
+
+
+
+    <ps-input-numeric id="nbOfTransactions" [options]="nbOfTransactions"></ps-input-numeric>
+
+
+    <!-- TRANSFERS 85 -->
+
+    <ps-complex-filter-amount id="filterAmount" [options]="filterAmountOptions"></ps-complex-filter-amount>
+
+
+    <!-- EXCHANGE || TRANSFERS -->
+
+    <ps-dropdown-currencies id="currencyCode" [options]="currencyOptions"></ps-dropdown-currencies>
+
+
+
+    <ps-date-day-month-year-past id="date_day_month_year_past" [options]="filterDateOptions">
+    </ps-date-day-month-year-past>
+
+
+    <!-- STATEMENT -->
+
+    <ps-dropdown-portfolio *ngIf="showPortfolioList" id="portfolio" [options]="filterPortfolioOptions">
+    </ps-dropdown-portfolio>
+
+    <!-- SUKUK TYPE -->
+    <ps-input-varchar id="sukukType" [options]="sukukTypeOptions"></ps-input-varchar>
+
+    <!-- ISDARA-->
+    <ps-input-varchar id="isdara" [options]="isdaraOptions"></ps-input-varchar>
+
+
+    <!-- ACTIVITY lOG -->
+    <ps-dropdown-activity id="activityFilter" [options]="activityFilterOptions">
+    </ps-dropdown-activity>
+
+
+    <div class="row container-fluid filterButtonOptions ">
+        <ps-action-button [options]="filterRestButtonOptions" class="col-6" id='filter_reset_button'
+            (onClick)="resetReport()">
+        </ps-action-button>
+        <ps-action-button [options]="filterButtonOptions" class="col-6" id='filter_submit_button'
+            (onClick)="filterReport()">
+        </ps-action-button>
+    </div>
+
+
+</ps-container-panel>

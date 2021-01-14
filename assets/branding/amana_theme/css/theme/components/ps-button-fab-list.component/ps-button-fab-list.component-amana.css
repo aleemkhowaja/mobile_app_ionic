@@ -1,0 +1,16 @@
+:root {
+    --ps-fab-button-size: 55px;
+}
+
+ps-button-fab-list ion-fab-button {
+    --background: #ffffff7a !important;
+}
+
+ps-button-fab-list ion-fab-button.fab-button-in-list {
+    --background: white !important;
+}
+
+ps-button-fab-list ion-fab-button.fab-button-in-list ion-icon,
+ps-button-fab-list ion-fab-button.fab-button-in-list ps-label {
+    color: #704897;
+}

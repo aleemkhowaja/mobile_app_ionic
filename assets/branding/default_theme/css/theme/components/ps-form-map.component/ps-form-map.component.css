@@ -1,0 +1,64 @@
+/* ps-form-map * {
+    height: 100%;
+} */
+
+ps-form-map .ps-form-map {
+    height: 100%;
+}
+
+ps-form-map .ps-map-legend {
+    background: #ffffffb5;
+    padding: 5px;
+}
+
+ps-form-map .ps-map-legend .legend-title {
+    font-size: var(--ps-md-font) !important;
+    display: none;
+}
+
+ps-form-map * {
+    font-size: var(--ps-md-font) !important;
+}
+
+ps-form-map .legend-wrapper {
+    width: 5em;
+    color: var(--ps-map-legend-color);
+}
+
+ps-form-map .legend-wrapper{
+        display:none;
+}
+
+ps-form-map .legend-item .legend-item-icon img {
+    height: 1em;
+    width: 1em;
+}
+
+ps-form-map .legend-wrapper .ps-action-icon-container {
+    padding: 0px !important;
+}
+
+
+ps-form-map .legend-wrapper .ps-action-image-label,
+ps-form-map .legend-wrapper .ps-action-image-image {
+    -webkit-box-flex: 0;
+    flex: 0 0 50%;
+    max-width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+ps-form-map .ps-container-form-content {
+    scrollbar-color: var(--ps-scrollbar-color-firefox);
+    scrollbar-width: var(--ps-scrollbar-width);
+}
+.legend-branch {
+    position: relative;
+    right: 1.3em;
+}
+.isWeb-Layout .mapAtmBranchModal .modal-wrapper {
+    width: 30%;
+    position: relative;
+    min-height: 20rem;
+    bottom: 12%;
+}

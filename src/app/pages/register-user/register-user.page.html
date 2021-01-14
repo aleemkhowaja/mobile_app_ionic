@@ -1,0 +1,21 @@
+<ps-template-stepper [options]="options">
+  <ps-form-step step1 [id]="options.namesofSteps[0]">
+
+    <ps-container-panel [options]="panelOptions1">
+
+      <ps-input-username [options]="userId"></ps-input-username>
+
+      <ps-input-free-text [options]="username"></ps-input-free-text>
+
+      <ps-dropdown-sub-profile [options]="subProfile"></ps-dropdown-sub-profile>
+
+      <ps-input-email [options]="userEmail"></ps-input-email>
+
+      <ps-entity-phone-number [options]="phoneOptions"></ps-entity-phone-number>
+
+      <ps-lov-preferred-language [options]="alertLanguage"></ps-lov-preferred-language>
+
+    </ps-container-panel>
+  </ps-form-step>
+
+</ps-template-stepper>

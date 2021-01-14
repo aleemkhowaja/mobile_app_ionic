@@ -1,0 +1,5 @@
+<ps-container-complex class="ps-confirm-pin" [id]="'confirm_pin' + id" *ngIf="isRequireTransactionPassword">
+  <ps-complex-password-confirm id="complex_confirm_pin" [options]="defaultOptions"
+    (onPasswordChange)="onChangePin($event)" (onConfirmPasswordChange)="onChangeConfirmPin($event)">
+  </ps-complex-password-confirm>
+</ps-container-complex>

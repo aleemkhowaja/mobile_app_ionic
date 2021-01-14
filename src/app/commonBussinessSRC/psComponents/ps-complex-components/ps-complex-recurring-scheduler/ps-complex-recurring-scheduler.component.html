@@ -1,0 +1,21 @@
+<ps-container-complex [id]="'container_complex_' + id">
+
+    <ps-lov-periodicity [id]="id" [options]="priodicityOptions" (onPsChange)="onChangePriodicityLov($event)">
+    </ps-lov-periodicity>
+
+
+    <ps-input-count [hidden]="singleDate" [options]="endCountOptions" (onPsChange)="onChangePriodicityEnd($event)">
+    </ps-input-count>
+
+
+    <!-- <full-calendar class='fc-scheduler' #calendar defaultView="dayGridMonth" [header]="
+    {
+        left: 'prev,next',
+        center: 'title',
+        right: ''
+    }" [plugins]="calendarPlugins" [weekends]="calendarWeekends" [events]="calendarEvents"
+        (dateClick)="handleDateClick($event)"></full-calendar> --> 
+    <full-calendar deepChangeDetection="true"  class='fc-scheduler' #calendar [options]="calendarOptions">
+    </full-calendar>
+
+</ps-container-complex>

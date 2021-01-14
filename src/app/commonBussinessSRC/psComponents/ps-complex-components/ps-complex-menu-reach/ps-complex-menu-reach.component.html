@@ -1,0 +1,12 @@
+<ps-container-complex class="ps-complex-menu-reach" [id]="'container_complex' + id">
+  <ps-action-button [options]="infoOptions" [id]="'button_faq' + id" (onClick)="faqClickHandler()">
+  </ps-action-button>
+  <ps-button-call class="ps-action-button" [id]="'button_call' + id" [options]="callOptions"></ps-button-call>
+  <ps-notification-defaulted class="ps-action-button" [id]="'button_notification' + id" [options]="notificationOptions"
+    (click)="notificationClickHandler()">
+  </ps-notification-defaulted>
+  <ps-email-us-defaulted class="ps-action-button" [id]="'button_email' + id" [options]="emailUsOptions">
+  </ps-email-us-defaulted>
+  <ps-action-button [options]="pendingApprovalOptions" [id]="'button_pap' + id" (onClick)="PendingApprovalClickHandler($event)">
+  </ps-action-button>
+</ps-container-complex>

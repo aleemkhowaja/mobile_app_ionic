@@ -1,0 +1,21 @@
+<ps-container-complex>
+
+
+  <ps-input-varchar *ngIf="!options.isInstitutionType && options.customerNameOptions"
+    [options]="options.customerNameOptions"></ps-input-varchar>
+
+  <!-- Updated by Hisham.Omar TP#1136182 start-->
+  <ps-date-day-month-year-past-asString *ngIf="!options.isInstitutionType" [options]="options.psDobOptions"
+    [id]="'dob_' + id" class="ps-date-month-year">
+  </ps-date-day-month-year-past-asString>
+  <!-- Updated by Hisham.Omar TP#1136182 end-->
+
+
+  <ps-dropdown-nationalities [options]="options.nationalityOptions" [id]="'nationality_' + id">
+  </ps-dropdown-nationalities>
+
+
+  <ps-dropdown-marital-status *ngIf="!options.isInstitutionType" [options]="options.maritalstatusOptions"
+    [id]="'maritalstatus_' + id"></ps-dropdown-marital-status>
+
+</ps-container-complex>

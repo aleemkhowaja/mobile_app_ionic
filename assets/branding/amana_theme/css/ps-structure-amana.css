@@ -1,0 +1,19 @@
+.isWeb-Layout.userIsNotLoggedIn body {
+    background-image: url('/assets/branding/amana_theme/imgs/Background-image-web.jpg') !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.isMobile-Layout body {
+    background-image: url('/assets/branding/amana_theme/imgs/Background-image.jpg') !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.isMobile-Layout ion-router-outlet .ion-page {
+    background-image: url('/assets/branding/amana_theme/imgs/Background-image.jpg') !important;
+}
+
+/* ::-webkit-scrollbar {
+    width: 1px !important;
+} */

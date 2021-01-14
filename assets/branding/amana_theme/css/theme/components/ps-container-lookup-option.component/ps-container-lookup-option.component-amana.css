@@ -1,0 +1,33 @@
+.ps-container-lookup-option-details .mat-card {
+    background-color: rgb(28, 9, 45);
+}
+
+.ps-container-lookup-option-details .lookup-details-header {
+    background: none !important;
+}
+
+.ps-container-lookup-option-details .ps-balance .current-balance-div {
+    background: unset;
+    border-right: 0px;
+}
+
+.ps-container-lookup-option-details .ps-balance .available-balance-div {
+    background-color: unset !important;
+}
+
+ps-container-lookup-option mat-card-title ps-action-image {
+    display: none;
+}
+
+.show-more-less-icon {
+    background: none !important;
+}
+
+.show-more-less-icon {
+    background: none !important;
+}
+
+.card-action-buttons {
+    background: #644876 !important;
+}
+

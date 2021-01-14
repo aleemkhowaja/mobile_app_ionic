@@ -1,0 +1,26 @@
+/* Newly added by DK */
+
+.ps-action-anchor:hover {
+    text-decoration: underline !important;
+}
+
+.ps-action-anchor {
+    background: transparent !important;
+    outline: none;
+    /* text-decoration: underline !important; */
+}
+
+.ps-action-anchor:active {
+    color: var(--ps-focused-field-color);
+}
+
+.ps-action-anchor a {
+    color: var(--ps-lbl) !important;
+}
+
+.ps-action-anchor a:hover {
+    color: var(--ps-link-hover-color) !important;
+    /* --ps-lbl-focus-color replaced by the new variable added by DK */
+    text-decoration: underline !important;
+    /* Newly added by DK */
+}

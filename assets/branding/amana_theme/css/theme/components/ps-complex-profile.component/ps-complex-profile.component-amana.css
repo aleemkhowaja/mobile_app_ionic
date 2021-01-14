@@ -1,0 +1,24 @@
+.isMobile-Layout .ps-complex-profile {
+    background: none !important;
+}
+
+.welcome-label-value {
+    font-weight: 600;
+}
+
+
+ps-dropdown-allowed-languages  .main-dropdown-wrapper{
+    max-width: 100%;
+}
+/* ps-template-landing-fab-ui ps-complex-profile, ps-template-landing-fab-ui ps-complex-profile *{
+    height: 72pt !important;
+} */
+
+.select-drop-down-img-wrapper{
+    display:none;
+}
+
+ps-complex-profile ps-dropdown-allowed-languages .mat-select-arrow {
+    border-right: 0px solid transparent;
+    border-top: 0px solid;
+}

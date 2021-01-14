@@ -1,0 +1,9 @@
+<ps-icon-customization *ngIf="custMode" [id]="'cust_icon_'+ id" [options]="custIconOptions"></ps-icon-customization>
+<ng-container *ngIf="visible || custMode">
+  <a [id]="id" class="ps-action-anchor" [ngClass]="options.psClass">
+    <ps-action-icon *ngIf="options?.iconOptions" [options]="options.iconOptions"
+      (onClick)="onButtonClick(options.anchorValue)"></ps-action-icon>
+    <ps-action-image *ngIf="options?.imageOptions" [options]="options.imageOptions"
+      (onClick)="onButtonClick(options.anchorValue)"></ps-action-image>
+  </a>
+</ng-container>

@@ -1,0 +1,133 @@
+<ps-template-stepper [options]="stepperOptions" [id]="stepperOptions.stepperName">
+  <ps-form-step step1 [id]="stepperOptions.namesofSteps[0]">
+    <ps-container-panel [options]="panelOptions1Step1" id="personal_info_panel">
+
+      <ps-keyin-input id="first_name" [options]="firstNameOptions">
+
+      </ps-keyin-input>
+      <ps-keyin-input id="middle_name" [options]="middleNameOptions">
+
+      </ps-keyin-input>
+      <ps-keyin-input id="last_name" [options]="lastNameOptions">
+
+      </ps-keyin-input>
+      <ps-keyin-input id="short_arabic_name" [options]="shortArabicNameOptions">
+
+      </ps-keyin-input>
+      <ps-keyin-input id="long_arabic_name" [options]="longArabicNameOptions">
+
+      </ps-keyin-input>
+      <ps-entity-phone-number id="phone_number" [options]="phoneNumberOptions"></ps-entity-phone-number>
+      <ps-input-email id="email" [options]="emailOptions">
+      </ps-input-email>
+
+    </ps-container-panel>
+    <ps-container-panel [options]="panelOptions2Step1" id="on_bording_pane2">
+      <ps-complex-select-branch [options]="selectBranchOptions" (onPsChange)="onSelectBranch($event)">
+      </ps-complex-select-branch>
+    </ps-container-panel>
+
+
+    <ps-container-panel [options]="panelAditionalInformationOptions" id="additional_info_panel">
+
+      <ps-complex-personal-details [options]="defaultPersonalDetailsOptions"></ps-complex-personal-details>
+
+      <ps-lov-gender [options]="genderOptions" id="gender"></ps-lov-gender>
+
+      <ps-dropdown-legal-status id="'lstatus' + id" [options]="lstatusOptions"></ps-dropdown-legal-status>
+
+      <ps-complex-eco-sector id="ps-complex-eco-sector-id" [options]="complexEcoSectorOptions">
+      </ps-complex-eco-sector>
+
+    </ps-container-panel>
+
+  </ps-form-step>
+
+
+  <ps-form-step step2 [id]="stepperOptions.namesofSteps[1]">
+    <ps-container-panel [options]="panelIdDetailsOptions" id="id_details_panel">
+
+      <ps-complex-cif-id-types *ngIf="showCifDetails" [options]="defaultCifIdTypesOptions"></ps-complex-cif-id-types>
+
+
+      <ps-input-numeric id="input_free_text" [options]="tinNumberOptions">
+      </ps-input-numeric>
+
+    </ps-container-panel>
+    <ps-container-panel [options]="panelOptions1Step2" id="address_details_panel">
+
+      <ps-complex-address [options]="addressOptions2"></ps-complex-address>
+
+    </ps-container-panel>
+
+    <ps-container-panel [options]="panelEmployementDetailsOptions" id="employment_details_panel">
+
+      <ps-complex-employment-details [options]="defaultEmployeeOptions" id="employment_details">
+      </ps-complex-employment-details>
+
+    </ps-container-panel>
+
+    <ps-container-panel [options]="panelAttachementOptions" id="attachments_panel">
+
+      <ps-label class="upload-title" [options]="fileUploadLabelDescription" id="file_upload_label_desc">
+      </ps-label>
+
+      <ps-file-upload [options]="fileUploadOptions" id="ps-file-upload">
+      </ps-file-upload>
+
+      <ps-input-varchar [options]="commentOptions" id="comments"></ps-input-varchar>
+
+    </ps-container-panel>
+  </ps-form-step>
+
+  <ps-form-step step3 [id]="stepperOptions.namesofSteps[2]">
+    <ps-container-panel [options]="panelOptions1Step3" id="user_credentials_panel">
+
+      <ps-complex-user-credentials [options]="userCredentialsOptions" id="user_credential">
+      </ps-complex-user-credentials>
+
+    </ps-container-panel>
+  </ps-form-step>
+
+  <ps-form-step step4 [id]="stepperOptions.namesofSteps[3]">
+    <ps-map-atm-branches class="component-map-container" [options]="mapAtmBranchesOptions" id="map_atm_branches">
+    </ps-map-atm-branches>
+  </ps-form-step>
+
+  <ps-form-step step5 [id]="stepperOptions.namesofSteps[4]">
+    <ps-container-panel [options]="panelOptions1Step4" id="accounts_panel">
+
+      <ps-dropdown-account-types id='accountType' [options]="accountTypeOptions"
+        (onPsChange)="accountTypeChecking($event)"></ps-dropdown-account-types>
+
+
+      <ps-dropdown-currencies id='currency' [options]="currencyOptions"></ps-dropdown-currencies>
+
+
+      <ps-select-toggle *ngIf="showCardToggle" id='card_flag' [options]="cardcheckboxOptions"
+        (onPsChange)="cardChecking($event)">
+      </ps-select-toggle>
+
+
+      <ps-lov-card-types *ngIf="showCardTypelookup" [options]="cardsLookupOptiops" id="card_type"
+        (onPsChange)="cardTypeChecking($event)">
+      </ps-lov-card-types>
+
+
+      <ps-dropdown-card-types *ngIf="showDebitCardTypes" id="debitCardType" [options]="debitCardTypeOptions">
+      </ps-dropdown-card-types>
+
+
+      <ps-dropdown-card-types *ngIf="showCreditCardTypes" id="creditCardType" [options]="creditCardTypeOptions">
+      </ps-dropdown-card-types>
+
+
+      <ps-select-toggle *ngIf="showChequeBookToggle" id='chequebook_flag' [options]="chequeBookcheckboxOptions"
+        (onPsChange)="chequeBookChecking($event)"></ps-select-toggle>
+
+      <ps-dropdown-chequebook-types *ngIf="showChequebooklookup" id="'cheq_req_transfer_to"
+        [options]="chequebookTypeOptions">
+      </ps-dropdown-chequebook-types>
+    </ps-container-panel>
+  </ps-form-step>
+</ps-template-stepper>

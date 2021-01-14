@@ -1,0 +1,56 @@
+<ps-container-complex class="ps-complex-card-details-atm-cdm" [id]="id" (swipe)="onSwipe()">
+    <div class="container-fluid modal-close-icon-container">
+        <div class="row modal-close-icon-row">
+            <div class="widget-menu-icon-back">
+                <ps-action-icon class="modal-close-icon" [options]="closeIcon" (onClick)="dismissPopover()">
+                </ps-action-icon>
+            </div>
+            <div class="card-title widget-header-title">
+                <ps-label [options]="cardDetailsTitle"></ps-label>
+            </div>
+        </div>
+    </div>
+
+    <ps-container-panel [options]="panel1Options" [id]="id + '_panel'" (swipe)="onSwipe()"
+        *ngIf="options.countryName !== undefined || options.cityName !== undefined">
+
+        <div class="ps-complex-card-details-atm-cdm-item ion-float-start" *ngIf="options.countryName !== undefined">
+            <ps-label class="ps-complex-card-details-atm-cdm-item-label ion-float-start"
+                [options]="countryLabelOptions"></ps-label>
+            <span class="ion-float-start">: </span>
+            <ps-label class="ps-complex-card-details-atm-cdm-item-value ion-float-start"
+                [options]="countryLabelValueOptions"></ps-label>
+        </div>
+
+
+        <div class="ps-complex-card-details-atm-cdm-item ion-float-start" *ngIf="options.cityName !== undefined">
+            <ps-label class="ps-complex-card-details-atm-cdm-item-label ion-float-start" [options]="cityLabelOptions">
+            </ps-label>
+            <span class="ion-float-start">: </span>
+            <ps-label class="ps-complex-card-details-atm-cdm-item-value ion-float-start"
+                [options]="cityLabelValueOptions"></ps-label>
+        </div>
+
+    </ps-container-panel>
+    <ps-container-panel [options]="panel2Options" [id]="id + '_panel2'" (swipe)="onSwipe()"
+        *ngIf="options.locationDetails !== undefined || concatLocationLabelValueOptions.labelKey !== undefined">
+
+        <div class="ps-complex-card-details-branch-item ion-float-start">
+            <ps-label class="ps-complex-card-details-branch-item-value ion-float-start"
+                [options]="locationDetailsLabelValueOptions"></ps-label>
+            <ps-label class="ps-complex-card-details-branch-item-value ion-float-start"
+                [options]="concatLocationLabelValueOptions"
+                *ngIf="concatLocationLabelValueOptions.labelKey !== undefined"></ps-label>
+        </div>
+
+    </ps-container-panel>
+    <div *ngIf="options.countryName !== undefined || options.cityName !== undefined" class="item-divider">
+    </div>
+
+    <div class="container map-atm-branch-details-bottom">
+        <div class="row ">
+            <ps-button-direction [id]="id + '_direction_btn'" [options]="directionOptions" (onClick)="onDirection()">
+            </ps-button-direction>
+        </div>
+    </div>
+</ps-container-complex>

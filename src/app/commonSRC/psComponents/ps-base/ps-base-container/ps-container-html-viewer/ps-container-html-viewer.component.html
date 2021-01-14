@@ -1,0 +1,13 @@
+<div *ngIf="fullPath && !options.parseHtmlFromFile" class="ps-html-viewer-wrapper">
+  <iframe [id]="id" [src]="fullPath | PsSafe: 'resourceUrl'" frameBorder="0" scrolling="no"></iframe>
+</div>
+
+
+
+<div *ngIf="options?.htmlSrc" class="ps-html-viewer-wrapper" #psInlineHtmlWrapper>
+  <div id="ps-inline-html" class="table-responsive ps-inline-html" [id]="id"
+    [innerHTML]="options?.htmlSrc | PsSafe: 'html'" #psInlineHtml></div>
+</div>
+<ng-container *ngIf="!wasChecked && options?.htmlSrc">
+  {{checkReportSize()}}
+</ng-container>

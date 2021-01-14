@@ -1,0 +1,24 @@
+.ps-label-cifname {
+    color: var(--ps-font-light-color);
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    line-height: 150%;
+    font-size: var(--ps-lg-font) !important;
+    display: flex;
+    font-weight: normal;
+}
+
+.ps-label-cifname ion-label {
+    white-space: normal;
+}
+
+.ps-label-username {
+    color: var(--ps-font-light-color);
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    line-height: 150%;
+    font-size: var(--ps-lg-font) !important;
+    display: flex;
+}

@@ -1,0 +1,6 @@
+ps-label ion-label {
+    max-width: 100% !important;
+    /* Overide Ionic code max-width: 200px*/
+    /* display: inline-block !important; */
+    width: 100% !important;
+}

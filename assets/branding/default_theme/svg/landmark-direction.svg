@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="54.006359mm"
+   height="504.38269mm"
+   viewBox="0 0 191.36111 1787.1828"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="landmark-direction.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="-395.56846"
+     inkscape:cy="830.33593"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1057"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-333.4256,424.48457)">
+    <g
+       id="g4221"
+       transform="matrix(0.82347741,-0.36235806,0.36235806,0.82347741,-756.73343,7.9874331)">
+      <g
+         id="White_background" />
+      <g
+         id="Compass">
+        <g
+           id="g4142">
+          <g
+             id="g4144">
+            <polygon
+               id="polygon4146"
+               points="902.87,956.75 597.8,1902.34 597.08,1904.94 999.99,1000 "
+               class="st0"
+               style="fill:#0071bc" />
+            <polygon
+               id="polygon4148"
+               points="597.19,1904.99 598.37,1902.6 1097.16,1043.26 999.99,1000 596,1907.37 "
+               class="st1"
+               style="fill:#005187" />
+            <polygon
+               id="polygon4150"
+               points="1097.14,1043.25 1402.2,97.66 1402.92,95.06 1000.01,1000.01 "
+               class="st2"
+               style="fill:#990000" />
+            <polygon
+               id="polygon4152"
+               points="1402.81,95.01 1401.63,97.4 902.85,956.74 1000.01,1000.01 1404,92.63 "
+               class="st3"
+               style="fill:#ff0000" />
+          </g>
+          <g
+             id="g4154">
+            <linearGradient
+               y2="1048.7594"
+               x2="1075.0857"
+               y1="951.25177"
+               x1="924.93707"
+               gradientUnits="userSpaceOnUse"
+               id="SVGID_1_">
+              <stop
+                 id="stop4157"
+                 style="stop-color:#E1DEDB"
+                 offset="0" />
+              <stop
+                 id="stop4159"
+                 style="stop-color:#D8D4D1"
+                 offset="0" />
+              <stop
+                 id="stop4161"
+                 style="stop-color:#C9C5C3"
+                 offset="0.0553" />
+              <stop
+                 id="stop4163"
+                 style="stop-color:#A49E9F"
+                 offset="0.161" />
+              <stop
+                 id="stop4165"
+                 style="stop-color:#797377"
+                 offset="0.264" />
+              <stop
+                 id="stop4167"
+                 style="stop-color:#F2F2F2"
+                 offset="0.5225" />
+              <stop
+                 id="stop4169"
+                 style="stop-color:#E4E3E3"
+                 offset="0.5775" />
+              <stop
+                 id="stop4171"
+                 style="stop-color:#BFBCBD"
+                 offset="0.6832" />
+              <stop
+                 id="stop4173"
+                 style="stop-color:#837E7F"
+                 offset="0.8274" />
+              <stop
+                 id="stop4175"
+                 style="stop-color:#6D6769"
+                 offset="0.8764" />
+              <stop
+                 id="stop4177"
+                 style="stop-color:#C9C8C8"
+                 offset="1" />
+              <stop
+                 id="stop4179"
+                 style="stop-color:#979695"
+                 offset="1" />
+            </linearGradient>
+            <path
+               id="path4181"
+               d="m 1089.52,1000.01 c 0,49.43 -40.07,89.5 -89.5,89.5 -49.43,0 -89.51,-40.07 -89.51,-89.5 0,-49.43 40.07,-89.51 89.51,-89.51 49.42,0 89.5,40.07 89.5,89.51 z"
+               class="st4"
+               inkscape:connector-curvature="0"
+               style="fill:url(#SVGID_1_)" />
+            <g
+               id="g4183">
+              <path
+                 id="path4185"
+                 d="m 1076.6,1000.01 c 0,42.3 -34.29,76.59 -76.59,76.59 -42.3,0 -76.59,-34.29 -76.59,-76.59 0,-42.3 34.29,-76.59 76.59,-76.59 42.3,-0.01 76.59,34.29 76.59,76.59 z"
+                 class="st5"
+                 inkscape:connector-curvature="0"
+                 style="fill:#1a1a1a" />
+              <linearGradient
+                 y2="1009.3171"
+                 x2="1020.9241"
+                 y1="990.6955"
+                 x1="979.09912"
+                 gradientUnits="userSpaceOnUse"
+                 id="SVGID_2_">
+                <stop
+                   id="stop4188"
+                   style="stop-color:#E1DEDB"
+                   offset="0" />
+                <stop
+                   id="stop4190"
+                   style="stop-color:#D8D4D1"
+                   offset="0" />
+                <stop
+                   id="stop4192"
+                   style="stop-color:#C9C5C3"
+                   offset="0.0553" />
+                <stop
+                   id="stop4194"
+                   style="stop-color:#A49E9F"
+                   offset="0.161" />
+                <stop
+                   id="stop4196"
+                   style="stop-color:#797377"
+                   offset="0.264" />
+                <stop
+                   id="stop4198"
+                   style="stop-color:#F2F2F2"
+                   offset="0.5225" />
+                <stop
+                   id="stop4200"
+                   style="stop-color:#E4E3E3"
+                   offset="0.5775" />
+                <stop
+                   id="stop4202"
+                   style="stop-color:#BFBCBD"
+                   offset="0.6832" />
+                <stop
+                   id="stop4204"
+                   style="stop-color:#837E7F"
+                   offset="0.8274" />
+                <stop
+                   id="stop4206"
+                   style="stop-color:#6D6769"
+                   offset="0.8764" />
+                <stop
+                   id="stop4208"
+                   style="stop-color:#C9C8C8"
+                   offset="1" />
+                <stop
+                   id="stop4210"
+                   style="stop-color:#979695"
+                   offset="1" />
+              </linearGradient>
+              <path
+                 id="path4212"
+                 d="m 1022.9,1000.01 c 0,12.64 -10.24,22.88 -22.88,22.88 -12.64,0 -22.89,-10.24 -22.89,-22.88 0,-12.64 10.25,-22.89 22.89,-22.89 12.63,0 22.88,10.25 22.88,22.89 z"
+                 class="st6"
+                 inkscape:connector-curvature="0"
+                 style="fill:url(#SVGID_2_)" />
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+  <style
+     id="style4138"
+     type="text/css">
+	.st0{fill:#0071BC;}
+	.st1{fill:#005187;}
+	.st2{fill:#990000;}
+	.st3{fill:#FF0000;}
+	.st4{fill:url(#SVGID_1_);}
+	.st5{fill:#1A1A1A;}
+	.st6{fill:url(#SVGID_2_);}
+</style>
+</svg>

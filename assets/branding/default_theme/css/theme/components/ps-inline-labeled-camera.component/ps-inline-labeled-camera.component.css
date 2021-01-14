@@ -1,0 +1,29 @@
+.profile-info {
+    border-radius: 50%;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    width: 128px;
+    height: 128px;
+    overflow: hidden;
+    position: relative;
+    margin: 2% auto;
+}
+
+.profile-image {
+    border-radius: 100%;
+}
+
+.upload-profile-overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    color: var(--ps-font-light-color);
+    width: 100%;
+    transition: .5s ease;
+    font-size: var(--ps-md-font) !important;
+    padding: 2px;
+    text-align: center;
+    opacity: 1;
+    left: 0;
+}

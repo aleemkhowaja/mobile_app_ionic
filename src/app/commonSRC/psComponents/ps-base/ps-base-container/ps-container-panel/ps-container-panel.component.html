@@ -1,0 +1,37 @@
+<ps-base-container #containerPanel>
+  <ps-icon-customization *ngIf="custMode" [id]="'cust_icon_'+ id" [options]="custIconOptions"></ps-icon-customization>
+  <ion-card class="ps-container-panel" *ngIf="options && (visible||custMode) && !previewMode">
+    <ps-container-item class="ps-container-panel-item" (click)="handleExpandicon()" [options]="itemOptions"
+      [ngClass]="options.expanded?'is-expanded':'is-collapsed'">
+      <div class="ps-container-panel-icon">
+        <ps-action-icon class="text-center ps-container-panel-description-icon" *ngIf="options.iconName"
+          [options]="iconOptions">
+        </ps-action-icon>
+        <ps-action-image class="text-center ps-container-panel-description-icon" *ngIf="options.iconUrl"
+          [options]="imageOptions">
+        </ps-action-image>
+      </div>
+      <ps-label-nav class="col-8 text-center ps-container-panel-title" *ngIf="options.labelKey"
+        [options]="labelOptions">
+      </ps-label-nav>
+
+      <!-- <div class="col number-of-invalid-inputs" *ngIf="validationResponse && numberOfInvalidControls>0">
+          {{numberOfInvalidControls}}
+        </div> -->
+
+      <div class="col ps-container-panel-expand-icon">
+        <ps-action-icon *ngIf="options.isExpandable" class="text-center ps-container-panel-expandable-icon"
+          [options]="openOptions" [ngClass]="{'offset-11':!options.labelKey && !options.iconName && !options.iconUrl}">
+        </ps-action-icon>
+      </div>
+
+    </ps-container-item>
+    <div [hidden]="!options.expanded" class="ps-container-panel-content slide-bottom">
+      <ps-base-container-body>
+        <ng-content>
+
+        </ng-content>
+      </ps-base-container-body>
+    </div>
+  </ion-card>
+</ps-base-container>

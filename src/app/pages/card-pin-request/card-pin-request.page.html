@@ -1,0 +1,17 @@
+<ps-template-form [options]="options">
+  <ps-container-panel [options]="panelOptions1">
+
+    <ps-option-card id="ps-option-cards-list" [options]="debitCardOptions"></ps-option-card>
+
+    <!-- </ps-container-panel>
+  <ps-container-panel [options]="panelOptions2"> -->
+
+    <ps-input-password *ngIf="change" [options]="optionsPassword">
+    </ps-input-password>
+
+
+    <ps-complex-password-confirm id="complex_password_confirm" [options]="pinConfirmOptions">
+    </ps-complex-password-confirm>
+
+  </ps-container-panel>
+</ps-template-form>

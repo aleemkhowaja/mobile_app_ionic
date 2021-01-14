@@ -1,0 +1,94 @@
+:root {
+	--ps-root-menu-background-color: var(--ps-secondary-color); /* Dark Blue */
+	--ps-root-menu-font-color: White;
+	
+	--ps-parent-menu-background-color: #3C48B1;
+	--ps-parent-menu-font-color: White;
+	
+	--ps-leaf-menu-background-color: #3C48B1;
+	--ps-leaf-menu-font-color: White;
+}
+
+
+
+/* Style of the +/- icon - Newly added by DK */
+.ps-menu-main-icon {
+	font-size: 32px !important;
+}
+
+
+.ps-complex-menu-parent:active {
+    /*   background-color: silver !important;
+    font-size: var(--ps-lg-font) !important;
+    font-weight: bold; */
+	color: var(--ps-font-light-color) !important; /* Newly added by DK */
+}
+
+
+.ps-complex-menu-parent,
+ps-action-menu-item {
+    /* background-color: var(--ps-secondary-color) !important; */ /* DK */
+    border-bottom: 0.1px solid White; /* DK */
+}
+
+
+.ps-complex-menu .ps-action-menu-item .ps-label-input {
+    /* padding-inline-start: 27px; Removed by DK */
+    color: var(--ps-font-light-color) !important;
+}
+
+/* Newly added by DK */
+ps-action-menu-item .ps-action-menu-item ps-label-input {
+	 padding-inline-start: 8px;
+}
+
+
+.ps-action-menu-item {
+    /* background-color: #ececec; */ /* DK */
+}
+
+
+
+.ps-complex-menu-parent-has-children>ps-action-menu-item {
+	background: var(--ps-app-header-color-stop1) !important; /* hsla(var(--ps-primary-degree-2-color), 0.2) !important; */ /* DK */
+}
+
+
+.ps-root-menu,
+ps-complex-info .ps-container-list ion-item {
+    /* background: var(--ps-parent-menu-background-color) !important;/* hsla(var(--ps-primary-degree-4-color), 0.4) !important;
+    --background: var(--ps-parent-menu-background-color) !important;/* hsla(var(--ps-primary-degree-4-color), 0.4) !important; Replaced by DK */
+    text-align: start;
+}
+
+/* Completely updated by DK */
+.ps-root-menu {	
+	font-size: calc(var(--ps-md-font)) !important;
+	color: var(--ps-root-menu-font-color) !important;
+	background: var(--ps-root-menu-background-color) !important;
+}
+.ps-root-menu ion-icon:first-child {
+    font-size: calc(var(--ps-lg-font)) !important;
+}
+
+/* Completely updated by DK */
+.ps-parent-menu {
+	font-size: calc(var(--ps-md-font)) !important;
+	color: var(--ps-parent-menu-font-color) !important;
+	background: var(--ps-parent-menu-background-color) !important;
+	/* background: hsla(var(--ps-primary-degree-3-color), 0.4) !important; */
+}
+.ps-parent-menu ion-icon:first-child {
+    font-size: calc(var(--ps-lg-font)) !important;
+}
+
+/* Completely updated by DK */
+.ps-leaf-menu {
+	font-size: calc(var(--ps-md-font)) !important;
+	color: var(--ps-leaf-menu-font-color) !important;
+	background: var(--ps-leaf-menu-background-color) !important;
+	/* background: hsla(var(--ps-primary-degree-1-color), 0.4) !important; */
+}
+.ps-leaf-menu ion-icon:first-child {
+    font-size: calc(var(--ps-lg-font)) !important;
+}

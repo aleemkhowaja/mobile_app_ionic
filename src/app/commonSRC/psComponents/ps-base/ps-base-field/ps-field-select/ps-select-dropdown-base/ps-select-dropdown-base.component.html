@@ -1,0 +1,70 @@
+<div id="selectDropDown">
+
+  <!-- <button *ngIf="custMode && options.labelKey && enableLabeling" class="cust-button" (click)="openCustLabel($event)">
+    <ps-action-icon [options]="wordpressIconOptions"></ps-action-icon>
+  </button> -->
+  <ng-container *ngIf="(visible||custMode) && !previewMode">
+    <div class="ps-select-dropdown" [ngClass]="options.psClass">
+      <ps-container-item class="ps-field-item-wrapper" [options]="itemOptions" [ngClass]="{'disableContent':disabled}">
+        <ps-label-input [options]="labelOptions"></ps-label-input>
+        <img *ngIf="(options.enableLoading && (selectData.length == 0))" [src]="loaderUrl" [ngClass]="psIcon"
+          class="loadingSelect arrowClr" item-start />
+        <!--  <img *ngIf="outerIcon != '' && outerIcon != 'undefined' && outerIcon != null && showExtraInfo" item-start
+          [src]="outerIcon" height="20"> -->
+
+        <!-- <div class="ps-select-dropdown-label" *ngIf="custMode || (options.labelKey && enableLabeling)">
+          <ps-icon-customization *ngIf="custMode" [options]="custIconOptions"></ps-icon-customization>
+        </div> -->
+        <div class="container-fluid select-container-wrapper">
+          <div class="row select-row-wrapper">
+            <div class="dropdown-selected-image"
+              *ngIf="outerIcon != '' && outerIcon != 'undefined' && outerIcon != null && showExtraInfo">
+              <img [src]="outerIcon">
+            </div>
+            <div class="main-dropdown-wrapper"
+              [ngClass]="[outerIcon != '' && outerIcon != 'undefined' && outerIcon != null && showExtraInfo?'col-10':'col-12']">
+              <mat-form-field [formGroup]="options.group"
+                [ngClass]="{'ps-select-has-image':outerIcon != '' && outerIcon != 'undefined' && outerIcon != null && showExtraInfo}">
+                <mat-select id="id_mat" class="mat-select-content" [formControlName]="options.fcName"
+                  [attr.psFcName]="options.fcName" [(ngModel)]="selectedItem"
+                  [placeholder]="getPlaceHolder() | translate" (opened)="onSelectOpened()"
+                  [panelClass]="options.panelClass" #matSelect>
+                  <mat-option *ngFor="let item of selectData" [value]="item.itemValue">
+                    <!-- <ps-icon item-start [class]="item.iconName"> </ps-icon> -->
+                    <span *ngIf="item.iconUrl" class="select-drop-down-img-wrapper">
+                      <img class="select-drop-down-img" [src]="item.iconUrl">
+                    </span>
+                    <span class="select-drop-down-additional-description" [ngClass]="{'image-is-present':item.iconUrl}"
+                      *ngIf="showExtraInfo && !item.disableAdditionalDescrOnSelect">{{item.additionalDescr}}</span>
+                    <span [ngClass]="{'image-is-present':item.iconUrl}"
+                      *ngIf="!(commonProv.isMobile() && item.shortDescription)"
+                      class="select-drop-down-description">{{item.description}}</span>
+                    <span [ngClass]="{'image-is-present':item.iconUrl}" class="select-drop-down-description"
+                      *ngIf="commonProv.isMobile() && item.shortDescription">
+                      {{item.shortDescription}}</span>
+                    <!-- <span item-end>{{item.additionalDescr}}</span> -->
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+
+
+      </ps-container-item>
+      <ng-container *ngIf="showError">
+        <p *ngFor="let e of errorMsgs" class="validation-message">
+          <ps-label [options]="{labelKey: e.msgKey, translate: true}"></ps-label>
+          <ps-label [options]="{labelKey: e.param, translate: false}"></ps-label>
+        </p>
+      </ng-container>
+    </div>
+  </ng-container>
+  <div *ngIf="previewMode" class="ps-custom-component-preview" psPreviewEngine>
+    <ps-label-input *ngIf="options.labelKey" [options]="labelOptions" [id]="'lbl_'+id" class="ps-lbl-preview">
+    </ps-label-input>
+    <span [innerHTML]="delimiter"></span>
+    <!-- get value from get valueDesc fnct; -->
+    <ps-label-input [options]="previewValOptions" [id]="'value_preview_'+id" class="ps-value-preview"></ps-label-input>
+  </div>
+</div>

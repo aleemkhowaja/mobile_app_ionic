@@ -1,0 +1,21 @@
+<ps-container-complex class="ps-complex-financial-calculator">
+
+    <ps-dropdown-product-types [id]="id" [options]="options.productTypesOptions" (onPsChange)="onProductChange($event)">
+    </ps-dropdown-product-types>
+
+
+
+    <ps-complex-amount [options]="options.complexAmountOptions" (onCurrencyChange)="onCurrencyChange($event)"
+        (onAmountChanged)="onAmountChanged($event) "></ps-complex-amount>
+    <ps-label [options]=" options.amountLabelOptions"></ps-label>
+
+
+    <ps-input-amount *ngIf="options.downPaymentExists" [id]="id + '_amount'" [options]="options.downPaymentOptions">
+    </ps-input-amount>
+    <ps-label [options]=" options.paymentsLabelOptions "></ps-label>
+
+
+
+    <ps-input-count [options]="options.numberOfInstallmentsCountOptions"></ps-input-count>
+
+</ps-container-complex>

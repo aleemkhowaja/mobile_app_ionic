@@ -1,0 +1,166 @@
+<mat-vertical-stepper [linear]="true" #stepper class="authentication-matrix">
+    <ng-template matStepperIcon="edit">
+        <mat-icon>done</mat-icon>
+    </ng-template>
+    <mat-step [label]="TransactionPass" *ngIf="transactionPasswordEnabled" [stepControl]="transactionPasswordForm"
+        [editable]="!transactionPasswordCompleted">
+        <ng-template matStepLabel>{{"pin_key" | translate }}</ng-template>
+        <form [formGroup]="transactionPasswordForm">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <ps-input-password [options]="transactionPasswordOptions"
+                            id="transaction_password_authentication"></ps-input-password>
+                        <ps-keyin-input [options]="transactionPasswordValidOptions" [hidden]="true">
+                        </ps-keyin-input>
+                        <p class="error-message" *ngIf="showTransactionPasswordErrorMessage">
+                            {{transactionPasswordErrorMessage}}</p>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step [label]="Password" *ngIf="fingerPrintEnabled && !deviceHaveFingerPrint" [stepControl]="passwordForm"
+        [editable]="!passwordCompleted">
+        <ng-template matStepLabel>{{"password" | translate }}</ng-template>
+        <form [formGroup]="passwordForm">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <ps-input-password [options]="passwordOptions" id="password_authentication"></ps-input-password>
+                        <ps-keyin-input [options]="passwordValidOptions" [hidden]="true">
+                        </ps-keyin-input>
+                        <p class="error-message" *ngIf="showPasswordErrorMessage">
+                            {{passwordErrorMessage}}</p>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step [label]="SecurityQuest" *ngIf="securityQuestionEnabled" [stepControl]="securityQuestionForm"
+        [editable]="!securityQuestionCompleted">
+        <ng-template matStepLabel>{{"security_question_key" | translate }}</ng-template>
+        <form [formGroup]="securityQuestionForm">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <ps-select-dropdown #securityQuestion [options]="securityQuestionOptions"
+                            id="security_question_authentication">
+                        </ps-select-dropdown>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <ps-keyin-input [options]="securityAnswerOptions" id="security_answer_authentication">
+                        </ps-keyin-input>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p class="error-message" *ngIf="showSecurityQuestionErrorMessage">
+                            {{securityQuestionErrorMessage}}</p>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step label="physicalToken" *ngIf="physicalTokenEnabled" [stepControl]="physicalTokenForm"
+        [editable]="!physicalTokenCompleted">
+        <ng-template matStepLabel>{{"physical_token_key" | translate }}</ng-template>
+        <form [formGroup]="physicalTokenForm">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <ps-keyin-input [options]="physicalTokenOptions" id="physical_token_authentication">
+                        </ps-keyin-input>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p class="error-message" *ngIf="physicalTokenErrorMessage">
+                            {{physicalTokenErrorMessage}}</p>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step [label]="OTP" *ngIf="smsOTPEnabled" [stepControl]="smsOTPForm" [editable]="!smsOTPCompleted">
+        <ng-template matStepLabel>{{"otp_key" | translate }}</ng-template>
+        <form [formGroup]="smsOTPForm">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <ps-input-password [options]="smsOtpOptions" id="otp_authentication"></ps-input-password>
+                        <ps-keyin-input [options]="smsOtpValidOptions" [hidden]="true">
+                        </ps-keyin-input>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p class="error-message" *ngIf="showOTPErrorMessageOne">
+                            {{otpErrorMessageOne}}</p>
+                        <p class="error-message" *ngIf="showOTPErrorMessageTwo">
+                            {{otpErrorMessageTwo}}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="offset-2 col-8">
+                        <ps-button-standard [options]="requestOtpOptions" (onClick)="requestOTP()"></ps-button-standard>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step label="Captcha" *ngIf="captchaEnabled" [stepControl]="captchaForm" [editable]="!captchaCompleted">
+        <ng-template matStepLabel>{{"captcha_key" | translate }}</ng-template>
+        <ps-captcha [options]="captchaOptions" (onCaptchaResolved)="onVerifyClicked($event)"></ps-captcha>
+        <p *ngIf="showCaptchaError" class="validation-message">
+            <ps-label [options]="{labelKey: captchaErrorMessage}"></ps-label>
+          </p>
+    </mat-step>
+    <mat-step label="FingerPrint" [stepControl]="fingerPrintForm" *ngIf="fingerPrintEnabled && fingerPrintIsSupported"
+        [editable]="!fingerPrintCompleted">
+        <ng-template matStepLabel>{{"biometric_key" | translate }}</ng-template>
+        <form [formGroup]="fingerPrintForm">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="authentication-success-title">
+                            {{"biometric_key" | translate}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step label="done" [completed]="true" *ngIf="authenticationCompleted">
+        <ng-template matStepLabel>{{"done_key" | translate }}</ng-template>
+        <div class="container-fluid">
+            <div class="row">
+                <div text-center>
+                    <div class="authentication-success-img">
+                        <div class="authentication-success-img-gif col-2">
+                            <ps-action-image [options]="actionImageOptions"></ps-action-image>
+                        </div>
+                    </div>
+                    <div class="authentication-success-title">
+                        {{"authentication_success_key" | translate}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-step>
+</mat-vertical-stepper>
+<div *ngIf="!authenticationCompleted && (stepper?.selected?.label !== isFinger)">
+    <div class="row auth-bottom">
+        <div class="col-5">
+            <ps-button-dismiss [options]="cancelButtonOptions"></ps-button-dismiss>
+        </div>
+        <div class="col-5">
+            <ps-action-button [options]="verifyButtonOptions" [disabled]="verifyButtonDisabled" [id]="authVerifyID"
+                (onClick)="onVerifyClicked()">
+            </ps-action-button>
+        </div>
+
+    </div>
+</div>

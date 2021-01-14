@@ -1,0 +1,15 @@
+
+:root{
+    --ps-date-color: #A390AC;
+}
+
+ps-complex-notification .ps-complex-notification-date-label {
+    font-size: var(--ps-sm-font);
+    color:lightgray !important;
+}
+
+
+.notification-date {
+    color: var(--ps-date-color) !important;
+}
+

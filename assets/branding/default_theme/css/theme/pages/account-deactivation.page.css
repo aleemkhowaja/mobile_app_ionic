@@ -1,0 +1,9 @@
+app-account-deactivation ps-label.text-waring-account-dactivation ion-label {
+    white-space: normal !important;
+    color: #ffffffa3;
+}
+
+app-account-deactivation .account-deactivation-warning {
+    position: absolute;
+    bottom: 0;
+}

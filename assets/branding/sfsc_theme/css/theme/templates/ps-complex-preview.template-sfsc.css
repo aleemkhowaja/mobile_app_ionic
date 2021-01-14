@@ -1,0 +1,15 @@
+/* Newly added by DK */
+ps-complex-preview .ps-container-panel-content ion-text {
+    color: var(--ps-preview-value-color) !important;
+    font-weight: 500;
+}
+
+ps-complex-preview .ps-container-panel-content {
+    background: hsla(var(--ps-panel-background-color), calc(var(--ps-app-opacity-degree) * 1));
+
+}
+
+ps-complex-preview .preview-label ion-label,
+ps-complex-preview .preview-value ion-label {
+    color: rgb(227, 181, 38);
+}

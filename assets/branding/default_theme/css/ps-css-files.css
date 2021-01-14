@@ -1,0 +1,117 @@
+@import "./ps-structure-path.css";
+@import "./ps-grid.css";
+@import "./ps-theme-variables - Path.css";
+@import "./ps-responsive.css";
+
+/*
+    Components UI
+*/
+@import "./theme/components/app.component/app.component.css";
+@import "./theme/components/ps-action-button.component/ps-action-button.component.css";
+@import "./theme/components/ps-container-item.component/ps-container-item.component.css";
+@import "./theme/components/ps-entity-phone-number.component/ps-entity-phone-number.component.css";
+@import "./theme/components/ps-container-panel.component/ps-container-panel.component.css";
+@import "./theme/components/ps-base.component/ps-base.component.css";
+@import "./theme/components/ps-container-footer.component/ps-container-footer.component.css";
+@import "./theme/components/ps-complex-menu-reach.component/ps-complex-menu-reach.component.css";
+@import "./theme/components/ps-complex-info.component/ps-complex-info.component.css";
+@import "./theme/components/ps-complex-menu.component/ps-complex-menu.component.css";
+@import "./theme/components/ps-container-report-viewer.component/ps-container-report-viewer.component.css";
+@import "./theme/components/ps-button-logout.component/ps-button-logout.component.css";
+@import "./theme/components/ps-container-swiper.component/ps-container-swiper.component.css";
+@import "./theme/components/ps-container-html-viewer.component/ps-container-html-viewer.component.css";
+@import "./theme/components/ps-complex-terms-and-conditions.component/ps-complex-terms-and-conditions.component.css";
+@import "./theme/components/ps-file-upload.component/ps-file-upload.component.css";
+@import "./theme/components/ps-keyin-date.component/ps-keyin-date.component.css";
+@import "./theme/components/ps-authentication-matrix.component/ps-authentication-matrix.component.css";
+@import "./theme/components/ps-select-dropdown-base.component/ps-select-dropdown-base.component.css";
+@import "./theme/components/ps-complex-menu-header-container.component/ps-complex-menu-header-container.component.css";
+@import "./theme/components/ps-complex-profile.component/ps-complex-profile.component.css";
+@import "./theme/components/ps-container-flip.component/ps-container-flip.component.css";
+@import "./theme/components/ps-container-form.component/ps-container-form.component.css";
+@import "./theme/components/ps-complex-find-cif.component/ps-complex-find-cif.component.css";
+@import "./theme/components/ps-label.component/ps-label.component.css";
+@import "./theme/components/ps-select-segment.component/ps-select-segment.component.css";
+@import "./theme/components/ps-hyperlink-anchor.component/ps-hyperlink-anchor.component.css";
+@import "./theme/components/ps-button-notification.component/ps-button-notification.component.css";
+@import "./theme/components/ps-complex-notification.component/ps-complex-notification.component.css";
+@import "./theme/components/ps-complex-prayer-time.component/ps-complex-prayer-time.component.css";
+@import "./theme/components/ps-drafts-report.component/ps-drafts-report.component.css";
+@import "./theme/components/ps-container-stepper.component/ps-container-stepper.component.css";
+/* @import "./theme/components/ps-base-container-body.component/ps-base-container-body.component.css"; */
+
+@import "./theme/components/ps-complex-exchange.component/ps-complex-exchange.component.css";
+@import "./theme/components/ps-select-toggle.component/ps-select-toggle.component.css";
+@import "./theme/components/ps-input-display-only.component/ps-input-display-only-value.component.css";
+@import "./theme/components/ps-complex-amount.component/ps-complex-amount.component.css";
+@import "./theme/components/ps-select-checkbox.component/ps-select-checkbox.component.css";
+@import "./theme/components/ps-dropdown-allowed-languages.component/ps-dropdown-allowed-languages.component.css";
+@import "./theme/components/ps-label-welcome.component/ps-label-welcome.component.css";
+@import "./theme/components/ps-button-save.component/ps-button-save.component.css";
+@import "./theme/components/ps-base-field.component/ps-base-field.component.css";
+@import "./theme/components/ps-action-menu-item.component/ps-action-menu-item.component.css";
+@import "./theme/components/ps-container-lookup-option.component/ps-container-lookup-option.component.css";
+@import "./theme/components/ps-action-icon.component/ps-action-icon.component.css";
+@import "./theme/components/ps-balance.component/ps-balance.component.css";
+@import "./theme/components/ps-complex-lookup.component/ps-complex-lookup.component.css";
+@import "./theme/components/ps-input-search-html.component/ps-input-search-html.component.css";
+@import "./theme/components/ps-button-print.component/ps-button-print.component.css";
+@import "./theme/components/ps-keyin-input.component/ps-keyin-input.component.css";
+@import "./theme/components/ps-input-card-number.component/ps-input-card-number.component.css";
+@import "./theme/components/ps-input-count.component/ps-input-count.component.css";
+@import "./theme/components/ps-inline-labeled-camera.component/ps-inline-labeled-camera.component.css";
+@import "./theme/components/ps-button-fab-list.component/ps-button-fab-list.component.css";
+@import "./theme/components/ps-gallery-banners.component/ps-gallery-banners.component.css";
+@import "./theme/components/ps-map-atm-branches.component/ps-map-atm-branches.component.css";
+@import "./theme/components/ps-form-map.component/ps-form-map.component.css";
+@import "./theme/components/ps-button-direction.component/ps-button-direction.component.css";
+@import "./theme/components/ps-form-step.component/ps-form-step.component.css";
+@import "./theme/components/ps-complex-landmark-compass.component/ps-complex-landmark-compass.component.css";
+@import "./theme/components/ps-complex-recurring-scheduler.component/ps-complex-recurring-scheduler.component.css";
+@import "./theme/components/ps-complex-card-details-branch.component/ps-complex-card-details-branch.component.css";
+@import "./theme/components/ps-keyin-textarea.component/ps-keyin-textarea.component.css";
+@import "./theme/components/ps-action-image.component/ps-action-image.component.css";
+@import "./theme/components/ps-complex-cif-id-types.component/ps-complex-cif-id-types.component.css";
+@import "./theme/components/ps-accounts-list.component/ps-accounts-list.component.css";
+@import "./theme/components/ps-select-dropdown.component/ps-select-dropdown.component.css";
+@import "./theme/components/ps-select-dropdown-overlay.component/ps-select-dropdown-overlay.component.css";
+@import "./theme/components/ps-complex-po-box.component/ps-complex-po-box.component.css";
+@import "./theme/components/ps-dynamic-edit.component/ps-dynamic-edit.component.css";
+
+/*
+    Templates UI
+*/
+
+@import "./theme/templates/ps-template-base.page.css";
+@import "./theme/templates/ps-template-landing.page.css";
+@import "./theme/templates/ps-template-report.page.css";
+@import "./theme/templates/ps-complex-preview.template.css";
+@import "./theme/templates/ps-template-login.css";
+@import "./theme/templates/ps-template-landing-web.template.css";
+@import "./theme/templates/ps-template-screen.template.css";
+@import "./theme/templates/ps-template-alert-controller.template.css";
+@import "./theme/templates/ps-template-popup-message.template.css";
+@import "./theme/templates/ps-template-stepper.template.css";
+@import "./theme/templates/ps-template-landing-main.template.css";
+@import "./theme/templates/ps-template-view.template.css";
+@import "./theme/templates/ps-template-landing-menu-web.template.css";
+
+/*
+    Pages UI
+*/
+
+@import "./theme/pages/account-statement-report.page.css";
+@import "./theme/pages/atm-and-branch-locator.page.css";
+@import "./theme/pages/qibla-direction.page.css";
+@import "./theme/pages/omni-login.page.css";
+@import "./theme/pages/home.page.css";
+@import "./theme/pages/ps-splash-screen.page.css";
+@import "./theme/pages/accounts-list.page.css";
+@import "./theme/pages/products-and-services.page.css";
+@import "./theme/pages/account-opening-fixed-maturity-account.page.css";
+@import "./theme/pages/profile.page.css";
+@import "./theme/pages/account-deactivation.page.css";
+@import "./theme/pages/ps-template-landing-fab-ui.page.css";
+@import "./theme/pages/on-boarding.page.css";
+@import "./theme/pages/online-registration.page.css";
+@import "./theme/pages/scheduled-transfer-list.page.css";

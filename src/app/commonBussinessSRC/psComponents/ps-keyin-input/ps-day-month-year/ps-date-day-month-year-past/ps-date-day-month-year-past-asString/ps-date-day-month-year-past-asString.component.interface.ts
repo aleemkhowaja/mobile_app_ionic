@@ -1,0 +1,2 @@
+import { IOptionsPsDateDayMonthYearPastExposed } from './../ps-date-day-month-year-past.component.interfaces';
+export interface IOptionsPsDateDayMonthYearPastAsStringExposed extends IOptionsPsDateDayMonthYearPastExposed { }

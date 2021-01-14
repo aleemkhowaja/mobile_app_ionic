@@ -1,0 +1,32 @@
+ps-complex-preview .ps-container-panel-content {
+    background: white !important;
+}
+
+ps-complex-preview .preview-label ion-label {
+    white-space: normal !important;
+    color: orangered;
+    font-weight: bold;
+}
+
+ps-complex-preview .preview-value ion-label {
+    white-space: normal !important;
+    color: rgb(235, 141, 34);
+}
+
+ps-complex-preview .preview-wrapper {
+    -webkit-box-flex: 0;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+ps-complex-preview .preview-label {
+    -webkit-box-flex: 0;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+ps-complex-preview .preview-value {
+    -webkit-box-flex: 0;
+    flex: 0 0 100%;
+    max-width: 100%;
+}

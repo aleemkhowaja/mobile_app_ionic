@@ -1,0 +1,36 @@
+.inline-loading-image .ps-action-image-image {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.inline-loading-image .ps-action-image-image ion-img {
+    width: var(--ps-loader-size);
+}
+
+.inline-loading-image {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: auto;
+    z-index: 10;
+}
+
+ps-container-report-viewer ps-container-html-viewer .highlight {
+    background: var(--ps-highlight-background-color) !important;
+}
+
+ps-container-report-viewer ps-container-html-viewer .ps-html-viewer-wrapper {
+    padding:0px !important;
+}
+ps-container-report-viewer ps-container-html-viewer .ps-html-viewer-wrapper .ps-inline-html {
+    padding:0px !important;
+    /* font-size:0.6rem !important; */
+}
+.ps-template-report-search ps-input-search-html .ps-keyin-input{
+    padding-left:1em !important;
+}

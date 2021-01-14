@@ -1,0 +1,25 @@
+ps-splash-screen .splash-div {
+    background-image: url('/assets/branding/amana_theme/imgs/splash.png') !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+ps-splash-screen .splash-progress,
+ps-splash-screen .splash-label {
+    color: white;
+    font-size: 1em;
+    margin: 5vh;
+    margin-top: 30vh;
+}
+
+ps-splash-screen .splash-spinner {
+    width: 25% !important;
+    margin: 5vh;
+    margin-top: 30vh;
+}
+
+ps-splash-screen .splash-logo,
+ps-splash-screen .splash-label {
+    display: none;
+}

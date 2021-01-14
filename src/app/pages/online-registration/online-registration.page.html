@@ -1,0 +1,52 @@
+<ps-template-stepper [options]="stepperOptions" [id]="stepperOptions.stepperName">
+  <ps-form-step step1 [id]="stepperOptions.namesofSteps[0]">
+    <ps-container-panel [options]="panelOptions1Step2" id="online_reg_panel1">
+
+      <ps-complex-bank-authentication [options]="grpOptions"></ps-complex-bank-authentication>
+
+    </ps-container-panel>
+    <ps-container-panel [options]="panelOptions2Step2" id="online_reg_panel2">
+
+      <ps-input-password id="online_reg_card_pin" [options]="cardPinOptions"></ps-input-password>
+
+
+      <ps-complex-id-details [options]="complexIdDetailsOptions"></ps-complex-id-details>
+
+
+      <ps-entity-phone-number [options]="complexPhoneOptions"></ps-entity-phone-number>
+
+
+      <!-- Updated by Hisham.Omar TP#1136182 start-->
+      <ps-date-day-month-year-past-asString id="date_day_month_year_past"
+        [options]="psDateDayMonthYearPastAsStringOptions"></ps-date-day-month-year-past-asString>
+      <!-- Updated by Hisham.Omar TP#1136182 end-->
+
+      <ps-input-email [options]="emailOptions"></ps-input-email>
+
+    </ps-container-panel>
+  </ps-form-step>
+  <ps-form-step step2 [id]="stepperOptions.namesofSteps[1]">
+    <ps-container-panel [options]="panelOptions1Step3" id="online_reg_panel3">
+      <ps-complex-user-credentials [options]="userCredentialsOptions1"></ps-complex-user-credentials>
+    </ps-container-panel>
+    <ps-container-panel [options]="panelOptions2Step3" id="online_reg_panel4" *ngIf="RequireTransactionPassword">
+      <ps-confirm-pin id="complex_pin_confirm" [options]="pinConfirmOptions"></ps-confirm-pin>
+    </ps-container-panel>
+    <ps-container-panel [options]="panelOptions3Step3" id="online_reg_panel5" *ngIf="EnableSecurityQuestion">
+      <ps-complex-security-questions id="complex_security_question" [options]="securityQuestionOptions">
+      </ps-complex-security-questions>
+    </ps-container-panel>
+    <div class="registration-charges-block" *ngIf="registrationCharges">
+      <ps-label class="registration-charges_label" [options]="registrationLabelOptions"></ps-label>
+      <ps-label class="registration-charges_value" [options]="registrationChargesOptions"></ps-label>
+    </div>
+    <!-- 
+        <ps-container-panel [options]="panelOptions4Step3">
+          <ps-gallery-verification-images id="verification_images" [options]="verificationImageOptions"></ps-gallery-verification-images>
+        </ps-container-panel>
+       -->
+  </ps-form-step>
+  <!-- <ps-form-step step3>
+        <ps-complex-terms-and-conditions [options]="termsAndConditionsOptions" id="terms_and_conditions"></ps-complex-terms-and-conditions>
+    </ps-form-step> -->
+</ps-template-stepper>

@@ -1,0 +1,13 @@
+<!-- Author: GRadwan 16Jan2020 -->
+<ps-template-stepper [options]="stepperOptions" [id]="stepperOptions.stepperName">
+
+    <ps-form-step step1 [id]="stepperOptions.namesofSteps[0]">
+        <ps-container-panel [options]="panelOptionsBenf" id="local_benef_panel">
+            <ps-banks  [options]="banksOptions"></ps-banks>
+            <ps-keyin-input id="branch_name" [options]="branchOptions"> </ps-keyin-input>
+            <ps-complex-beneficiary-details [options]="beneficiaryDetailsOptions">
+            </ps-complex-beneficiary-details>
+        </ps-container-panel>
+    </ps-form-step>
+
+</ps-template-stepper>

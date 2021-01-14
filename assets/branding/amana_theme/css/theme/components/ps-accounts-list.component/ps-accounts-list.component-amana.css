@@ -1,0 +1,72 @@
+ps-accounts-list mat-card-content .lookup-details-content .container-option-table {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: var(--ps-md-font) !important;
+}
+
+ps-accounts-list mat-card-content .lookup-details-content .container-option-table-row {
+    flex: 0 0 50%;
+    max-width: 50%;
+    border-right: 2px solid white;
+}
+
+ps-accounts-list mat-card-content .lookup-details-content .container-option-table-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+ps-accounts-list mat-card-content ps-balance .ps-balance {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+ps-accounts-list mat-card-content ps-balance .current-balance-div {
+    display: none;
+}
+
+ps-accounts-list mat-card-content ps-balance .available-balance-div {
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+/*ps-accounts-list mat-card-content ps-balance .available-balance-div br {
+    display: none;
+}
+*/
+ps-accounts-list mat-card-content ps-balance {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left:10px !important;
+}
+
+ps-accounts-list .ps-container-lookup-option-details .lookup-details-header .lookup-details-title ps-action-icon {
+    font-size: var(--ps-xxl-font)
+}
+
+ps-accounts-list .ps-container-lookup-option-details .action-details-options div ion-icon {
+    background-color: unset;
+
+}
+
+ps-accounts-list .ps-container-lookup-option-details .card-action-buttons {
+    background: transparent;
+}
+
+ps-accounts-list .ps-container-lookup-option-details .mat-card {
+    background: transparent;
+}
+
+
+ps-accounts-list mat-card-content .lookup-details-content .container-option-table {
+    padding: 10px !important;
+}
+
+ps-accounts-list .ps-container-lookup-option-details .lookup-details-content {
+    padding-top: 0px !important;
+}
+
+ps-accounts-list .ps-container-lookup-option-details .lookup-details-header .lookup-details-title {
+    font-size: var(--ps-md-font);
+}

@@ -1,0 +1,27 @@
+<ps-container-complex class="ps-complex-credit-availability">
+
+
+  <ps-select-checkbox id="documentsCheckbox" [options]="options.documentdetailsCheckbox"
+    (onPsChange)="onCheckBoxChanged($event)">
+  </ps-select-checkbox>
+
+
+
+  <ps-lov-ab-orignal-for *ngIf="options.hasLov && showDocumentInput" [options]="options.airwayBillLovOptions"
+    (onPsChange)="onAirwayBillChange($event)"></ps-lov-ab-orignal-for>
+
+
+
+  <ps-input-free-text *ngIf="options.documentType =='T' && showDocumentInput" id="documentDetailsFreeText"
+    [options]="options.documentDetailsFreeText">
+  </ps-input-free-text>
+
+
+
+  <ps-input-numeric *ngIf="options.documentType =='N' && showDocumentInput" id="documentDetailsNumber"
+    [options]="options.documentDetailsNumeric">
+  </ps-input-numeric>
+
+
+
+</ps-container-complex>

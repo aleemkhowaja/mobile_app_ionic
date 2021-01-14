@@ -1,0 +1,24 @@
+<ps-template-base>
+    <!-- <ng-content select="[floatingPart]" floatingPart></ng-content> -->
+    <ng-container psHeader>
+        <div class="widget-style">
+            <div class="widget-menu-icon widget-menu-icon-back" (click)="openPage()">
+                <ps-action-icon class="menu-icon arrow_icon" [options]='arrowIconOptios'></ps-action-icon>
+                <ps-action-icon class="menu-icon home_icon" [options]='homeOptions'></ps-action-icon>
+            </div>
+            <div class="widget-header-title" *ngIf="optionsHeader.labelKey">
+                <ps-action-icon class="menu-icon widget-header-icon" [options]='headerIconOptions'
+                    *ngIf="headerIconOptions.iconName">
+                </ps-action-icon>
+                <ps-label-header [options]="optionsHeader">
+                </ps-label-header>
+            </div>
+            <ng-content select="[saveAsDraftButton]"></ng-content>
+        </div>
+        <ng-content select="[extraHeader]"></ng-content>
+    </ng-container>
+    <ps-container-form>
+        <ng-content></ng-content>
+    </ps-container-form>
+    <ng-content select="[psFooter]" psFooter></ng-content>
+</ps-template-base>

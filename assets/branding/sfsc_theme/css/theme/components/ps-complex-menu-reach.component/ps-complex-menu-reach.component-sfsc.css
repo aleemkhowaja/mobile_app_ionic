@@ -1,0 +1,31 @@
+ps-complex-menu-reach ps-action-button ion-button {
+    --border-style: none !important;
+    --box-shadow: none !important;
+}
+
+/* 
+ALSO add the above to ./ps-complex-info.component/ps-complex-info.component.css
+*/
+
+ps-complex-menu-reach ion-button.ps-menu-reach-background {
+    border-radius: 20%;
+    height: calc(80px * var(--ps-font-size-ratio) * var(--ps-font-size-ratio-initial));
+    width: calc(80px * var(--ps-font-size-ratio) * var(--ps-font-size-ratio-initial));
+    background-color: var(--ps-secondary-degree-1-color) !important;
+    --background-hover: var(--ps-secondary-color) !important;
+
+}
+
+ps-complex-menu-reach ion-button.ps-menu-reach-background ion-icon {
+    color: var(--ps-font-light-color) !important;
+    font-size: var(--ps-xl-font) !important;
+}
+
+
+ps-complex-menu-reach ps-action-icon .ps-action-icon-label ps-label {
+    width: 100%;
+}
+
+ps-complex-menu-reach ion-button ps-action-icon .ps-action-image-container .ps-action-icon-label ion-label {
+    white-space: normal !important;
+}

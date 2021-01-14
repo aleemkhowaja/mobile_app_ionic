@@ -1,0 +1,7 @@
+.mat-select-arrow {
+    color: rgba(0, 0, 0, 0.54) !important;
+}
+
+ps-select-dropdown-base .mat-select-value-text {
+    color: var(--ps-input-placeholder-font-color) !important
+}

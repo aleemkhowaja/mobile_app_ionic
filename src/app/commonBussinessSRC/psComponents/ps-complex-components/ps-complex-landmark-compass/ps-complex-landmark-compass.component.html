@@ -1,0 +1,61 @@
+<div class="landmark-icon-main">
+</div>
+<ps-label class="landmark-compass-title" [options]="options.lblOptions"></ps-label>
+<div class="landmark-icon-arrow">
+	<ps-action-icon [options]="landmarkOptions" class="important-text-color"></ps-action-icon>
+</div>
+<div class="landmark-compass-wrapper">
+	<div class="compass-background" [style.transform]="'rotate(' + deviceAngle + 'deg)'">
+		<!-- Compass Directions -->
+		<div class="primary-text-color direction direction-n">
+			<ps-label [options]="northOptions"></ps-label>
+		</div>
+		<div class="light direction direction-ne">
+			<ps-label [options]="northEastOptions"></ps-label>
+		</div>
+		<div class="primary-text-color direction direction-e">
+			<ps-label [options]="eastOptions"></ps-label>
+		</div>
+		<div class="light direction direction-se">
+			<ps-label [options]="southEastOptions"></ps-label>
+		</div>
+		<div class="primary-text-color direction direction-s">
+			<ps-label [options]="southOptions"></ps-label>
+		</div>
+		<div class="light direction direction-sw">
+			<ps-label [options]="southWestOptions"></ps-label>
+		</div>
+		<div class="primary-text-color direction direction-w">
+			<ps-label [options]="westOptions"></ps-label>
+		</div>
+		<div class="light direction direction-nw">
+			<ps-label [options]="northWestOptions"></ps-label>
+		</div>
+		<!-- Landmark Icon -->
+		<div class="landmark-icon-wrapper">
+			<div class="primary-text-color direction landmark-compass-icon-arrow">
+				<ps-action-icon [options]="landmarkArrowOptions"></ps-action-icon>
+			</div>
+		</div>
+		<!-- <div class="landmark-icon-wrapper" [ngStyle]="{'transform': 'rotateZ('+ landmarkAngle + 'deg)'}">
+				<div class="landmark-icon">
+				</div>
+				<div class="main-pointing-arrow">
+				</div>
+			</div> -->
+		<!-- Landmark Icon -->
+		<!-- <div class="landmark-icon-wrapper" [ngStyle]="{'transform': 'rotateZ('+ landmarkAngle + 'deg)'}">
+				<div class="landmark-icon" [ngStyle]="{'transform': 'translateX(-50%) rotate('+ (-deviceAngle) + 'deg)'}">
+				</div>	
+				<div class="landmark-icon-arrow">
+				</div>
+			</div> -->
+	<div class="main-pointing-arrow direction ">
+	</div>
+	</div>
+	<div class="compass-inner-circle">
+		<!-- <ps-action-icon [options]="iconOptions" class="device-pointer" psIcon *ngIf="iconOptions?.iconName">
+			</ps-action-icon> -->
+		<!-- <ion-icon name="logo-twitter" class=" compass-arrow" ></ion-icon> -->
+	</div>
+</div>

@@ -1,0 +1,20 @@
+<ps-icon-customization *ngIf="custMode" [options]="custIconOptions"></ps-icon-customization>
+<div class="container-fluid ps-action-image-container" *ngIf="options?.labelOptions && (custMode || visible)"
+    [ngClass]="{'disableContent': disabled}">
+    <div class="row ps-action-image-row">
+        <div class="col col-auto ps-action-icon-label">
+            <ps-label [id]="id + '_label'" [options]="options.labelOptions" (click)="onIconClicked($event)">
+            </ps-label>
+        </div>
+        <div class="col col-auto ps-action-icon-icon" *ngIf="url">
+            <ion-icon (click)="onIconClicked($event)" [id]="id" *ngIf="url" [class]="options.iconName"
+                [ngClass]="{'disableContent': disabled}" class="arrowClr" [src]="url" [flipRtl]="flipRtl">
+            </ion-icon>
+        </div>
+    </div>
+</div>
+
+<ion-icon [id]="id" *ngIf="url && !options?.labelOptions && (custMode || visible)" [class]="options.iconName"
+    [ngClass]="options.psClass" [ngClass]="{'disableContent': disabled}" class="arrowClr" (click)="onIconClicked($event)" [src]="url"
+    [flipRtl]="flipRtl">
+</ion-icon>

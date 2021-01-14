@@ -1,0 +1,16 @@
+.ps-select-checkbox__item .ps-item-wrapper ion-label {
+    order: 1;
+    padding-inline-start: 5px !important;
+    color: var(--ps-primary-color);
+    /* Newly added by DK */
+}
+
+.ps-select-checkbox {
+    /* the styles of the checkbox goes here */
+    --background-checked: var(--ps-checked-color);
+    /* New variable added by DK */
+    --border-color-checked: var(--ps-primary-color);
+    --border-radius: 10px;
+    /* padding: 5px; */
+    height: 20px;
+}

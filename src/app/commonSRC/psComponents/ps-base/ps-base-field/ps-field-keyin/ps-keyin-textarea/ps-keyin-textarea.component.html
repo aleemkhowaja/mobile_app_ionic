@@ -1,0 +1,22 @@
+<ps-icon-customization *ngIf="custMode" [options]="custIconOptions"></ps-icon-customization>
+<ps-container-item [formGroup]="options.group" *ngIf="options && (visible||custMode) && !previewMode"
+  [options]="itemOptions" class="ps-field-item-wrapper ps-keyin-textarea-component" [ngClass]="options.psClass">
+
+  <ps-label-input [options]="labelOptions" class="ps-keyin-textarea-label"></ps-label-input>
+  <ion-textarea #msgInput [placeholder]="options.placeHolder |translate" class="ps-keyin-textarea" rows="1"
+    [formControlName]="options.fcName" (keydown)="onKeyDown($event)" [cols]="options.cols" [autoGrow]="options.autoGrow"
+    [maxlength]="options.maxLength" [attr.psFcName]="options.fcName" [minlength]="options.minLength" (keyup)="resize()"
+    [(ngModel)]="value"></ion-textarea>
+
+</ps-container-item>
+<ng-container *ngIf="showError">
+  <p *ngFor="let e of errorMsgs" class="validation-message">
+    {{e.msgKey | translate}} {{e.param}}
+  </p>
+</ng-container>
+
+<div *ngIf="previewMode" class="ps-custom-component-preview" psPreviewEngine>
+  <ion-label *ngIf="options.labelKey" [id]="'lbl_'+id" class="ps-lbl-preview">{{options.labelKey | translate }}
+  </ion-label><span [innerHTML]="delimiter"></span>
+  <ion-label [id]="'value_preview_'+id" class="ps-value-preview">{{fcValue}}</ion-label>
+</div>

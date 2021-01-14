@@ -1,0 +1,27 @@
+<ps-template-stepper [options]="stepperOptions" [id]="stepperOptions.stepperName">
+      <ps-form-step step1 [id]="stepperOptions.namesofSteps[0]">
+            <ps-container-panel [options]="panelOptions1Step1" id="demand_draft_panel">
+
+
+                  <ps-lookup-own-accounts id="savingAccount'+ id" [options]="accountListOptions">
+                  </ps-lookup-own-accounts>
+
+                  <ps-container-item class="ps-complex-card-details-branch-item">
+                        <ps-label [options]="effectiveDateLabelOptions">
+                        </ps-label>
+                        <ps-label [options]="effectiveDateLabelValueOptions">
+                        </ps-label>
+                  </ps-container-item>
+
+                  <ps-dropdown-currencies id="'transferCurrency' + id" [options]="currencyOptions">
+                  </ps-dropdown-currencies>
+
+                  <ps-input-amount id="demand_draft_input_amount" [options]="inputAmountOptions">
+                  </ps-input-amount>
+
+                  <ps-input-varchar id="'purpose' + id" [options]="purposeOptions"></ps-input-varchar>
+
+
+            </ps-container-panel>
+      </ps-form-step>
+</ps-template-stepper>

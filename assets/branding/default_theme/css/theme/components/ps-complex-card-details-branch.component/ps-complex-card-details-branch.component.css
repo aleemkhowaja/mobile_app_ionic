@@ -1,0 +1,134 @@
+ion-modal ps-complex-card-details-branch .ps-complex-card-details-branch {}
+
+ion-modal ps-complex-card-details-branch .ps-complex-card-details-branch-header .ps-label {
+    font-size: var(--ps-md-font);
+    color: var(--ps-primary-color);
+    font-weight: bold;
+}
+
+ion-modal ps-complex-card-details-branch .ps-complex-card-details-branch-item {
+    font-size: var(--ps-lg-font);
+    display: flex;
+    width: 100%;
+}
+
+/* ion-modal ps-complex-card-details-branch .ps-complex-card-details-branch-item-label {
+    color: var(--ps-primary-color);
+    padding-right: 10px;
+    display: inline-block;
+} */
+
+ion-modal ps-complex-card-details-branch .ps-complex-card-details-branch-item ion-item {
+    border-bottom: none !important;
+}
+
+/* 
+ion-modal ps-complex-card-details-branch .ps-complex-card-details-branch-item-value {
+    color: var(--ion-color-dark-shade);
+    display: inline-block;
+}
+
+ion-modal ps-complex-card-details-branch .ps-complex-card-details-branch-item-value ion-label {
+    white-space: break-spaces !important;
+} */
+
+ion-modal ps-complex-card-details-branch .ps-complex-card-details-branch-opening-hours-list {
+    width: 100%;
+}
+
+ion-modal ps-complex-card-details-branch .ps-complex-card-details-branch-opening-hours-list ion-list ps-label-header ion-label {
+    color: var(--ps-primary-color) !important;
+}
+
+ion-modal ps-complex-card-details-branch .ps-complex-card-details-branch-opening-hours-list-item {
+    display: flex;
+    font-size: var(--ps-lg-font);
+}
+
+ion-modal ps-complex-card-details-branch .ps-complex-card-details-branch-opening-hours-list-item ps-base-container {
+    width: 100%;
+}
+
+ion-modal ps-complex-card-details-branch .ps-complex-card-details-branch-opening-hours-list-item-day ion-label {
+    display: inline !important;
+    font-size: var(--ps-lg-font) !important;
+    color: white !important;
+    font-weight: bold !important;
+}
+
+ion-modal ps-complex-card-details-branch .ps-complex-card-details-branch-opening-hours-list-item-opening-closing {
+    text-align: center;
+}
+
+ion-modal ps-complex-card-details-branch .ps-complex-card-details-branch-opening-hours-list-item-opening-closing ion-label {
+    display: inline !important;
+}
+
+ion-modal ps-complex-card-details-branch .ps-complex-card-details-branch-opening-hours-list-item-opening {
+    padding: 0 5px;
+    color: white !important;
+    font-weight: 200;
+}
+
+
+
+
+ion-modal ps-complex-card-details-branch .ps-complex-card-details-branch-button-call {
+    --background: var(--ps-primary-color);
+}
+
+ion-modal ps-complex-card-details-branch .branch-details-opening-hours ps-base-container ion-item {
+    border-bottom: none !important;
+}
+
+ps-complex-card-details-branch .ps-complex-card-details-branch-opening-hours-list ion-list {
+    background: transparent !important;
+}
+
+.modal-close-icon ion-icon {
+    font-size: 35px;
+    opacity: 100;
+}
+
+ion-modal ps-complex-card-details-branch ps-container-panel ps-label-nav ps-label ion-label {
+    justify-content: start !important;
+}
+
+ion-modal ps-complex-card-details-branch .text-truncate {
+    white-space: normal;
+    color:var(--ps-font-light-color);
+}
+
+.ps-complex-card-details-branch-item {
+    padding: 5px;
+
+}
+
+ion-modal ps-complex-card-details-branch .ps-complex-card-details-branch-opening-hours-list-item {
+    padding: 5px
+}
+
+ion-modal ps-complex-card-details-branch ps-button-call ion-button {
+    border: 1.5pt solid white !important;
+    border-radius: var(--ps-button-border-radius);
+}
+
+ion-modal ps-complex-card-details-branch .ps-complex-card-details-branch-opening-hours-list-item-opening-closing .ps-complex-card-details-branch-closed-day {
+    color: var(--ps-error-color) !important;
+    opacity: 100%;
+    font-weight: 400;
+}
+
+ion-modal ps-complex-card-details-branch .ps-complex-card-details-branch-opening-hours-list-item-opening-closing {
+    text-align: start !important;
+}
+
+ion-modal ps-complex-card-details-branch .ps-complex-card-details-branch-opening-hours-list-item-closing {
+    padding: 0 5px;
+    color: white !important;
+    font-weight: 200;
+}
+
+ion-modal ps-complex-card-details-branch ps-container-panel .ps-container-panel-item .ps-item-wrapper .ps-container-item-main-content {
+    border-bottom: 0px;
+}

@@ -1,0 +1,16 @@
+{
+    "fileReplacements": [
+        {
+            "replace": "src/app/commonSRC/customization/psComponent/ps-icon-customization/ps-icon-customization.component.html",
+            "with": "customization_src/app/commonSRC/customization/psComponent/ps-icon-customization/ps-icon-customization.component.html"
+        },
+        {
+            "replace": "src/app/commonSRC/customization/psPages/field-customization/field-customization.html",
+            "with": "customization_src/app/commonSRC/customization/psPages/field-customization/field-customization.html"
+        },
+        {
+            "replace": "src/app/app.component.html",
+            "with": "customization_src/app/app.component.html"
+        }
+    ]
+}

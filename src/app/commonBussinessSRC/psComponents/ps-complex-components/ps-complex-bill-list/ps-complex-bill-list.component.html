@@ -1,0 +1,57 @@
+<ps-container-complex class="ps-complex-bill-types">
+
+    <ps-complex-bill-item *ngFor="let att of billTypesArray; let idx = index" [options]="att">
+    </ps-complex-bill-item>
+
+    <ps-select-checkbox class="col-lg-5 col-md-12 col-sm-12 p-0 m-0" [id]="'bill_types_others' + id"
+        [options]="othersCheckBoxOptions" (onPsChange)="onCheckChanged($event)">
+    </ps-select-checkbox>
+    <div class="col-lg-7 col-md-12 col-sm-12 p-0 m-0">
+        <div class="row m-auto">
+            <div class="col-5 mr-1 ml-2">
+                <ps-input-varchar [options]="otherscopyInputOptions">
+                </ps-input-varchar>
+            </div>
+            <div class="col-6 ml-2">
+                <ps-input-varchar [options]="othersoriginalInputOptions">
+                </ps-input-varchar>
+            </div>
+        </div>
+    </div>
+    <ps-input-free-text class="col-11" id="keyin_textarea" [options]="otherInputOptions">
+    </ps-input-free-text>
+    <ps-select-checkbox class="col-lg-5 col-md-12 col-sm-12 p-0 m-0" [id]="'bill_types_others' + id"
+        [options]="others2CheckBoxOptions" (onPsChange)="onCheck2Changed($event)">
+    </ps-select-checkbox>
+    <div class="col-lg-7 col-md-12 col-sm-12 p-0 m-0">
+        <div class="row m-auto">
+            <div class="col-5 mr-1 ml-2">
+                <ps-input-varchar [options]="others2copyInputOptions">
+                </ps-input-varchar>
+            </div>
+            <div class="col-6 ml-2">
+                <ps-input-varchar [options]="others2originalInputOptions">
+                </ps-input-varchar>
+            </div>
+        </div>
+    </div>
+    <ps-input-free-text class="col-11" id="keyin_textarea" [options]="other2InputOptions">
+    </ps-input-free-text>
+    <ps-select-checkbox class="col-lg-5 col-md-12 col-sm-12 p-0 m-0" [id]="'bill_types_others' + id"
+        [options]="others3CheckBoxOptions" (onPsChange)="onCheck3Changed($event)">
+    </ps-select-checkbox>
+    <div class="col-lg-7 col-md-12 col-sm-12 p-0 m-0">
+        <div class="row m-auto">
+            <div class="col-5 mr-1 ml-2">
+                <ps-input-varchar [options]="others3copyInputOptions">
+                </ps-input-varchar>
+            </div>
+            <div class="col-6 ml-2">
+                <ps-input-varchar [options]="others3originalInputOptions">
+                </ps-input-varchar>
+            </div>
+        </div>
+    </div>
+    <ps-input-free-text class="col-11" id="keyin_textarea" [options]="other3InputOptions">
+    </ps-input-free-text>
+</ps-container-complex>

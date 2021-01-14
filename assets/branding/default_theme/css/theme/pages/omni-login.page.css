@@ -1,0 +1,65 @@
+omni-login ion-content main {
+  overflow: hidden !important;
+  overflow-y: hidden !important;
+}
+
+
+omni-login ps-action-hyperlink ion-icon,
+omni-login ps-action-hyperlink ion-label,
+omni-login ps-action-hyperlink .ps-action-icon-icon ion-icon {
+  color: var(--ps-highlight-background-color) !important;
+  cursor: pointer;
+  display: flex !important;
+  padding: 5px !important;
+}
+
+omni-login ps-select-toggle ps-label-input {
+  order: 2;
+}
+
+omni-login ps-select-toggle ion-toggle {
+  order: 1;
+}
+
+omni-login .ps-action-anchor {
+  display: block;
+  margin-top: 10px !important;
+  background: var(--ps-primary-degree-1-color) !important;
+  border-radius: 50px;
+  padding-inline-start: 5px;
+}
+omni-login ::-webkit-scrollbar {
+  width: 0px !important;
+}
+
+.isWeb-Layout omni-login {
+  background: var(--ps-web-background-color);
+}
+
+.isWeb-Layout omni-login #online_registration_link .ps-action-image-row {
+  justify-content: center !important;
+
+}
+
+/* mindflare structure  */
+omni-login ps-action-hyperlink#online_registration_link .ps-action-image-row,
+omni-login ps-action-hyperlink#help_with_cred_link .ps-action-image-row {
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+omni-login .ps-template-login-links {
+  margin-top: 20px !important;
+}
+
+.isWeb-Layout omni-login .ps-action-anchor {
+  margin-top: 5px !important;
+}
+omni-login .bank-name {
+  bottom: 10px;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+}

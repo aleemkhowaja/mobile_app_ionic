@@ -1,0 +1,73 @@
+<div class="ps-component-test-main">
+
+    <p class="ps-test-header">Internal Beneficary</p>
+    <div class="ps-test-component" (click)="goIntBeneficiary()">
+        <ps-hyperlink-anchor [options]="intBenefAnchorOptions">
+            goIntBeneficiary
+        </ps-hyperlink-anchor>
+    </div>
+
+    <!-- <p class="ps-test-header">Local Beneficary</p> -->
+    <div class="ps-test-component" (click)="goLocBeneficiary()">
+        <ps-hyperlink-anchor [options]="locBenefAnchorOptions">
+        </ps-hyperlink-anchor>
+    </div>
+
+    <!-- <p class="ps-test-header">External Beneficary</p> -->
+    <div class="ps-test-component" (click)="goExtBeneficiary()">
+        <ps-hyperlink-anchor [options]="extBenefAnchorOptions">
+        </ps-hyperlink-anchor>
+    </div>
+
+    <p class="ps-test-header">prayer Component </p>
+    <div class="ps-test-component">
+        <ion-button (click)="navigateprayer()">go to prayer page</ion-button>
+    </div>
+
+
+    <p class="ps-test-header">ps landing page</p>
+    <div class="ps-test-component">
+        <ion-button>go to landing page</ion-button>
+    </div>
+
+
+    <p class="ps-test-header">The ps-verifications-image Component</p>
+    <div class="ps-test-component">
+        <ps-gallery-verification-images [options]='verificationOptions'>
+        </ps-gallery-verification-images>
+    </div>
+
+    <p class="ps-test-header">Terms and conditions component</p>
+    <div class="ps-test-component">
+        <ps-complex-terms-and-conditions id="terms1" [options]='termsAndConditinsOptions'>
+        </ps-complex-terms-and-conditions>
+    </div>
+
+
+    <div class="ps-test-component">
+        <p class="ps-test-header">Popup Messages</p>
+        <ion-button (click)="onClick_Failure()">
+            Alert Failure
+        </ion-button>
+        <ion-button (click)="onClick_Fatal()">
+            Alert Fatal
+        </ion-button>
+        <ion-button (click)="onClickSucess()">
+            Alert success (autoHide= true)
+        </ion-button>
+        <ion-button (click)="onClickSucessUserDismiss()">
+            Alert success (autoHide= false)
+        </ion-button>
+        <ion-button (click)="onClick_Info()">
+            Alert Info
+        </ion-button>
+    </div>
+
+
+
+    <p class="ps-test-header">deals Component </p>
+    <div class="ps-test-component">
+        <ion-button (click)="navigateDeals()">go to deals page</ion-button>
+    </div>
+
+</div>

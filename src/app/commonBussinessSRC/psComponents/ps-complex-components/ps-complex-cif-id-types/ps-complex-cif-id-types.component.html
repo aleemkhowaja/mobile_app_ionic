@@ -1,0 +1,27 @@
+<ps-container-complex [options]="defaultOptions">
+
+  <ps-dropdown-cif-types *ngIf="defaultOptions.showCifType" [options]="defaultOptions.cifTypeOptions"
+    (onPsChange)="onChange($event)">
+  </ps-dropdown-cif-types>
+
+  <div class="cifIdTypes" *ngIf="showBG">
+    <ng-container *ngIf="mandatoryIdTypes && mandatoryIdTypes.length > 0 && !showIdDropDown">
+
+      <ps-complex-id-details *ngFor="let item of mandatoryIdTypes" id="complex_id_details" [options]="item">
+      </ps-complex-id-details>
+
+    </ng-container>
+
+
+    <ps-complex-id-details
+      *ngIf="mandatoryIdTypes.length == 0 && defaultOptions.complexIdDetailsOptions1.dropdownIdTypesOptions.listOfOptions  && defaultOptions.complexIdDetailsOptions1.dropdownIdTypesOptions.listOfOptions.length>0 && !showIdDropDown && !mandatoryIdThere"
+      id="complex_id_details1" [options]="defaultOptions.complexIdDetailsOptions1" (onPsChange)="onItemChange($event)">
+    </ps-complex-id-details>
+
+
+    <ps-complex-id-details *ngIf="mandatoryIdTypes.length == 0 && optionalIdTypes.length ==  0 && showIdDropDown"
+      id="complex_id_details2" [options]="defaultOptions.complexIdDetailsOptions" (onPsChange)="onItemChange($event)">
+    </ps-complex-id-details>
+
+  </div>
+</ps-container-complex>

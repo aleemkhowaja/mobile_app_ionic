@@ -1,0 +1,11 @@
+<ps-container-complex [options]="defaultOptions">
+  <ps-dropdown-account-types id="'accountType' + id" [options]="defaultOptions.accountTypesOptions"
+    (onPsChange)="onChangeEvent($event)">
+  </ps-dropdown-account-types>
+  <ps-input-display-only *ngIf="enablePeriodicity" id="'accountTypePeriodiCity' + id"
+    [options]="defaultOptions.periodicity">
+  </ps-input-display-only>
+  <ps-input-display-only *ngIf="enableMinBal" id="'accountTypeMinimumBal' + id"
+    [options]="defaultOptions.minimumBalance">
+  </ps-input-display-only>
+</ps-container-complex>

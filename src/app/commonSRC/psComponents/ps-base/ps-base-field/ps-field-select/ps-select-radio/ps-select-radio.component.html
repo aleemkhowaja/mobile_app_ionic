@@ -1,0 +1,32 @@
+<ps-icon-customization *ngIf="custMode" [options]="custIconOptions"></ps-icon-customization>
+<ng-container *ngIf="options && (visible||custMode) && !previewMode">
+  <ps-container-item [formGroup]="options?.group" [options]="itemOptions"
+    class="ps-field-item-wrapper ps-select-radio-component" [ngClass]="options.psClass">
+
+    <ion-list *ngIf="options" [formGroup]="options?.group">
+      <ion-radio-group [formControlName]="options.fcName" [(ngModel)]="selectedItem">
+        <ion-list-header>
+          <ps-label-input [options]="headerLabelOptions"></ps-label-input>
+        </ion-list-header>
+        <ion-item *ngFor="let option of options.listOfOptions;let i = index">
+          <ion-label>{{ option.description }}</ion-label>
+          <ion-radio [value]="option.itemValue" [attr.psFcName]="options.fcName" [checked]="option.checked"
+            [disabled]="option.disabled"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+
+  </ps-container-item>
+
+  <ng-container *ngIf="showError">
+    <p *ngFor="let e of errorMsgs" class="validation-message">
+      {{e.msgKey | translate}} {{e.param}}
+    </p>
+  </ng-container>
+</ng-container>
+
+<div *ngIf="previewMode" class="ps-custom-component-preview" psPreviewEngine>
+  <ion-label *ngIf="options.labelKey" [id]="'lbl_'+id" class="ps-lbl-preview">{{options.labelKey | translate }}
+  </ion-label><span [innerHTML]="delimiter"></span>
+  <ion-label [id]="'value_preview_'+id" class="ps-value-preview">{{fcValue}}</ion-label>
+</div>

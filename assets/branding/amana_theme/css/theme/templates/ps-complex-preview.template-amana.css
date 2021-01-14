@@ -1,0 +1,20 @@
+ps-complex-preview .preview-wrapper {
+    -webkit-box-flex: 0;
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+ps-complex-preview .preview-label ion-label {
+    color: white !important;
+}
+
+ps-complex-preview .preview-value ion-label {
+    color: white !important;
+    opacity: 50% !important;
+}
+
+ps-complex-preview .ps-container-panel-content {
+    background: #190529a6 !important;
+}

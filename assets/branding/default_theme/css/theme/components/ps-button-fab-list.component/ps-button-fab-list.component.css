@@ -1,0 +1,59 @@
+:root {
+    --ps-fab-button-size: 60px;
+}
+
+ps-button-fab-list ion-fab-button {
+    --border-radius: 20%;
+    --background-activated: var(--ps-highlight-background-color);
+    --background: var(--ps-highlight-background-color);
+}
+
+ps-button-fab-list ion-fab-button ion-icon {
+    font-size: var(--ps-xl-font);
+}
+
+ps-button-fab-list ion-fab-button .container-fluid,
+ps-button-fab-list ion-fab-button .row {
+    width: 100% !important;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+ps-button-fab-list ion-fab-button ps-action-icon {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+ps-button-fab-list ion-fab-button ps-action-icon .ps-action-icon-label,
+ps-button-fab-list ion-fab-button ps-action-icon ps-label {
+    order: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+ps-button-fab-list ion-fab-button ps-action-icon .ps-action-icon-icon {
+    order: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+ion-fab-button {
+    width: var(--ps-fab-button-size) !important;
+    height: var(--ps-fab-button-size) !important
+}
+
+ps-button-fab-list ion-fab-button ps-label ion-label {
+    font-size: 0.7em;
+    white-space: normal !important;
+    font-weight: bold;
+}
+ps-button-fab-list ion-fab-button{
+    --background-hover: var(--ps-highlight-background-color) !important;
+}

@@ -1,0 +1,50 @@
+<ng-template #fablist let-fablist="fablist" let-side="side">
+  <ion-fab-list [side]="side" (click)="isClosedClicked()">
+    <ng-container *ngFor="let fab of fablist; let i = index">
+      <ion-fab-button (click)="fab.handler()">
+        <ps-action-icon [options]="{iconName:fab.iconName,labelOptions:{labelKey:fab.labelKey}}">
+        </ps-action-icon>
+      </ion-fab-button>
+    </ng-container>
+  </ion-fab-list>
+</ng-template>
+
+<ng-container *ngIf="visible || custMode">
+  <div *ngIf="custMode" [id]="'base_'+ id ">
+    <ps-icon-customization [id]="'cust_icon_'+ id" [options]="custIconOptions"></ps-icon-customization>
+  </div>
+  <div [ngClass]="options?.psClass" #fabListSelector>
+    <ion-fab vertical="bottom" horizontal="end" class="ps-action-fab">
+      <ion-fab-button class="main-fab-button" (click)="isOpenedClicked()">
+        <ps-action-icon [options]="{iconName:options.mainProperties.iconName}">
+        </ps-action-icon>
+        <ps-label [options]="{labelKey:options.mainProperties.labelKey}">
+        </ps-label>
+      </ion-fab-button>
+
+      <ng-container *ngIf="options.topFabList && options.topFabList.length>0">
+        <ng-container *ngTemplateOutlet="fablist; context:{ fablist: options.topFabList, side:'top' }"></ng-container>
+      </ng-container>
+
+
+      <ng-container *ngIf="options.bottomFabList && options.bottomFabList.length>0">
+        <ng-container *ngTemplateOutlet="fablist; context:{ fablist: options.bottomFabList, side:'bottom' }">
+        </ng-container>
+      </ng-container>
+
+
+      <ng-container *ngIf="options.startFabList && options.startFabList.length>0">
+        <ng-container *ngTemplateOutlet="fablist; context:{ fablist: options.startFabList , side:'start'}">
+        </ng-container>
+      </ng-container>
+
+
+      <ng-container *ngIf="options.endFabList && options.endFabList.length>0">
+        <ng-container *ngTemplateOutlet="fablist; context:{ fablist: options.endFabList , side:'end'}"></ng-container>
+      </ng-container>
+
+
+
+    </ion-fab>
+  </div>
+</ng-container>

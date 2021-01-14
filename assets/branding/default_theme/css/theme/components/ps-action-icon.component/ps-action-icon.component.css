@@ -1,0 +1,27 @@
+ps-action-icon ion-icon {
+    cursor: pointer;
+}
+
+ps-action-icon .ps-action-icon-label ps-label {
+    height: 100% !important;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.green-tick {
+    color: var(--ps-success-color);
+}
+
+.red-cross {
+    color: var(--ps-error-color);
+}
+
+/* 
+    gilbertandary   
+    #DN:1096723 - menu icon
+    Do not remove the below
+*/
+ps-action-icon ion-icon.card {
+    background: transparent !important;
+}

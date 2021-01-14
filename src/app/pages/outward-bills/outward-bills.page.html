@@ -1,0 +1,46 @@
+<ps-template-stepper [options]="stepperOptions" [id]="stepperOptions.stepperName">
+    <ps-form-step step1 [id]="stepperOptions.namesofSteps[0]">
+        <ps-container-panel [options]="billDetailPanelOptions" id="outward_bills_panel1">
+            <ps-dropdown-tfs-document-type [options]="billtypesDropdownOptions" (onPsChange)="onBillTypeChange($event)">
+            </ps-dropdown-tfs-document-type>
+            <ps-complex-amount [options]="complexAmountOptions">
+            </ps-complex-amount>
+        </ps-container-panel>
+        <ps-container-panel [options]="banksDetailPanelOptions" id="outward_bills_panel2">
+
+            <ps-banks [options]="draweeBankOptions"></ps-banks>
+
+            <ps-input-varchar id="branch" [options]="draweeBranchOptions"></ps-input-varchar>
+
+            <ps-input-free-text id="draweeName_textarea" [options]="draweeNameOptions">
+            </ps-input-free-text>
+
+            <ps-complex-address [options]="draweeAddressOptions"></ps-complex-address>
+
+        </ps-container-panel>
+        <ps-container-panel [options]="settlementsDetailPanelOptions" id="outward_bills_panel3">
+            <ps-complex-settlement [options]="settlementTypesOptions"></ps-complex-settlement>
+            <ps-input-free-text id="payments_details_textarea" [options]="paymentsDetailOptions">
+            </ps-input-free-text>
+        </ps-container-panel>
+    </ps-form-step>
+    <ps-form-step step2 [id]="stepperOptions.namesofSteps[1]">
+        <ps-container-panel [options]="panelOptions1Step2" id="outward_bills_step2_panel1">
+            <ps-label [options]="requiredDocumentOptions"></ps-label>
+            <div *ngFor="let att of billTypesArray; let idx = index">
+                <ps-complex-bill-item [options]="att"></ps-complex-bill-item>
+            </div>
+        </ps-container-panel>
+        <ps-container-panel [options]="panelOptions2Step2" id="outward_bills_step2_panel2">
+            <ps-complex-goods [options]="goodsOptions"></ps-complex-goods>
+        </ps-container-panel>
+        <ps-container-panel [options]="panelOptions3Step2" id="outward_bills_step2_panel3">
+            <ps-file-upload [options]="fileUploadOptions">
+            </ps-file-upload>
+            <ps-input-free-text id="file_comment_textarea" [options]="fileDetailInputOptions">
+            </ps-input-free-text>
+        </ps-container-panel>
+
+
+    </ps-form-step>
+</ps-template-stepper>

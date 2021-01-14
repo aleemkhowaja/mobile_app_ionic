@@ -1,0 +1,8 @@
+ps-container-footer {
+    background: var(--ps-container-footer-background);
+}
+
+ps-container-footer .ps-container-footer {
+    width: 100% !important;
+    margin: 0px !important;
+}

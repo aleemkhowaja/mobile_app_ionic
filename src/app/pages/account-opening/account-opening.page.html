@@ -1,0 +1,50 @@
+<!-- <ion-content > -->
+
+<ps-template-stepper [options]="stepperOptions" [id]="stepperOptions.stepperName">
+  <ps-form-step step1 [id]="stepperOptions.namesofSteps[0]">
+    <ps-container-panel [options]="panelOptions1Step1" id="account_opening_panel_1">
+
+      <ps-input-display-only *ngIf="enableCifBranch" id="'accountCifBranch' + id" [options]="branchOptions">
+
+      </ps-input-display-only>
+
+
+      <ps-dropdown-account-types id="'accountType' + id" [options]="accountTypeOptions"
+        (onPsChange)='onAccountTypeChanged($event)'>
+      </ps-dropdown-account-types>
+
+      <ps-select-toggle [id]="'addOpeningBalance'" [options]="openingBalanceToggleOptions"
+        (onPsChange)="onAddOpeningBalanceChange($event)">
+      </ps-select-toggle>
+
+      <ps-dropdown-currencies id="'currency' + id" [options]="currencyOptions" (onPsChange)="onCurrencyChanged($event)">
+      </ps-dropdown-currencies>
+
+      <ng-container *ngIf="addOpeningBal">
+
+        <ps-input-display-only id="MinimumOpeningBalance" [options]="minOpeningBalOptions">
+        </ps-input-display-only>
+
+        <ps-lookup-own-accounts id="'fromAccount'" [options]="fromAccOptions"
+          (onAccountChange)="onFromAccountChange($event)"></ps-lookup-own-accounts>
+
+        <ps-complex-exchange id="exchangeComponent" [options]="complexExchangeOptions"></ps-complex-exchange>
+      </ng-container>
+
+      <!-- 
+              <ps-input-varchar id="'accountName' + id" [options]="accountNameOptions"></ps-input-varchar>
+             -->
+      <!-- </div> -->
+    </ps-container-panel>
+
+    <ps-container-panel [options]="panelOptions2Step1" *ngIf="!enableCifBranch" id="account_opening_panel_2">
+      <ps-complex-select-branch [options]="selectBranchOptions" (onPsChange)="onSelectBranch($event)">
+      </ps-complex-select-branch>
+    </ps-container-panel>
+  </ps-form-step>
+  <ps-form-step step2 [id]="stepperOptions.namesofSteps[1]">
+    <ps-map-atm-branches class="component-map-container" [options]="mapAtmBranchesOptions"></ps-map-atm-branches>
+  </ps-form-step>
+
+</ps-template-stepper>
+<!-- </ion-content> -->

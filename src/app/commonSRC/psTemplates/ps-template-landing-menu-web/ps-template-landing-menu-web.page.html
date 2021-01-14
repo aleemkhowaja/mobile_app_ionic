@@ -1,0 +1,91 @@
+<ng-template #header>
+    <ps-complex-profile class="profile-animate-left" [options]='options.optionsComplexProfile'>
+    </ps-complex-profile>
+    <div class="fab-ui-notification" *ngIf="commonProv.isMobile()" [ngClass]="{'notification-is-flipped':notificationIsFlipped }">
+        <ps-notification-defaulted class="ps-action-button" [id]="'button_notification' + id"
+            [options]="notificationOptions" (click)="notificationClickHandler()">
+        </ps-notification-defaulted>
+    </div>
+    <div class="col-12" *ngIf="commonProv.isMobile()">
+        <ps-gallery-banners class="ps-complex-menu-header-container-banner profile-animate-left"
+            [options]='bannersOptions'>
+        </ps-gallery-banners>
+    </div>
+</ng-template>
+<ps-template-base>
+    <div class="widget-banner" psHeader>
+        <ng-container *ngIf="!omniCommon.isAgent()">
+            <ng-container *ngTemplateOutlet="header"></ng-container>
+        </ng-container>
+        <ng-container *ngIf="omniCommon.isAgent()">
+            <div *ngIf="!commonProv.isWebLayout()">
+                <ng-container *ngTemplateOutlet="header"></ng-container>
+            </div>
+            <div class="container-fluid cif-switcher-container" *ngIf="commonProv.isWebLayout()">
+                <div class="cif-switcher-row row">
+                    <div class="col-12 container-fluid complex-flip-base ">
+                        <ps-container-flip [options]="psContainerFlipHeader">
+                            <ng-container visibleSection>
+                                <ng-container *ngTemplateOutlet="header"></ng-container>
+                                <hr class="header-separator">
+                            </ng-container>
+
+                            <ng-container hiddenSection>
+                                <div class="container-fluid">
+                                    <div class="row ps-complex-cif-row">
+                                        <div class="col-12 ps-complex-profile-info complex-find-CIF">
+                                            <ps-complex-find-CIF id="ps-complex-find-CIF" [options]="findCIFOptions">
+                                            </ps-complex-find-CIF>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="header-separator">
+                            </ng-container>
+                        </ps-container-flip>
+                    </div>
+                    <div class="offset-11 col-1 cif-switcher">
+                        <ps-action-icon [options]="switchOptions" (onClick)="switchContent()"
+                            [ngClass]="{'cif-switcher-switched':this.psContainerFlipHeader.isFlipped}">
+                        </ps-action-icon>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+    <div class="ps-template-landing">
+        <div class="container-fluid ps-template-landing-body">
+            <div class="row">
+                <div class="col-12 menu-container">
+                    <ps-container-flip [options]="psContainerFlip">
+                        <ps-complex-menu visibleSection></ps-complex-menu>
+                        <div class="container-fluid hidden-content-wrapper" hiddenSection>
+                            <div header class="row opened-screen-title"
+                                *ngIf="previousComponent?.title && psContainerFlip.isFlipped">
+                                <ps-action-icon class="col-2 back-button" [options]="{ iconName:'arrow-back' }"
+                                    (onClick)="goBack()">
+                                </ps-action-icon>
+                                <ps-action-icon class="col-8 current-opened-page"
+                                    [options]="{labelOptions:{labelKey: previousComponent.title} }">
+                                </ps-action-icon>
+                            </div>
+                            <ng-template #hiddenComponent></ng-template>
+                        </div>
+                    </ps-container-flip>
+                </div>
+                <ps-button-fab-list [options]="fabListOptions" id="fab-landing" (isClosed)="isFabClosed()"
+                    (isOpened)="isFabOpened()" *ngIf="commonProv.isMobile()">
+                </ps-button-fab-list>
+                <!-- <div class="col-3 menu-slider-reach" *ngIf="commonProv.isMobile()">
+                    <ps-complex-menu-reach class="ps-menu-reach-pos" (onClick)="changeContent($event)">
+                    </ps-complex-menu-reach>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <ng-container psFooter *ngIf="!commonProv.isMobile()">
+        <div class="col-12">
+            <ps-button-logout></ps-button-logout>
+        </div>
+    </ng-container>
+</ps-template-base>

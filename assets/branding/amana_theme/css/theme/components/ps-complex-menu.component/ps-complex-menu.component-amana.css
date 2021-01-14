@@ -1,0 +1,7 @@
+ps-complex-menu .ps-complex-menu-widget-container {
+    overflow: hidden !important;
+    overflow-y: unset !important;
+    padding-bottom: 10px;
+}
+
+

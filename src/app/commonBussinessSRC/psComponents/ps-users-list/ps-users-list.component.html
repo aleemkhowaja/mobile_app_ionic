@@ -1,0 +1,7 @@
+ <div *ngIf="options?.itemList?.length > 0">
+    <!-- <ps-container-lookup-option [options]="containerLookUpOptions" (clickedCard)="updateCard($event)" [itemCard]="getItem(itemOption)" ></ps-container-lookup-option> -->
+    <div *ngFor="let item of options.itemList">
+       <ps-container-lookup-option [id]="id + '_opt'" [options]="getContainerLookUpOptions(item)" [itemCard]="item" (clickedCard)="updateCard($event)"></ps-container-lookup-option>
+    </div>
+ </div>
+ 

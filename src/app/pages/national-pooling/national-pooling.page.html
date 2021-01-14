@@ -1,0 +1,36 @@
+<ps-template-stepper [options]="stepperOptions" [id]="stepperOptions.stepperName">
+  <ps-form-step step1 [id]="stepperOptions.namesofSteps[0]">
+    <ng-container *ngIf="accountsList.length>0">
+
+
+      <ps-input-varchar class="balance-wrapper" id="totalBalance" [options]="totalBalanceReadOnlyOptions">
+      </ps-input-varchar>
+
+
+
+      <ps-select-checkbox class="account-list" *ngFor="let account of accountsList; let idx = index"
+        [id]="'account' + idx" [options]="account.checkBoxOptions"
+        (onPsChange)="onAccountChecked($event, account.accountNo, account.balance)">
+      </ps-select-checkbox>
+
+
+      <!-- 
+        <ps-action-button class="simulate-button" [options]="simulateButtonOptions" (onClick)="openReportPage()">
+        </ps-action-button>
+       -->
+
+    </ng-container>
+    <ng-container *ngIf="accountsList.length==0">
+      <div class="inline-loading-image">
+        <ps-action-image [options]="actionImageOptions"></ps-action-image>
+      </div>
+    </ng-container>
+  </ps-form-step>
+  <ps-form-step step2 [id]="stepperOptions.namesofSteps[1]">
+    <div class="ps-template-report-viewer" id="div-content">
+      <ps-container-html-viewer [options]="reportOptions">
+      </ps-container-html-viewer>
+    </div>
+  </ps-form-step>
+
+</ps-template-stepper>

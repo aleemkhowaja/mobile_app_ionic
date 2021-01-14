@@ -1,0 +1,92 @@
+<div class="ps-container-lookup-option-details lookup-card-margin-bottom">
+  <mat-card class="lookup-details-card">
+
+    <mat-card-header class="lookup-details-header">
+
+      <mat-card-title class="lookup-details-title">
+        <ps-action-image [options]="currencyImageOptions" *ngIf="currencyImage" (click)="showClickedCard(itemCard)">
+        </ps-action-image>
+
+        <div class="container-currency-iso">
+          <span *ngIf="currencyISO && currencyISO !== ''" (click)="showClickedCard(itemCard)">{{currencyISO}}
+            | </span>
+          <ps-label [options]="titleOptions" class="card-title-label" (click)="showClickedCard(itemCard)"></ps-label>
+          <ps-action-icon [ngClass]="{'card-more-options': !isIOS}" *ngIf="options.isEditable"
+            [options]="gotoActionIcon" [id]="id + '_stat'" (onClick)="gotoStatement(options.statementOptions)">
+          </ps-action-icon>
+        </div>
+      </mat-card-title>
+
+      <mat-card-subtitle class="lookup-details-subtitle">
+
+        <ps-dynamic-edit [options]="dynamicEditOptions"></ps-dynamic-edit>
+
+        <ps-label [options]="statusOptions" [ngClass]="itemStatusClass"></ps-label>
+      </mat-card-subtitle>
+      <span fxFlex></span>
+    </mat-card-header>
+
+    <mat-card-content>
+      <div class="lookup-details-content" (click)="showClickedCard(itemCard)">
+        <div class="container-option-table container-fluid">
+          <div *ngFor="let content of cardContentOptions | slice:0:showTotal let i=index;"
+            class="container-option-table-row row">
+            <div *ngIf="content.showMappingOnNoValue ? itemCard[content.value] !== undefined ? true : false : true" class="container-option-table-col lookup-item-label">
+              <ps-label [options]="{labelKey: content.key}"></ps-label>
+            </div>
+            <div *ngIf="content.showMappingOnNoValue ? itemCard[content.value] !== undefined ? true : false : true" class="container-option-table-col col-6 item-value lookup-item-value">{{ itemCard[content.value] }}</div>
+          </div>
+          <ps-balance [options]="balanceOptions" *ngIf="options.balanceMapping && showBalance"></ps-balance>
+          <div *ngIf="!collapsed && cardContentOptions.length > initialShowVal">
+            <div *ngFor="let content of cardContentOptions | slice:showTotal:cardContentOptions.length let i=index;"
+              class="container-option-table-row row">
+              <div *ngIf="content.showMappingOnNoValue ? itemCard[content.value] !== undefined ? true : false : true" class="container-option-table-col lookup-item-label">
+                <ps-label [options]="{labelKey: content.key}"></ps-label>
+              </div>
+              <div *ngIf="content.showMappingOnNoValue ? itemCard[content.value] !== undefined ? true : false : true" class="container-option-table-col item-value lookup-item-value">{{ itemCard[content.value] }}</div>
+            </div>
+          </div>
+          <ps-action-icon [options]="loaderOptions" *ngIf="showLoader"></ps-action-icon>
+        </div>
+
+        <div *ngIf="(options.isEditable && !collapsed && options?.actionDetailsOptions?.length > 0)"
+          class="card-action-buttons ps-animation" #moreItems>
+          <div *ngFor="let actionOption of actionOptionList; let j = index" class="action-details-options"
+            [ngStyle]="commonProv.animationDelay(j+1)">
+            <div>
+              <ps-action-hyperlink [id]="id + '_lookup_link'" [options]="actionOption.actionHyperlink"
+                *ngIf="actionOption.actionHyperlink !== null && actionOption.actionHyperlink !== undefined">
+              </ps-action-hyperlink>
+              <ps-action-icon #actionIcon [options]="actionOption" (click)="actionFunc(itemCard, actionOption, $event)"
+                *ngIf="(actionOption.actionUrl !== undefined && actionOption.actionUrl !== '') || (actionOption.commonMethod !== undefined && actionOption.commonMethod !== '')">
+              </ps-action-icon>
+              <ng-container *ngIf="actionOption?.component">
+                <div #dynamicComponent></div>
+              </ng-container>
+            </div>
+            <div>
+              <ps-label [options]="{labelKey: actionOption.label}"></ps-label>
+            </div>
+          </div>
+        </div>
+        <div
+          *ngIf="!showLoader && options.isEditable && (options?.actionDetailsOptions?.length > 0 || cardContentOptions.length > showTotal)"
+          class="show-more-less-button-card" [ngClass]="[collapsed?'collapsed':'expanded']">
+          <ps-action-icon [options]="showMoreOptions" class="material-icons show-more-less-icon collapsed"
+            (click)="showMore()" *ngIf="collapsed"></ps-action-icon>
+          <ps-action-icon [options]="showLessOptions" class="material-icons show-more-less-icon expanded"
+            (click)="showLess()" *ngIf="!collapsed"></ps-action-icon>
+        </div>
+      </div>
+    </mat-card-content>
+
+  </mat-card>
+
+</div>
+
+<div *ngIf="previewMode" class="ps-custom-component-preview" psPreviewEngine>
+  <ps-label-input *ngIf="options.labelKey" [id]="'lbl_'+ id" [options]="options" class="ps-lbl-preview">
+  </ps-label-input>
+  <span [innerHTML]="delimiter"></span>
+  <ps-label-input [id]="'value_preview_'+ id " [options]="previewValOptions" class="ps-value-preview"></ps-label-input>
+</div>

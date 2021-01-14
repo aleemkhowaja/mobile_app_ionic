@@ -1,0 +1,60 @@
+<ps-template-base>
+    <div class="ps-template-login-banners widget-banner" *ngIf="showBannerOnLogin" psHeader>
+        <div class="login-banners" banner>
+            <ps-gallery-banners id="login_banner" class="profile-animate-left" [options]='bannersOptions'>
+            </ps-gallery-banners>
+        </div>
+    </div>
+    <ion-card class="ps-template-login-card">
+        <div class="ps-template-login-card-flex">
+            <div class="ps-template-login-logo">
+                <ng-content select="[header]"></ng-content>
+            </div>
+            <div id="ps-container-login-form">
+                <div class="ps-template-login-username">
+                    <ps-input-username [id]="'username_' + id" [options]="mainOptions.userName"
+                        (onPsEmpty)="onEmptyUsername()"></ps-input-username>
+                </div>
+                <div class="ps-template-login-password">
+                    <ps-input-password [id]="'password_' + id" [options]="mainOptions.password"></ps-input-password>
+                </div>
+                <div class="ps-template-login-rememberMe">
+                    <ps-select-toggle [id]="'rememberMe_' + id" [options]="mainOptions.rememberMe"
+                        class="ps-template-login-rememberMe-toggle" (onPsChange)="onToggle($event)">
+                    </ps-select-toggle>
+                </div>
+                <div class="ps-template-login-help">
+                    <ps-action-hyperlink id="help_with_cred_link" [options]="helpCredentialsOptions">
+                    </ps-action-hyperlink>
+                </div>
+
+                <!-- 
+                    <div class="ps-template-login-biometric">
+                        <ps-action-anchor id="'biometric_login_' + id" [options]="biometricLoginOptions" (onClick)="logInByBiometric(true)">
+                        </ps-action-anchor>
+                    </div> 
+                -->
+                <div class="ps-template-login-submit">
+                    <ps-button-submit id="login_submit" text-uppercase [options]="submitOptions"
+                        class="ps-login-submit"></ps-button-submit>
+                </div>
+                <div class="additional-links">
+                    <ps-action-hyperlink class="online-registration-link" id="online_registration_link"
+                        [options]="onlineRegistrationOptions">
+                    </ps-action-hyperlink>
+                </div>
+
+                <div class="ps-template-login-links">
+                    <ng-content select="[footer]"></ng-content>
+                </div>
+                <div class="bank-name">
+                    <ng-content select="[bankName]"></ng-content>
+                </div>
+            </div>
+            <ng-content select="[login-fab-list]"></ng-content>
+            <!-- <div>
+                <ng-content select="[serverUrl]"></ng-content>
+            </div> -->
+        </div>
+    </ion-card>
+</ps-template-base>

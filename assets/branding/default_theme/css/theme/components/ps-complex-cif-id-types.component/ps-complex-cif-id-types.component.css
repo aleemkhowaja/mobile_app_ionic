@@ -1,0 +1,19 @@
+.cifIdTypes {
+    background-color: #f0f6ff;
+    margin-top: 0.7500em;
+    padding-bottom: 0.625em;
+    padding-right: 0.13em;
+    padding-left: 0.13em;
+    opacity: 0.8;
+    border-radius: 0.3125em;
+
+}
+
+ps-complex-id-details ps-container-complex ps-base-container .container-fluid.ps-base-container-fluid {
+    height: fit-content !important;
+}
+@-moz-document url-prefix() {
+    ps-complex-id-details ps-container-complex ps-base-container .container-fluid.ps-base-container-fluid {
+        height: -moz-fit-content !important;
+    }
+  }

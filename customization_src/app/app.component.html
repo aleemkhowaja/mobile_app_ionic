@@ -1,0 +1,11 @@
+<ng-container>
+  <ion-app>
+    <ion-content>
+      <ion-router-outlet main></ion-router-outlet>
+    </ion-content>
+  </ion-app>
+</ng-container>
+<div class="ps-custom-spinner-wrapper absolute-center" *ngIf="loaderOptions" id="ps-loader-controller">
+  <ps-action-image class="ps-custom-spinner absolute-center" [options]="loaderOptions">
+  </ps-action-image>
+</div>

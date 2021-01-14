@@ -1,0 +1,6 @@
+<ps-template-view [options]="templateViewOptions">
+    <ng-container *ngIf="!requestWasSent">
+        <ps-cif-list [options]="cifReportListOptions" (reloadFct)="loadCifOpeningList()"></ps-cif-list>
+        <ps-label [options]="noRecordFoundOptions" *ngIf="noCifListFound" class="no-cif-report-text"></ps-label>
+      </ng-container>
+</ps-template-view>

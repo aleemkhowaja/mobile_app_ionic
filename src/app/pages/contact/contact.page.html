@@ -1,0 +1,10 @@
+<ps-template-stepper [options]="stepperOptions" [id]="stepperOptions.stepperName">
+  <ps-form-step step1 [id]="stepperOptions.namesofSteps[0]">
+    <ps-container-panel [options]="panelNotificationContactOptions" id="contact_panel">
+
+      <ps-input-email [options]="emailNotificationOptions"></ps-input-email>
+      <ps-entity-phone-number [options]="phoneNumberNotificationOptions"></ps-entity-phone-number>
+
+    </ps-container-panel>
+  </ps-form-step>
+</ps-template-stepper>

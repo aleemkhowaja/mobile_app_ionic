@@ -1,0 +1,30 @@
+<!-- <ps-container-item [options]="itemOptions">
+  <ion-segment>
+    <div class="ps-segment-button-wrapper" *ngFor="let segment of options.segmentList; let i = index">
+      <ion-segment-button class="ps-select-segment" [checked]="segment.description === defaultSegment"
+        (click)="segmentChanged(segment.description, i)" [value]="segment.description">
+        <ps-label [options]="{labelKey: segment.description}">
+        </ps-label>
+      </ion-segment-button>
+      <span class="segment-seperator" [id]="'seperator_'+ i"></span>
+    </div>
+  </ion-segment>
+</ps-container-item> -->
+
+
+<ps-container-item [options]="itemOptions" class="ps-item-segment">
+  <ion-segment (ionChange)="segmentChanged()" [(ngModel)]="selectedSegment" [id]='id'>
+    <div class="ps-segment-button-wrapper" *ngFor="let segment of options.segmentList"
+      [ngClass]="{'checked': segment.itemValue === selectedSegment}">
+      <ion-segment-button class="ps-select-segment" [value]="segment.itemValue">
+        <ps-action-icon [options]="{iconName: segment.iconName}">
+
+        </ps-action-icon>
+        <ps-label [options]="{labelKey: segment.description}">
+
+        </ps-label>
+      </ion-segment-button>
+    </div>
+  </ion-segment>
+
+</ps-container-item>

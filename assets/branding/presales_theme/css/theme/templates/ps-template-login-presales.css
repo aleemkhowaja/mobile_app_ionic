@@ -1,0 +1,24 @@
+ps-template-login ps-container-card .ps-container-card {
+    height: 100vh !important;
+    display: flex;
+    align-items: center;
+    box-shadow: none;
+    border: none;
+    justify-content: center;
+}
+
+ps-template-login .ps-template-login-card {
+    /* Newly Added by DK */
+    background-image: linear-gradient(to bottom, var(--ps-app-background-color-stop1), var(--ps-app-background-color-stop2));
+    /* box-shadow: 0 11px 15px -7px rgba(255, 255, 255, .2), 0 24px 38px 3px rgba(255, 255, 255, .14), 0 9px 46px 8px rgba(255, 255, 255, .12) !important;
+    overflow-x: hidden; */
+    /* DK */
+}
+
+ps-template-login .bank-logo {
+    height: 12vh;
+    margin:2vh !important;
+}
+.isMobile-Layout ps-template-login .bank-logo{
+    margin-bottom: 6vh !important;
+}

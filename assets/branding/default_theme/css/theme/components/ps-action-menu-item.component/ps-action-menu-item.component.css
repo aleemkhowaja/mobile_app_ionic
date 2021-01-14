@@ -1,0 +1,104 @@
+:root {
+    --ps-root-font-size: 4em;
+    --ps-parent-font-size: 3em;
+    --ps-leaf-font-size: 2.5em;
+}
+
+/* .is-widget-view ps-action-menu-item {
+    height: auto !important;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+} */
+
+.is-widget-view ps-action-menu-item .ps-menu-main-icon {
+    -webkit-box-flex: 0 !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    order: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+}
+
+/* .is-widget-view ps-action-menu-item .ps-action-menu-item {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+} */
+
+.is-widget-view ps-action-menu-item .ps-action-menu-item-field {
+    margin: auto;
+}
+
+.is-widget-view ps-action-menu-item .ps-menu-title {
+    -webkit-box-flex: 0 !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    order: 2;
+    /* display: none; */
+    text-align: center;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.is-widget-view ps-action-menu-item .ps-menu-title ion-label {
+    white-space: normal !important;
+}
+
+.is-widget-view ps-action-menu-item .ps-menu-main-expand-icon {
+    -webkit-box-flex: 0 !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    order: 3;
+    display: flex;
+    justify-content: center;
+    color: var(--ps-primary-color);
+    font-size: var(--ps-xxl-font);
+    display: none;
+}
+
+.is-widget-view ps-action-menu-item .ps-menu-main-icon ps-action-icon {
+    /* background: white; */
+    padding: 5px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+}
+
+.is-widget-view ps-action-menu-item .ps-menu-main-icon ps-action-icon ion-icon {
+    color: white !important;
+    font-size: calc(var(--ps-font-size-ratio) * var(--ps-root-font-size)) !important;
+}
+
+.is-tree-view ps-action-menu-item .ps-menu-main-icon {
+    order: 1;
+}
+
+.is-tree-view ps-action-menu-item .ps-menu-title {
+    order: 2;
+}
+
+.is-tree-view ps-action-menu-item .ps-menu-main-expand-icon {
+    order: 3;
+}
+
+.is-tree-view .ps-action-menu-item-field {
+    align-items: center;
+}
+
+
+.is-tree-view .ps-action-menu-item-field {
+    align-items: center;
+}
+
+.is-tree-view .ps-action-menu-item-field ps-action-icon,
+.is-tree-view .ps-action-menu-item-field ps-label {
+    display: flex;
+}

@@ -1,0 +1,4 @@
+<div class="ps-options-security" *ngIf="securityListOptions.itemList && securityListOptions.itemList.length > 0">
+  <ps-container-lookup-option [id]="'ps-container-lookup-option_' + id" [options]="securityListOptions"
+      [itemCard]="options.securityInformation" (clickedCard)="updateCard($event)"></ps-container-lookup-option>
+</div>

@@ -1,0 +1,44 @@
+<ps-base-container>
+  <ion-item class="ps-item-wrapper ion-no-padding" [ngClass]="options.psClass">
+    <ps-base-container-body>
+      <div class="ps-keyin-input-label-cust"
+        [ngClass]="serviceMappingIconOptions?.iconName ? 'ps-container-item-service-img-icon' : 'ps-container-item-img-icon'"
+        *ngIf="(!((!options?.iconOptions?.iconName) && options.hideImageAndIconIfNotPresent)) || (options?.iconOptions?.iconName && !options.hideImageAndIconIfNotPresent)">
+        <ps-action-icon *ngIf="serviceMappingIconOptions?.iconName" (onClick)="onIconClicked()"
+          [options]="serviceMappingIconOptions" psIcon>
+        </ps-action-icon>
+        <ps-action-icon *ngIf="options?.iconOptions?.iconName" (onClick)="onIconClicked()"
+          [options]="options.iconOptions" psIcon>
+        </ps-action-icon>
+      </div>
+
+      <div class="ps-container-item-img-img" *ngIf="options?.imageOptions && !options?.hideImageAndIconIfNotPresent">
+        <ps-action-image psIcon [options]="options.imageOptions" (onClick)="onImageClicked()"></ps-action-image>
+      </div>
+
+      <div class="ps-container-item-main-content"
+        [ngClass]="options.hideImageAndIconIfNotPresent? 'ps-container-item-main-content-no-image-no-icon':(options?.imageOptions?.imageName) ? 'ps-container-item-main-content-image': 'ps-container-item-main-content-icon'">
+
+        <ps-base-container-body>
+          <ng-content>
+
+          </ng-content>
+        </ps-base-container-body>
+      </div>
+    </ps-base-container-body>
+  </ion-item>
+</ps-base-container>
+
+<!-- <div class="item item-block">
+  <ng-content select="[psIcon]"></ng-content>
+  <div class="item-inner">
+    <div class="ps-item-wrapper">
+      <ng-content select="[formField]">
+
+      </ng-content>
+      <ng-content>
+
+      </ng-content>
+    </div>
+  </div>
+</div> -->

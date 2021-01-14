@@ -1,0 +1,7 @@
+ps-label ion-label {
+    font-family: var(--ion-font-family, inherit) !important;
+}
+
+/* ps-label ion-label {
+    color: white !important;
+} */

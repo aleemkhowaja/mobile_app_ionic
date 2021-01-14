@@ -1,0 +1,97 @@
+ps-accounts-list .ps-container-lookup-option-details .available-balance-value {
+    font-weight: 300;
+    font-size: var(--ps-sm-font) !important;
+    color: var(--ps-balance-color) !important;
+}
+
+ps-accounts-list mat-card-content .lookup-details-content .container-option-table-col.item-value {
+    font-weight: 300;
+    font-size: var(--ps-sm-font) !important;
+    color: var(--ps-balance-color) !important;
+}
+
+ps-accounts-list mat-card-subtitle .ps-dynamic-edit .dynmaic-edit-label {
+    flex: 0 0 80%;
+}
+
+ps-accounts-list mat-card-subtitle ps-dynamic-edit {
+    flex: 0 0 100%;
+}
+
+ps-accounts-list mat-card-subtitle ps-dynamic-edit .dynmaic-edit-label ps-label {
+    margin: 0px 15px !important;
+}
+
+ps-accounts-list .container-option-table-col ps-label {
+    display: flex;
+}
+
+ps-accounts-list .container-option-table-col {
+    text-align: start;
+}
+
+ps-accounts-list .mat-card-header-text {
+    display: flex;
+    flex-direction: column;
+    margin: 0px !important;
+}
+
+ps-accounts-list mat-card-subtitle {
+    order: 1;
+}
+
+ps-accounts-list mat-card-title {
+    order: 2;
+    margin: 0 16px !important;
+}
+
+ps-accounts-list .ps-container-lookup-option-details .lookup-details-header .lookup-details-subtitle {
+    border-radius: 7px 7px 0px 0px;
+    background: var(--ps-account-list-title-background-color) !important;
+    margin-bottom: 15px !important;
+}
+
+ps-accounts-list .ps-container-lookup-option-details .lookup-details-header .lookup-details-subtitle {
+    padding: 0px !important;
+}
+
+ps-accounts-list .ps-container-lookup-option-details .lookup-details-header .lookup-details-subtitle ps-label {
+    min-height: 40px !important;
+    align-items: center;
+    display: flex;
+}
+
+ps-accounts-list .ps-container-lookup-option-details .lookup-details-header .lookup-details-subtitle .ps-dynamic-edit {
+    align-items: center;
+}
+
+ps-accounts-list .ps-container-lookup-option-details ps-keyin-input ps-container-item .item {
+    --background: white !important;
+    border-radius: 0px !important;
+}
+
+ps-accounts-list .ps-container-lookup-option-details ps-keyin-input ps-container-item .item ion-input {
+    color: var(--ps-account-list-title-font-edit-color) !important;
+    font-weight: 500 !important;
+    margin-inline-start: 15px;
+    font-size: var(--ps-md-font) !important;
+}
+
+ps-accounts-list .ps-container-lookup-option-details ps-keyin-input ps-container-item .ps-container-item-img-icon {
+    display: none
+}
+
+ps-accounts-list ps-dynamic-edit .ps-action-icon-label {
+    display: block !important;
+    font-size: var(--ps-lg-font) !important;
+}
+
+ps-accounts-list ps-dynamic-edit .ps-action-icon-icon {
+    display: none !important;
+}
+
+ps-accounts-list ps-dynamic-edit .dynamic-edit-action {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}

@@ -1,0 +1,19 @@
+<a *ngIf="options && (visible||custMode) && !previewMode" [id]="id" class="ps-action-menu-item"
+  [ngClass]="options.psClass?options.psClass: ''" (click)="onButtonClick(options.anchorValue)">
+  <div class="container-fluid">
+    <div class="row ps-action-menu-item-field">
+      <div class="col-2 ps-menu-main-icon">
+        <ps-action-icon *ngIf="options?.menuIconOptions" [options]="options.menuIconOptions"></ps-action-icon>
+      </div>
+
+      <div class="col-9 ps-menu-title">
+        <ps-label-input [options]="options"></ps-label-input>
+      </div>
+
+      <div class="col-1 ps-menu-main-expand-icon">
+        <ps-action-icon *ngIf="options?.expandCollapseIconOptions" [options]="options.expandCollapseIconOptions">
+        </ps-action-icon>
+      </div>
+    </div>
+  </div>
+</a>

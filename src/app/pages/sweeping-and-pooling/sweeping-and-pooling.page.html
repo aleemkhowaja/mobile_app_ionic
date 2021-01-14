@@ -1,0 +1,29 @@
+<ps-template-stepper [options]="stepperOptions" [id]="stepperOptions.stepperName">
+  <ps-form-step step1 [id]="stepperOptions.namesofSteps[0]">
+    <ps-container-panel [options]="panelSweepingOptions" id="sweeping_panel">
+      <ps-lov-instruction-method [options]="instructionMethodOptions" (onPsChange)="onInstructionMethodChange($event)">
+      </ps-lov-instruction-method>
+      <ps-lov-instruction-type [options]="instructionTypeOptions" (onPsChange)="onInstructionChange($event)">
+      </ps-lov-instruction-type>
+      <ps-lookup-own-accounts id="'transferFrom'+ id" #fromAccountRef [options]="targetAccountListOptions"
+        (onAccountChange)="onFromAccountChange($event)"></ps-lookup-own-accounts>
+      <ps-lookup-own-accounts *ngIf="showtoAccount" id="'transferTo'+ id" #toAccountRef [options]="toAccountListOptions"
+        (onAccountChange)="onToAccountChange($event)"></ps-lookup-own-accounts>
+
+      <ps-complex-exchange *ngIf="showIsMinimumOrMax" [options]="complexExchangeOptions"></ps-complex-exchange>
+
+      <ps-complex-date-filter id="filterDate" [options]="filterDate" *ngIf="showDate"></ps-complex-date-filter>
+
+    </ps-container-panel>
+  </ps-form-step>
+  <ps-form-step step2 [id]="stepperOptions.namesofSteps[1]">
+    <ps-container-panel [options]="panelPeriodicityOptions" id="periodicity_panel">
+      <ps-complex-recurring-scheduler [options]="schedulerOptions" (onPsChange)="onChangeSchedule($event)">
+      </ps-complex-recurring-scheduler>
+      <div [hidden]="hideDates">
+        <ps-date-day-month-year-future [options]="startDateOptions"></ps-date-day-month-year-future>
+        <ps-date-day-month-year-future [options]="endDateOptions"></ps-date-day-month-year-future>
+      </div>
+    </ps-container-panel>
+  </ps-form-step>
+</ps-template-stepper>

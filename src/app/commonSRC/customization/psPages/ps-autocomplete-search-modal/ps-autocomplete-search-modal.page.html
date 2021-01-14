@@ -1,0 +1,7 @@
+<div class="ps-autocomplete-search-modal">
+    <div class="ps-autocomplete-search-modal-element" *ngFor="let eachOption of searchresults" (click)="onElementChoosen(eachOption)">
+        <p><span class="element_description">{{ 'description_in_english_key' | translate }}</span><span class="element_translation">{{ eachOption.transEnglish }}</span></p>
+        <p><span class="element_description">{{ 'description_in_arabic_key' | translate }}</span><span class="element_translation">{{ eachOption.transArabic }}</span></p>
+        <p><span class="element_description">{{ 'description_in_french_key' | translate }}</span><span class="element_translation">{{ eachOption.transFrench }}</span></p>
+    </div>
+</div>

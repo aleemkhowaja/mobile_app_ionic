@@ -1,0 +1,46 @@
+<ion-content class="login-page">
+	<div class="container-fluid ion-no-padding">
+		<div class="row ion-no-padding">
+			<div class="login-main col-12 col-sm-12 col-md-12 col-lg-12 col-xl-7 offset-lg-0 offset-xl-3">
+				<ps-template-login id="omni-login" [options]="options" (logInClicked)="authenticate($event)">
+					<div header class="bank-logo"></div>
+					<div footer class="omni-login-links">
+						<div class="additional-links">
+							<ps-action-hyperlink id="create_account_link" [options]="createAccountOptions">
+							</ps-action-hyperlink>
+						</div>
+						<div class="additional-links">
+							<ps-action-hyperlink id="products_link" [options]="ProductNServiceCategoriesOptions">
+							</ps-action-hyperlink>
+						</div>
+						<div class="additional-links">
+							<ps-action-hyperlink id="qibla_direction_link" [options]="qiblaDirectionOptions">
+							</ps-action-hyperlink>
+						</div>
+						<div class="additional-links">
+							<ps-action-hyperlink id="prayer-time_link" [options]="prayerOptions"></ps-action-hyperlink>
+						</div>
+						<div class="additional-links">
+							<ps-action-hyperlink id="atm_and_branch_locator_link"
+								[options]="atmAndBranchLocatorOptions">
+							</ps-action-hyperlink>
+						</div>
+						<div class="additional-links">
+							<ps-action-hyperlink id="financing_calculator_link" [options]="financingCalculatorOptions">
+							</ps-action-hyperlink>
+						</div>
+					</div>
+					<div login-fab-list class="omni-login-fab-list">
+						<ps-button-fab-list [options]="loginfabListOptions" id="fab-login">
+						</ps-button-fab-list>
+					</div>
+					<ps-label bankName class="omni-login-fab-list" [options]="bankName">
+					</ps-label>
+				</ps-template-login>
+			</div>
+		</div>
+	</div>
+	<ion-footer class="ps-version">
+		<div class="omni-login-version-number">{{ version }}</div>
+	</ion-footer>
+</ion-content>

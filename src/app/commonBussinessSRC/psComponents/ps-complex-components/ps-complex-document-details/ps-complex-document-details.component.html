@@ -1,0 +1,28 @@
+<ps-container-complex class="ps-complex-credit-availability">
+
+
+  <ps-select-checkbox id="documentsCheckbox" [options]="options.documentdetailsCheckbox"
+    (onPsChange)="onCheckBoxChanged($event)">
+  </ps-select-checkbox>
+
+
+
+
+  <ps-dropdown-lov *ngIf="options.hasLov && showDocumentInput" id="documentLov"
+    [options]="options.documentDetailsLovOptions" (onPsChange)="onDocumentLovChange($event)"></ps-dropdown-lov>
+
+
+
+  <ps-input-free-text *ngIf="options.documentType =='T' && showDocumentInput" id="documentDetailsFreeText"
+    [options]="options.documentDetailsFreeTextOptions">
+  </ps-input-free-text>
+
+
+
+  <ps-input-numeric *ngIf="options.documentType =='N' && showDocumentInput" id="documentDetailsNumber"
+    [options]="options.documentDetailsNumericOptions">
+  </ps-input-numeric>
+
+
+
+</ps-container-complex>

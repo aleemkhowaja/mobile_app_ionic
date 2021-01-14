@@ -1,0 +1,36 @@
+ps-select-toggle .ps-select-toggle {
+  --background: var(--ps-primary-degree-3-color);
+  --background-checked: var(--ps-toggle-checked-background) !important;
+  --handle-background: var(--ps-font-light-color);
+  --handle-background-checked: var(--ps-font-light-color);
+}
+
+
+ps-select-toggle .ps-select-toggle-item {
+  display: flex;
+  align-items: center;
+}
+
+ps-select-toggle ps-label {
+  color: inherit !important;
+}
+
+ps-select-toggle .ps-select-toggle-item .ps-item-wrapper {
+  display: flex;
+}
+
+ps-select-toggle .ps-select-toggle-label {
+  flex: inherit;
+}
+
+ps-select-toggle .ps-select-toggle-item ion-toggle {
+  order: 1;
+}
+
+ps-select-toggle .ps-select-toggle-item ps-label-input {
+  order: 2;
+}
+
+ps-select-toggle .ps-select-toggle-item ps-label {
+  display: flex;
+}

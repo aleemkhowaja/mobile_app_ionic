@@ -1,0 +1,111 @@
+ps-complex-notification .ps-complex-notification {
+    width: 100%;
+}
+
+ps-complex-notification .ps-notification-item {
+    margin:15px;
+    -webkit-backface-visibility: visible !important;
+    backface-visibility: visible !important;
+    -webkit-animation-name: flipInX;
+    animation-name: flipInX;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+ps-complex-notification .ps-complex-notification-divider-label {
+    color: white;
+}
+
+ps-complex-notification ion-list {
+    background: none !important;
+}
+
+ps-complex-notification .anchor-title {
+    font-weight: bold;
+}
+
+ps-complex-notification .ps-complex-notification-date-label {
+    font-size: var(--ps-md-font) !important;
+}
+
+ps-complex-notification ps-container-item .item {
+    margin-top: 0.2em;
+    --background: var(--ps-notification-background-color) !important;
+    background: var(--ps-notification-background-color) !important;
+    border-radius: 7px !important;
+}
+
+.isWeb-Layout  ps-complex-notification ps-container-item .item:not(.item-has-focus) {
+    background: var(--ps-notification-background-color) !important;
+    --background: var(--ps-notification-background-color)  !important;
+}
+
+/* ps-complex-notification .ps-complex-notification-loadmoreButton {
+    --background: var(--ps-select-placeholder);
+    --background-focused: var(--ps-select-placeholder);
+    --background-hover: #ed8931;
+    --color: var(--ps-app-background-color) !important;
+    --color-hover: var(--ps-app-background-color);
+}
+
+ps-complex-notification .ps-complex-notification-loadmoreButton .ps-default-button {
+    --border-radius: 0% !important;
+    --border-style: none !important;
+} */
+
+ps-complex-notification ps-hyperlink-anchor ps-label.description ion-label{
+    font-size: var(--ps-lg-font);
+    color:white !important;
+    font-weight: 400;
+    white-space: normal;
+}
+ps-complex-notification ps-hyperlink-anchor ps-label.title ion-label{
+    color:white !important;
+    font-weight: 600;
+}
+
+ps-complex-notification ps-hyperlink-anchor {
+    order: 2;
+}
+
+ps-complex-notification ps-hyperlink-anchor .title {
+    font-weight: none !important;
+}
+
+.notification-date {
+    opacity:0.5;
+    padding:7px 0px;
+}
+
+ps-complex-notification .anchor-title {
+    font-weight: normal;
+}
+
+ps-complex-notification .ps-anchor-panel-data {
+    max-width: 100%
+}
+
+ps-complex-notification ps-label.notif-header-title {
+    display: flex;
+    flex: 0 0 100%;
+    border-radius: 5pt;
+    margin-top: 15px;
+    margin-inline-start: 15px !important;
+}
+
+ps-complex-notification ps-label.notif-header-title ion-label {
+    font-weight: 600;
+}
+ps-complex-notification .ps-container-item-main-content{
+    padding:10px !important;
+
+}
+ps-complex-notification ps-hyperlink-anchor .ps-anchor-panel-image {
+    display: none;
+}
+
+ps-complex-notification ps-container-item .item:not(.item-has-focus) {
+    box-shadow: 1px 1px darkgray !important;
+}

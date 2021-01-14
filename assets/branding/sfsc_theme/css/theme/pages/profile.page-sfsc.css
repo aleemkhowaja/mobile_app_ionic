@@ -1,0 +1,25 @@
+.ps-anchor-title {
+    font-size: var(--ps-md-font) !important;
+    /* DK */
+    color: var(--ps-font-dark-color);
+}
+
+.ps-label-cifname {
+    color: var(--ps-font-dark-color);
+    /* DK */
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    line-height: 150%;
+    font-size: var(--ps-md-font) !important;
+}
+
+.ps-label-username {
+    color: var(--ps-secondary-color);
+    /* DK */
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    line-height: 150%;
+    font-size: var(--ps-md-font) !important;
+}

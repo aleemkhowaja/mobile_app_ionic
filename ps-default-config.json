@@ -1,0 +1,21 @@
+{
+    "MAIN_CONFIG": {
+        "MINIFIED_DEFAULT_CSS_FILE_NAME": "./assets/ps-css-default-files.min.css"
+    },
+    "DEFAULT_ASSETS_CONFIG": {
+        "ASSETS_URL": "/assets/branding/default_theme/",
+        "MAIN_CSS_FILE_NAME": "ps-css-files.css",
+        "IMGS_FOLDER_URL": "imgs/",
+        "CSS_FOLDER_URL": "css/",
+        "FONTS_URL": "fonts/",
+        "ICONS_URL": "icon/",
+        "HTML_URL": "/assets/html/",
+        "FONT_FAMILY": "Montserrat/Montserrat.css",
+        "SVG_URL": "svg/",
+        "BANNERS_FILE_URL": "/assets/html/default_banners/default_banners.json",
+        "UI_CONFIGURATION": {
+            "LANDING_UI_TYPE": 1,
+            "DISPLAY_SLIDER_ON_LOGIN": false
+        }
+    }
+}

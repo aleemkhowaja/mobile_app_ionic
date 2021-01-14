@@ -1,0 +1,7 @@
+ps-form-step,
+ps-form-step .ps-form-step-section {
+    display: flex;
+    flex-direction: column;
+    flex-flow: column;
+    height: 100%;
+}

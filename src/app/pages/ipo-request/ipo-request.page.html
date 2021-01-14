@@ -1,0 +1,31 @@
+<ps-template-stepper [options]="stepperOptions" [id]="stepperOptions.stepperName">
+  <ps-form-step step1 [id]="stepperOptions.namesofSteps[0]">
+    <ps-container-panel [options]="panelOptions1Step1" id="ipo_req_panel">
+
+      <ps-ipo-securities-list [options]="ipoSecuritiesOptions"></ps-ipo-securities-list>
+
+
+      <ps-dropdown-portfolio id="portfolio_id" [options]="portfolioOptions"></ps-dropdown-portfolio>
+
+
+      <ps-input-numeric id="sukuk_count" (onPsChange)="countChange($event)" [options]="sukukOptions"></ps-input-numeric>
+
+
+      <ps-complex-amount id="sukuk_value" [options]="sukukValueOptions"></ps-complex-amount>
+
+
+      <ps-lov-payment-method-agent *ngIf="isUserAgent" id="payment_method" [options]="paymentMethodOptions">
+      </ps-lov-payment-method-agent>
+
+
+      <ps-lov-payment-method-individual *ngIf="!isUserAgent" id="payment_method"
+        [options]="paymentMethodIndividualOptions">
+      </ps-lov-payment-method-individual>
+
+
+      <ps-file-upload id="ps-file-upload" [options]="fileUploadOptions" (onPsFileSelect)='onFileSelect($event)'
+        (onPsFileDelete)='onFileDeleted($event)'></ps-file-upload>
+
+    </ps-container-panel>
+  </ps-form-step>
+</ps-template-stepper>

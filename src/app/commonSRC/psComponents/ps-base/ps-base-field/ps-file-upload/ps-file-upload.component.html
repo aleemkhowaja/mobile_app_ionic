@@ -1,0 +1,49 @@
+<ps-container-item class="ps-file-upload" [formGroup]="options.group" *ngIf="(visible || custMode) && !previewMode"
+    [options]="{hideImageAndIconIfNotPresent: true}" [ngClass]="[dataFiles.length===0?'no-file':'file-is-present']">
+    <div class="file-upload-padding">
+        <ion-input #fileUpload [formControlName]="options.fcName" type="file" [id]="id" [placeholder]="placeHolderTrans"
+            [(ngModel)]="fieldValue" (change)="selectFile($event)" [attr.psFcName]="options.fcName"></ion-input>
+        <ps-action-button class="chooseFile" [id]="'upload-button-'+id" [options]='chooseFileOptions'
+            (onClick)="callUploadFile()"> </ps-action-button>
+    </div>
+    <div class="description-section">
+        <div *ngIf="dataFiles.length > 0">
+            <ps-container-list [options]="dataFilesOptions">
+                <div *ngFor="let file of dataFiles;index as i">
+                    <ion-item class="ps-secondary-color ps-primary-font-color"
+                        [ngClass]="{'download-file': (file.file!=null && file.file != undefined)}" positionV="top"
+                        arrow>
+                        <img [src]="file.imageUrl" class="image-file-upload" *ngIf="file.isImage">
+                        <ion-label>
+                            <b class="ps-upload-file-name">{{ file.fileName }}</b>
+                            <p *ngIf="file.fileSize" class="ps-upload-file-size">{{ file.fileSize | psFileSize }}
+                            </p>
+                        </ion-label>
+                        <ps-action-icon [options]="removeIconOptions" (click)="deleteFile($event,i)"></ps-action-icon>
+                    </ion-item>
+                </div>
+            </ps-container-list>
+        </div>
+        <ps-label [options]="noFileLableOptions" *ngIf="dataFiles.length===0" class="no-file-choosen"></ps-label>
+    </div>
+</ps-container-item>
+<ng-container *ngIf="showError">
+    <p *ngFor="let e of errorMsgs" class="validation-message">
+        <ps-label [options]="{labelKey: e.msgKey}"></ps-label>
+        <ps-label [options]="{labelKey: e.param, translate: false}"></ps-label>
+    </p>
+</ng-container>
+
+<ng-container *ngFor="let file of dataFiles;index as i">
+    <div *ngIf="previewMode" psPreviewEngine>
+        <ion-item>
+            <ion-label>
+                <b>
+                    <ps-label [options]="fileAttachmentLabelOptions"></ps-label> {{i + 1}}
+                </b>
+                <span [innerHTML]="delimiter"></span>
+                <p>{{ file.fileName }}</p>
+            </ion-label>
+        </ion-item>
+    </div>
+</ng-container>

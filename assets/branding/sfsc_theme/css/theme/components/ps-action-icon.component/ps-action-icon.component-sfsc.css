@@ -1,0 +1,21 @@
+.ps-action-icon-icon {
+    order: -1;
+    padding: 0;
+    vertical-align: middle;
+    margin-inline-end: 10px;
+}
+
+ps-action-icon ion-icon {
+    color: white !important;
+}
+
+.ps-action-icon-label {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+ps-action-icon .ps-action-icon-icon {
+    display: flex;
+    align-items: center;
+}

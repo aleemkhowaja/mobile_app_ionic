@@ -1,0 +1,78 @@
+omni-login ion-content main {
+  overflow: hidden !important;
+  overflow-y: hidden !important;
+}
+
+omni-login ps-action-hyperlink ion-icon,
+omni-login ps-action-hyperlink ion-label,
+omni-login ps-action-hyperlink .ps-action-icon-icon ion-icon {
+  cursor: pointer !important;
+  padding: 0px !important;
+}
+
+/* Newly added by DK */
+
+omni-login ps-action-hyperlink .ps-action-anchor:hover {
+  text-decoration: underline !important;
+  cursor: pointer !important;
+}
+
+.isWeb-Layout omni-login .login-main {
+  margin: auto;
+  flex: 0 0 75% !important;
+  width: 75% !important;
+}
+
+.isWeb-Layout omni-login .login-main .main-content {
+  border-radius: 20px;
+  /* DK */
+  height: 90vh !important;
+  /* DK */
+  box-shadow: 1px 2px 6px 4px #CECECE !important;
+  /* DK */
+  -webkit-box-shadow: 1px 2px 6px 4px #CECECE !important;
+  /* DK */
+}
+
+.bank-logo {
+  width: 100% !important;
+  background-image: url(/assets/branding/sfsc_theme/imgs/BankLogo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 10vh;
+  background-position: center;
+}
+
+.bank-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.omni-login-links {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+omni-login .ps-action-anchor {
+  display: block;
+  margin-top: 5px !important;
+  /* background: hsla(0, 0%, 100%, 0.4) !important; */
+  border-radius: 5px;
+  padding-inline-start: 5px;
+  padding: 2px 2px;
+  /* text-decoration: underline !important;*/
+}
+
+omni-login .ps-template-login-links {
+  margin: 0px !important;
+}
+
+omni-login .ps-action-anchor {
+  display: block;
+  margin-top: 5px !important;
+  background: none !important;
+  border-radius: 5px;
+  padding: 2px 2px;
+}

@@ -1,0 +1,19 @@
+<ng-container *ngIf="showPsSplashScreen">
+  <ps-splash-screen (loadComplete)="loadComplete(true)"></ps-splash-screen>
+</ng-container>
+<ng-container *ngIf="isPlatformReady">
+  <ion-app>
+    <ion-content *ngIf="nav.commonService.isMobileLayout() || (nav.commonService.isWebLayout() && !nav.isUserLoggedIn)">
+      <ion-router-outlet main></ion-router-outlet>
+    </ion-content>
+
+    <ng-container *ngIf="nav.commonService.isWebLayout() && nav.isUserLoggedIn">
+      <ps-template-landing-web class="animated slideInLeft">
+      </ps-template-landing-web>
+    </ng-container>
+  </ion-app>
+</ng-container>
+<div class="ps-custom-spinner-wrapper absolute-center" *ngIf="loaderOptions" id="ps-loader-controller">
+  <ps-action-image class="ps-custom-spinner absolute-center" [options]="loaderOptions">
+  </ps-action-image>
+</div>

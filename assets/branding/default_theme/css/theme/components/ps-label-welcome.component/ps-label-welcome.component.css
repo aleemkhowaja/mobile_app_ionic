@@ -1,0 +1,7 @@
+ps-label-welcome .welcome-label {
+    font-weight: bold;
+}
+
+ps-label-welcome ps-label {
+    display: flex;
+}

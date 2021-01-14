@@ -1,0 +1,86 @@
+<ng-container hiddenSection>
+  <!-- <div id="cont" data-pct="20">
+    <svg id="svg" width="200" height="200" viewPort="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <circle r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48" stroke-dashoffset="12"></circle>
+      <circle id="bar" r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48" stroke-dashoffset="12">
+      </circle>
+    </svg>
+  </div> -->
+  <ng-template #reportList let-reportArray="reportArray" let-status="status" let-label="label"
+    let-labelClass="labelClass" let-isPending="isPending" let-statusArray="statusArray">
+    <div class="container-fluid report-header" *ngIf="availableTypes[status]">
+      <div class="row">
+        <div class="draft-title col-6">
+          <ps-label class="col" [options]="{'labelKey': label,'psClass':labelClass}"></ps-label>
+        </div>
+
+        <div class="draft-refresh-icon col-6">
+          <ps-action-icon [options]="refreshIconOptions" (onClick)="refreshReport()">
+
+          </ps-action-icon>
+        </div>
+      </div>
+    </div>
+
+    <div class="" *ngFor="let report of reportArray; let i = index" [ngStyle]="commonProv.animationDelay(i, 7)"
+      (click)="selectReport(report, $event)" id="{{ 'draft-report-' + i }}">
+      <div class="col-12" *ngIf="statusArray.includes(report.status)">
+        <div class="container-fluid">
+          <div class="row ps-animation  report draftReportInAnimation">
+            <div class="col-3 report-field progress">
+              <round-progress [current]="report.progress" max="1" responsive="true" stroke="15" color="null"
+                *ngIf="report.percentage>0 && !isPending" background="#e4e4e4" class="important-stroke-color" [ngClass]="{
+                        'positive' : report.progress*100 >= 50,
+                        'negative':  report.progress*100< 30,
+                        'neutral': report.progress*100 < 50 && report.progress*100> 30,
+                        'shade-0-20':report.progress*100<= 20,
+                        'shade-20-40':report.progress*100<= 40 && report.progress*100> 20,
+                        'shade-40-60':report.progress*100<= 60 && report.progress*100> 40,
+                        'shade-60-80':report.progress*100<= 80 && report.progress*100> 60,
+                        'shade-80-100':report.progress*100<= 100 && report.progress*100> 80
+                          }">
+              </round-progress>
+              <div class="percentage" *ngIf="report.percentage>0 && !isPending">
+                {{report.percentage + '%'}}
+              </div>
+              <ps-image-avatar [options]="report.avatar" *ngIf="!report.percentage"></ps-image-avatar>
+            </div>
+            <div class=" col-8 report-field">
+              <div class="report-field-details" *ngIf="isPending">
+                {{report.operName |  translate}}
+              </div>
+              <div class="report-field-details" *ngIf="status=='DR'">
+                {{report.name}}
+              </div>
+              <div class="report-field-details">
+                {{report.createdDateFormatted}}
+              </div>
+            </div>
+
+            <div class="col-1 report-field" *ngIf="!report.pendingDeletion && !isPending"
+              (click)="deleteReport(report, $event, 'draft-report-'+i)">
+              <ps-action-icon [options]="deleteReportIcon">
+              </ps-action-icon>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+      <ion-spinner *ngIf="report.pendingDeletion"></ion-spinner>
+    </div>
+  </ng-template>
+  <div class="container-fluid report-container">
+    <div *ngIf="!filterByOper" id="pending_reports">
+      <ng-container
+        *ngTemplateOutlet="reportList; context:{ isPending:true, statusArray:['P', 'T', 'TS','TP'],reportArray: reportArray, status: 'P',label:'pending_for_approval_key',labelClass:'ps-draft-report-status-label' }">
+      </ng-container>
+    </div>
+    <div id="draft_reports">
+      <ng-container
+        *ngTemplateOutlet="reportList; context:{ isPending:false, statusArray:['DR'] ,reportArray: reportArray, status: 'DR',label:'draft_key',labelClass:'ps-draft-report-status-label'}">
+      </ng-container>
+    </div>
+  </div>
+</ng-container>

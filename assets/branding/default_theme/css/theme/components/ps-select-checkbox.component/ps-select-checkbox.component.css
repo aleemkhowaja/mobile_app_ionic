@@ -1,0 +1,39 @@
+ps-select-checkbox .ps-select-checkbox-label {
+    -webkit-box-flex: 0;
+    flex: 0 0 91.666667%;
+    max-width: 91.666667%;
+}
+
+ps-select-checkbox .ps-select-checkbox {
+    -webkit-box-flex: 0;
+    flex: 0 0 8.333333%;
+    max-width: 8.333333%;
+}
+
+.ps-select-checkbox__item .ps-item-wrapper {
+    display: flex;
+}
+
+.ps-select-checkbox__item .ps-item-wrapper ion-label {
+    order: 1;
+    padding-inline-end: 5px !important;
+}
+
+.ps-select-checkbox {
+    /* the styles of the checkbox goes here */
+    --background-checked: var(--ps-primary-color);
+    --border-color-checked: var(--ps-primary-color);
+    --border-color: var(--ps-primary-color);
+    --border-width: 2px;
+}
+
+ps-select-checkbox ion-checkbox {
+    margin: 0px !important;
+    height: 100%;
+    width: 100%;
+}
+
+ps-select-checkbox ps-container-item ion-item.item-has-focus ion-label,
+ps-select-checkbox ps-container-item ion-item.ion-touched.ion-dirty ion-label {
+    color: inherit !important;
+}

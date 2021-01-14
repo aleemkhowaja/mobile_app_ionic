@@ -1,0 +1,6 @@
+<ps-template-view [options]="templateViewOptions">
+    <div class="chequebook-list-div" *ngIf="showList">
+        <!-- <ps-option-chequebook id="ps-option-chequebooks-list" *ngFor="let chequeBook of chequebookOptions" [options]="chequeBook"></ps-option-chequebook> -->
+        <ps-option-chequebook id="ps-option-chequebooks-list" [options]="chequebookOptions"></ps-option-chequebook>
+    </div>
+</ps-template-view>

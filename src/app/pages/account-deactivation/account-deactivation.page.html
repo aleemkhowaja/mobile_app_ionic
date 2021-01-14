@@ -1,0 +1,18 @@
+<ps-template-form [options]="options">
+  <ps-container-panel [options]="panelAccountDeactivationOptions" id="pin_panel">
+
+    <ps-dropdown-reasons id="keyin_select_dropdown" [options]="selectReasonDropDwnOptions"
+      (onPsChange)="onChangeReason($event)">
+    </ps-dropdown-reasons>
+
+
+    <ps-keyin-textarea id="keyin_textarea" [options]="inputOptions">
+    </ps-keyin-textarea>
+
+
+    <!-- <ps-action-image  class="image-warning-account-deactivation" [options]="actionImageOptions">
+      </ps-action-image> -->
+    <ps-label class="text-waring-account-dactivation" [options]="warningMsgLabelOptions"></ps-label>
+
+  </ps-container-panel>
+</ps-template-form>

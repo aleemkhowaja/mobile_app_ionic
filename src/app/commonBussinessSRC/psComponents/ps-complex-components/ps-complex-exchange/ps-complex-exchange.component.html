@@ -1,0 +1,31 @@
+<ng-container>
+  <ps-container-complex class="ps-complex-exchange-component">
+    <ps-complex-amount id="'fromAmount' + id" [options]="options.fromAmountOptions"
+      (onCurrencyChange)="fromCurrencyChange($event)" (onAmountChanged)="onamountInFromAccountChange($event)">
+    </ps-complex-amount>
+    <div class="exchange-rate"
+      *ngIf="options.fromAmountOptions.currencyCode !== undefined && options.toAmountOptions.currencyCode !== undefined && options.fromAmountOptions.currencyCode !== options.toAmountOptions.currencyCode && options.editableMode">
+      <ps-label [options]="exchangeRatelabelOptions"></ps-label>
+      <span>
+        <ps-action-icon [options]="excnageRateIconOptions" class="exchange-rate-icon"></ps-action-icon>
+      </span>
+      <span>{{exchangeRate}}</span>
+    </div>
+    <ps-complex-amount id="'toAmount' + id"
+      *ngIf="!previewMode || (previewMode && !(options.fromAmountOptions.currencyCode == options.toAmountOptions.currencyCode))"
+      [options]="options.toAmountOptions" (onCurrencyChange)="toCurrencyChange($event)"
+      [hidden]='!options.editableMode'>
+    </ps-complex-amount>
+    <p class="validation-message" *ngIf="toCurrenciesWarning">{{toCurrenciesWarningText}}</p>
+  </ps-container-complex>
+
+  <div *ngIf="(previewMode && !(options.fromAmountOptions.currencyCode == options.toAmountOptions.currencyCode))"
+    class="ps-custom-component-preview" psPreviewEngine>
+    <ps-label-input [id]="'lbl_'+ id" [options]="exchangeRatelabelOptions" class="ps-lbl-preview">
+    </ps-label-input>
+    <span [innerHTML]="delimiter"></span>
+    <ps-label-input [id]="'value_preview_'+ id " [options]="exchangeRateValueOptions" class="ps-value-preview">
+    </ps-label-input>
+    <!-- removed since the fcValue is already returned formatted <ion-label *ngIf="type=='amount'" [id]="'value_preview_'+ id " class="ps-value-preview">{{fcValue | psCurrency:decPoints}}</ion-label> -->
+  </div>
+</ng-container>

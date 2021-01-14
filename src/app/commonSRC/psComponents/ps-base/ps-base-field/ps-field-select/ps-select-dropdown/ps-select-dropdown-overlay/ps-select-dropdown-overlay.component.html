@@ -1,0 +1,34 @@
+<div class="ps-dismiss-modal" (click)="dismissModal()">
+</div>
+<div class="ps-item-list-wrapper" #psItemListWrapper
+  [ngStyle]="positionWasChecked?currentPosition:getDropDownBoxPosition()">
+  <ps-container-item [formGroup]="options.group" class="ps-custom-component" [ngClass]="options.psClass"
+    [ngClass]="{'error-field': showError}" [options]="dropDownOptions">
+    <div class="list-wrapper">
+      <div class="searchbar-wrapper">
+        <ion-searchbar [(ngModel)]="searchCriteriaField" [ngModelOptions]="{standalone: true}" #searchBar
+          (ionInput)="filterSearchCriteria($event)" [formControlName]="options?.searchOptions?.fcName" animated
+          [placeholder]="'search_key' | translate">
+          <!-- (ionCancel)="hideDropDown()" -->
+        </ion-searchbar>
+      </div>
+      <div class="ps-item-list" #psItemList (scroll)="onScroll($event)">
+        <ng-container #allItemsList *ngFor="let opts of filteredAndPaginatedArray">
+          <ion-item (click)="onSelectionChange(opts)" class="ps-pointer">
+
+            <ion-avatar *ngIf="opts.iconUrl">
+              <img [src]="opts.iconUrl">
+            </ion-avatar>
+            <ps-label [options]="{labelKey:opts.description, translate:false}"></ps-label>
+
+            <!-- <h2>{{opts.description}}</h2> -->
+          </ion-item>
+        </ng-container>
+        <div class="loading-wrapper" *ngIf="filteredAndPaginatedArray.length == 0 || loadMoreData || loadMoreAsyncData">
+          <ps-action-icon *ngIf="loadMoreData || loadMoreAsyncData" [options]="loadingOptions"></ps-action-icon>
+          <ps-label *ngIf="filteredAndPaginatedArray.length == 0 && !loadMoreData && !loadMoreAsyncData" [options]="{labelKey:'no_data_found_key'}"></ps-label>
+        </div>
+      </div>
+    </div>
+  </ps-container-item>
+</div>

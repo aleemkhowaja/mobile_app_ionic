@@ -1,0 +1,4 @@
+ps-input-display-only .ps-input-display-only-value ion-label{
+    color: var(--ps-input-label-font-color) !important; /* white !important; */
+    white-space: normal !important;
+}

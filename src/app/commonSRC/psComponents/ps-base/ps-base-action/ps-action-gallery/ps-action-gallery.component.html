@@ -1,0 +1,28 @@
+<!-- We will add  ps-container-draggable once it will be ready to use its functionallity-->
+<!-- <ps-container-draggable></ps-container-draggable> -->
+<ng-container *ngIf="visible || custMode">
+  <!-- <div [id]="'base_'+ id " *ngIf="custMode">
+    <ps-icon-customization [id]="'cust_icon_'+ id" [options]="custIconOptions"></ps-icon-customization>
+  </div> -->
+  <div class="ps-action-gallery-div">
+    <div *ngIf="options.layout==='grid'">
+      <div class="image-thumbnail">
+        <div class="ps-action-gallary-item" *ngFor="let media of options?.mediaList; let i = index ">
+          <ps-action-image [id]="'ps-gallery-image-' + media.id"
+            [options]="{imageBase64Url: media.data, imageName: media.imageName, psClass: 'un-selected-image'}"
+            (onClick)="onImageClick($event, media.id)">
+          </ps-action-image>
+          <div *ngIf="media?.type ==='text' || media?.type ==='html'" [innerHTML]="media?.data"></div>
+        </div>
+      </div>
+    </div>
+    <ps-container-slider *ngIf="options?.layout==='slider'" [options]='{mediaList: options.mediaList}'>
+    </ps-container-slider>
+    <div class="ps-custom-component-preview" psPreviewEngine>
+      <ps-label [options]="labelOptions" psPreviewLabel [id]="'lbl_'+ id" class="ps-lbl-preview">
+      </ps-label>
+      <img *ngIf="selectedImage?.imageData" psPreviewHTML class="ps-image ps-verification-images"
+        [src]="selectedImage?.imageData" [id]="'ps-verification-image-' +selectedImage?.imageData" />
+    </div>
+  </div>
+</ng-container>

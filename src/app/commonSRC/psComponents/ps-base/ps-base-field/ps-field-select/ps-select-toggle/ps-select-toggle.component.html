@@ -1,0 +1,23 @@
+<ps-icon-customization *ngIf="custMode" [id]="'cust_icon_'+ id" [options]="custIconOptions"></ps-icon-customization>
+<ng-container *ngIf="(visible||custMode) && !previewMode">
+  <ps-container-item class="ps-field-item-wrapper" [options]="{'hideImageAndIconIfNotPresent': true}">
+    <div [formGroup]="options?.group" class="ps-select-toggle-item">
+      <!-- <ps-label [options]="labelOptions" [id]="'lbl_' + id" class="ps-select-toggle-label"></ps-label> -->
+      <!-- <ion-label>{{ options?.labelKey | translate }}</ion-label> -->
+      <ps-label-input *ngIf="options?.labelKey" [options]="labelOptions"></ps-label-input>
+      <ion-toggle [(ngModel)]="value" [formControlName]="options?.fcName" class="ps-select-toggle" [id]="id"
+        [ngClass]="options.psClass" mode="md" [attr.psFcName]="options.fcName"></ion-toggle>
+    </div>
+  </ps-container-item>
+  <ng-container *ngIf="showError">
+    <p *ngFor="let e of errorMsgs" class="validation-message">
+      {{e.msgKey | translate}} {{e.param}}
+    </p>
+  </ng-container>
+</ng-container>
+<div *ngIf="previewMode" class="ps-custom-component-preview" psPreviewEngine>
+  <ps-label-input [id]="'lbl_'+id" class="ps-lbl-preview" *ngIf="options.labelKey" [options]="labelOptions">
+  </ps-label-input>
+  <span [innerHTML]="delimiter"></span>
+  <ps-label-input [id]="'value_preview_'+ id " [options]="previewValOptions"></ps-label-input>
+</div>

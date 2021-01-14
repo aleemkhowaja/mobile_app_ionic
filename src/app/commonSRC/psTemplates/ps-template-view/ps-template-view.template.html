@@ -1,0 +1,13 @@
+<ps-template-screen>
+    <ps-action-image class="inline-loading-image" *ngIf="!options.disableLoading && spinner"
+        [options]="actionImageOptions">
+    </ps-action-image>
+    <ng-content>
+    </ng-content>
+    <ng-container psFooter>
+
+        <ps-button-cancel (click)="onFooterClick()" [id]="id + 'temp_btn_cancel'" [options]="cancelOptions">
+        </ps-button-cancel>
+
+    </ng-container>
+</ps-template-screen>

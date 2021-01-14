@@ -1,0 +1,249 @@
+atm-and-branch-locator .component-map-container {
+    width: 100%;
+    height: 90vh;
+}
+
+.ps-form-map {
+    position: relative;
+    width: 100%;
+    min-height: 20em;
+}
+
+
+ps-map-atm-branches ps-action-modal ps-complex-card-details-atm-cdm .ion-fab-call-direction {
+    top: 0.3em;
+    position: fixed;
+}
+
+ps-map-atm-branches ps-action-modal ps-complex-card-details-atm-cdm .ps-complex-card-details-atm-cdm-header .ps-label {
+    font-size: var(--ps-md-font);
+    color: var(--ps-primary-color);
+    font-weight: bold;
+}
+
+ps-map-atm-branches ps-action-modal ps-complex-card-details-atm-cdm .ps-complex-card-details-atm-cdm-item {
+    font-size: var(--ps-lg-font);
+    display: inline-block;
+}
+
+.ps-complex-card-details-atm-cdm-item-label,
+.ps-complex-card-details-branch-item-label {
+    color: white;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.ps-complex-card-details-atm-cdm-item-value,
+.ps-complex-card-details-branch-item-value {
+    color: white;
+    display: inline-block;
+    font-weight: 200;
+}
+
+ps-map-atm-branches ps-action-modal ps-complex-card-details-atm-cdm .ps-complex-card-details-atm-cdm-button-directions {
+    --background: var(--ps-primary-color);
+}
+
+ion-card ps-map-atm-branches ps-form-map .ps-container-form-content {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    background: none !important;
+    overflow-y: scroll !important;
+    height: 100%;
+}
+
+account-opening ps-map-atm-branches ps-form-map .ps-container-form-content {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    background: none !important;
+    overflow-y: scroll !important;
+    height: 100%;
+}
+
+.isMobile-Layout account-opening ps-template-stepper ._gmaps_cdv_ .ps-container-form-content {
+    background: none !important;
+}
+
+atm-and-branch-locator ps-container-form .ps-container-form-content {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    background: none !important;
+}
+
+.selected-branch {
+    text-align: center;
+    width: 100%;
+    background-color: var(--ion-color-success-shade);
+    color: var(--ion-color-success-contrast);
+    margin-bottom: 1rem;
+    padding-top: 0.5rem;
+}
+
+.mapAtmBranchModal {
+    --background: rgba(0, 0, 0, 0.5);
+}
+
+.mapAtmBranchModal .modal-wrapper {
+    height: auto !important;
+    align-self: flex-end;
+    width: auto !important;
+    bottom: 0px !important;
+}
+
+.isWeb-Layout.userIsLoggedIn .mapAtmBranchModal .modal-wrapper {
+    width: 50% !important;
+    margin-bottom: var(--ps-page-margin);
+}
+
+.mapAtmBranchModal {
+    height: 100%;
+}
+
+.mapAtmBranchModal .modal-wrapper .ion-page {
+    position: relative;
+    contain: content;
+    max-height: 100vh;
+    overflow: auto;
+    display: flex;
+    justify-content: start;
+}
+
+.mapAtmBranchModal .modal-wrapper .ion-page .ps-complex-card-details-atm-cdm,
+.mapAtmBranchModal .modal-wrapper .ion-page .ps-complex-card-details-branch {
+    margin-top: 10vh !important;
+}
+
+.map-not-load ion-label {
+    position: fixed;
+    left: 45%;
+    top: 40%;
+}
+
+.my-location-btn-ui {
+    background-color: var(--ps-font-light-color);
+    border: 0.1rem solid var(--ps-font-light-color);
+    border-radius: 0.1rem;
+    box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, .3);
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.my-location-btn-text {
+    color: var(--ps-font-dark-color);
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 2rem;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+}
+
+.item-divider {
+    width: 100%;
+    border-bottom: 0.05rem dotted;
+    height: 0;
+    margin-bottom: 0.3rem;
+}
+
+atm-and-branch-locator ps-map-atm-branches .ps-map-segment-section {
+    height: 8%;
+}
+
+atm-and-branch-locator ps-map-atm-branches .ps-map-map-section {
+    height: 92%;
+    padding-top:var(--ps-section-padding) !important;
+}
+
+.mapAtmBranchModal .modal-close-icon-container {
+    position: fixed;
+    top: 0px;
+    opacity: 100;
+    background: var(--ps-header-background-color) !important;
+}
+
+.mapAtmBranchModal .map-atm-branch-details-bottom {
+    position: fixed;
+    bottom: 0px;
+    padding: 10px 15px !important;
+    background: var(--ps-app-opaque-background-color) !important;
+}
+
+.mapAtmBranchModal .ps-container-panel {
+    padding: 0px 5px !important;
+}
+
+.mapAtmBranchModal .map-atm-branch-details-bottom ion-button {
+    --padding: 0px 5px !important;
+}
+
+.mapAtmBranchModal .ps-container-panel-item .ps-item-wrapper .ps-container-item-main-content {
+    border-bottom: 0px;
+}
+
+
+.mapAtmBranchModal .card-title {
+    margin-bottom: 0px !important;
+}
+
+.mapAtmBranchModal .atm-branches-panels {
+    overflow: auto;
+    height: calc(100vh - 110px);
+}
+
+.mapAtmBranchModal ps-container-panel .container-fluid.ps-base-container-fluid {
+    height: initial !important;
+
+}
+
+.mapAtmBranchModal .modal-close-icon .close {
+    float: inherit;
+
+}
+
+.mapAtmBranchModal ps-container-panel {
+    margin-top: 15px !important;
+}
+
+.mapAtmBranchModal .widget-header-title {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: var(--ps-lg-font) !important;
+    padding-inline-start: 5px !important;
+    padding-inline-end: 5px !important;
+}
+
+.mapAtmBranchModal ps-container-item.ps-container-panel-item {
+    border-radius: 7px 7px 0px 0px !important;
+}
+
+.mapAtmBranchModal ps-container-panel .ps-container-panel-content {
+    border-radius: 0px 0px 7px 7px !important;
+}
+
+.mapAtmBranchModal .widget-menu-icon {
+    padding: 0px 10px !important;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.isWeb-Layout.userIsLoggedIn  .mapAtmBranchModal{
+    justify-content:center !important;
+}
+[dir="ltr"].isWeb-Layout.userIsLoggedIn  .mapAtmBranchModal{
+    margin-left:var(--ps-margin-left) !important;
+}
+[dir="rtl"].isWeb-Layout.userIsLoggedIn  .mapAtmBranchModal{
+    margin-right:var(--ps-margin-left) !important;
+}
+
+
+.mapAtmBranchModal .map-atm-branch-details-bottom>.row>* {
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    max-width: 100%;
+}

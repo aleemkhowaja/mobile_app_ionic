@@ -1,0 +1,76 @@
+<ps-template-stepper [options]="stepperOptions" [id]="stepperOptions.stepperName">
+    <ps-form-step step1 [id]="stepperOptions.namesofSteps[0]">
+        <ps-container-panel [options]="panelOptions1Step1" id="debit_card_req_panel">
+
+            <ps-lookup-own-accounts id="'primaryAccount'+ id" [options]="primaryAccountOptions">
+            </ps-lookup-own-accounts>
+
+
+
+            <ps-input-varchar id="'cardHolderName' + id" [options]="cardHolderNameOptions">
+            </ps-input-varchar>
+
+
+
+            <ps-dropdown-card-types id="'cardType' + id" [options]="cardTypeOptions"
+                (onPsChange)="onCardTypeChangeItem($event)"></ps-dropdown-card-types>
+
+            <ng-container *ngIf="enableCardLimit || enablePosLimit">
+                <ps-input-display-only id="'withdrawalLimit' + id" [options]="withdrawalLimitOptions"
+                    *ngIf="enableCardLimit">
+                </ps-input-display-only>
+                <ps-input-display-only id="'pOSLimit' + id" [options]="posLimitOptions" *ngIf="enablePosLimit">
+                </ps-input-display-only>
+            </ng-container>
+            <br />
+
+            <ps-lookup-own-accounts id="'secondaryAccount'+ id" [options]="secondaryAccountOptions">
+            </ps-lookup-own-accounts>
+
+
+            <ps-lov-delivery-location *ngIf="enableDeliveryLoc" id="delivery_branch" [options]="deliveryLocOptions"
+                (onPsChange)="onDeliveryLocationChange($event)">
+            </ps-lov-delivery-location>
+
+
+            <ps-input-display-only-cif-address-home id="HomeAddressDetails" [options]="homeAddressDetailsOptions">
+            </ps-input-display-only-cif-address-home>
+            <ps-input-display-only-cif-address-work id="workAddressDetails" [options]="workAddressDetailsOptions">
+            </ps-input-display-only-cif-address-work>
+
+
+            <ps-keyin-textarea id="manualAddress" [options]="manualAddressOptions">
+            </ps-keyin-textarea>
+
+
+            <ps-input-display-only *ngIf="enableCifBranch" id="accountCifBranch" [options]="branchOptions">
+            </ps-input-display-only>
+
+        </ps-container-panel>
+        <ps-container-panel [options]="panelOptions2Step1" id="credit_card_req_pane2" [style.visibility]="enableCifBranch ?
+              'hidden' : 'visible'">
+            <ps-complex-select-branch [options]="selectBranchOptions" (onPsChange)="onSelectBranch($event)">
+            </ps-complex-select-branch>
+        </ps-container-panel>
+        <ps-container-panel [options]="panelOptions3Step1" id="credit_card_req_pane2-1">
+            <ps-complex-select-branch [options]="selectDestinationBranchOptions"
+                (onPsChange)="onSelectDestinationBranch($event)">
+            </ps-complex-select-branch>
+        </ps-container-panel>
+    </ps-form-step>
+
+    <ps-form-step step2 [id]="stepperOptions.namesofSteps[1]">
+        <ps-container-panel [options]="atmBranchesPanelOptions">
+            <div class="dcMapLocator">
+                <ps-map-atm-branches class="component-map-container" [options]="mapAtmBranchesOptions">
+                </ps-map-atm-branches>
+            </div>
+        </ps-container-panel>
+        <ps-container-panel [options]="panelOptionsStep2" id="destBranch">
+            <div class="dcMapLocator">
+                <ps-map-atm-branches class="component-map-container" [options]="destinationBranchesOptions">
+                </ps-map-atm-branches>
+            </div>
+        </ps-container-panel>
+    </ps-form-step>
+</ps-template-stepper>

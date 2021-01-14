@@ -1,0 +1,34 @@
+<ps-template-stepper [options]="stepperOptions">
+  <ps-form-step step1 [id]="stepperOptions.namesofSteps[0]">
+    <ps-container-panel [options]="panelOptionsStep1" id="amana_online_bill_pmt_panel1">
+
+      <ps-dropdown-billers-category id="'category' + id" [options]="categoryOptions"
+        (onPsChange)="onCategoryChange($event)"></ps-dropdown-billers-category>
+
+
+      <ps-dropdown-biller *ngIf="showBiller" id="'type' + id" [options]="typeOptions"
+        (onPsChange)="onBillerChange($event)"></ps-dropdown-biller>
+
+
+      <ps-input-free-text id="'hint' + id" [options]="hintOptions">
+      </ps-input-free-text>
+
+
+      <ps-lookup-own-accounts id="'transferFrom'+ id" [options]="accountListOptions"
+        (onAccountChange)="onAccountChange($event)"></ps-lookup-own-accounts>
+
+
+      <ps-input-free-text id="input_free_text" [options]="briefExplanationOptions" (onPsChange)="onRefChange($event)">
+      </ps-input-free-text>
+
+      <!--<div class= "col-12">
+             <ps-complex-amount [options]="psComplexAmountOptions"></ps-complex-amount>
+        </div> -->
+
+      <ps-complex-exchange [options]="complexExchangeOptions"></ps-complex-exchange>
+
+
+
+    </ps-container-panel>
+  </ps-form-step>
+</ps-template-stepper>

@@ -1,0 +1,9 @@
+ps-container-lookup-option .ps-balance .available-balance-div {
+    background-color: var(--ps-primary-degree-4-color) !important;
+}
+
+.mat-card-content>:last-child:not(.mat-card-footer),
+.mat-card>:last-child:not(.mat-card-footer) {
+    background-color: var(--ps-primary-degree-3-color) !important;
+
+}

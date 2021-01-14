@@ -1,0 +1,538 @@
+<style>
+    .blockBody {
+        margin: 10px
+    }
+
+    .standardListing .row {
+        margin-bottom: 15px;
+    }
+
+    .compareListing {
+        padding-top: 10px;
+    }
+
+    .compareListing div {
+        margin-bottom: 20px;
+    }
+
+    .compareListing .listingItem {
+        border: 2px solid #ddd;
+        padding: 20px;
+        height: 100%;
+    }
+
+    .compareListing.standardListing .listingImage {
+        height: auto;
+    }
+
+    .standardListing .listingImage {
+        line-height: 0;
+        height: 240px;
+    }
+
+    .listingImage {
+        overflow: hidden;
+        display: block;
+    }
+
+    .compareListing.standardListing .listingInfos {
+        border: none;
+        background: transparent;
+    }
+
+    .listingImage a {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .listingImage img {
+        min-width: inherit !important;
+        max-width: 100%;
+        width: 100%
+    }
+
+    .listingTitle {
+        font-size: 24px;
+        color: #282828;
+        position: relative;
+        text-align: center;
+        padding-bottom: 8px;
+        margin-bottom: 16px;
+    }
+
+    .listingTitle a {
+        color: #282828;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .listingTitle::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        height: 2px;
+        background: #ddb603;
+        width: 86px;
+        margin-left: -43px;
+    }
+
+    .listingDescription {
+        text-align: center;
+        color: #19171a;
+        font-size: 16px;
+        margin-bottom: 12px;
+        line-height: 18px;
+    }
+
+    .listingLink {
+        text-align: center;
+    }
+
+    .listingLink a {
+        color: #e77543;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-evenly;
+        border-bottom: 1px solid gray;
+        margin-bottom: 10px;
+        background-color: #f8f9fa;
+        /* color: orange; */
+        /* font-weight: bold; */
+        font-size: 18px;
+        margin-bottom: 5px;
+        color: #282828;
+        font-weight: 500
+    }
+
+    .headerTitle {
+        border-right: 1px solid gray;
+        border-left: 1px solid gray;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    body {
+        background: transparent !important;
+    }
+
+    .compareCardsFilter {
+        background: white;
+    }
+
+    .btn-footer {
+        width: 100%;
+        color: white !important;
+        font-weight: 500 !important;
+    }
+
+    .cardInfo {
+        background: white;
+        margin-top: 10px
+    }
+
+    .compareListing.activeList .listingItem:hover {
+        border: 2px solid #ddb603;
+    }
+    html{
+        height: 100%;
+        overflow: hidden;
+    }
+    body{
+        width:100%;
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden
+    }
+</style>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<html >
+
+<body>
+    <div id="productList">
+        <div class="header">
+            <div class="headerTitle" onclick="showAccounts()" id="account">Accounts</div>
+            <div class="headerTitle" onclick="showCards()" id="card">Cards</div>
+            <div class="headerTitle" onclick="showLoans()" id="loan">Loans</div>
+        </div>
+        <div class="compareCardsFilter " id="accountsList">
+            <div class="blockBody">
+                <div class="compareListing activeList standardListing">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="listingItem">
+                                <div class="listingImage">
+                                    <a href="#" title="Current Account ">
+                                        <img src="./images/Business_banking.jpg"
+                                            alt="Current Account ">
+                                    </a>
+                                </div>
+                                <div class="listingInfos">
+                                    <div class="productInfoHolder">
+                                        <h3 class="listingTitle">
+                                            <a href="#" title="Current Account " onclick="showMore('cardInfo_1')">
+                                                Current Account
+                                            </a>
+                                        </h3>
+                                        <div class="listingDescription">
+                                            The simplest solution for daily transactions and easy access ...
+                                        </div>
+                                        <div class="listingLink">
+                                            <a href="#" title="Current Account" onclick="showMore('cardInfo_1')">
+                                                Know More
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="listingItem">
+                                <div class="listingImage">
+                                    <a href="/personal-current-bank-account-lebanon" title="Current Account ">
+                                        <img src="./images/Business_banking.jpg"
+                                            id="body_body_rpttowlevel_rptCards_0_imgLogo_0" alt="Current Account ">
+                                    </a>
+                                </div>
+                                <div class="listingInfos">
+                                    <div class="productInfoHolder">
+                                        <h3 class="listingTitle">
+                                            <a href="#" title="Current Account " onclick="showMore('cardInfo_1')">
+                                                Deposit Account
+                                            </a>
+                                        </h3>
+                                        <div class="listingDescription">
+                                            Lock in great rates to grow your saving
+                                        </div>
+                                        <div class="listingLink">
+                                            <a href="#" title="Current Account " onclick="showMore('cardInfo_1')">
+                                                Know More
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="listingItem">
+                                <div class="listingImage">
+                                    <a href="#" title="Current Account ">
+                                        <img src="./images/Business_banking.jpg"
+                                            id="body_body_rpttowlevel_rptCards_0_imgLogo_0" alt="Current Account ">
+                                    </a>
+                                </div>
+                                <div class="listingInfos">
+                                    <div class="productInfoHolder">
+                                        <h3 class="listingTitle">
+                                            <a href="#" title="Current Account " onclick="showMore('cardInfo_1')">
+                                                Easy Account
+                                            </a>
+                                        </h3>
+                                        <div class="listingDescription">
+                                                Streamline your life by keeping your savings and all daily ...
+                                            </div>
+                                        <div class="listingLink">
+                                            <a href="#" title="Current Account " onclick="showMore('cardInfo_1')">
+                                                Know More
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="listingItem">
+                                <div class="listingImage">
+                                    <a href="#" title="Current Account ">
+                                        <img src="./images/Business_banking.jpg"
+                                            id="body_body_rpttowlevel_rptCards_0_imgLogo_0" alt="Current Account ">
+                                    </a>
+                                </div>
+                                <div class="listingInfos">
+                                    <div class="productInfoHolder">
+                                        <h3 class="listingTitle">
+                                            <a href="#" title="Current Account " onclick="showMore('cardInfo_1')">
+                                                Saving Account
+                                            </a>
+                                        </h3>
+                                        <div class="listingDescription">
+                                            The simplest solution for daily transactions and easy access ...
+                                        </div>
+                                        <div class="listingLink">
+                                            <a href="#" title="Current Account " onclick="showMore('cardInfo_1')">
+                                                Know More
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="compareCardsFilter " id="cardsList">
+            <div class="blockBody">
+                <div class="compareListing activeList standardListing">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="listingItem">
+                                <div class="listingImage">
+                                    <a href="#" title="Current Account ">
+                                        <img src="./images/Business_banking.jpg"
+                                            alt="Current Account ">
+                                    </a>
+                                </div>
+                                <div class="listingInfos">
+                                    <div class="productInfoHolder">
+                                        <h3 class="listingTitle">
+                                            <a href="#" title="Current Account " onclick="showMore('cardInfo_1')">
+                                                Visa Prioprity
+                                            </a>
+                                        </h3>
+                                        <div class="listingDescription">
+                                            Exclusively for 18-24-year-olds </div>
+                                        <div class="listingLink">
+                                            <a href="#" title="Current Account" onclick="showMore('cardInfo_1')">
+                                                Know More
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="listingItem">
+                                <div class="listingImage">
+                                    <a href="" title="Current Account ">
+                                        <img src="./images/Business_banking.jpg"
+                                            alt="Current Account ">
+                                    </a>
+                                </div>
+                                <div class="listingInfos">
+                                    <div class="productInfoHolder">
+                                        <h3 class="listingTitle">
+                                            <a href="#" title="Current Account " onclick="showMore('cardInfo_1')">
+                                                Visa Classic
+                                            </a>
+                                        </h3>
+                                        <div class="listingDescription">
+                                            Exclusively for 18-24-year-olds </div>
+                                        <div class="listingLink">
+                                            <a href="#" title="Current Account" onclick="showMore('cardInfo_1')">
+                                                Know More
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="listingItem">
+                                <div class="listingImage">
+                                    <a href="" title="Current Account ">
+                                        <img src="./images/Business_banking.jpg"
+                                            alt="Current Account ">
+                                    </a>
+                                </div>
+                                <div class="listingInfos">
+                                    <div class="productInfoHolder">
+                                        <h3 class="listingTitle">
+                                            <a href="#" title="Current Account " onclick="showMore('cardInfo_1')">
+                                                Visa Platinum
+                                            </a>
+                                        </h3>
+                                        <div class="listingDescription">
+                                            Exclusively for 18-24-year-olds </div>
+                                        <div class="listingLink">
+                                            <a href="#" title="Current Account" onclick="showMore('cardInfo_1')">
+                                                Know More
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="compareCardsFilter " id="loansList">
+                <div class="blockBody">
+                    <div class="compareListing activeList standardListing">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                                <div class="listingItem">
+                                    <div class="listingImage">
+                                        <a href="#" title="Current Account ">
+                                            <img src="./images/Business_banking.jpg"
+                                                alt="Current Account ">
+                                        </a>
+                                    </div>
+                                    <div class="listingInfos">
+                                        <div class="productInfoHolder">
+                                            <h3 class="listingTitle">
+                                                <a href="#" title="Current Account " onclick="showMore('cardInfo_1')">
+                                                    Car Loan
+                                                </a>
+                                            </h3>
+                                            <div class="listingDescription">
+                                                    Grab that perfect property now </div>
+                                            <div class="listingLink">
+                                                <a href="#" title="Current Account" onclick="showMore('cardInfo_1')">
+                                                    Know More
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                                <div class="listingItem">
+                                    <div class="listingImage">
+                                        <a href="#" title="Current Account ">
+                                            <img src="./imgs/Business_banking.jpg"
+                                                alt="Current Account ">
+                                        </a>
+                                    </div>
+                                    <div class="listingInfos">
+                                        <div class="productInfoHolder">
+                                            <h3 class="listingTitle">
+                                                <a href="#" title="Current Account " onclick="showMore('cardInfo_1')">
+                                                    Personal Loan
+                                                </a>
+                                            </h3>
+                                            <div class="listingDescription">
+                                                    Because life happens </div>
+                                            <div class="listingLink">
+                                                <a href="#" title="Current Account" onclick="showMore('cardInfo_1')">
+                                                    Know More
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                                <div class="listingItem">
+                                    <div class="listingImage">
+                                        <a href="#" title="Current Account ">
+                                            <img src="./images/Business_banking.jpg"
+                                                alt="Current Account ">
+                                        </a>
+                                    </div>
+                                    <div class="listingInfos">
+                                        <div class="productInfoHolder">
+                                            <h3 class="listingTitle">
+                                                <a href="#" title="Current Account " onclick="showMore('cardInfo_1')">
+                                                    Travel Loan
+                                                </a>
+                                            </h3>
+                                            <div class="listingDescription">
+                                                    Your ticket to ride </div>
+                                            <div class="listingLink">
+                                                <a href="#" title="Current Account" onclick="showMore('cardInfo_1')">
+                                                    Know More
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <div id="cardInfo_1">
+        <div>
+            <div class="row" style="background:#e77543 ">
+                <div class="col-12">
+                    <button type="button" class="btn btn-footer " onclick="back()">Back</button>
+                </div>
+            </div>
+        </div>
+        <div class="cardInfo firstBlock">
+            <div class="container">
+                <div class="cardMainInfo clearfix">
+                    <figure>
+                        <img id="body_body_imgProduct" src="./images/Business_banking.jpg">
+                    </figure>
+                    <div class="listingInfo textContent">
+                        <h3>
+                            Current Account
+                        </h3>
+                        <div class="highlightedInfo">
+                            The simplest solution for daily transactions and easy access to your money
+                        </div>
+                        <p>
+                            Bsic Current Account is an essential for modern life. This non-interest
+                            bearing account is a dedicated vehicle for all your regular transactions, from bill and
+                            loan payments to money transfers and setting up standing orders. You also get all the
+                            technology you need to stay in charge of your finances from wherever you happen to be.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    document.getElementById('cardInfo_1').style.display = "none";
+    document.getElementById('cardsList').style.display = "none";
+    document.getElementById('loansList').style.display = "none";
+    document.getElementById("account").style.color = "#e77543";
+
+    function showMore(id) {        
+        document.getElementById('productList').style.display = "none";
+         document.getElementById(id).style.display = "block";
+    }
+
+    function showAccounts() {
+        document.getElementById("account").style.color = "#e77543";
+        document.getElementById("accountsList").style.display = "block";
+        document.getElementById('cardsList').style.display = "none";
+        document.getElementById('loansList').style.display = "none";
+        document.getElementById("loan").style.color = "#282828";
+        document.getElementById("card").style.color = "#282828";
+    }
+
+    function showCards() {
+        document.getElementById("card").style.color = "#e77543";
+        document.getElementById('cardsList').style.display = "block";
+        document.getElementById('accountsList').style.display = "none";
+         document.getElementById('loansList').style.display = "none";
+         document.getElementById("loan").style.color = "#282828";
+        document.getElementById("account").style.color = "#282828";
+    }
+
+    function showLoans() {
+        document.getElementById("loan").style.color = "#e77543";
+       document.getElementById('loansList').style.display = "block";
+        document.getElementById('cardsList').style.display = "none";
+        document.getElementById('accountsList').style.display = "none";
+        document.getElementById("card").style.color = "#282828";
+        document.getElementById("account").style.color = "#282828";
+    }
+    function back(){
+        document.getElementById('cardInfo_1').style.display = "none";
+        document.getElementById('productList').style.display = "block";
+    }
+</script>
+
+</html>

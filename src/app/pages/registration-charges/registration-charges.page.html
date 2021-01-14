@@ -1,0 +1,13 @@
+<ps-template-stepper [options]="stepperOptions" [id]="stepperOptions.stepperName">
+    <ps-form-step step1 [id]="stepperOptions.namesofSteps[0]">
+        <ps-container-panel [options]="registrationChargesPanel" id="reg_charges_panel">
+
+            <ps-lookup-own-accounts id="registration_account" [options]="chargeAccountsOptions">
+            </ps-lookup-own-accounts>
+
+
+            <ps-input-display-only id="registration_charges" [options]="chargesOptions"></ps-input-display-only>
+
+        </ps-container-panel>
+    </ps-form-step>
+</ps-template-stepper>

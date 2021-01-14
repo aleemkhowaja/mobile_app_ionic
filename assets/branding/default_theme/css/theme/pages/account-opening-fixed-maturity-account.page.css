@@ -1,0 +1,8 @@
+.fixed-maturity-account-toggle ps-base-container ps-base ion-item ps-select-toggle ion-item {
+  margin-top: 0em;
+
+}
+
+.ps-toggle-acc-open-2 ps-base-container ps-base ion-item .text-truncate {
+  white-space: normal !important;
+}

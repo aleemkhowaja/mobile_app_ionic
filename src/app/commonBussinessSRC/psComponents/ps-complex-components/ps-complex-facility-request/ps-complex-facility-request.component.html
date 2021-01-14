@@ -1,0 +1,29 @@
+<ps-container-complex class="ps-complex-financial-calculator">
+
+
+    <ps-dropdown-facility-types [options]="options.facilitytypesOptions" (onPsChange)="onFacilityTypeChanged($event)">
+    </ps-dropdown-facility-types>
+
+
+
+    <ps-input-varchar [id]="id + '_amount'" [options]="options.revolvingAmountOptions">
+    </ps-input-varchar>
+
+
+
+
+    <ps-complex-amount [options]="options.complexAmountOptions" (onAmountChanged)="onAmountChanged($event)">
+    </ps-complex-amount>
+
+
+    <ps-input-amount [id]="id + '_amount'" [options]="options.downPaymentOptions"
+        (onPsChange)='onDownPaymentChange($event)'>
+    </ps-input-amount>
+
+
+    <ps-input-display-only id="'financial_amount' + id" [options]="options.amountLabelOptions">
+
+    </ps-input-display-only>
+
+
+</ps-container-complex>

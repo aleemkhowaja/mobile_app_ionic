@@ -1,0 +1,10 @@
+<ps-template-view [options]="templateViewOptions">
+    <!-- 
+        <ps-action-button [options]='frButtonOptions' (onClick)="toLCRequest()">
+        </ps-action-button>
+     -->
+
+    <div *ngIf="showMyDeals" class="financing-page-padding">
+        <ps-complex-deal-details [options]='dealListOptions'></ps-complex-deal-details>
+    </div>
+</ps-template-view>

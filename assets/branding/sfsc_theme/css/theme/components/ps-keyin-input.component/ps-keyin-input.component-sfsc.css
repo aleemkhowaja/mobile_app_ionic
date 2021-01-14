@@ -1,0 +1,13 @@
+.ps-keyin-input {
+  padding: 0px;
+}
+
+.ps-keyin-input-icon-image {
+  padding: 1px;
+}
+
+.ps-keyin-input-label {
+  padding: 0px;
+  color: var(--ps-input-label-font-color);
+  /* Newly added by DK */
+}

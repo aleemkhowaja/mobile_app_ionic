@@ -1,0 +1,30 @@
+<ps-template-stepper [options]="stepperOptions">
+  <ps-form-step step1>
+
+    <ps-container-panel [options]="panelOptionsStep2" id="account_details_panel">
+      <ps-accounts-list [options]="termsAccountListOptions"></ps-accounts-list>
+    </ps-container-panel>
+
+    <ps-container-panel [options]="panelOptionsStep1" id="change_maturity_panel">
+
+      <ps-select-toggle *ngIf="!showLabel" [id]="'accOpenFMid'" [options]="mainOptions.toggleOptions" (onPsChange)="onChange($event)"
+        class="ps-toggle-acc-open fixed-maturity-account-toggle">
+      </ps-select-toggle>
+
+
+      <ps-lookup-own-accounts *ngIf="enableMaturityTransfer" id="'maturitrytransfer'+ id" [options]="maturityTransferOptions" (onAccountChange)="onMaturityAccountChange($event)">
+      </ps-lookup-own-accounts>
+
+
+      <ps-select-toggle [id]="'accprofitFMid'" [options]="mainOptions.toggleProfitOptions" (onPsChange)="onProfitChange($event)"
+        class="ps-toggle-acc-open-2" [hidden]="enableMaturityTransfer===true">
+      </ps-select-toggle>
+
+      <div>
+        <ps-lookup-own-accounts id="' profitAccount'+ id" [options]="profitAccOptions" (onAccountChange)="onProfitAccountChange($event)"
+          [hidden]="enableProfit===false || enableMaturityTransfer===true"></ps-lookup-own-accounts>
+      </div>
+
+    </ps-container-panel>
+  </ps-form-step>
+</ps-template-stepper>

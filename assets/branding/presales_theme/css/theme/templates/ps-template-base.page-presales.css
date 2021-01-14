@@ -1,0 +1,17 @@
+ps-template-base .main-header {
+    /* padding: 6px !important; */
+    background: linear-gradient(to right, var(--ps-app-header-color-stop1), var(--ps-app-header-color-stop2)) !important;
+    /* Newly Added by DK */
+    background-image: linear-gradient(to right, var(--ps-app-header-color-stop1), var(--ps-app-header-color-stop2));
+    border-radius: 0px !important;
+}
+
+
+ps-template-base .main-footer {
+    background: linear-gradient(to right, var(--ps-app-header-color-stop1), var(--ps-app-header-color-stop2)) !important;
+    border-radius: 0px !important;
+}
+
+.isWeb-Layout ps-template-base .main-footer {
+    background: transparent !important;
+}

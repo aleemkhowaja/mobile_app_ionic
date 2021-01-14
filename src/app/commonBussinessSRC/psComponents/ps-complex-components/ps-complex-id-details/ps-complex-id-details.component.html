@@ -1,0 +1,12 @@
+<ps-container-complex>
+
+    <ps-dropdown-id-types [options]="options?.dropdownIdTypesOptions" (expiryNeeded)="toggleExpiry($event)"
+        (onPsChange)="onItemChange($event)"></ps-dropdown-id-types>
+    <ps-input-free-text [options]="options?.idNumberOptions"></ps-input-free-text>
+    <ps-date-day-month-year-future [id]="id + '_expiryDate'" [options]="options.dateExpiryOptions" #expiryDate>
+    </ps-date-day-month-year-future>
+    <ps-dropdown-country [id]="id + '_country'" [options]="options?.countriesOptions" #issuanceCountry></ps-dropdown-country>
+    <ps-date-month-year-past [options]="options?.issueDateOptions" [id]="id + '_issueDate'" #issueDate></ps-date-month-year-past>
+
+
+</ps-container-complex>

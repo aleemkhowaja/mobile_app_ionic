@@ -1,0 +1,8 @@
+.ps-button-print {
+    --background: #f5760ef5;
+    --background-hover: var(--ps-font-dark-color);
+    --color: var(--ps-font-light-color);
+    --border-color: #f5760ef5;
+    --border-style: solid;
+    --border-width: 1px;
+}

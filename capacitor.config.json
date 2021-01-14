@@ -1,0 +1,8 @@
+{
+  "appId": "omni.channel",
+  "appName": "OMNI CHANNEL",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {}
+}

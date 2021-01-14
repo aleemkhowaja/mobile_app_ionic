@@ -1,0 +1,80 @@
+<ion-content class="main-web-content">
+  <!-- <div class="container-fluid navbar-header landing-web-header" *ngIf="landingType == 3">
+    <div class="row navbar-header-row">
+      <div class="profile-nav-header">
+        <ps-complex-profile></ps-complex-profile>
+      </div>
+      <div class="cif-nav-header">
+        <ps-complex-find-CIF [options]="findCIFOptions"></ps-complex-find-CIF>
+      </div>
+      <div class="reach-menu-header">
+        <ps-complex-menu-reach #reachMenu (click)="main.changeContent(reachMenu)"></ps-complex-menu-reach>
+        <ps-complex-profile></ps-complex-profile>
+      </div>
+    </div>
+  </div> -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="left-section" [ngClass]="{'col-2 menu-landing-web': landingType == 3,'col-3': landingType != 3}">
+        <ps-template-landing-main #main [hidden]="!showMenu" [options]="templateLandingOptions">
+        </ps-template-landing-main>
+      </div>
+      <div class="main-section " #mainSection [ngClass]="{'col-10 landing-web': landingType == 3, 'col-9': landingType != 3}">
+        <ps-template-base>
+          <div class="container-fluid navbar-header landing-web-header" *ngIf="landingType == 3" psHeader>
+            <div class="row navbar-header-row">
+              <div class="col-12 reach-menu-header">
+                <ps-complex-menu-reach #reachMenu (onClick)="changeContent($event)"></ps-complex-menu-reach>
+                <ps-complex-profile></ps-complex-profile>
+              </div>
+            </div>
+          </div>
+          <ion-router-outlet main class="main-section-page"></ion-router-outlet>
+        </ps-template-base>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <div class="right-floating-section" [ngClass]="{'open': openToggle}">
+      <a class="toggle" (click)="toggleClick()">
+        <ps-action-icon [options]="toggleIcon" class="toggle-icon"> </ps-action-icon>
+      </a>
+      <div class="floating-content">
+        <ps-select-segment [options]="segmentOptions" (segmentButtonClicked)="onClickSegment($event)">
+        </ps-select-segment>
+        <div *ngIf="showPanels" class="floating-content-panels">
+          <ps-container-panel [options]="atmBranchesPanelOptions" id="temp_web_atm_branches_panel">
+            <div class="map-panel">
+              <ps-map-atm-branches class="component-map-container" [options]="mapAtmBranchesOptions">
+              </ps-map-atm-branches>
+            </div>
+          </ps-container-panel>
+
+          <ps-container-panel [options]="exchangeRatePanelOptions" id="temp_web_ex_rate_panel">
+            <ps-complex-exchange [options]="complexExchangeOptions"></ps-complex-exchange>
+          </ps-container-panel>
+
+          <ps-container-panel id="temp_web_prayer_panel" [options]="prayerTimeOptions">
+            <ps-complex-prayer-time></ps-complex-prayer-time>
+          </ps-container-panel>
+        </div>
+        <div class="home-banners" *ngIf="showAds">
+          <ps-gallery-banners class="ps-complex-menu-header-container-banner profile-animate-left"
+            [options]='bannersOptions' id="temp_landing_web_banner">
+          </ps-gallery-banners>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <div class="right-side-bar" [ngClass]="{'open': openRightSide}">
+
+  </div>
+
+</ion-content>
+
+<!-- <ng-container *ngIf="!wasChecked">
+  {{checkContent()}}
+</ng-container> -->

@@ -1,0 +1,22 @@
+.ps-custom-spinner-wrapper {
+    height: 100% !important;
+    width: 100% !important;
+    z-index: 99999999999;
+    background: #00000054;
+}
+
+.isWeb-Layout .ps-custom-spinner-wrapper {
+    background: #00000091;
+}
+
+.show-spinner {
+    display: block;
+}
+
+.hide-spinner {
+    display: none;
+}
+
+.ps-custom-spinner-container {
+    width: var(--ps-loader-size);
+}

@@ -1,0 +1,7 @@
+<ps-image-inline-labeled [options]="defaultOptions" (click)="selectImages()">
+
+</ps-image-inline-labeled>
+ <div *ngIf="editlabelOptions && showedit" class="col-12 text-center">
+    <ps-label class="upload-profile-overlay position-relative" [options]="editlabelOptions" (click)="editImage()">
+    </ps-label>
+</div> 

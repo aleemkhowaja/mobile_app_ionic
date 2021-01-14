@@ -1,0 +1,15 @@
+<ps-container-complex [id]="'container_complex_'+id" *ngIf="EnableSecurityQuestion">
+
+    <ng-container *ngIf="options.group">
+
+        <ps-dropdown-security-question [id]="'sec_question_'+id" [options]="options.securityQuestionOptions"
+            (onPsChange)="onChangeSecurityQuestion($event)"></ps-dropdown-security-question>
+
+
+
+        <ps-input-free-text [id]="'sec_answer_'+id" (onPsChange)="onChangeAnwer($event)"
+            [options]="options.securityAnswerOptions"></ps-input-free-text>
+
+    </ng-container>
+
+</ps-container-complex>

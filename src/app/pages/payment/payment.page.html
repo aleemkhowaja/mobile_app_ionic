@@ -1,0 +1,87 @@
+<ps-template-stepper [options]="stepperOptions" (onNextPreviousStepper)="onNextAndPrevious($event)"
+  [id]="stepperOptions.stepperName">
+  <ps-form-step step1 [id]="stepperOptions.namesofSteps[0]">
+    <ps-container-panel [options]="panelOptions1Step2" id="payment_panel">
+
+      <ps-lookup-own-accounts id="'transferFrom'+ id" #fromAccountRef [options]="fromAccountList"
+        (onAccountChange)="onFromAccountChange($event)"></ps-lookup-own-accounts>
+
+
+      <ps-lookup-own-accounts *ngIf="enableOwnAccountTransfer()" id="'transferTo'+ id" #toAccountRef
+        [options]="toaccountList" (onAccountChange)="onToAccountChange($event)"></ps-lookup-own-accounts>
+
+
+      <!-- <ps-container-item class="ps-field-item-wrapper main-container" *ngIf="enableLocalBeneficiary() || enableInternalBeneficiary() || enableInternationalBeneficiary()" [options]="containerItemOptions"> -->
+      <ps-select-segment class="transfer-select-segment" *ngIf="showSegment" id="transferSegment"
+        (segmentButtonClicked)="onClickSegment($event)" [options]="segmentOptions"></ps-select-segment>
+
+      <ng-container *ngIf="showBeneficiaryDetails && !enableOwnAccountTransfer()">
+
+        <ps-lookup-beneficiaries-local *ngIf="enableLocalBeneficiary() && showBeneficiaryDropdown"
+          id="'localbeneficiarytransferTo'+ id" [options]="localBeneficiariesOptions"
+          (onBenificiaryChange)="localBeneficiaryChange($event)"></ps-lookup-beneficiaries-local>
+
+
+        <ps-lookup-beneficiaries-internal *ngIf="enableInternalBeneficiary() &&
+        showBeneficiaryDropdown" id="'internalbeneficiarytransferTo'+
+            id" [options]="internalBeneficiariesOptions" (onBenificiaryChange)="internalBeneficiaryChange($event)">
+        </ps-lookup-beneficiaries-internal>
+
+
+        <ps-lookup-beneficiaries-international *ngIf="enableInternationalBeneficiary() &&
+        showBeneficiaryDropdown" id="'internationalbeneficiarytransferTo'+ id"
+          [options]="internationalBeneficiariesOptions" (onBenificiaryChange)="internationalBeneficiaryChange($event)">
+        </ps-lookup-beneficiaries-international>
+
+        <!--  <div *ngIf="toAccountComponent.toAccountType === 'internationalAccountTransfer' || toAccountComponent.toAccountType === 'internationalAccountStandingOrder'">
+          <ps-complex-swift-transfer id="'swiftAccounttransferTo'+ id" [options]="toSwiftList" (onSwiftChange)="onToSwiftAccountChange($event)"></ps-complex-swift-transfer>
+        </div> -->
+      </ng-container>
+
+      <ng-container *ngIf="showToOtherDetails && !enableOwnAccountTransfer()">
+        <ps-banks *ngIf="enableLocalBeneficiary()" [options]="banksOptions" (onPsChange)="onBankChanged($event)">
+        </ps-banks>
+        <ps-keyin-input *ngIf="enableLocalBeneficiary()" id="branch_name" [options]="branchOptions"> </ps-keyin-input>
+
+        <ps-input-varchar *ngIf="enableInternationalBeneficiary()" id="id" [options]="swiftCodeOptions"
+          (onPsChange)="onSwiftCodeChanged($event)">
+        </ps-input-varchar>
+
+
+        <ps-input-account-number [options]="toOtherAccountNumberOptions" (onPsChange)="onAccountNumbChanged($event)">
+        </ps-input-account-number>
+
+        <ps-input-display-only *ngIf="enableInternalBenef" [options]="beneficiaryOptions"></ps-input-display-only>
+
+        <ps-dropdown-currencies *ngIf="enableLocalBeneficiary() || enableInternationalBeneficiary()" id="id"
+          [options]="benefCurrencyOptions" (onPsChange)="onBenefCurrencyChanged($event)"></ps-dropdown-currencies>
+
+
+        <ps-select-toggle [id]="'showPersonalDet'" [options]="saveBenefToggleOptions"
+          (onPsChange)="onSaveBenefChange($event)">
+        </ps-select-toggle>
+
+      </ng-container>
+
+      <!-- </ps-container-item> -->
+
+
+      <ps-complex-exchange id="exchange" [options]="complexExchangeOptions"></ps-complex-exchange>
+
+      <ps-purpose *ngIf="showPurpposeSubPurpose" id="purpose" [options]="purposeOptionsDDLB"></ps-purpose>
+
+      <ps-input-varchar *ngIf="!showPurpposeSubPurpose" id="'purpose' + id" [options]="purposeOptions">
+      </ps-input-varchar>
+
+    </ps-container-panel>
+  </ps-form-step>
+  <ps-form-step step2 *ngIf="toAccountComponent.scheduler" [id]="stepperOptions.namesofSteps[1]">
+    <ps-complex-recurring-scheduler [options]="schedulerOptions" (onPsChange)="onChangeSchedule($event)">
+    </ps-complex-recurring-scheduler>
+    <div [hidden]="hideDates">
+
+      <ps-date-day-month-year-future [options]="startDateOptions"></ps-date-day-month-year-future>
+      <ps-date-day-month-year-future [options]="endDateOptions"></ps-date-day-month-year-future>
+    </div>
+  </ps-form-step>
+</ps-template-stepper>

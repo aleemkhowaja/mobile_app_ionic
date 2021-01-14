@@ -1,0 +1,64 @@
+<ps-template-stepper [options]="options">
+  <ps-form-step step1 [id]="options.namesofSteps[0]">
+    <ps-container-panel [options]="panelOptions1">
+
+      <ps-option-card id="ps-option-cards-list" [options]="debitCardOptions"></ps-option-card>
+
+    </ps-container-panel>
+    <ps-container-panel *ngIf="blockCard" [options]="panelOptions2">
+
+      <ps-dropdown-core-reasons id="card-block-reason" [options]="cardBlockReason"> </ps-dropdown-core-reasons>
+
+
+      <ps-select-toggle *ngIf="allowReissue" [options]="cardBlockToggleOptions">
+      </ps-select-toggle>
+
+    </ps-container-panel>
+    <ps-container-panel *ngIf="renewCard" [options]="panelOptions3">
+
+      <ps-lov-delivery-location *ngIf="enableDeliveryLoc" id="delivery_branch" [options]="deliveryLocOptions"
+        (onPsChange)="onLocChange($event)">
+      </ps-lov-delivery-location>
+
+
+      <ps-complex-select-branch *ngIf="enableCifBranch" [options]="selectBranchOptions">
+      </ps-complex-select-branch>
+
+      <ng-container *ngIf="showAddress">
+        <ps-input-display-only-cif-address-home *ngIf="showHomeAddress" id="HomeAddressDetails"
+          [options]="homeAddressDetailsOptions">
+        </ps-input-display-only-cif-address-home>
+        <ps-input-display-only-cif-address-work *ngIf="!showHomeAddress" id="workAddressDetails"
+          [options]="workAddressDetailsOptions">
+        </ps-input-display-only-cif-address-work>
+      </ng-container>
+      <ng-container *ngIf="showManualAddress">
+        <ps-keyin-textarea id="keyin_textarea" [options]="inputOptions">
+        </ps-keyin-textarea>
+      </ng-container>
+    </ps-container-panel>
+    <ps-container-panel *ngIf="limitUpdate && showPos" [options]="panelOptions6">
+
+      <ps-display-only-currency-amount id="displayPosCurrentLimit" [options]="currentPosLimitOptions">
+      </ps-display-only-currency-amount>
+      <!-- <ps-input-display-only id="displayPosCurrentLimit" [options]="currentPosLimitOptions"></ps-input-display-only> -->
+
+
+      <ps-input-amount id="requestPosLimitUpdate" [options]="limitRequestPosOptions">
+      </ps-input-amount>
+
+    </ps-container-panel>
+    <ps-container-panel *ngIf="limitUpdate && showWd" [options]="panelOptions7">
+
+      <ps-display-only-currency-amount id="displayWdCurrentLimit" [options]="currentWdLimitOptions">
+      </ps-display-only-currency-amount>
+      <!-- <ps-complex-amount id="displayWdCurrentLimit" [options]="currentWdLimitOptions"></ps-complex-amount> -->
+
+
+      <ps-input-amount id="requestWdLimitUpdate" [options]="limitRequestWdOptions">
+      </ps-input-amount>
+
+    </ps-container-panel>
+  </ps-form-step>
+
+</ps-template-stepper>

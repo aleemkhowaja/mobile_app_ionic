@@ -1,0 +1,13 @@
+.image-thumbnail {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    .ps-action-gallary-item{
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+        min-width: 33%;
+        flex: 3 3;
+    }
+}

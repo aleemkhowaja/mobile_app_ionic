@@ -1,0 +1,85 @@
+ps-authentication-matrix .error-message {
+    color: var(--ps-negative-value-font-color);
+}
+
+ps-authentication-matrix mat-vertical-stepper {
+    background: rgba(0, 0, 0, 0.5) !important;
+}
+
+ps-authentication-matrix .mat-step-header .mat-step-label.mat-step-label-active {
+    color: var(--ps-tooltip-message-font-color) !important;
+    display: block;
+    padding-left: 15px;
+}
+
+ps-authentication-matrix .mat-step-header .mat-step-label {
+    display: none;
+}
+
+ps-authentication-matrix .authentication-success-img {
+    order: 1;
+    flex-grow: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ps-authentication-matrix .authentication-success-img-gif {
+    display: inline;
+}
+
+ps-authentication-matrix .authentication-success-title {
+    order: 2;
+    flex-grow: 1;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    color: var(--ps-tooltip-message-font-color);
+}
+
+ps-authentication-matrix .ps-button-standard {
+    --background: var(--ps-highlight-background-color);
+    --color: var(--ps-tooltip-message-font-color);
+}
+
+.mat-stepper-vertical-line::before {
+    background: var(--ps-tooltip-message-font-color);
+}
+
+ps-authentication-matrix ion-button {
+    margin: 0px !important;
+}
+
+ps-authentication-matrix .mat-vertical-stepper-content ion-button {
+    margin-top: 5px !important;
+}
+
+ps-authentication-matrix .ps-button-standard {
+    /* --background: var(--ps-green-color) !important; */
+     --background: transparent !important; 
+}
+
+ps-authentication-matrix .ps-button-standard ion-button {
+    max-height: 30px !important;
+}
+
+ps-authentication-matrix .mat-step-icon-state-number {
+    background: var(--ps-highlight-background-color) !important;
+}
+
+ps-authentication-matrix .auth-bottom {
+    justify-content: space-around;
+}
+
+ ps-authentication-matrix .ps-button-standard ps-label{
+    color: var(--ps-lbl) !important;
+    font-weight: 500 !important;
+}
+
+ps-authentication-matrix .ps-button-standard ion-icon{
+    color: var(--ps-lbl) !important;
+}
+
+ps-authentication-matrix .ps-button-standard ps-action-icon{
+    border-bottom: 1px solid var(--ps-lbl) !important;
+} 

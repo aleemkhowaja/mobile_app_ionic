@@ -1,0 +1,44 @@
+<!-- <ps-container-complex [id]="'ps-complex-user-profile-menu-' + id" class="ps-complex-user-profile-menu">
+  <div class="ps-complex-user-profile-image-profile">
+    <ps-image-loggedin-user></ps-image-loggedin-user>
+  </div>
+  <div class="ps-complex-user-profile-profile-info">
+    <ps-label-welcome class="label-info"></ps-label-welcome>
+     <ps-label-user-email class="label-info"></ps-label-user-email>
+    <ps-label-user-last-login class="label-info"></ps-label-user-last-login>
+    <ps-action-anchor [options]="anchorOptions"></ps-action-anchor>
+  </div>
+  <div class="ps-complex-user-profile-language">
+    <ps-lov-preferred-language id="lov_preferred_language" [options]="preferredLanguageOptions">
+    </ps-lov-preferred-language>
+  </div>
+</ps-container-complex> -->
+<ps-container-complex class="ps-complex-user-profile-menu">
+  <!-- <div class="ps-complex-user-profile-credentials"> -->
+
+  <div class="ps-complex-user-profile-profile-info">
+    <div class="ps-complex-user-profile-profile-info-welcome">
+      <ps-label-welcome></ps-label-welcome>
+    </div>
+    <div class="ps-complex-user-profile-profile-info-last-login">
+      <ps-label-user-last-login></ps-label-user-last-login>
+    </div>
+  </div>
+  <!-- </div> -->
+  <div class="ps-complex-user-profile-other-info">
+    <div class="ps-complex-user-profile-image-profile">
+      <ps-image-loggedin-user></ps-image-loggedin-user>
+    </div>
+    <div (click)="doEdit()">
+      <ps-hyperlink-anchor id="profile_menu_hyperlink" [options]="anchorOptions">
+      </ps-hyperlink-anchor>
+    </div>
+    <!-- <div class="ps-complex-user-profile-edit">
+        <ps-action-anchor [options]="anchorOptions"></ps-action-anchor>
+    </div> -->
+    <div class="ps-complex-user-profile-language">
+      <ps-lov-preferred-language id="lov_preferred_language" [options]="preferredLanguageOptions">
+      </ps-lov-preferred-language>
+    </div>
+  </div>
+</ps-container-complex>

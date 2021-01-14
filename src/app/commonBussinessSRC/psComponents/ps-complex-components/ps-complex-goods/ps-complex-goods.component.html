@@ -1,0 +1,17 @@
+<ps-container-complex class="ps-complex-goods">
+
+
+    <ps-dropdown-good-categories [options]="options.goodCategoriesOptions"
+        (onPsChange)="onGoodCategoriesChanged($event)">
+    </ps-dropdown-good-categories>
+
+    <ps-dropdown-country [options]="options.countryGoodsOptions" (onPsChange)="onCountryGoodsChanged($event)">
+    </ps-dropdown-country>
+
+    <ps-dropdown-goods [options]="options.goodOptions" (onPsChange)="onGoodsChanged($event)">
+    </ps-dropdown-goods>
+
+
+
+
+</ps-container-complex>

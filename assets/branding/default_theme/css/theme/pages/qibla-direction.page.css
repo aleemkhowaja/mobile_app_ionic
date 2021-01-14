@@ -1,0 +1,16 @@
+/* app-qibla-direction ps-template-view ps-container-form ps-base .container-fluid {
+    padding: 6% !important;
+    position: fixed;
+    top: 15%;
+    left: 0;
+    height: 30rem !important;
+} */
+
+/* app-qibla-direction ps-template-view ps-container-form .ps-container-form-content {
+    overflow: hidden !important;
+} */
+
+ps-complex-landmark-compass ps-label.landmark-compass-title ion-label {
+    display: none;
+}
+

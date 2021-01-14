@@ -1,0 +1,25 @@
+:root {
+    --ps-valid-field-color: var(--ps-checked-color); /* hsl(120, 73%, 75%); */ /* DK */
+    --ps-invalid-field-color: hsl(0, 95%, 55%); /* DK */
+    --ps-focused-field-color: #2F3BA2; /* DK */ 
+    --ps-default-field-color: rgba(0, 0, 0, 0.102);
+    --ps-default-font-color: var(--ps-primary-color); /* DK */
+}
+
+ps-container-item .item {
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    --highlight-background: none !important;
+    margin-top: 12px;
+    border-radius: var(--ps-fields-border-radius) !important;
+    --background: hsla(0, 0%, 100%, 1) !important; /* hsla(0, 0%, 94%, 0.851) DK */
+    font-size: var(--ps-md-font) !important; /* DK */
+}
+
+ps-container-item .item ion-input,
+ps-container-item .item ion-datetime,
+.mat-form-field-label-wrapper {
+    font-size: var(--ps-md-font) !important; /* DK */
+	font-weight: 500;
+	color: var(--ps-input-placeholder-font-color) !important;
+}

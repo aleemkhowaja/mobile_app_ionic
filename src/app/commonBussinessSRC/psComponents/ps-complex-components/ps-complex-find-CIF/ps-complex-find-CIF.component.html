@@ -1,0 +1,31 @@
+<ps-container-complex class="ps-complex-find-CIF">
+    <div class="container-fluid ps-complex-find-CIF-details">
+        <div class="row">
+            <div class="col-12 cif-long-nane">
+                <ps-input-varchar id="cifLongName" [options]="cifLongNameOptions" (onPsChange)="onChange($event)">
+                </ps-input-varchar>
+            </div>
+            <div class="col-6 cif-number">
+                <ps-input-varchar id="cifNumber" [options]="cifNumberOptions" (onPsChange)="onChange($event)">
+                </ps-input-varchar>
+            </div>
+            <div class="col-6 cif-id-number">
+                <ps-input-varchar id="idNumber" [options]="idNumberOptions" (onPsChange)="onChange($event)">
+                </ps-input-varchar>
+            </div>
+            <div class="col-12 cif-hint-message-label">
+                <ps-label [options]="hintMessageLabelOptions"></ps-label>
+            </div>
+        </div>
+    </div>
+    <div class="cif-verify-reset-btn">
+        <ps-action-button class="searchCif" *ngIf="emptyFields" [ngClass]="{'item-disabled': isVerified}"
+            [options]="searchCIFOptions" (click)="searchCif()"></ps-action-button>
+
+
+        <ps-action-button class="resetCif" *ngIf="!emptyFields" [ngClass]="{'item-disabled': !isVerified}"
+            [options]="resetCIFOptions" (click)="resetCif()">
+        </ps-action-button>
+
+    </div>
+</ps-container-complex>

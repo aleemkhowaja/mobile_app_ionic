@@ -1,0 +1,109 @@
+ps-complex-menu-header-container {
+    height: 100% !important;
+}
+
+.upload-profile-overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    color: var(--ps-font-light-color);
+    width: 100%;
+    transition: .5s ease;
+    font-size: var(--ps-md-font) !important;
+    padding: 2px;
+    text-align: center;
+    opacity: 1;
+    left: 0;
+}
+
+.ps-complex-profile-info *,
+.upload-profile-overlay {
+    height: auto !important;
+}
+
+ps-complex-menu-header-container .sliderIcon {
+    order: 2;
+    z-index: 2;
+    height: 100%;
+    position: absolute;
+    transform: translateX(100vw);
+}
+
+ps-complex-menu-header-container .sliderIcon .ps-action-image-container {
+    padding: 0px !important;
+}
+
+ps-complex-menu-header-container .sliderIcon .ps-action-image-row,
+.isMobile-Layout ps-complex-menu-header-container .ps-complex-profile {
+    background-color: var(--ps-highlight-background-color) !important;
+}
+
+ps-complex-menu-header-container .sliderIcon .ps-action-image-row {
+    padding-inline-end: 10px;
+    color: var(--ps-font-color-opp-primary-color);
+    padding-inline-end: 0.5em;
+    width: 100%;
+    margin: 0px !important;
+}
+
+ps-complex-menu-header-container .sliderIcon .ps-action-icon-label {
+    transform: rotate(-90deg);
+    order: -1;
+}
+
+ps-complex-menu-header-container .sliderIcon .ps-action-icon-icon {
+    margin: -1em !important;
+}
+
+[dir='rtl'] ps-complex-menu-header-container .sliderIcon .ps-action-icon-icon {
+    margin: 1em !important;
+}
+
+ps-complex-menu-header-container .sliderIcon ion-icon {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    font-size: 25px;
+}
+
+ps-complex-menu-header-container .label-info {
+    white-space: nowrap;
+}
+
+ps-complex-menu-header-container .profile-menu-main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: 100%;
+    color: var(--ps-font-light-color);
+    transform: translate3d(-100%, 0, 0);
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transition: 1s linear all;
+}
+
+ps-complex-menu-header-container .profile-menu-main-show {
+    -webkit-transform: translate3d(15px, 0, 0);
+    transform: translate3d(15px, 0, 0);
+    transition: 1s linear all;
+}
+
+ps-complex-menu-header-container .ps-complex-user-profile-image-profile {
+    display: flex;
+    align-items: center;
+}
+
+ps-complex-menu-header-container ps-complex-user-profile-profile-info {
+    padding-inline-start: 5px !important;
+    display: flex;
+    flex-direction: column;
+}
+
+ps-complex-menu-header-container .ps-complex-profile {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}

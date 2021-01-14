@@ -1,0 +1,29 @@
+<ng-container *ngIf="canLoadSlider && !reload">
+  <ion-slides [dir]="currentDirection" [reversed]="getIfReversed" [options]="defaultOptions" #slider
+    (ionSlidesDidLoad)="slidesDidLoad(slider)">
+    <ion-slide *ngFor=" let media of options?.mediaList ; let i=index">
+      <ps-action-image id="'image-' + media.id" *ngIf="media?.type==='image'"
+        [options]="{imageBase64Url: media.data, imageName: media.imageName}" (onClick)="onImageClick($event, media.id)">
+      </ps-action-image>
+      <div *ngIf="media?.type==='Text'" [innerHTML]="media?.data"></div>
+      <ps-container-html-viewer *ngIf="media?.type==='html'" [options]="{fileName: media.fileName}">
+      </ps-container-html-viewer>
+    </ion-slide>
+  </ion-slides>
+</ng-container>
+
+<!-- <div class="ps-slider-wrapper">
+  <div class="ps-slider">
+    <ng-container *ngFor="let media of options?.mediaList ; let i = index">
+      <ps-action-image id="'image-' + media.id" *ngIf="media?.type==='image'"
+        [options]="{imageBase64Url: media.data, imageName: media.imageName}" (onClick)="onImageClick($event, media.id)"
+        [ngStyle]="{'order': i}">
+      </ps-action-image>
+      <div *ngIf="media?.type==='Text'" [innerHTML]="media?.data" [ngStyle]="{'order': i}"></div>
+      <ps-container-html-viewer *ngIf="media?.type==='html'" [options]="{fileName: media.fileName}"
+        [ngStyle]="{'order': i}">
+      </ps-container-html-viewer>
+    </ng-container>
+  </div> 
+</div>
+-->

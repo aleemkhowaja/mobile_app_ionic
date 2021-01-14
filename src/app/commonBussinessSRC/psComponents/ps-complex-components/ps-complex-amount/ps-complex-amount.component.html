@@ -1,0 +1,13 @@
+<ps-container-item class="ps-field-item-wrapper ps-complex-amount" #amount (ionFocus)="onFocus()" (ionBlur)="onBlur()"
+    [ngClass]="{'was-focused' : hasFocus, 'isValid': isValid, 'notValid': !isValid && !hasFocus && touched}"
+    (click)="itemWasClicked(amount, $event)" [options]="amountItemOptions">
+
+    <ps-dropdown-currencies class="ps-dropdown-currencies-wrapper complex-currency" id="currency_exch"
+        [options]="options.currenciesOptions" (onPsChange)="changeCurrency($event)"></ps-dropdown-currencies>
+
+
+    <ps-input-amount [id]="id + '_amount'" [options]="options.amountOptions"
+        class="ps-input-amount-wrapper complex-amount-input" (onPsChange)="onAmountChange($event)">
+    </ps-input-amount>
+
+</ps-container-item>

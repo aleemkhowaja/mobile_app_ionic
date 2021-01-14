@@ -1,0 +1,35 @@
+<ps-template-stepper [options]="stepperOptions" [id]="stepperOptions.stepperName">
+    <ps-form-step step1 [id]="stepperOptions.namesofSteps[0]">
+        <ps-container-panel [options]="panelOptionsStep1" id="facility_req_panel1">
+
+            <ps-input-display-only id="'accountCifBranch' + id" [options]="branchOptions" *ngIf="enableCifBranch">
+            </ps-input-display-only>
+
+            <ps-complex-facility-request [options]="facilityRequestOptions" (amountChange)="onAmountChange($event)"
+                (facilityTypeChange)="onFacilityTypeChanged($event)" (downPaymentChange)='onDownpaymentChange($event)'
+                (fileSelected)="selectFile($event)">
+            </ps-complex-facility-request>
+        </ps-container-panel>
+
+        <ps-container-panel [options]="attachmentPanelOptions" id="attachment_panel">
+
+            <ps-file-upload [options]="fileUploadOptions" (onPsFileSelect)="selectFile($event)">
+            </ps-file-upload>
+
+        </ps-container-panel>
+
+        <ps-container-panel [options]="panelOptions2Step1" id="facility_req_pane2" *ngIf="!enableCifBranch">
+            <ps-complex-select-branch [options]="selectBranchOptions" (onPsChange)="onSelectBranch($event)">
+            </ps-complex-select-branch>
+        </ps-container-panel>
+    </ps-form-step>
+
+    <ps-form-step step2 [id]="stepperOptions.namesofSteps[1]" *ngIf="!enableCifBranch">
+        <ps-container-panel [options]="panelOptions1Step2" id="facility_req_panel2">
+
+            <ps-map-atm-branches class="component-map-container" [options]="mapAtmBranchesOptions">
+            </ps-map-atm-branches>
+
+        </ps-container-panel>
+    </ps-form-step>
+</ps-template-stepper>

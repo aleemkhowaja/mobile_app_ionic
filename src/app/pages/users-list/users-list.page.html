@@ -1,0 +1,7 @@
+<ps-template-view [options]="templateViewOptions">
+  <ps-action-button [options]="actionIconOptions" *ngIf="showCreateUserButton" (onClick)="GotoRegisterPage()"></ps-action-button>
+  <ng-container *ngIf="!requestWasSent">
+    <ps-users-list [options]="usersListOptions"  (reloadFct)="populateUsersList()"></ps-users-list>
+    <ps-label [options]="noRecordFoundOptions" *ngIf="noUsersFound" class="no-users-text"></ps-label>
+  </ng-container>
+</ps-template-view>

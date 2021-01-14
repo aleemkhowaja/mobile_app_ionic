@@ -1,0 +1,17 @@
+<ps-template-screen>
+    <ng-content>
+
+    </ng-content>
+    <ng-container psFooter>
+
+        <ps-button-cancel class="footer-buttons" (click)="onFooterClick()" [id]="id + '_form_cancel'">
+        </ps-button-cancel>
+
+
+
+        <ps-button-submit class="footer-buttons" (click)="onFooterClick()" [options]="submitOptions" id="form_submit">
+
+        </ps-button-submit>
+
+    </ng-container>
+</ps-template-screen>

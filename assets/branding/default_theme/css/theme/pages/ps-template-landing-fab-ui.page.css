@@ -1,0 +1,98 @@
+ps-template-landing-fab-ui .main-footer {
+    display: none;
+}
+ps-template-landing-fab-ui .main-content {
+    background: linear-gradient(to right, var(--ps-app-header-color-stop1), var(--ps-app-header-color-stop2)) !important;
+}
+/* ps-template-landing-fab-ui ion-fab,
+ps-template-landing-fab-ui ion-fab-button {
+    width: 50px;
+    height: 50px;
+} */
+ps-template-landing-fab-ui .fab-ui-notification {
+    position: absolute;
+    top: 1em;
+}
+
+[dir="ltr"] ps-template-landing-fab-ui .fab-ui-notification {
+    right: 0;
+}
+
+[dir="rtl"] ps-template-landing-fab-ui .fab-ui-notification {
+    left: 0;
+}
+
+ps-template-landing-fab-ui .fab-ui-notification ps-notification-defaulted ion-label {
+    display: none !important;
+}
+
+ps-template-landing-fab-ui .fab-ui-notification ps-notification-defaulted ion-icon {
+    font-size: 2em;
+}
+
+ps-template-landing-fab-ui ps-complex-profile {
+    padding-inline-start: 0px var(--ps-section-padding) !important;
+    display: block;
+}
+
+
+
+ps-template-landing-fab-ui .main-header {
+    max-height: 35vh !important;
+}
+
+ps-template-landing-fab-ui ps-complex-profile,
+ps-template-landing-fab-ui ps-complex-profile * {
+    max-height: 15vh !important;
+}
+
+ps-template-landing-fab-ui ps-gallery-banners,
+ps-template-landing-fab-ui ps-gallery-banners * {
+    max-height: 20vh !important;
+    height: 20vh !important;
+}
+
+ps-template-landing-fab-ui .notification-is-flipped ion-icon {
+    color: var(--ps-highlight-background-color);
+}
+
+ps-template-landing-fab-ui .fab-ui-notification ion-button {
+    box-shadow: none !important;
+    --box-shadow: none !important;
+}
+
+ps-template-landing-fab-ui ion-fab-button .ps-action-icon-label {
+    display: none !important;
+}
+
+ps-template-landing-fab-ui ps-button-fab-list ion-fab-button ion-icon {
+    font-size: var(--ps-xxl-font);
+    width:100% !important;
+}
+
+ps-template-landing-fab-ui ps-dropdown-allowed-languages mat-form-field .mat-form-field-infix img {
+    display: none
+}
+
+ps-template-landing-fab-ui .ps-dropdown-allowed-languages-wrapper {
+    align-self: flex-start;
+}
+
+ps-template-landing-fab-ui .ps-dropdown-allowed-languages-wrapper ps-select-dropdown-base ps-base-container-body {
+    height: 100% !important;
+}
+
+ps-template-landing-fab-ui .ps-dropdown-allowed-languages-wrapper ps-select-dropdown-base ps-base-container-body .container-fluid,
+ps-template-landing-fab-ui .ps-dropdown-allowed-languages-wrapper ps-select-dropdown-base ps-base-container-body .row {
+    padding: 0px !important;
+    width: 100%;
+    margin: 0px;
+    /* margin-top:1rem; */
+}
+
+ps-template-landing-fab-ui .ps-dropdown-allowed-languages-wrapper ps-select-dropdown-base ps-base-container-body .container-fluid .container-fluid,
+ps-template-landing-fab-ui .ps-dropdown-allowed-languages-wrapper ps-select-dropdown-base ps-base-container-body .row .row {
+    padding: inherit !important;
+    width: inherit !important;
+    margin: inherit !important;
+}

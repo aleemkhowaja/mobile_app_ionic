@@ -1,0 +1,10 @@
+<ps-icon-customization *ngIf="custMode" [id]="'cust_icon_'+ id" [options]="custIconOptions">
+</ps-icon-customization>
+<ng-container *ngIf="visible || custMode">
+  <div [ngClass]="options?.psClass">
+    <ion-button class="ps-default-button" [disabled]='disabled' [type]="options?.type" [ngClass]="options?.psClass"
+      (click)="onActionButtonClicked($event)">
+      <ps-action-icon [options]="iconOptions"></ps-action-icon>
+    </ion-button>
+  </div>
+</ng-container>

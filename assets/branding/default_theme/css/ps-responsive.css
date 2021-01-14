@@ -1,0 +1,28 @@
+.isWeb-Layout:root {
+    --ps-form-container-padding-ratio: 1;
+    --ps-zoom-ratio: 1;
+    --ps-font-size-ratio: 0.75;
+}
+
+.isMobile-Layout:root {
+    --ps-form-container-padding-ratio: 0.2;
+    --ps-zoom-ratio: 1;
+    --ps-font-size-ratio: 1;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
+
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+    .isMobile-Layout:root {
+        --ps-zoom-ratio: 2;
+    }
+}

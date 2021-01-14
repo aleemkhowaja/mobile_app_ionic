@@ -1,0 +1,22 @@
+<ps-template-stepper [options]="stepperOptions" [id]="stepperOptions.stepperName">
+    <ps-form-step step1 [id]="stepperOptions.namesofSteps[0]">
+
+        <ps-container-panel [options]="panelOptions1Step2" id="financial_calc_panel1">
+            <ps-complex-financial-calculator [options]="financialCalculatorOptions"
+                (productTypeChange)="onProductChange($event)" (amountChange)="onAmountChange($event)"
+                (currencyChange)="currencyChange($event)">
+            </ps-complex-financial-calculator>
+        </ps-container-panel>
+
+    </ps-form-step>
+    <ps-form-step step2 *ngIf="!cifInfo" [id]="stepperOptions.namesofSteps[1]">
+        <ps-container-panel [options]="panelOptionsStep1" id="financial_calc_panel2">
+
+
+            <ps-complex-contact-info id="ps-complex-contact-info" [options]="contactInfoOptions">
+            </ps-complex-contact-info>
+
+
+        </ps-container-panel>
+    </ps-form-step>
+</ps-template-stepper>

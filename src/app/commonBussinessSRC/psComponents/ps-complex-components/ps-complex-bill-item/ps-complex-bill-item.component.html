@@ -1,0 +1,23 @@
+<ps-container-complex class="ps-complex-bill-type">
+    <div class="col-lg-5 col-md-12 col-sm-12 p-0 m-0">
+        <ps-select-checkbox [id]="'bill_type' + id" [options]="options.checkBoxOptions"
+            (onPsChange)="onCheckChanged($event)">
+        </ps-select-checkbox>
+    </div>
+    <div class="col-lg-7 col-md-12 col-sm-12 p-0 m-0">
+        <div class="row m-auto">
+            <div class="col-5 ml-2">
+                <ps-input-numeric [options]="options.copyInputOptions">
+                </ps-input-numeric>
+            </div>
+            <div class="col-6 ml-2">
+                <ps-input-numeric [options]="options.originalInputOptions">
+                </ps-input-numeric>
+            </div>
+        </div>
+    </div>
+
+    <ps-input-free-text *ngIf="options.otherInputOptions" id="keyin_textarea" [options]="options.otherInputOptions">
+    </ps-input-free-text>
+
+</ps-container-complex>

@@ -1,0 +1,233 @@
+:root {
+    --ps-assets-url: './assets';
+    --color-mixer: hsl(211, 60%, 23%);
+    --ps-primary-hue: 211;
+    --ps-primary-saturation: 60%;
+    --ps-primary-light: 23%;
+    --ps-secondary-hue: 0;
+    --ps-secondary-saturation: 0%;
+    --ps-secondary-light: 65%;
+    --ps-primary-color: hsl(var(--ps-primary-hue), var(--ps-primary-saturation), var(--ps-primary-light));
+    /* blue */
+    --ps-secondary-color: hsl(var(--ps-secondary-hue), var(--ps-secondary-saturation), var(--ps-secondary-light));
+    /* silver */
+    --ps-app-background-color: hsl(0, 0%, 100%);
+    /* white */
+    --ps-highlight-background-color: #e77543;
+    /* orange */
+    --ps-font-color-opp-app-background: hsl(211, 60%, 23%);
+    --ps-font-color-opp-primary-color: black;
+    --ps-font-color-opp-secondary-color: white;
+    --ps-font-color-opp-highlight-color: white;
+    --ps-font-light-color: white;
+    --ps-font-dark-color: black;
+    --ps-primary-degree-1-color: #D5835E;
+    --ps-primary-degree-2-color: #CF8767;
+    --ps-primary-degree-3-color: #C98C70;
+    --ps-primary-degree-4-color: #BE9583;
+    --ps-secondary-degree-1-color: #B3A191;
+    --ps-secondary-degree-2-color: #C09B7B;
+    --ps-secondary-degree-3-color: #CD9666;
+    --ps-secondary-degree-4-color: #DA9151;
+    --ps-font-size-ratio-initial: 1;
+    --ps-xs-font: calc(0.6rem * var(--ps-font-size-ratio-initial)* var(--ps-font-size-ratio));
+    --ps-sm-font: calc(0.8rem * var(--ps-font-size-ratio-initial)* var(--ps-font-size-ratio));
+    --ps-md-font: calc(1rem * var(--ps-font-size-ratio-initial)* var(--ps-font-size-ratio));
+    --ps-lg-font: calc(1.2rem * var(--ps-font-size-ratio-initial)* var(--ps-font-size-ratio));
+    --ps-xl-font: calc(1.4rem * var(--ps-font-size-ratio-initial)* var(--ps-font-size-ratio));
+    --ps-xxl-font: calc(1.8rem * var(--ps-font-size-ratio-initial)* var(--ps-font-size-ratio));
+    --ps-form-container-padding-ratio-initial: 1;
+    --ps-form-container-padding: calc(60px * var(--ps-form-container-padding-ratio-initial));
+    --ps-hint-message-font-color: hsl(31, 90%, 55%);
+    --ps-tooltip-message-font-color: hsl(0, 0%, 100%);
+    --ps-tooltip-message-background-color: hsl(221, 29%, 25%);
+    --scroll-bar-width: 3px;
+    --scroll-bar-border-radius: 10px;
+    --scroll-bar-thumb-color: var(--ps-primary-color);
+    --scroll-bar-track-box-shadow: inset 0 0 5px hsl(0, 0%, 50%);
+    --ps-positive-value-font-color: var(--ps-primary-color);
+    --ps-negative-value-font-color: hsl(0, 100%, 50%);
+    --ps-neutral-value-font-color: hsl(34, 100%, 58%);
+    --ps-debit-font-color: hsl(244, 100%, 50%);
+    --ps-credit-font-color: hsl(0, 100%, 50%);
+    --ps-section-border-radius: 5px;
+    --ps-panel-border-radius: calc(var(--ps-section-border-radius) * 2);
+    --ps-panel-expanded-header-background-color: linear-gradient(to right, #000f42, #0015ce);
+    --ps-panel-collapsed-header-background-color: linear-gradient(to right, #bdc0ca, #6774e6);
+    --ps-fields-border-radius: calc(var(--ps-section-border-radius) * 2);
+    --ps-buttons-border-radius: 0px;
+    --ps-card-header-border-radius: calc(var(--ps-section-border-radius) * 2);
+    --ps-loader-image-name: "Eclipse-1s-90px-logo.svg";
+    --ps-splash-screen-logo-name: 'Path.png';
+    --ps-loader-size: 100px;
+    --ps-container-footer-background: white;
+    --ps-content-height: 0px;
+    --ps-section-padding: 10px;
+    --ps-application-top-padding: 15px;
+    --ps-application-bottom-padding: 15px;
+    --ps-application-left-padding: 5px;
+    --ps-application-right-padding: 5px;
+    --ps-app-opacity-degree: 0.4;
+    --ps-app-opaque-background-color: hsla(0, 0%, 100%, var(--ps-app-opacity-degree));
+    --ps-panel-background-color: 231, 62%, 33%;
+    --ps-form-container-background-color: hsla(0, 0%, 100%, calc(var(--ps-app-opacity-degree) * 1));
+    --ps-highlighted-search-text-background: yellow;
+    --ps-input-label-font-color: purple;
+    --ps-input-value-font-color: rgb(65, 55, 194);
+    --ps-input-placeholder-font-color: cyan;
+    --ps-panel-font-color: var(--ps-primary-color);
+    --ps-gradient-orientation: to bottom;
+    --ps-base-color: white;
+    --ps-lbl: #306CAF;
+    --ps-select-placeholder: #bbbbbb;
+    --ps-lbl-preview: #355EA9;
+    --ps-value-preview: rgb(0, 0, 0);
+    --ps-lbl-focus-color: #3F429E;
+    --ps-lbl-focus-zoom: 0.9;
+    --ps-lbl-required-star: red;
+    --ps-danger-color: orange;
+    --ps-error-color: red;
+    --ps-success-color: green;
+    --ps-main-font-color: var(--ps-base-color);
+    --ps-page-title-font-size: 3rem;
+    --ps-page-title-font-color: white;
+    --ps-disabled-components-border-color: #ececec;
+
+    --ps-card-header-color: #c0c0c0;
+    --ion-color-light: var(--ps-secondary-color);
+    --ion-color-light-contrast: var(--ps-font-light-color);
+    --ion-color-dark: var(--ps-font-light-color);
+    /*
+        Report css variables
+    */
+    --ps-report-header-color: #0000004a;
+    --ps-report-content-color: hsl(225, 22%, 96%, 0.7);
+    --ps-report-header-title-color: #f4f5f8;
+    --ps-report-header-title-size: 15px;
+    --ps-report-header-label-color: #f4f5f8;
+    --ps-report-header-value-color: hsl(34, 100%, 58%);
+    --ps-report-content-label-color: #6b6b6b;
+    --ps-report-content-label-value-color: hsl(240, 97%, 26%);
+    --ps-report-content-label-value2-color: hsl(164, 43%, 33%);
+    --ps-report-content-label-value3-color: hsl(0, 100%, 50%);
+    --ps-report-content-border-color: #6b6b6b;
+    --ps-report-header-image-width: 30px;
+
+    /*
+        popup messages images definitions
+    */
+    --ps-success-message-image-name: 'checkmark.svg';
+    --ps-error-message-image-name: 'Stopper.svg';
+    --ps-info-message-image-name: 'info.svg';
+    --ps-fatal-message-image-name: 'FatalCrack.svg';
+    --ps-no-network-image-name: 'NoNetwork.svg';
+
+    /*
+        Customization CSS Variables
+    */
+    --ps-customization-page-background: rgba(255, 255, 255);
+    --ps-customization-page-main-color: #005A80;
+    --ps-customization-page-secondary-color: #EE8932;
+    --ps-customization-page-ternary-color: #7d7d7d;
+    --ps-customization-page-disabled-color: #b8b5b5;
+
+    --ps-scrollbar-color-primary: var(--scroll-bar-thumb-color);
+    --ps-scrollbar-color-secondary: var(--scroll-bar-track-box-shadow);
+    --ps-scrollbar-color-firefox: var(--ps-scrollbar-color-primary) var(--ps-scrollbar-color-secondary);
+    --ps-scrollbar-width: thin;
+
+
+    /*  menu section */
+    --ps-menu-box-background: transparent;
+    /* container-item */
+    --ps-background-color-container-item: hsla(0, 0%, 100%, 0.851);
+    --ps-background-color-container-item-details: hsla(0, 0%, 100%, 0.851);
+    --ps-subtitle-background-color: transparent;
+    --ps-container-edit-subtitle-background: transparent;
+
+    /* header */
+    --ps-header-background: linear-gradient(to right, var(--ps-app-header-color-stop1), var(--ps-app-header-color-stop2));
+
+    /* toggle */
+    --ps-toggle-checked-background: var(--ps-highlight-background-color);
+
+    /* account balance */
+    --ps-balance-color: var(--ps-font-light-color);
+
+    --ps-cif-message-background-color: #687eae;
+
+    /*header*/
+    --ps-main-title-background: linear-gradient(to right, var(--ps-app-header-color-stop1), var(--ps-app-header-color-stop2));
+    --ps-main-title-color: var(--ps-font-color-opp-secondary-color);
+
+    /*header*/
+    --container-panel-content-background-color: hsla(var(--ps-panel-background-color), calc(var(--ps-app-opacity-degree) * 1));
+    /*form content*/
+    --ps-form-content-padding: 10px;
+    /*colors*/
+    --ps-gradient-color-1: #0b21b3;
+
+    --ps-gradient-color-2: #7b4007;
+    --ps-gradient-color-opposite: linear-gradient(135deg, #64392b, #0b21b3);
+    --ps-search-icon-color: gray !important;
+    /*general*/
+    --ps-web-background-color: linear-gradient(43deg, hsla(0, 0%, 41.2%, .02), hsla(0, 0%, 41.2%, .02) 62%, hsla(0, 0%, 89%, .02) 0, hsla(0, 0%, 89%, .02) 69%, rgba(24, 24, 24, .02) 0, rgba(24, 24, 24, .02) 80%, rgba(13, 13, 13, .02) 0, rgba(13, 13, 13, .02) 82%, rgba(13, 13, 13, .02) 0, rgba(13, 13, 13, .02)), linear-gradient(31deg, hsla(0, 0%, 60.8%, .02), hsla(0, 0%, 60.8%, .02) 29%, hsla(0, 0%, 64.3%, .02) 0, hsla(0, 0%, 64.3%, .02) 41%, hsla(0, 0%, 78.4%, .02) 0, hsla(0, 0%, 78.4%, .02) 74%, hsla(0, 0%, 89.8%, .02) 0, hsla(0, 0%, 89.8%, .02) 79%, rgba(15, 15, 15, .02) 0, rgba(15, 15, 15, .02)), linear-gradient(319deg, rgba(39, 39, 39, .02), rgba(39, 39, 39, .02) 17%, rgba(49, 49, 49, .02) 0, rgba(49, 49, 49, .02) 25%, rgba(59, 59, 59, .02) 0, rgba(59, 59, 59, .02) 32%, hsla(0, 0%, 76.1%, .02) 0, hsla(0, 0%, 76.1%, .02) 46%, hsla(0, 0%, 86.3%, .02) 0, hsla(0, 0%, 86.3%, .02)), linear-gradient(113deg, hsla(0, 0%, 73.7%, .02), hsla(0, 0%, 73.7%, .02) 15%, hsla(0, 0%, 87.5%, .02) 0, hsla(0, 0%, 87.5%, .02) 46%, rgba(21, 21, 21, .02) 0, rgba(21, 21, 21, .02) 88%, rgba(93, 93, 93, .02) 0, rgba(93, 93, 93, .02) 94%, hsla(0, 0%, 51%, .02) 0, hsla(0, 0%, 51%, .02)), linear-gradient(29deg, hsla(0, 0%, 52.5%, .02), hsla(0, 0%, 52.5%, .02) 27%, hsla(0, 0%, 71%, .02) 0, hsla(0, 0%, 71%, .02) 41%, rgba(81, 81, 81, .02) 0, rgba(81, 81, 81, .02) 46%, hsla(0, 0%, 99.2%, .02) 0, hsla(0, 0%, 99.2%, .02) 58%, rgba(74, 74, 74, .02) 0, rgba(74, 74, 74, .02)), linear-gradient(90deg, #e5e5e5, #e4e4e4);
+    /*draft-report*/
+    --ps-draft-report-background-color: #0b21b3ad;
+    /*map*/
+    --ps-map-legend-color: darkorange;
+    /*main header ion page*/
+    --ps-header-web-title-background-color: #0000001c;
+    /*nav header , init value if we are using landing type 3, we set in height*/
+    --ps-nav-header-init: 50px;
+    --ps-nav-header-height: 0px;
+    --ps-page-margin: 25px;
+    /*notitcation*/
+    --ps-notification-background-color: #f56e0f40;
+    /* cif */
+    --ps-cif-button-label-color: orange;
+    --ps-cif-content-color: white;
+    /*tree menu*/
+    --ps-menu-tree-label-color: #fff;
+    --ps-menu-tree-selected-hover-color: hsla(0, 0%, 87.8%, .2);
+    /*strucure*/
+    --ps-shadow-color: rgba(0, 0, 0, 0.5);
+    --ps-form-content-background-color: #ffffff47;
+    /*login*/
+    --ps-login-second-label-color: #ffffffb8;
+    /* margin left and right for web */
+    --ps-margin-left: 0px;
+    /*segment*/
+    --ps-segment-selected-background-color: transparent;
+    --ps-segment-label-color: white;
+    --ps-segment-background-color: #8080801f;
+
+    --ps-popup-button-background-color: #002cff66;
+    --ps-popup-background-color: var(--ps-primary-degree-1-color);
+    --ps-alert-modal-background-color: #002cff66;
+    --ps-notification-background-color: var(--ps-primary-degree-1-color);
+    --ps-header-background-color: linear-gradient(to right, var(--ps-app-header-color-stop1), var(--ps-app-header-color-stop2));
+    --ps-account-list-title-background-color: transparent;
+    --ps-account-list-title-font-edit-color: var(--ps-input-value-font-color);
+    --ps-selected-language-background-color: #6464dc;
+    --ps-prayer-time-selected-time-color: #D5835E;
+    --ps-separator-time-color: gray;
+}
+
+.isWeb-Layout {
+    /*header*/
+    --ps-nav-header-background: linear-gradient(to right, var(--ps-app-header-color-stop1), var(--ps-app-header-color-stop2));
+    --ps-main-title-background: #8080807a;
+    --ps-main-title-color: white;
+    /* --ps-panel-expanded-header-background-color: transparent; */
+    --ps-main-title-background: transparent;
+    /*panel header*/
+    --ps-panel-expanded-header-background-color: linear-gradient(to right, #ffa50094, #d48639, #ffa50094);
+    --ps-panel-collapsed-header-background-color: linear-gradient(to right, #ffa5007d, #da9654, #ffa5007d);
+    --container-panel-content-background-color: transparent;
+    --ps-form-content-padding: 0px;
+}
+
+.isWeb-Layout.userIsNotLoggedIn {
+    --ps-form-content-padding: 10px;
+}

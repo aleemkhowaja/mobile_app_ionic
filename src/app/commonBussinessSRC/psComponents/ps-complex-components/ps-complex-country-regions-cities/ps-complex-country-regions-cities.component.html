@@ -1,0 +1,17 @@
+<ps-container-complex class="ps-complex-swift-benef-creation">
+
+    <ps-dropdown-country [id]="id" [options]="defaultOptions.countriesOptions" (onPsChange)="countryChanged($event)">
+    </ps-dropdown-country>
+
+
+
+    <ps-dropdown-regions [id]="id" [options]="defaultOptions.regionOptions" (onPsChange)="regionChanged($event)">
+    </ps-dropdown-regions>
+
+
+
+    <ps-dropdown-cities [id]="id" [options]="defaultOptions.cityOptions" (onPsChange)="cityChanged($event)">
+    </ps-dropdown-cities>
+
+
+</ps-container-complex>

@@ -1,0 +1,18 @@
+<!-- Author: GRadwan 16Jan2020, ISayad 21Jan2020-->
+<ps-template-stepper [options]="stepperOptions" [id]="stepperOptions.stepperName">
+
+  <ps-form-step step1 [id]="stepperOptions.namesofSteps[0]">
+    <ps-container-panel [options]="panelOptionsBenfBankDetails" id="international_benef_panel1">
+      <ps-complex-beneficiary-bank-details [options]='bankTransferOptions'></ps-complex-beneficiary-bank-details>
+    </ps-container-panel>
+  </ps-form-step>
+
+  <ps-form-step step2 [id]="stepperOptions.namesofSteps[1]">
+    <ps-container-panel [options]="panelOptionsbenefDetails" id="international_benef_panel2">
+      <ps-complex-beneficiary-details [options]="beneficiaryDetailsOptions">
+      </ps-complex-beneficiary-details>
+    </ps-container-panel>
+  </ps-form-step>
+
+
+</ps-template-stepper>

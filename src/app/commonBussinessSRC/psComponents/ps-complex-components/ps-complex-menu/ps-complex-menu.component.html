@@ -1,0 +1,44 @@
+<ng-template #mainMenuItem let-menuItem="menuItem" let-index="index" let-siblings="siblings">
+    <div class="ps-complex-menu-item ps-animation" [ngClass]="{'ps-leaf-menu': menuItem.isChildLeaf, 'ps-root-menu': menuItem.isRoot, 'ps-parent-menu': menuItem.isParent,
+    'selected': menuItem.isSelected}" [ngStyle]="commonProv.animationDelay(index)">
+        <ps-action-menu-item class="row"
+            [options]="menuItem.actionMenuOptionsItem?menuItem.actionMenuOptionsItem :returnOptions(menuItem, siblings)"
+            (click)="isTreeView?expandOrCollapseTree($event,menuItem):expandOrCollapseWidget($event,menuItem)">
+        </ps-action-menu-item>
+    </div>
+</ng-template>
+<ng-template #recursiveList let-pages="pages">
+    <ng-container *ngFor="let item of pages; let i = index">
+        <ng-container *ngIf="!(!isTreeView && item?.hide)">
+            <ng-container *ngTemplateOutlet="mainMenuItem;context:{menuItem:item, index:i, siblings: pages}">
+            </ng-container>
+        </ng-container>
+        <ng-container *ngIf="item?.children?.length > 0 && !item.collapse || (item.children.length>0 &&!isTreeView)">
+            <ng-container *ngTemplateOutlet="recursiveList;context:{pages:item.children}"></ng-container>
+        </ng-container>
+    </ng-container>
+</ng-template>
+
+<div class="ps-complex-menu container-fluid" [ngClass]="{'menu-is-expanded': openedPage}">
+    <!-- <div class="">
+        <ps-action-icon [options]="{iconName:'refresh' }" (onClick)="changeView()">
+        </ps-action-icon>
+    </div> -->
+    <div class="row opened-screen-title" *ngIf="!isTreeView" [ngClass]="{'parent-page': !openedPage}">
+        <ps-action-icon *ngIf="openedPage" class="col-2 back-button" [options]="{ iconName:'arrow-back' }"
+            (onClick)="goBack()">
+        </ps-action-icon>
+        <ps-action-icon class="col-8 current-opened-page"
+            [options]="{labelOptions:{labelKey: openedPage?.title ? openedPage.title : 'home_key'} }">
+        </ps-action-icon>
+    </div>
+
+    <div class="row ps-complex-menu-tree-container" *ngIf="pages && pages.length > 0 && isTreeView">
+        <ng-container *ngTemplateOutlet="recursiveList; context:{ pages: pages }"></ng-container>
+    </div>
+
+
+    <div class="row ps-complex-menu-widget-container" *ngIf="pages && pages.length > 0 && !isTreeView" #widgetMenu>
+        <ng-container *ngTemplateOutlet="recursiveList; context:{ pages: pages }"></ng-container>
+    </div>
+</div>

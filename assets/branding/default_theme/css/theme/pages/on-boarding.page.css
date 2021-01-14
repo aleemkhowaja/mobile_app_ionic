@@ -1,0 +1,71 @@
+on-boarding .ps-container-panel-title .ps-label-nav {
+    color: white !important;
+}
+
+on-boarding ps-container-panel .ps-container-panel-description-icon .arrowClr {
+    color: white !important;
+}
+
+on-boarding .ps-container-panel-expandable-icon .arrowClr {
+    color: white !important;
+}
+
+on-boarding .upload-title {
+    margin: 5px 0px !important;
+    padding: 0px 5px !important
+}
+
+on-boarding .upload-title ion-label {
+    color: white !important;
+    white-space: normal !important;
+}
+
+on-boarding ps-file-upload ion-item img {
+    width: 50px !important;
+    height: 50px !important;
+}
+
+on-boarding ps-file-upload .row.ps-complex-file-upload {
+    height: 60px !important;
+}
+
+on-boarding ps-file-upload .chooseFile ion-button {
+    height: 50px !important
+}
+
+on-boarding .file-upload-padding ion-icon:not(.psCustIcon) {
+    padding-left: 6% !important;
+    top: 30% !important;
+}
+
+on-boarding ps-file-upload ps-action-button .ps-button-cancel {
+    font-size: var(--ps-sm-font) !important;
+}
+
+on-boarding ps-file-upload ps-action-button .ps-button-cancel ion-button {
+    border: 1px solid var(--ps-form-container-background-color);
+    border-radius: 10%;
+    box-shadow: 2px 2px var(--ps-form-container-background-color);
+}
+
+on-boarding ps-file-upload ion-button ps-action-icon {
+    margin-left: 25%;
+}
+
+on-boarding ps-file-upload ion-list {
+    padding: 0px !important;
+    height: 58px !important;
+}
+
+on-boarding ps-form-map .ps-container-form-content {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+on-boarding ps-select-toggle ion-item ion-toggle {
+    padding-left: 0px !important;
+}
+
+on-boarding ps-form-map .ps-form-map {
+    min-height: 60vh !important;
+}

@@ -1,0 +1,8 @@
+<div class="ps-button-notification">
+    <span *ngIf="options && options.notificationsCount > 0"
+        class="notification-badge">{{options.notificationsCount}}</span>
+    <ps-action-button [options]="notificationOptions" [id]="id" (onClick)="onNotificationClicked($event)">
+    </ps-action-button>
+</div>
+
+<!-- <ps-action-popover *ngIf="onClickNotificaion" [options]="popoverOptions"></ps-action-popover> -->

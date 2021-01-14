@@ -1,0 +1,54 @@
+ps-complex-menu-reach {
+    display: block;
+    height: 100%;
+    background: var(--ps-app-opaque-background-color);
+    border-radius: var(--ps-section-border-radius) !important;
+}
+
+ps-complex-menu-reach ps-action-button ion-button {
+    --border-style: none !important;
+    --box-shadow: none !important;
+}
+
+/* 
+ALSO add the above to ./ps-complex-info.component/ps-complex-info.component.css
+*/
+
+ps-complex-menu-reach ion-button.ps-menu-reach-background {
+    /* pointer-events: none; */
+    border-radius: 50%;
+    height: calc(80px * var(--ps-font-size-ratio) * var(--ps-font-size-ratio-initial));
+    width: calc(80px * var(--ps-font-size-ratio) * var(--ps-font-size-ratio-initial));
+    background-color: var(--ps-highlight-background-color) !important;
+    --background-hover: var(--ps-highlight-background-color) !important;
+}
+
+ps-complex-menu-reach ion-button.ps-menu-reach-background ion-icon {
+    color: var(--ps-font-light-color) !important;
+    font-size: var(--ps-xxl-font) !important;
+}
+
+ps-complex-menu-reach ion-button ps-action-icon {
+    width: 100%;
+}
+
+ps-complex-menu-reach ion-button ps-action-icon .ps-action-image-container {
+    padding: 0px !important;
+}
+
+ps-complex-menu-reach ion-button ps-action-icon .ps-action-image-container .ps-action-icon-icon,
+ps-complex-menu-reach ion-button ps-action-icon .ps-action-image-container .ps-action-icon-label {
+    -webkit-box-flex: 0 !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+}
+
+ps-complex-menu-reach ion-button ps-action-icon .ps-action-image-container .ps-action-icon-label ion-label {
+    /* white-space: normal; */
+}
+
+ps-complex-menu-reach ion-button ps-action-icon .ps-action-image-container .ps-action-icon-icon {
+    margin-inline-end: 0px !important;
+    align-items: center;
+    justify-content: center;
+}

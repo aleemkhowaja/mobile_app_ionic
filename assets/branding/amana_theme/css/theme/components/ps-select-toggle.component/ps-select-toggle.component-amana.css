@@ -1,0 +1,9 @@
+ps-select-toggle .ps-select-toggle-item ion-toggle {
+    order: 2;
+}
+
+ps-select-toggle .ps-select-toggle-item.ng-touched:not(.has-value),
+ps-select-toggle .ps-select-toggle-item.ng-untouched:not(.has-value) {
+    color: white !important;
+
+}

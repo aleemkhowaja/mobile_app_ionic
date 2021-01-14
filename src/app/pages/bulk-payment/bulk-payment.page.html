@@ -1,0 +1,15 @@
+<ps-template-stepper [options]="stepperOptions">
+  <ps-form-step step1 [id]="stepperOptions.namesofSteps[0]">
+    <ps-container-panel [options]="panelOptionsStep1" id="bulk_salary_upload_panel1">
+
+      <ps-lov-file-types id="'fileTypes'+ id" [options]="fileTypesOptions"></ps-lov-file-types>
+
+
+      <ps-lookup-own-accounts id="'transferFrom'+ id" [options]="accountListOptions"></ps-lookup-own-accounts>
+
+
+      <ps-file-upload id="ps-file-upload" [options]="fileUploadOptions"></ps-file-upload>
+
+    </ps-container-panel>
+  </ps-form-step>
+</ps-template-stepper>

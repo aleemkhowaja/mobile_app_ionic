@@ -1,0 +1,12 @@
+<ps-container-panel [options]="previewPanelOptions">
+  <div class="preview-wrapper" *ngFor="let itemData of previewData">
+    <ps-label-input class="preview-label" *ngIf="!enableTranslation"
+      [options]="{labelKey: itemData.key,  previewMode: false}"></ps-label-input>
+    <ps-label-input class="preview-label" *ngIf="enableTranslation"
+      [options]="{labelKey: itemData.key, previewMode: true }">
+    </ps-label-input>
+    <ps-label-input class="preview-value" [options]="{labelKey: itemData.value,  previewMode: true}">
+      <!-- <p [innerHTML]="itemData.value"></p> -->
+    </ps-label-input>
+  </div>
+</ps-container-panel>

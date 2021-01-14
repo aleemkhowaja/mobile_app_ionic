@@ -1,0 +1,9 @@
+ion-textarea {
+    border-radius: 5px !important;
+    background: transparent !important;
+    --padding: 0px !important;
+}
+
+ps-keyin-textarea ion-textarea textarea {
+    padding: 0px !important;
+}

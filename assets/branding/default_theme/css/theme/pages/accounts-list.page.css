@@ -1,0 +1,13 @@
+.no-account-text {
+    text-align: center;
+    padding-top: 20%;
+    color: var(--ps-error-color);
+}
+
+.no-account-text ion-label {
+    margin-top: 2rem;
+}
+
+.accounts-list{
+    padding:10px;
+}

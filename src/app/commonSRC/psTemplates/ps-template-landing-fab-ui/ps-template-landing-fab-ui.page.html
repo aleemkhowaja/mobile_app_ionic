@@ -1,0 +1,58 @@
+<ps-template-base>
+    <div class="widget-banner" psHeader>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <ps-complex-profile class="profile-animate-left" [options]='optionsComplexProfile'
+                        (onClick)="changeContent($event)">
+                    </ps-complex-profile>
+                </div>
+                <div class="fab-ui-notification" [ngClass]="{'notification-is-flipped':notificationIsFlipped }">
+                    <ps-notification-defaulted class="ps-action-button" [id]="'button_notification' + id"
+                        [options]="notificationOptions" (click)="notificationClickHandler()">
+                    </ps-notification-defaulted>
+                </div>
+                <!-- <div class="col-2">
+                    <ps-button-logout></ps-button-logout>
+                </div> -->
+                <div class="col-12" *ngIf="!options.isWideLayout">
+                    <ps-gallery-banners class="ps-complex-menu-header-container-banner profile-animate-left"
+                        [options]='bannersOptions'>
+                    </ps-gallery-banners>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 menu-container" [ngClass]="{'trigger-disable-field':isFabExpanded }">
+                <ps-container-flip [options]="psContainerFlip">
+                    <ps-complex-menu visibleSection></ps-complex-menu>
+                    <div class="container-fluid hidden-content-wrapper" hiddenSection>
+                        <div header class="row opened-screen-title"
+                            *ngIf="previousComponent?.title && psContainerFlip.isFlipped">
+                            <ps-action-icon class="col-2 back-button" [options]="{ iconName:'arrow-back' }"
+                                (onClick)="goBack()">
+                            </ps-action-icon>
+                            <ps-action-icon class="col-8 current-opened-page"
+                                [options]="{labelOptions:{labelKey: previousComponent.title} }">
+                            </ps-action-icon>
+                            <!-- <ps-label [options]="{labelKey:previousComponent.title}"></ps-label> -->
+                        </div>
+                        <ng-template #hiddenComponent></ng-template>
+                    </div>
+                    <!-- <ps-complex-info hiddenSection></ps-complex-info> -->
+                </ps-container-flip>
+            </div>
+            <ps-button-fab-list [options]="fabListOptions" id="fab-landing" (isClosed)="isFabClosed()"
+                (isOpened)="isFabOpened()">
+            </ps-button-fab-list>
+        </div>
+    </div>
+    <!-- <ng-container psFooter>
+        <div class="col-12">
+            <ps-button-fab-list [options]="fabListOptions" id="fab-landing">
+            </ps-button-fab-list>
+        </div>
+    </ng-container> -->
+</ps-template-base>

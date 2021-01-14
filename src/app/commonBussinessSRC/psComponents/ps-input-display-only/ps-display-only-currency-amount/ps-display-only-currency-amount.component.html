@@ -1,0 +1,12 @@
+<ps-container-item class="ps-field-item-wrapper ps-display-only-currency-amount ps-disabled"
+    [options]="amountItemOptions">
+
+    <ps-dropdown-currencies class="ps-dropdown-currencies-wrapper ps-disabled" class="display-only-currency"
+        id="currency_exch" [options]="options.currenciesOptions">
+    </ps-dropdown-currencies>
+
+
+    <ps-input-amount class="ps-input-amount-wrapper ps-disabled" [id]="id + '_amount'" [options]="options.amountOptions"
+        class="display-only-amount ps-disabled"> </ps-input-amount>
+
+</ps-container-item>

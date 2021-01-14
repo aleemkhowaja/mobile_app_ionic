@@ -1,0 +1,8 @@
+ps-template-screen .widget-menu-icon {
+    background-color: transparent;
+    border: none !important;
+}
+
+ps-template-screen .widget-menu-icon.border-start {
+    border: none !important;
+}

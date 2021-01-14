@@ -1,0 +1,135 @@
+/* ps-complex-amount ps-dropdown-currencies ion-item {
+    margin-bottom: 0px !important;
+    border-bottom: none !important;
+} */
+ps-complex-amount {
+    width: 100%;
+}
+
+ps-complex-amount ps-input-amount ps-container-item.ps-field-item-wrapper ps-base-container-body .ps-container-item-img-icon {
+    -webkit-box-flex: 0 !important;
+    flex: auto !important;
+    max-width: 100% !important;
+}
+
+ps-complex-amount ps-input-amount ps-container-item.ps-field-item-wrapper ps-base-container-body .ps-container-item-main-content {
+    -webkit-box-flex: 0 !important;
+    flex: auto !important;
+    max-width: 100% !important;
+}
+
+ps-complex-amount ps-input-amount .item.item-has-focus {
+    --highlight-background: none !important;
+    border-bottom: none !important;
+}
+
+ps-complex-amount ps-input-amount ps-container-item .item {
+    margin-bottom: 0px !important;
+    border-bottom: none !important;
+    --background: none !important;
+    background: none !important;
+    border-radius: 0px !important;
+}
+
+ps-complex-amount ps-input-amount ps-container-item .item:not(.item-has-focus) {
+    border-bottom: none !important;
+}
+
+ps-complex-amount ps-input-amount .item.item-has-focus {
+    --highlight-background: none !important;
+    border-bottom: none !important;
+}
+
+ps-complex-amount ps-input-amount .item.item-has-value.ion-valid.ion-dirty:not(.item-has-focus) {
+    border-bottom: none !important
+}
+
+ps-complex-amount ps-input-amount .item.item-has-value.ion-invalid.ion-dirty:not(.item-has-focus) {
+    --highlight-background: none !important;
+}
+
+ps-complex-amount ps-input-amount ion-item {
+    margin-top: 0px !important;
+}
+
+ps-complex-amount ps-input-amount .ps-input-amount {
+    padding-top: 4px !important;
+}
+
+ps-complex-amount ps-dropdown-currencies .ps-container-item-img-icon {
+    display: none !important;
+}
+
+ps-complex-amount ps-dropdown-currencies ps-container-item.ps-field-item-wrapper ps-base-container-body .ps-container-item-img-icon {
+    -webkit-box-flex: 0 !important;
+    flex: auto !important;
+    max-width: 100% !important;
+}
+
+ps-complex-amount ps-dropdown-currencies ps-container-item.ps-field-item-wrapper ps-base-container-body .ps-container-item-main-content {
+    -webkit-box-flex: 0 !important;
+    flex: auto !important;
+    max-width: 100% !important;
+}
+
+ps-complex-amount ps-dropdown-currencies ps-container-item .item {
+    margin-bottom: 0px !important;
+    border-bottom: none !important;
+    --background: none !important;
+    background: none !important;
+    border-radius: 0px !important;
+}
+
+ps-complex-amount ps-dropdown-currencies ps-container-item .item:not(.item-has-focus) {
+    border-bottom: none !important;
+}
+
+ps-complex-amount ps-dropdown-currencies .item.item-has-focus {
+    --highlight-background: none !important;
+    border-bottom: none !important;
+}
+
+ps-complex-amount ps-dropdown-currencies .item.item-has-value.ion-valid.ion-dirty:not(.item-has-focus) {
+    border-bottom: none !important
+}
+
+ps-complex-amount ps-dropdown-currencies .item.item-has-value.ion-invalid.ion-dirty:not(.item-has-focus) {
+    --highlight-background: none !important;
+}
+
+ps-complex-amount ps-dropdown-currencies ion-item {
+    margin-top: 0px !important;
+    --background: none !important;
+    background: none !important;
+}
+
+ps-complex-amount .ps-container-complex {
+    background: var(--ps-base-color) !important;
+    margin-top: 15px !important;
+    border-radius: 10px !important;
+}
+
+ps-complex-amount .was-focused .complex-amount {
+    --highlight-background: var(--ps-focused-field-color) !important;
+    border-bottom: var(--ps-focused-field-color) 2px solid !important;
+}
+
+ps-complex-amount .ps-complex-amount.isValid .complex-amount {
+    border-bottom: var(--ps-valid-field-color) 2px solid !important
+}
+
+ps-complex-amount .ps-complex-amount.notValid .complex-amount {
+    border-bottom: var(--ps-invalid-field-color) 2px solid;
+}
+
+ps-complex-amount .ps-dropdown-currencies-wrapper {
+    -webkit-box-flex: 0;
+    flex: 0 0 41.666667%;
+    max-width: 41.666667%;
+}
+
+ps-complex-amount .ps-input-amount-wrapper {
+    -webkit-box-flex: 0;
+    flex: 0 0 58.333333%;
+    max-width: 58.333333%;
+}

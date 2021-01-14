@@ -1,0 +1,210 @@
+:root {
+    --ps-search-bar-padding: 35px;
+    --ps-select-dropdown-box-shadow: 0 0 20px 5px black;
+    --ps-select-dropdown-height: 300px;
+    --ps-select-dropdown-min-width: 150px;
+    --ps-select-dropdown-searchbar-height: 70px;
+}
+
+ps-select-dropdown-overlay {
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 99999999;
+}
+
+ps-select-dropdown-overlay .ps-dismiss-modal {
+    height: 100%;
+    width: 100%;
+    z-index: 999999999;
+}
+
+ps-select-dropdown-overlay .ps-item-list-wrapper {
+    position: absolute;
+    animation: show-list;
+    animation-duration: 0.3s;
+    overflow-y: auto;
+    z-index: 9999999999;
+    min-width: var(--ps-select-dropdown-min-width);
+    height: var(--ps-select-dropdown-height);
+    overflow: hidden;
+    box-shadow: var(--ps-select-dropdown-box-shadow) !important;
+    -webkit-box-shadow: var(--ps-select-dropdown-box-shadow) !important;
+}
+
+ps-select-dropdown-overlay .ps-item-list-wrapper ps-container-item .item {
+    margin-top: 0px !important;
+    --inner-padding: 0px !important;
+    --inner-padding-end: 0px !important;
+    --inner-padding-start: 0px !important;
+    padding-inline-start: 0px !important;
+    padding-inline-end: 0px !important;
+}
+
+
+ps-select-dropdown-overlay .ps-item-list {
+    overflow-y: auto !important;
+    height: calc(var(--ps-select-dropdown-height) - var(--ps-select-dropdown-searchbar-height));
+    /* height: 100%; */
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+ps-select-dropdown-overlay .searchbar-wrapper {
+    height: var(--ps-select-dropdown-searchbar-height);
+}
+
+ps-select-dropdown-overlay .list-wrapper {
+    height: var(--ps-select-dropdown-height);
+    width: 100%;
+}
+
+
+ps-select-dropdown-overlay .ps-item-list ion-avatar {
+    padding-inline-end: 5px !important;
+    border-radius: var(--ps-dropdown-image-border-radius) !important;
+    --border-radius: var(--ps-dropdown-image-border-radius) !important;
+    width: var(--ps-dropdown-image-width) !important;
+    height: var(--ps-dropdown-image-height) !important;
+}
+
+ps-select-dropdown-overlay .loading-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ps-select-dropdown-overlay .loading-wrapper ion-icon {
+    font-size: 3em;
+}
+
+ps-select-dropdown-overlay .hide-list {
+    animation: hide-list 0.3s forwards 0s !important;
+    -webkit-animation: hide-list 0.3s forwards 0s !important;
+}
+
+
+
+
+ps-select-dropdown-overlay ion-searchbar input {
+    -webkit-padding-start: var(--ps-search-bar-padding) !important;
+    padding-inline-start: var(--ps-search-bar-padding) !important;
+    -webkit-padding-end: var(--ps-search-bar-padding) !important;
+    padding-inline-end: var(--ps-search-bar-padding) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* @-webkit-keyframes show-list {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(50px)
+    }
+}
+
+@keyframes show-list {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(50px)
+    }
+}
+
+@-webkit-keyframes hide-list {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+
+@keyframes hide-list {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@-webkit-keyframes show-list {
+    from {
+        transform: scaleY(0);
+    }
+
+    to {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes show-list {
+    from {
+        transform: scaleY(0);
+    }
+
+    to {
+        transform: scaleY(1);
+    }
+}
+
+@-webkit-keyframes hide-list {
+    from {
+        transform: scaleY(1);
+    }
+
+    to {
+        transform: scaleY(0);
+    }
+}
+
+@keyframes hide-list {
+    from {
+        transform: scaleY(1);
+    }
+
+    to {
+        transform: scaleY(0);
+    }
+}

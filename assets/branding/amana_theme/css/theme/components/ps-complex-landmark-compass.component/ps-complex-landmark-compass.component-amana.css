@@ -1,0 +1,61 @@
+.landmark-icon-main {
+    display: block;
+}
+
+.main-pointing-arrow {
+    display: block;
+    background: url('/assets/branding/amana_theme/svg/landmark-direction.svg') center no-repeat;
+    transform: rotate(0deg);
+    width: 70%;
+    height: 55%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-size: contain;
+}
+
+.landmark-compass-wrapper .compass-background .landmark-icon-wrapper .landmark-icon {
+    display: none;
+}
+
+
+.landmark-icon-arrow .important-text-color ion-icon {
+    transform: rotate(180deg);
+}
+
+.landmark-compass-wrapper .compass-background .landmark-icon-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #e6e6e6;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.direction {
+    z-index: 2;
+}
+
+.landmark-compass-wrapper .compass-inner-circle {
+    display: none;
+}
+
+.landmark-compass-wrapper .compass-background .direction.direction-n {
+    color: red !important;
+}
+
+.landmark-compass-wrapper {
+    width: 95%;
+}
+
+.landmark-compass-wrapper .compass-background {
+    margin: 15px !important;
+}

@@ -1,0 +1,8 @@
+ps-select-dropdown {
+    display: block;
+    position: relative;
+}
+
+.ps-select-dropdown-select-base {
+    display: none;
+}

@@ -1,0 +1,30 @@
+<ps-container-complex>
+
+  <ps-input-varchar *ngIf="!options.isInstitutionType" [options]="options.employerNameOptions"></ps-input-varchar>
+
+
+  <ps-dropdown-occupation *ngIf="!options.isInstitutionType" [options]="options.occupationOptions">
+  </ps-dropdown-occupation>
+
+
+  <ps-complex-address [options]="options.addressOptions"></ps-complex-address>
+
+
+  <ps-date-day-month-year-past *ngIf="options.isInstitutionType" [id]="id + '_establishment_date'"
+    [options]="options.establishmentDateOptions">
+  </ps-date-day-month-year-past>
+
+
+  <ps-entity-phone-number [options]="options.officeTelPhoneNumberOptions"></ps-entity-phone-number>
+
+
+  <ps-entity-phone-number [options]="options.handPhoneNumberOptions"></ps-entity-phone-number>
+
+
+  <ps-entity-phone-number [options]="options.faxOptions"></ps-entity-phone-number>
+
+
+  <ps-date-day-month-year-past id="date_day_month_year_past" [options]="options.dateOfJoiningDivisionOptions">
+  </ps-date-day-month-year-past>
+
+</ps-container-complex>

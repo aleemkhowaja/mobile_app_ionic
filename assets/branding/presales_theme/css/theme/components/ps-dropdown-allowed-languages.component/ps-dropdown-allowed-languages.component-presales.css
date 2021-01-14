@@ -1,0 +1,6 @@
+ps-dropdown-allowed-languages ps-select-dropdown-base .mat-select-value-text,
+ps-dropdown-allowed-languages .mat-option-text,
+ps-dropdown-allowed-languages .mat-option,
+ps-dropdown-allowed-languages .mat-select-arrow-wrapper {
+    color: var(--ps-font-light-color) !important; /*var(--ps-font-color-opp-primary-color) !important; */
+}

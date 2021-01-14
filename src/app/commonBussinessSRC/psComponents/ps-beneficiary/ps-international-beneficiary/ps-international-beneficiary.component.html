@@ -1,0 +1,11 @@
+<div>
+  <ps-action-hyperlink [options]="addBeneficiaryOptions" class="add-beneficiary-button" *ngIf="options.isEditable">
+  </ps-action-hyperlink>
+</div>
+
+<div  *ngIf="options?.itemList?.length > 0">
+  <div *ngFor="let itemOption of options.itemList">
+    <ps-container-lookup-option [id]="'international-benef-list-' + id" [options]="getContainerLookUpOptions()"
+    [itemCard]="itemOption" (clickedCard)="updateCard($event)"></ps-container-lookup-option>
+ </div>
+</div>

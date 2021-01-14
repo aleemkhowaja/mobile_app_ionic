@@ -1,0 +1,139 @@
+ps-container-panel .ps-container-panel-item ion-item {
+    --background: #9C7DB4 !important;
+}
+
+ps-container-panel .ps-container-panel-content {
+    background: rgba(30, 10, 45, 50%) !important;
+}
+
+ps-container-panel .ps-container-panel-item .ps-item-wrapper .ps-container-item-main-content {
+    border-bottom: 7px solid rgb(107, 62, 149);
+}
+
+ps-container-panel .ps-item-wrapper .ps-container-item-main-content ps-label-nav ion-label {
+    font-size: 1.1em !important;
+    display: flex !important;
+}
+
+ps-container-panel .ps-container-panel-title {
+    justify-content: flex-start !important;
+}
+
+ps-container-panel ion-item.item-label {
+    background: transparent !important;
+}
+
+ps-container-panel ps-label-nav ps-label ion-label {
+    justify-content: center !important;
+}
+
+/* ps-container-panel .ps-container-panel-icon{
+    display:none !important;
+} 
+ps-container-panel .ps-container-panel-expand-icon{
+    display:none !important;
+} */
+ps-container-panel .ps-container-item-main-content .row {
+    justify-content: center !important;
+}
+
+ps-container-panel .ps-container-item-main-content .ps-keyin-input-label {
+    display: none;
+}
+
+ps-container-panel ion-item {
+    --background: rgba(142, 142, 142, 0.5) !important;
+}
+
+ps-select-checkbox.forget-username-checkbox ion-item {
+    background: transparent !important;
+    --background: transparent !important;
+}
+
+
+
+/*
+.forget-username-checkbox .ps-select-checkbox-label{
+    flex: 0 0 50% !important;
+}
+
+ps-complex-terms-and-conditions .ps-select-checkbox-label{
+    color: white !important;
+}
+.ps-complex-terms-and-conditions{
+    background: transparent !important;
+}
+*/
+/* ps-complex-terms-and-conditions .ps-select-checkbox-label{
+    -webkit-box-flex: 0;
+    flex: 0 0 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 100%;
+    max-width: 100%;
+    color: white !important;
+    justify-content: center !important;
+    text-align: center !important;
+}
+ps-complex-terms-and-conditions .ps-select-checkbox{
+    -webkit-box-flex: 0;
+    flex: 0 0 100% !important;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 100%;
+    max-width: 100% !important;
+    height: 50px;
+    justify-content: center !important;
+    text-align: center !important;
+} */
+/* ps-complex-terms-and-conditions ps-select-checkbox ion-checkbox {
+    height:30px !important;
+    display: flex !important;
+}
+ps-complex-terms-and-conditions ps-select-checkbox ion-checkbox .checkbox-icon{
+    width: 30px !important;
+    background: rgb(142,142,142 );
+}
+ ps-select-checkbox.forget-username-checkbox .checkbox-icon{
+    background: var(--ps-stepper-step-selected-background-color) !important;
+}
+.select-drop-down-img{
+    width: 35px;
+    height: 25px;
+}
+.select-drop-down-description{
+    padding-left: 5px;
+}
+.mat-select-panel{
+    border-radius: 10px !important;
+}
+
+ps-select-dropdown ion-item ps-label-input{
+    display: none !important;
+}
+
+.mat-form-field{
+    line-height: 1.5 !important;
+}
+.mat-form-field-wrapper{
+    padding: 0px !important;
+}
+
+ps-date-day-month-year-past ps-keyin-date ion-item ps-label-input{
+    display:none !important;
+}
+
+ps-complex-phone-number .complex-phone-number{
+    height: 44px !important;
+}
+
+ps-complex-preview .ps-container-panel-content{
+    background: rgb(28, 9, 45) !important;
+}
+ion-button .ps-button-cancel{
+    background: rgba(255, 255, 255, 0.6705882352941176)
+}
+ion-button .ps-button-next{
+    background: rgb(173, 149, 193)
+}
+ */

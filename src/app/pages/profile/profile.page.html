@@ -1,0 +1,52 @@
+<ps-template-view [options]="options">
+  <div class="profile-section">
+
+    <ps-inline-labeled-camera [options]="imageUploadOptions"></ps-inline-labeled-camera>
+
+
+    <ps-label [options]="cifNameOptions" class="ps-label-cifname"></ps-label>
+
+
+    <ps-label [options]="userNameOptions" class="ps-label-username"></ps-label>
+
+  </div>
+  <div>
+    <ps-container-panel [options]="panelProfileOptions" id="profile_panel1">
+
+      <ps-hyperlink-anchor id="profile_contact_us" [options]="contactUsOptions">
+      </ps-hyperlink-anchor>
+
+
+      <ps-hyperlink-anchor id="profile_personal_details" [options]="personalDetailsOptions">
+      </ps-hyperlink-anchor>
+
+    </ps-container-panel>
+    <ps-container-panel [options]="panelSecurityOptions" id="profile_panel2">
+
+      <ps-hyperlink-anchor id="profile_change_pass" [options]="changePasswordPanelOptions">
+      </ps-hyperlink-anchor>
+
+
+      <ps-hyperlink-anchor id="profile_change_pin" *ngIf="EnablePin" [options]="changePinPanelOptions">
+      </ps-hyperlink-anchor>
+
+
+      <ps-hyperlink-anchor id="profile_security_question" *ngIf="EnableSecurityQuestion"
+        [options]="changeSecurityQuestionsPanelOptions">
+      </ps-hyperlink-anchor>
+
+
+      <ps-hyperlink-anchor id="profile_account_deactivation" [options]="accountDeactivationPanelOptions">
+      </ps-hyperlink-anchor>
+
+    </ps-container-panel>
+    <ps-container-panel [options]="panelActivityLogOptions" id="profile_panel3">
+
+      <ps-hyperlink-anchor id="my_activity_Log" [options]="activityLogOptions">
+      </ps-hyperlink-anchor>
+      
+    </ps-container-panel>
+  </div>
+
+
+</ps-template-view>

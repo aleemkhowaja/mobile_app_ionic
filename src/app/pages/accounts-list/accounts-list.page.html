@@ -1,0 +1,13 @@
+<ps-template-view [options]="templateViewOptions">
+  <ps-select-segment (segmentButtonClicked)="onClickSegment($event)" [options]="segmentOptions"></ps-select-segment>
+  <ng-container *ngIf="!requestWasSent">
+  <div *ngIf="showGeneralAccounts" class="accounts-list">
+    <ps-accounts-list id="general_acc" [options]="generalAccountListOptions"></ps-accounts-list>
+      <ps-label [options]="noRecordFoundOptions" *ngIf="noGeneralAccountFound " class="no-account-text"></ps-label>
+  </div>
+  <div *ngIf="showTermsAccounts" class="accounts-list">
+    <ps-accounts-list id="term_acc" [options]="termsAccountListOptions"></ps-accounts-list>
+    <ps-label [options]="noRecordFoundOptions" *ngIf="noTermsAccountFound " class="no-account-text"></ps-label>
+  </div>
+  </ng-container>
+</ps-template-view>

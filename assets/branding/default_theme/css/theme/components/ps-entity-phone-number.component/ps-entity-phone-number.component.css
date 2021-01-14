@@ -1,0 +1,145 @@
+/* ps-entity-phone-number ps-dropdown-country-code ion-item {
+    margin-bottom: 0px !important;
+    border-bottom: none !important;
+} */
+
+ps-entity-phone-number ps-keyin-input ps-container-item.ps-field-item-wrapper ps-base-container-body .ps-container-item-img-icon {
+    -webkit-box-flex: 0 !important;
+    flex: auto !important;
+    max-width: 100% !important;
+}
+
+ps-entity-phone-number ps-keyin-input ps-container-item.ps-field-item-wrapper ps-base-container-body .ps-container-item-main-content {
+    -webkit-box-flex: 0 !important;
+    flex: auto !important;
+    max-width: 100% !important;
+}
+
+ps-entity-phone-number ps-keyin-input .item.item-has-focus {
+    --highlight-background: none !important;
+    border-bottom: none !important;
+}
+
+ps-entity-phone-number ps-keyin-input ps-container-item .item {
+    margin-bottom: 0px !important;
+    border-bottom: none !important;
+    --background: none !important;
+    background: none !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}
+
+ps-entity-phone-number ps-keyin-input ps-container-item .item:not(.item-has-focus) {
+    border-bottom: none !important;
+}
+
+ps-entity-phone-number ps-keyin-input .item.item-has-focus {
+    --highlight-background: none !important;
+    border-bottom: none !important;
+}
+
+ps-entity-phone-number ps-keyin-input .item.item-has-value.ion-valid.ion-dirty:not(.item-has-focus) {
+    border-bottom: none !important
+}
+
+ps-entity-phone-number ps-keyin-input .item.item-has-value.ion-invalid.ion-dirty:not(.item-has-focus) {
+    --highlight-background: none !important;
+}
+
+ps-entity-phone-number ps-keyin-input ion-item {
+    margin-top: 0px !important;
+}
+
+
+ps-entity-phone-number ps-keyin-input .ps-keyin-input {
+    padding-top: 4px !important;
+}
+
+
+
+ps-entity-phone-number ps-dropdown-country-code ps-container-item.ps-field-item-wrapper ps-base-container-body .ps-container-item-img-icon {
+    -webkit-box-flex: 0 !important;
+    flex: auto !important;
+    max-width: 100% !important;
+}
+
+ps-entity-phone-number ps-dropdown-country-code ps-container-item.ps-field-item-wrapper ps-base-container-body .ps-container-item-main-content {
+    -webkit-box-flex: 0 !important;
+    flex: auto !important;
+    max-width: 100% !important;
+}
+
+ps-entity-phone-number ps-dropdown-country-code .ps-container-item-img-icon {
+    display: none !important;
+}
+
+
+ps-entity-phone-number ps-dropdown-country-code ps-container-item .item {
+    margin-bottom: 0px !important;
+    border-bottom: none !important;
+    --background: none !important;
+    background: none !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    border-radius: 0px !important;
+}
+
+ps-entity-phone-number ps-dropdown-country-code ps-container-item .item:not(.item-has-focus) {
+    border-bottom: none !important;
+}
+
+ps-entity-phone-number ps-dropdown-country-code .item.item-has-focus {
+    --highlight-background: none !important;
+    border-bottom: none !important;
+}
+
+ps-entity-phone-number ps-dropdown-country-code .item.item-has-value.ion-valid.ion-dirty:not(.item-has-focus) {
+    border-bottom: none !important
+}
+
+ps-entity-phone-number ps-dropdown-country-code .item.item-has-value.ion-invalid.ion-dirty:not(.item-has-focus) {
+    --highlight-background: none !important;
+}
+
+ps-entity-phone-number ps-dropdown-country-code ion-item {
+    margin-top: 0px !important;
+    --background: none !important;
+    background: none !important;
+}
+
+ps-entity-phone-number ps-container-item.was-focused .item.complex-phone-number:not(.item-has-focus) {
+    --highlight-background: var(--ps-focused-field-color) !important;
+    border-bottom: var(--ps-focused-field-color) 2px solid !important;
+}
+
+
+ps-entity-phone-number .ps-entity-phone-number.isValid .complex-phone-number {
+    border-bottom: var(--ps-valid-field-color) 2px solid !important
+}
+
+ps-entity-phone-number .ps-entity-phone-number.notValid .complex-phone-number {
+    border-bottom: var(--ps-invalid-field-color) 2px solid;
+}
+
+
+ps-entity-phone-number .ps-dropdown-country-code-wrapper {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+ps-entity-phone-number .ps-keyin-input-wrapper {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+[dir=rtl] ps-entity-phone-number ps-keyin-input ion-input input {
+    direction: ltr !important;
+    text-align: end !important;
+
+}
+
+.isWeb-Layout .main-section-page ps-entity-phone-number ion-item.item-label {
+    border: 0px !important;
+}

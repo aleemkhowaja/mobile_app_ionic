@@ -1,0 +1,20 @@
+ .ps-drafts-report-submit-button {
+     --background: var(--ps-button-submit-background-color) !important;
+     --color: var(--ps-button-submit-font-color) !important;
+     --border: var(--ps-button-submit-border-color) !important;
+     --background-hover: var(--ps-button-submit-background-color-hover) !important;
+     --background-activated: var(--ps-button-submit-background-color) !important;
+ }
+
+ .ps-drafts-report-cancel-button {
+     --background: var(--ps-button-cancel-background-color) !important;
+     --color: var(--ps-button-cancel-font-color) !important;
+     --border: var(--ps-button-border-width) solid var(--ps-button-cancel-border-color) !important;
+     --background-hover: var(--ps-button-cancel-background-color-hover) !important;
+     --border-style: solid;
+     --border-width: var(--ps-button-border-width);
+     --background-activated: var(--ps-button-cancel-background-color);
+ }
+ .ps-drafts-report-cancel-button ps-action-icon ps-label ion-label{
+    color: var(--ps-button-cancel-font-color) !important;
+}

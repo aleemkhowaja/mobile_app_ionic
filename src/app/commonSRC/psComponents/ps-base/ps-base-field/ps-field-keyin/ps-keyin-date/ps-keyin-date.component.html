@@ -1,0 +1,62 @@
+<ps-icon-customization *ngIf="custMode" [id]="'cust_icon_'+ id" [options]="custIconOptions"></ps-icon-customization>
+<ps-container-item [formGroup]="options.group" class="ps-field-item-wrapper ps-keyin-date-item"
+    *ngIf="options && (visible||custMode) && !previewMode" [options]="itemOptions"
+    [ngClass]="{ 'disableContent':disabled}">
+
+    <!--    <ps-action-icon [id]="'action_icon_' + id" [options]="iconOptions" (onClick)="dateTime.open()"
+        class="ps-keyin-date-icon">
+    </ps-action-icon> -->
+    <ps-label-input [id]="'label_input_' + id" [options]="labelOptions" class="ps-keyin-date-label">
+    </ps-label-input>
+
+    <ng-container *ngIf="isMobile" class="ps-keyin-date-grid">
+        <!-- Updated by Hisham.Omar TP#1136182
+        --   Change the ngModel property from 'value' to 'dateValue' in order to save
+        --   the formatted value in the control when needed 
+        -->
+        <ion-datetime class="ps-date-col" [(ngModel)]="dateValue" [formControlName]="options.fcName"
+            class="qps-keyin-date-datetime" [placeholder]="options.placeHolder|translate"
+            [displayFormat]="options.displayFormat" [attr.psFcName]="options.fcName"
+            [pickerFormat]="options.pickerFormat" [pickerOptions]="options.pickerOptions" [id]="id" [min]="min"
+            [yearValues]="year_values" [max]="max" #dateTime>
+        </ion-datetime>
+
+
+    </ng-container>
+    <ng-container *ngIf="!isMobile">
+
+        <mat-form-field class="ps-date-col" [ngClass]="{'error-field': showError}" (click)="picker.open()">
+            <!-- <ps-label-input class="ps-keyin-date-label"></ps-label-input> -->
+            <!-- Updated by Hisham.Omar TP#1136182 
+            --   Use the new created property 'formattedValue' that always format the chosen
+            --   date and display the value in the field even if the sent value to the server 
+            --   side was the full date (with timezone)
+            -->
+            {{ formattedValue ? formattedValue : "" }}
+            <!-- Updated by Hisham.Omar TP#1136182
+            --   Change the ngModel property from 'value' to 'dateValue' in order to save
+            --   the formatted value in the control when needed 
+            -->
+            <input [(ngModel)]="dateValue" disabled class="ps-date-input" [id]="id" [attr.psFcName]="options.fcName"
+                [formControlName]="options.fcName" matInput [min]="min" [max]="max" [matDatepicker]="picker"
+                [placeholder]="(value == null || value == undefined) ? (options.placeHolder|translate) : ''"
+                (dateChange)="dateChanged($event)">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker [disabled]="disabled" touchUi></mat-datepicker>
+        </mat-form-field>
+
+    </ng-container>
+
+</ps-container-item>
+<ng-container *ngIf="showError">
+    <p *ngFor="let e of errorMsgs" class="validation-message">
+        {{e.msgKey | translate}} {{e.param}}
+    </p>
+</ng-container>
+<div *ngIf="previewMode && this.fcValue" class="ps-custom-component-preview" psPreviewEngine>
+    <ps-label-input *ngIf="options.labelKey" [id]="'lbl_'+ id" [options]="previewLblOptions" class="ps-lbl-preview">
+    </ps-label-input>
+    <span [innerHTML]="delimiter"></span>
+    <ps-label-input [id]="'value_preview_'+ id " [options]="previewValOptions" class="ps-value-preview">
+    </ps-label-input>
+</div>

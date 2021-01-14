@@ -1,0 +1,15 @@
+<ps-container-complex class="ps-complex-notification">
+    <div *ngIf="notificationsList && notificationsList.length > 0" class="ps-complex-notification">
+        <div *ngFor="let item of (notificationsList);let i = index">
+            <ps-label class="notif-header-title" *ngIf="i == 0 || i == 10" [options]="(i == 10 ? earlierLabelOptions : newLabelOptions)">
+            </ps-label>
+            <ps-container-item class="ps-notification-item" [ngClass]="item.status === 'U' ?' ':'unseen-notification'"
+                (click)="onPsNotificationClick($event, item)" [options]="itemOptions"
+                [ngStyle]="common.animationDelay(i)">
+                <ps-hyperlink-anchor id="notif_hyperlink'" [options]="getNotificationItemData(item)">
+                </ps-hyperlink-anchor>
+                <ps-label [options]="getNotificationDate(item)" class="notification-date"></ps-label>
+            </ps-container-item>
+        </div>
+    </div>
+</ps-container-complex>

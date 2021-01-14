@@ -1,0 +1,27 @@
+<div class="ps-keyin-input-label-cust ps-keyin-input-label" *ngIf="custMode">
+  <ps-icon-customization [options]="custIconOptions"></ps-icon-customization>
+</div>
+<ps-container-complex class="ps-complex-lookup" [id]="id" *ngIf="showDropdownIcon || custMode">
+  <div class="select-card-dropDown">
+    <div [ngClass]="{'label' : selectLookUpOptions?.itemList?.length >= 0, 'labelSelected': selectLookUpOptions?.itemList?.length === 1,
+                  'disableContent' : disableLookup}">
+      <div (click)="popListUp($event)">
+        <ps-keyin-input [options]="lookupOptions" #inputRef></ps-keyin-input>
+      </div>
+      <ps-select-lookup-option-list [id]="id" #selectLookUpRef (changeItem)="emitItemDetails($event)"
+        [options]="selectLookUpOptions" [hidden]="toggleCardList"> </ps-select-lookup-option-list>
+    </div>
+    <div class="mat-select-arrow-wrapper" (click)="popListUp($event)">
+      <div id="dropdonwArrow" class="mat-select-arrow dropdown-arrow"></div>
+    </div>
+  </div>
+  <ps-label [options]="noValidAccountsLabelOptions" *ngIf="!bAccountsFound" class="no-account-found-message"></ps-label>
+  <div *ngIf="showWarning">
+    <p class="validation-message">
+      {{'selected_value_not_exist_key' | translate}}
+    </p>
+  </div>
+  <!-- #BUG 1077331 -->
+  <ps-keyin-input [options]="lookupDropDownOptions" (onPsChange)="onChangeItem($event)"
+    *ngIf="selectLookUpOptions.listOfOptions" [hidden]="true"></ps-keyin-input>
+</ps-container-complex>

@@ -1,0 +1,9 @@
+<ps-template-view [options]="templateViewOptions">
+  <div class="chequebook-list-div" *ngIf="showList">
+    <ps-option-expired-security id="ps-option-security-list" *ngFor="let security of securityOptions"
+      [options]="security" click="onclick"></ps-option-expired-security>
+  </div>
+  <div *ngIf="!showList" class="no-account-text">
+    <ps-label [options]="{labelKey: 'no_securities_found_key'}"></ps-label>
+  </div>
+</ps-template-view>

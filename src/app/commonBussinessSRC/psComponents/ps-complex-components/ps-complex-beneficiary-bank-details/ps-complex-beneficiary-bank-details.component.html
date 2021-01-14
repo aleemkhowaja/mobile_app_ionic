@@ -1,0 +1,27 @@
+<ps-container-complex class="ps-complex-swift-benef-creation">
+
+    <!-- <ps-dropdown-country [id]="id" [options]="defaultOptions.countriesOptions" (onPsChange)="countryChanged($event)"></ps-dropdown-country> -->
+    <ps-complex-country-regions-cities [id]="id" [options]="defaultOptions"></ps-complex-country-regions-cities>
+
+
+    <!-- 
+        <ps-dropdown-regions [id]="id" [options]="defaultOptions.regionOptions" (onPsChange)="regionChanged($event)"></ps-dropdown-regions>
+    -->
+
+    <!-- 
+        <ps-dropdown-cities [id]="id" [options]="defaultOptions.cityOptions"></ps-dropdown-cities>        
+   -->
+
+
+    <ps-input-varchar [id]="id" [options]="defaultOptions.swiftCodeOptions"></ps-input-varchar>
+
+
+
+    <ps-input-varchar [id]="id" [options]="defaultOptions.bankNameOptions"></ps-input-varchar>
+
+
+
+    <ps-input-varchar [id]="id" [options]="defaultOptions.branchNameOptions"></ps-input-varchar>
+
+
+</ps-container-complex>

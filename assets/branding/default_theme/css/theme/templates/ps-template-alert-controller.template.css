@@ -1,0 +1,52 @@
+ps-template-alert-controller .ps-template-alert-controller-container {
+    height: auto !important;
+}
+
+ps-template-alert-controller .header {
+    margin-bottom: 4em;
+    margin-top: 4em;
+}
+.isWeb-Layout ps-template-alert-controller .ps-template-alert-controller-row .header{
+    margin:0px !important;
+    padding:20px 0px !important;
+}
+
+ps-template-alert-controller ps-action-button .ps-default-button {
+    --background: var(--ps-secondary-color);
+}
+
+ps-template-alert-controller .ps-template-alert-controller-row {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 5px;
+    border-radius: var(--ps-section-border-radius);
+}
+
+ps-template-alert-controller .header ion-label {
+    color: white;
+    font-size: var(--ps-lg-font);
+}
+
+ps-template-alert-controller .text-truncate {
+    white-space: normal !important;
+}
+
+ps-template-alert-controller .center-header-img .ps-action-image-row {
+    justify-content: center;
+}
+
+[dir="ltr"].isWeb-Layout.userIsLoggedIn ps-template-alert-controller.ion-page{
+     margin-left: var(--ps-margin-left); 
+}
+[dir="rtl"].isWeb-Layout.userIsLoggedIn ps-template-alert-controller.ion-page{
+    margin-left: calc(var(--ps-margin-left) * -1) !important; 
+}
+
+.isWeb-Layout.userIsLoggedIn ps-template-alert-controller  .ps-template-alert-controller-container{
+    width:50%;
+}
+[dir="rtl"].isWeb-Layout.userIsLoggedIn ps-template-alert-controller  .ps-template-alert-controller-container{
+    width:calc(50% - var(--ps-margin-left));
+}
+.isWeb-Layout.userIsLoggedIn .alert-modal .modal-wrapper {
+    width: 100%;
+}

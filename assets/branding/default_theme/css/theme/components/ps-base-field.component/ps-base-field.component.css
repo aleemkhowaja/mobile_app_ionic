@@ -1,0 +1,99 @@
+:root {
+    --ps-field-color: black;
+}
+
+*[ng-reflect-placeholder],
+*[ng-reflect-form-control-name],
+*[psFcName],
+.ng-touched,
+.ng-untouched,
+.ps-input-display-only-value,
+.mat-form-field-label {
+    text-overflow: ellipsis;
+    font-size: 14px !important;
+    /* Define "inputs" value and placeholder size */
+}
+
+
+*[ng-reflect-placeholder]:not(.has-value),
+*[ng-reflect-form-control-name]:not(.has-value),
+*[psFcName]:not(.has-value) {
+    --placeholder-color: black;
+    color: black;
+    --placeholder-opacity: 1 !important;
+}
+
+.ng-touched:not(.has-value),
+.ng-untouched:not(.has-value) {
+    --placeholder-color: black;
+    color: black;
+    --placeholder-opacity: 1 !important;
+}
+
+*[ng-reflect-placeholder].has-value,
+*[ng-reflect-form-control-name].has-value,
+*[psFcName].has-value,
+.ng-touched.has-value,
+.ng-untouched.has-value,
+*[psFcName].ion-dirty {
+    --placeholder-color: black;
+    color: var(--ps-field-color);
+    --placeholder-opacity: 1 !important;
+}
+
+
+mat-form-field {
+    width: 100%;
+}
+
+.mat-form-field-hide-placeholder .mat-select-placeholder {
+    padding-bottom: 10px !important;
+}
+
+.mat-form-field-infix {
+    border: none !important;
+    padding: 0px !important;
+    /* height: 20px !important; */
+    margin: 0px !important;
+    border-top-width: 0px;
+    display: flex !important;
+}
+
+.mat-select-value {
+    padding: 0px !important;
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-wrapper {
+    padding: 0;
+    /* padding-bottom: 5px; */
+}
+
+.mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label,
+.mat-form-field-appearance-legacy.mat-form-field-can-float .mat-input-server:focus+.mat-form-field-label-wrapper .mat-form-field-label {
+    transform: none !important;
+    /* this will disable placeholder to aniumate and replace the label */
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-label {
+    top: auto !important;
+    padding-top: 5px !important;
+    /* this will Fix the UI(big height) of all mat dropdown*/
+}
+
+.isMobile-Layout ps-select-dropdown-base .mat-form-field-infix {
+    padding: 0px !important;
+    /* this will Fix the UI(big height) of all mat dropdown*/
+}
+
+.mat-form-field-label {
+    color: inherit !important;
+}
+
+.mat-form-field .mat-form-field-underline {
+    width: 0px;
+    height: 0px;
+}
+
+.ps-date-col .mat-form-field-flex {
+    align-items: normal;
+}

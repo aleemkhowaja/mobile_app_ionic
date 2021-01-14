@@ -1,0 +1,18 @@
+<ps-container-complex class="ps-complex-swift-benef-creation">
+
+    <ps-input-account-number [options]="defaultOptions.benefAccountNumberOptions"></ps-input-account-number>
+
+
+    <ps-dropdown-currencies *ngIf="defaultOptions.beneficiaryType !== 'internal'" [id]="id"
+        [options]="defaultOptions.currencyOptions"></ps-dropdown-currencies>
+
+
+    <ps-input-varchar [id]="id" [options]="defaultOptions.benefNameOptions"></ps-input-varchar>
+
+
+    <ps-entity-phone-number [options]="defaultOptions.benefPhoneOptions"></ps-entity-phone-number>
+
+
+    <ps-input-varchar [id]="id" [options]="defaultOptions.benefReasonOptions"></ps-input-varchar>
+
+</ps-container-complex>

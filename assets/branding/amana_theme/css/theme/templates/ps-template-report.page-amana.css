@@ -1,0 +1,11 @@
+.report-content-label span{
+  color:white !important;
+}
+.report-header-value span{
+  color:white !important;
+  font-size:inherit !important;
+}
+ps-input-search-html .ps-template-report-search ion-input{
+  --placeholder-color: white !important;
+  --placeholder-opacity: 1 !important;
+}

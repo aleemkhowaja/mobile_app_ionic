@@ -1,0 +1,116 @@
+:root {
+    --ps-dropdown-image-width: 40px;
+    --ps-dropdown-image-height: 20px;
+    --ps-dropdown-image-border-radius: 5px;
+}
+
+ps-select-dropdown-base {
+    pointer-events: none !important;
+}
+
+ps-select-dropdown-base .mat-form-field-infix {
+    display: flex !important;
+
+}
+
+ps-select-dropdown-base .mat-select-arrow {
+    color: inherit !important;
+}
+
+ps-select-dropdown-base img,
+.select-drop-down-img {
+    border-radius: var(--ps-dropdown-image-border-radius) !important;
+    --border-radius: var(--ps-dropdown-image-border-radius) !important;
+    width: var(--ps-dropdown-image-width) !important;
+    height: var(--ps-dropdown-image-height) !important;
+}
+
+
+ps-select-dropdown-base .mat-select-value-text,
+.mat-option-text,
+.mat-option {
+    color: var(--ps-font-color-opp-primary-color);
+}
+
+ps-select-dropdown-base .mat-option,
+ps-select-dropdown-base .mat-primary {
+    width: 100%;
+}
+
+.mat-option {
+    height: auto !important;
+    border-bottom: 1px solid;
+}
+
+.mat-option .mat-option-text {
+    white-space: normal;
+    display: flex;
+}
+
+ps-select-dropdown-base .mat-select-panel {
+    background: grey;
+}
+
+ps-select-dropdown-base .mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+    color: white;
+}
+
+ps-select-dropdown-base .mat-select-arrow-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ps-select-dropdown-base .mat-primary .mat-option.mat-selected {
+    color: var(--ps-highlight-background-color) !important;
+}
+
+ps-select-dropdown-base .dropdown-selected-image {
+    padding-inline-end: 5px !important;
+    background-repeat: no-repeat;
+    -ms-flex: 0 0 16.666667%;
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+}
+
+ps-select-dropdown-base .select-container-wrapper {
+    padding: 0px !important;
+}
+
+ps-select-dropdown-base .select-row-wrapper {
+    width: 100%;
+    margin: 0px;
+}
+
+ps-select-dropdown-base .main-dropdown-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+}
+
+.select-drop-down-description {
+    -webkit-box-flex: 0;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.select-drop-down-img-wrapper {
+    -webkit-box-flex: 0;
+    flex: 0 0 35%;
+    max-width: 50%;
+}
+
+.select-drop-down-description.image-is-present {
+    -webkit-box-flex: 0;
+    flex: 0 0 50%;
+    max-width: 100%;
+}
+
+.mat-select-panel-wrap {
+    scrollbar-color: var(--ps-scrollbar-color-firefox);
+}
+
+.mat-select-panel-wrap div {
+    scrollbar-width: var(--ps-scrollbar-width);
+}

@@ -1,0 +1,4 @@
+.ps-complex-card-details-branch-button-directions {
+    --background: var(--ps-button-submit-background-color) !important;
+    --background-hover: var(--ps-button-submit-background-color-hover) !important;
+}

@@ -1,0 +1,10 @@
+<ps-field-entity [options]="defaultOptions">
+  <div class="search-criteria_language">
+    <ng-container *ngFor="let labelOption of custLangLableOptions">
+      <ps-select-dropdown [options]="labelOption" [id]="id + labelOption['itemValue']"
+        (onPsChange)="onLanguageChange($event)" (onServiceDataChange)="onServiceDataChange($event)"
+        (onPsEmpty)="onEmptyLanguage($event)">
+      </ps-select-dropdown>
+    </ng-container>
+  </div>
+</ps-field-entity>

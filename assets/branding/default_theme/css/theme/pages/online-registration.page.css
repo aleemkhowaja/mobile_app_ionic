@@ -1,0 +1,15 @@
+online-registration .registration-charges-block {
+    text-align: center;
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+online-registration .registration-charges-block .registration-charges_label {
+    font-weight: bold;
+    color: var(--ps-panel-expanded-header-background-color);
+}
+
+online-registration .registration-charges-block .registration-charges_value {
+    color: var(--ps-neutral-value-font-color);
+    text-transform: uppercase;
+}

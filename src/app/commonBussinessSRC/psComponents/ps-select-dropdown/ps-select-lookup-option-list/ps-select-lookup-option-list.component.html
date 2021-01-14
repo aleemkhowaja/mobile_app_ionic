@@ -1,0 +1,9 @@
+<div [ngClass]="{'lookup-dropdown-content-show' : options.showSelectedCard,'lookup-dropdown-content' : !options.showSelectedCard,
+ 'lookup-dropdown-content-show-popup' : dynamicComponentOptions.itemList == dynamicComponentOptions.listOfOptions }">
+ <div [ngClass]="{'select-item-card': itemArraySize === 1,'lookup-dropdown-content-show lookup-dropdown-content': itemArraySize > 1}">
+      <div class="ps-container-lookup-option-details lookup-card-margin-bottom" *ngIf="itemArraySize > 1">
+        <ps-keyin-input [options]="disableSelectDropdownOptions" *ngIf="enableEmptyOpt"></ps-keyin-input>
+      </div>
+    <ps-dynamic-component-loader [options]="dynamicComponentOptions" (onClickCard)="onClickCard($event)"></ps-dynamic-component-loader>
+    </div>
+  </div>

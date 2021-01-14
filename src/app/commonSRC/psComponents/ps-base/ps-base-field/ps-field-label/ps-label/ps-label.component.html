@@ -1,0 +1,10 @@
+<ion-label *ngIf="getLabelKey && !options.isInnerHTML" class="ps-label text-truncate" [ngClass]="options.psClass"
+    [position]="options.position? options.position: undefined">
+    {{ options.previewMode ? getLabelKey : (options.translate == false) ? getLabelKey : getLabelKey | translate }}
+    <!-- {{ options.translate ? (options.labelKey | translate) : (options.labelKey) }} -->
+    <sup *ngIf="options.required && !options.previewMode" class="lbl-required-star">*</sup>
+</ion-label>
+<ion-label *ngIf="getLabelKey && options.isInnerHTML" class="ps-label text-truncate" [ngClass]="options.psClass"
+    [position]="options.position? options.position: undefined" [innerHTML]="getLabelKey">
+    <sup *ngIf="options.required && !options.previewMode" class="lbl-required-star">*</sup>
+</ion-label>

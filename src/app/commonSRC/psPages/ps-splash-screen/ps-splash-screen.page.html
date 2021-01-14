@@ -1,0 +1,8 @@
+<ng-container *ngIf="updating">
+  <div class="splash-div">
+    <img *ngIf="bankLogo" class="splash-logo" [src]="bankLogo">
+    <p class="splash-label">{{loadingKey | translate}}</p>
+    <img *ngIf="loaderIcon" [src]="loaderIcon" class="splash-spinner">
+    <p *ngIf="progress" class="splash-progress">{{progress}} %</p>
+  </div>
+</ng-container>

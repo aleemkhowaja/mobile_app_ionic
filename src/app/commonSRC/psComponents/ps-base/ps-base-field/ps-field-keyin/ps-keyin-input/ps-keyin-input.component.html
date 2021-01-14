@@ -1,0 +1,50 @@
+<ng-container *ngIf="(visible||custMode) && (!previewMode || options.forceShowOnPreview)">
+  <div class="ps-keyin-input-label ps-keyin-input-label-cust" *ngIf="custMode || (options.labelKey && enableLabeling)">
+    <ps-icon-customization *ngIf="custMode" [options]="custIconOptions"></ps-icon-customization>
+  </div>
+  <ps-container-item [formGroup]="options.group" class="ps-field-item-wrapper ps-custom-component"
+    [ngClass]="options.psClass" [tooltip]="isHelpEnabled && helpMessage && helpType =='tooltip'?helpMessage:''"
+    positionV="top" arrow [options]="itemOptions" (onPsIconClicked)="onIconClicked()"
+    (onPsImageClicked)="onImageClicked()">
+
+
+
+    <ps-label-input class="ps-keyin-input-label" [options]="labelOptions"></ps-label-input>
+
+
+
+    <div class="ps-keyin-input">
+      <!-- divided into two (amount or not amount) by Richie for #BUG 1011153-->
+      <ion-input *ngIf="this.options.type === 'amount'" [value]="fieldValue" [formControlName]="options.fcName"
+        [psInputMask]="options.mask" [id]="'ion-input_' + id" type="tel" inputmode="decimal" class="ps-input"
+        [placeholder]="placeHolderTrans" (keydown)="onKeyDown($event)" (keyup)="onKeyUp($event)"
+        [autocomplete]="options.autocomplete" [name]="options.name" [attr.psFcName]="options.fcName">
+      </ion-input>
+      <ion-input *ngIf="this.options.type != 'amount'" [value]="fieldValue" [formControlName]="options.fcName"
+        [psInputMask]="options.mask" [id]="'ion-input_' + id" [type]="this.options.type" class="ps-input"
+        [placeholder]="placeHolderTrans" (keydown)="onKeyDown($event)" (keyup)="onKeyUp($event)"
+        (ionFocus)="onFocus($event)" [autocomplete]="options.autocomplete" [name]="options.name"
+        [attr.psFcName]="options.fcName">
+      </ion-input>
+    </div>
+
+  </ps-container-item>
+</ng-container>
+
+<ng-container *ngIf="isHelpEnabled && helpMessage && helpType =='hint'">
+  <p class="hint-message">
+    {{helpMessage}}
+  </p>
+</ng-container>
+<ng-container *ngIf="showError">
+  <p *ngFor="let e of errorMsgs" class="validation-message">
+    {{e.msgKey | translate}} {{e.param}}
+  </p>
+</ng-container>
+<div *ngIf="previewMode && !options.disablePreview" class="ps-custom-component-preview" psPreviewEngine>
+  <ps-label-input *ngIf="options.labelKey" [id]="'lbl_'+ id" [options]="previewLblOptions" class="ps-lbl-preview">
+  </ps-label-input>
+  <span [innerHTML]="delimiter"></span>
+  <ps-label-input [id]="'value_preview_'+ id " [options]="previewValOptions" class="ps-value-preview"></ps-label-input>
+  <!-- removed since the fcValue is already returned formatted <ion-label *ngIf="type=='amount'" [id]="'value_preview_'+ id " class="ps-value-preview">{{fcValue | psCurrency:decPoints}}</ion-label> -->
+</div>

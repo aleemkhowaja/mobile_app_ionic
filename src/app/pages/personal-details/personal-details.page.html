@@ -1,0 +1,20 @@
+<ps-template-stepper [options]="stepperOptions" [id]="stepperOptions.stepperName">
+  <ps-form-step step1 [id]="stepperOptions.namesofSteps[0]">
+      <ps-container-panel [options]="panelPersonalDetailsOptions" id="personal_details_panel1">
+
+        <ps-complex-personal-details [options]="defaultPersonalDetailsOptions"></ps-complex-personal-details>
+
+      </ps-container-panel>
+      <ps-container-panel [options]="panelCifAddressOptions" id="personal_details_panel2">
+
+        <ps-complex-cif-details [options]="defaultCifDetailsOptions"></ps-complex-cif-details>
+
+
+      </ps-container-panel>
+      <ps-container-panel [options]="panelEmployementDetailsOptions" id="personal_details_panel3">
+
+        <ps-complex-employment-details [options]="defaultEmployeeOptions"></ps-complex-employment-details>
+
+      </ps-container-panel>
+  </ps-form-step>
+</ps-template-stepper>

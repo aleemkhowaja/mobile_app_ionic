@@ -1,0 +1,41 @@
+.ps-balance {
+    display: flex;
+    padding-top: 0.5em;
+    /* padding-right: 1em; */
+    padding-bottom: 0.5em;
+}
+
+.ps-balance .current-balance-div {
+    text-align: center;
+    background-color: var(--ps-tooltip-message-background-color);
+    border-right: 2px solid var(--ps-font-light-color);
+    color: var(--ps-font-light-color);
+    padding-top: 0.2em;
+    border-top-left-radius: 0.5em;
+    text-align: left;
+}
+
+.ps-balance .available-balance-div {
+    text-align: center;
+    background-color: #FF6607;
+    color: var(--ps-font-light-color);
+    padding-top: 0.2em;
+    border-bottom-right-radius: 0.5em;
+    text-align: left;
+}
+
+.ps-balance .available-balance-div,
+.ps-balance .current-balance-div,
+.container-option-table-row {
+    padding-inline-start: 5px !important;
+    height: auto !important;
+}
+
+
+
+.ps-balance .available-balance-div,
+.ps-balance .current-balance-div {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}

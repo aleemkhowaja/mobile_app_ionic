@@ -1,0 +1,196 @@
+ps-template-login #ps-container-login-form {
+    display: flex;
+    flex-direction: column;
+    height:80vh !important;
+    position:relative;
+}
+
+ps-template-login .main-content {
+    height: 100vh !important;
+}
+
+ps-template-login .ps-template-login-card {
+    overflow: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto !important;
+    position: absolute;
+    border-radius: 0px;
+    box-shadow: 0 11px 15px -7px rgba(255, 255, 255, .2), 0 24px 38px 3px rgba(255, 255, 255, .14), 0 9px 46px 8px rgba(255, 255, 255, .12) !important;
+    overflow-x: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+ps-template-login .bank-logo {
+    width: 80% !important;
+    background-image: url('/assets/branding/default_theme/imgs/BankLogo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 20vh;
+    background-position: center;
+}
+
+.ps-template-login-card-flex>div {
+    width: 80%;
+    outline: none !important;
+}
+
+.ps-template-login-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ps-template-login-card-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+ps-template-login .ps-template-login-banners {
+    width: 100% !important;
+    margin-top: 0 !important;
+    display: none;
+}
+
+.isWeb-Layout ps-template-login .ps-template-login-help {
+    display: flex;
+    align-items: center;
+}
+
+.isWeb-Layout {
+    --ps-fab-button-size: 45px;
+}
+
+.isWeb-Layout ps-template-login .ps-template-login-help .ps-action-icon-icon {
+    display: none;
+}
+
+.isWeb-Layout .login-and-regisration-section .additional-links {
+    margin: 10px 0px !important;
+}
+
+.isWeb-Layout .ps-template-login-card {
+    margin: 0px !important;
+    border-radius: 7px;
+    background: linear-gradient(to bottom, var(--ps-gradient-color-1), var(--ps-gradient-color-2)) !important;
+}
+
+.isWeb-Layout {
+    --ps-fab-button-size: 45px;
+}
+
+.ps-template-login-submit ion-button{
+    --background:var(--ps-highlight-background-color);
+}
+
+.online-registration-link .ps-action-icon-icon{
+    padding-inline-end: 10px !important;
+    margin-inline-end: 0px;
+}
+
+.isWeb-Layout ps-template-login ion-item .ps-keyin-input-label {
+    display: none;
+}
+
+
+.isWeb-Layout ps-template-login .help-and-remember-me-section {
+    display: flex;
+}
+
+.isWeb-Layout ps-template-login .help-and-remember-me-section .ps-template-login-rememberMe,
+.isWeb-Layout ps-template-login .help-and-remember-me-section .ps-template-login-help {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.isWeb-Layout ps-template-login .help-and-remember-me-section .ps-template-login-help {
+    flex-direction: row-reverse;
+}
+
+.isWeb-Layout ps-template-login .login-and-regisration-section .ps-action-icon-icon {
+    display: none;
+}
+
+.isWeb-Layout {
+    --ps-fab-button-size: 45px;
+}
+
+.isWeb-Layout ps-template-login .ps-template-login-help .ps-action-icon-icon {
+    display: none;
+}
+
+.isWeb-Layout {
+    --ps-fab-button-size: 45px;
+}
+
+.isWeb-Layout  .ps-template-login-card-flex{
+    background:linear-gradient(to bottom, var(--ps-gradient-color-1), var(--ps-gradient-color-2)) !important;
+    height:100%;
+}
+
+.online-registration-link .ps-action-icon-icon{
+    padding-inline-end: 10px !important;
+    margin-inline-end: 0px;
+}
+ /* mindflare structure  */
+ps-template-login .additional-links #online_registration_link .ps-action-icon-label{
+    border-bottom: 2px solid white !important;
+}
+
+ps-template-login .ps-template-login-username {
+    order: 1;
+}
+
+ps-template-login .ps-template-login-password {
+    order: 2;
+}
+
+ps-template-login .ps-template-login-rememberMe {
+    order: 3;
+}
+
+ps-template-login .ps-template-login-submit {
+    order: 4;
+}
+
+ps-template-login .ps-template-login-help {
+    order: 5;
+}
+
+ps-template-login .additional-links {
+    order: 6;
+}
+
+ps-template-login .ps-template-login-links{
+    order: 7;
+}
+
+.ps-template-login-help #help_with_cred_link{
+    max-width: 100%;
+    flex: 0 0 100%;
+}
+
+ps-template-login .additional-links #online_registration_link .ps-action-icon-icon,
+ps-template-login .ps-template-login-help .ps-action-icon-icon {
+    display: none;
+}
+
+ps-template-login ps-input-username .ps-keyin-input-label,
+ps-template-login ps-input-password .ps-keyin-input-label {
+    display: none;
+}
+
+
+.isMobile-Layout ps-template-login .ps-template-login-submit{
+    margin-top: 5vh;
+}
+
+ps-template-login .ps-template-login-help ion-label,
+ps-template-login .ps-template-login-rememberMe ion-label{
+    color: var(--ps-login-second-label-color) !important;
+}

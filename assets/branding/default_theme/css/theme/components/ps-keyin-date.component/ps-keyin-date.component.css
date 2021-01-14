@@ -1,0 +1,34 @@
+:root {
+    --ps-date-picker-background: hsla(0, 0%, 65%, 0.702);
+    --ps-date-picker-selected-background: var(--ps-secondary-color);
+}
+
+ion-picker .picker-above-highlight,
+ion-picker .picker-below-highlight {
+    background: var(--ps-date-picker-background) !important;
+}
+
+
+ion-picker ion-picker-column {
+    background: var(--ps-date-picker-selected-background) !important;
+    color: var(--ps-font-color-opp-secondary-color) !important;
+    display: flex !important;
+    justify-content: center !important;
+}
+
+ion-picker .picker-toolbar button {
+    color: var(--ps-highlight-background-color) !important;
+}
+
+ion-datetime {
+    padding: 0px !important;
+}
+
+.datetime-text {
+    color: var(--ps-field-color) !important;
+}
+
+.ps-keyin-date-item .ps-date-col .ps-date-input {
+    opacity: 0;
+    padding-bottom: .25rem!important;
+}

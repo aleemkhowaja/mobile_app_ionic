@@ -1,0 +1,148 @@
+:root {
+    --ps-button-background-color: hsl(0, 0%, 100%);
+    --ps-button-font-color: hsl(0, 0%, 100%);
+    --ps-button-background-color-hover: hsl(0, 0%, 100%);
+    --ps-button-border-radius: 10pt;
+    --ps-button-border-width: 0px;
+    --ps-button-border-color: #454545;
+    /* Newly Added by DK */
+    --ps-button-border-style: solid;
+    --ps-button-border: var(--ps-button-border-width) var(--ps-button-border-style) var(--ps-button-border-color);
+    /* Newly Added by DK - Default buttons' background colors */
+    /*------------------------------ The below can be customized by the customer ------------------------------*/
+    /* Used for the Cancel button */
+    --ps-button-background-color-1: #FF6708;
+    /* White */
+    --ps-button-background-color-hover-1: #F2F2F2;
+    /* Light Grey */
+    --ps-button-font-color-1: var(--ps-font-dark-color);
+    /* Grey */
+    /* Used for Next & Logout buttons */
+    --ps-button-background-color-2: #FF6708;
+    /* Orange */
+    --ps-button-background-color-hover-2: var(--ps-primary-color);
+    /* Grey */
+    --ps-button-font-color-2: var(--ps-font-light-color);
+    /* White */
+    /* Used for Previous button */
+    --ps-button-background-color-3: var(--ps-secondary-color);
+    /* Dark Blue */
+    --ps-button-background-color-hover-3: var(--ps-primary-color);
+    /* Grey */
+    --ps-button-font-color-3: var(--ps-font-light-color);
+    /* White */
+    /* Used for Save & Submit buttons */
+    --ps-button-background-color-4: #294183;
+    /* Green */
+    --ps-button-background-color-hover-4: var(--ps-primary-color);
+    /* Grey */
+    --ps-button-font-color-4: var(--ps-font-light-color);
+    /* White */
+    /* Completely Changed by DK */
+    --ps-button-cancel-background-color: white;
+    --ps-button-cancel-font-color: var(--ps-button-font-color-1);
+    --ps-button-cancel-border-color: #95989A;
+    --ps-button-cancel-background-color-hover: var(--ps-primary-color);
+    /*------------------------------------------------------------------------------------------------------*/
+    /* Completely Changed by DK */
+    --ps-button-next-background-color: var(--ps-button-background-color-2);
+    --ps-button-next-font-color: var(--ps-button-font-color-2);
+    --ps-button-next-border: var(--ps-button-border);
+    --ps-button-next-background-color-hover: var(--ps-button-background-color-hover-2);
+    /* Completely Changed by DK */
+    --ps-button-previous-background-color: var(--ps-button-background-color-3);
+    --ps-button-previous-font-color: var(--ps-button-font-color-3);
+    --ps-button-previous-border: var(--ps-button-border);
+    --ps-button-previous-background-color-hover: var(--ps-button-background-color-hover-3);
+    /* Completely Changed by DK */
+    --ps-button-submit-background-color: var(--ps-highlight-background-color);
+    --ps-button-submit-font-color: var(--ps-button-font-color-4);
+    --ps-button-submit-border-color: var(--ps-button-border);
+    --ps-button-submit-background-color-hover: var(--ps-button-background-color-hover-4);
+    /* Newly Added by DK */
+    --ps-button-logout-background-color:  var(--ps-highlight-background-color); 
+    --ps-button-logout-font-color: white;
+    --ps-button-logout-border: var(--ps-button-border);
+    --ps-button-logout-background-color-hover: var(--ps-button-background-color-hover-2);
+
+    --ps-button-reject-background-color: var(--ion-color-primary-tint,#4c8dff);
+    --ps-button-reject-background-color-hover: var(--ps-button-background-color-hover-4);
+}
+.isWeb-Layout{
+    --ps-button-logout-background-color: #94441d; 
+}
+ps-action-button ion-button.activated {
+    font-weight: bold;
+    /* font-size: var(--ps-md-font); */
+    --color-activated: initial !important;
+    --background-activated: inherit !important;
+}
+
+.ps-default-button {
+    display: block;
+    --border-style: solid;
+    --border-width: var(--ps-button-border-width);
+    --border-radius: var(--ps-button-border-radius) !important;
+    /* DK */
+    height: 45px;
+    /* margin: 0px 4px; */
+    text-transform: uppercase;
+    font-size: var(--ps-md-font);
+    /* DK */
+}
+
+ion-button .ps-button-cancel {
+    --border: 1px solid var(--ps-button-cancel-border-color);
+}
+
+/* Completely Changed by DK */
+
+.ps-button-cancel {
+    --background: var(--ps-button-cancel-background-color) !important; 
+    --color: var(--ps-button-cancel-font-color);
+    --background-hover: var(--ps-button-cancel-background-color-hover) !important;
+    --background-activated: var(--ps-secondary-color) !important;
+}
+
+.ps-button-cancel ion-label {
+    color: var(--ps-highlight-background-color) !important;
+}
+
+.ps-button-cancel .ps-action-icon-icon ion-icon {
+    color: var(--ps-button-background-color-1) !important;
+}
+
+/* Completely Changed by DK */
+
+.ps-button-submit {
+    --background: var(--ps-button-submit-background-color) !important;
+    --color: var(--ps-button-submit-font-color) !important;
+    --border: var(--ps-button-submit-border) !important;
+    --background-hover: var(--ps-button-submit-background-color-hover) !important;
+    --background-activated: var(--ps-secondary-color) !important;
+    /* text-transform: none !important; */
+}
+
+/* Completely Changed by DK */
+
+.ps-button-next {
+    --background: var(--ps-button-next-background-color) !important;
+    --color: var(--ps-button-next-font-color) !important;
+    --border: var(--ps-button-next-border) !important;
+    --background-hover: var(--ps-button-next-background-color-hover) !important;
+    --background-activated: var(--ps-secondary-color) !important;
+}
+
+/* Completely Changed by DK */
+
+.ps-button-back {
+    --background: #355ab9 !important;
+    --color: var(--ps-button-previous-font-color) !important;
+    --border: var(--ps-button-previous-border) !important;
+    --background-hover: var(--ps-button-previous-background-color-hover) !important;
+    --background-activated: var(--ps-secondary-color) !important;
+}
+
+.ps-default-button:active {
+    /* font-size: calc(var(--ps-md-font) * 1.1); */
+}

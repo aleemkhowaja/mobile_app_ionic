@@ -1,0 +1,20 @@
+ps-input-search-html ps-container-item ion-item {
+    margin-bottom: 22px !important;
+}
+
+ps-input-search-html .highlight {
+    background-color: var(--ps-highlighted-search-text-background);
+}
+
+ps-input-search-html .search-html ps-keyin-input {
+    width: 100%;
+}
+
+ps-input-search-html .search-html .ps-container-item-img-icon {
+    order: 1;
+}
+
+ps-input-search-html .search-html ps-action-icon ion-icon {
+    color: var(--ps-search-icon-color) !important;
+    font-size: var(--ps-xl-font);
+}

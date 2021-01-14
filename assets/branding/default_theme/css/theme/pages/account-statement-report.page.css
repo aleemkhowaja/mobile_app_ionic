@@ -1,0 +1,52 @@
+account-statement-report .rep-panel-content {
+    /* background: var(--ps-font-light-color) !important; */
+    /* -webkit-box-shadow: 0px 15px 5px -5px var(--ps-font-dark-color), 7px 10px 10px 8px hsla(0, 1%, 57%, 0);
+    box-shadow: 0px 15px 5px -5px var(--ps-font-dark-color), 7px 10px 10px 8px hsla(0, 1%, 57%, 0); */
+    /* border-radius: 25px; */
+    height: 135px !important;
+    background: var(--ps-font-light-color) !important;
+    border-top: 4px solid var(--ps-primary-color) !important;
+}
+
+account-statement-report .rep-date-val {}
+
+account-statement-report .rep-date-val span {
+    color: var(--ps-primary-color) !important;
+    font-size: var(--ps-md-font) !important;
+    font-weight: bold;
+}
+
+account-statement-report .rep-panel-cont-val {}
+
+account-statement-report .rep-panel-cont-val2 span {
+    color: var(--ps-secondary-color) !important;
+    font-size: var(--ps-md-font) !important;
+    /* -webkit-box-shadow: 0px 10px 13px -7px var(--ps-font-light-color), 7px 10px 10px 8px #93909000;
+    box-shadow: 0px 10px 13px -7px var(--ps-font-light-color), 7px 10px 10px 8px #93909000; */
+    padding: 10px;
+    font-weight: bold !important;
+    text-align: center !important;
+}
+
+account-statement-report .rep-panel-cont-val2 {}
+
+account-statement-report .rep-panel-cont-val span {
+    color: var(--ps-credit-font-color) !important;
+    font-size: var(--ps-md-font) !important;
+}
+
+account-statement-report .rep-panel-cont-val3 {}
+
+account-statement-report .rep-panel-cont-val3 span {
+    color: var(--ps-secondary-color) !important;
+    font-size: var(--ps-sm-font) !important;
+}
+
+account-statement-report .rep-sep-line {
+    border: none !important;
+}
+
+account-statement-report .rep-panel-cont-val4 span {
+    color: var(--ps-debit-font-color) !important;
+    font-size: var(--ps-md-font) !important;
+}

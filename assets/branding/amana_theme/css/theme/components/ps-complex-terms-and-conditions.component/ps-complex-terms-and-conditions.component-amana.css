@@ -1,0 +1,38 @@
+ps-complex-terms-and-conditions .ps-complex-terms-and-conditions {
+    color: white;
+}
+
+ps-complex-terms-and-conditions .ps-complex-terms-and-conditions .ps-html-viewer-wrapper {
+    background: rgb(28, 9, 45) !important;
+}
+
+ps-complex-terms-and-conditions .ps-complex-terms-and-conditions {
+    background: transparent !important;
+}
+
+ps-complex-terms-and-conditions .ps-complex-terms-and-conditions ps-select-checkbox ps-label {
+    color: white;
+}
+
+ps-complex-terms-and-conditions {
+    overflow-y: scroll !important;
+    height: 100% !important;
+}
+
+ps-complex-terms-and-conditions::-webkit-scrollbar-track {
+    border-radius: 10px !important;
+    background-color: var(--ps-highlight-background-color) !important;
+}
+
+ps-complex-terms-and-conditions::-webkit-scrollbar {
+    width: 5px !important;
+}
+
+ps-complex-terms-and-conditions::-webkit-scrollbar-thumb {
+    background-color: #ad95c1 !important;
+}
+
+
+ps-complex-terms-and-conditions .separator {
+    margin: 5px !important;
+}

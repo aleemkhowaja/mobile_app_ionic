@@ -1,0 +1,153 @@
+<div class="customization-page_div">
+  <div class="customization-page_header">
+    <div class="customization-page_header_info">
+      <div class="customization-page_header_info-oper">
+        <div class="header_info-label">
+          <ps-label [options]="operIdOptions"></ps-label>
+        </div>
+        <div class="header_info-value">
+          <ps-label [options]="operIdValueOptions"></ps-label>
+        </div>
+      </div>
+      <div class="customization-page_header_info-page_name">
+        <div class="header_info-label">
+          <ps-label [options]="pageNameOptions"></ps-label>
+        </div>
+        <div class="header_info-value">
+          <ps-label [options]="pageNameValueOptions"></ps-label>
+        </div>
+      </div>
+      <div class="customization-page_header_info-field_label" *ngIf="fieldNameValueOptions?.labelKey">
+        <div class="header_info-label">
+          <ps-label [options]="fieldNameOptions"></ps-label>
+        </div>
+        <div class="header_info-value">
+          <ps-label [options]="fieldNameValueOptions"></ps-label>
+        </div>
+      </div>
+    </div>
+    <div class="customization-page_header_close">
+      <ps-icon-close></ps-icon-close>
+    </div>
+  </div>
+  <div class="customization-page_content">
+    <div class="customization-page_content-segment">
+      <ps-select-segment [options]="custSegmentOptions" (segmentButtonClicked)="onClickSegment($event)">
+      </ps-select-segment>
+    </div>
+    <div class="customization-page_content-fields">
+      <div *ngIf="showCustByNameFields" class="customization-page_content-fields-div">
+        <ng-container
+          *ngTemplateOutlet="custOptions;context:{object:customizationGroupByName , type:CUSTOMIZATION_BY_NAME}">
+        </ng-container>
+      </div>
+      <div *ngIf="showCustByTypeFields" class="customization-page_content-fields-div">
+        <ng-container
+          *ngTemplateOutlet="custOptions;context:{object:customizationGroupByType , type:CUSTOMIZATION_BY_TYPE}">
+        </ng-container>
+      </div>
+    </div>
+  </div>
+  <div class="customization-page_footer">
+    <div class="container-fluid">
+      <div class="row">
+        <ng-container *ngIf="custData?.customizationByName?.screenDispVO?.SCREEN_DISPLAY_ID">
+          <ps-button-standard id="reset_cust" class="col-4 reset-cust" [options]="resetCustOptions"
+            (onClick)="confirmReset()">
+          </ps-button-standard>
+        </ng-container>
+        <ps-button-standard id="save_cust_updates" class="col-4 offset-4" [options]="saveCustOptions"
+          (onClick)="onSaveCust()">
+        </ps-button-standard>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #custOptions let-object="object" let-type="type">
+  <div *ngIf="showBusRelatedMsg" class="content-fields_item bus-related-msg">
+    <ps-label [options]="busMessageOptions"></ps-label>
+  </div>
+  <ps-container-panel id="customization_basic_panel" class="cust-panel" [options]="basicPanelOptions">
+
+    <div *ngIf="availableOptions?.IS_VISIBLE" class="content-fields_item">
+      <ps-select-checkbox id="visibleFlag" [options]="object.visibleFlagOptions"
+        (onPsChange)="onVisibilityChange($event, type)">
+      </ps-select-checkbox>
+    </div>
+    <div *ngIf="availableOptions?.IS_READONLY" class="content-fields_item">
+      <ps-select-checkbox id="readOnlyFlag" [options]="object.readOnlyFlagOptions"
+        (onPsChange)="onReadOnlyChange($event, type)">
+      </ps-select-checkbox>
+    </div>
+    <div *ngIf="availableOptions?.IS_MANDATORY" class="content-fields_item">
+      <ps-select-checkbox id="requiredFlag" [options]="object.requiredFlagOptions"
+        (onPsChange)="onRequiredChange($event, type)">
+      </ps-select-checkbox>
+    </div>
+    <div *ngIf="availableOptions?.ZERO_NOT_ALLOWED" class="content-fields_item">
+      <ps-select-checkbox id="allowZeroFlag" [options]="object.allowZeroFlagOptions">
+      </ps-select-checkbox>
+    </div>
+    <div *ngIf="availableOptions?.MIN_LENGTH" class="content-fields_item">
+      <ps-keyin-input class="cust_keyin_input" id="fldcust_min_length" (onPsChange)="onMinLengthChanged($event, type)"
+        [options]="object.minLengthOptions">
+      </ps-keyin-input>
+    </div>
+    <div *ngIf="availableOptions?.MAX_LENGTH" class="content-fields_item">
+      <ps-keyin-input class="cust_keyin_input" [options]="object.maxLengthOptions" id="fldcust_max_length"
+        (onPsChange)="onMaxLengthChanged($event, type)">
+      </ps-keyin-input>
+    </div>
+    <div *ngIf="availableOptions?.MIN_VALUE" class="content-fields_item">
+      <ps-keyin-input class="cust_keyin_input" [options]="object.minValueOptions"
+        (onPsChange)="onMinValueChanged($event, type)">
+      </ps-keyin-input>
+    </div>
+    <div *ngIf="availableOptions?.MAX_VALUE" class="content-fields_item">
+      <ps-keyin-input class="cust_keyin_input" [options]="object.maxValueOptions"
+        (onPsChange)="onMaxValueChanged($event, type)">
+      </ps-keyin-input>
+    </div>
+    <div *ngIf="availableOptions?.DEFAULT_VALUE" class="content-fields_item">
+      <ps-dynamic-component-loader [options]="object.dynamicComponentOptions"></ps-dynamic-component-loader>
+    </div>
+  </ps-container-panel>
+  <div *ngIf="availableOptions?.PATTERN" class="content-fields_item">
+    <ps-container-panel id="customization_pattern_panel" [options]="patternPanelOptions">
+      <ps-keyin-input class="panel_keyin_input" [options]="object.patternOptions" id="pattern-customization">
+      </ps-keyin-input>
+      <ps-entity-dropdown-languages [options]="object.patternLabelKeyOptions" id="pattern_error_key_cust"></ps-entity-dropdown-languages>
+    </ps-container-panel>
+  </div>
+  <div *ngIf="availableOptions?.KEY_LABEL_ID" class="content-fields_item">
+    <ps-container-panel id="customization_label_panel" [options]="labelPanelOptions">
+        <ps-keyin-input class="panel_keyin_input" [options]="object.defalutLabelOption"> </ps-keyin-input> 
+        <ps-entity-dropdown-languages [options]="object.labelKeyOptions" id="label_key_customization"></ps-entity-dropdown-languages>
+  </ps-container-panel>
+  </div>
+  <div *ngIf="availableOptions?.PLACEHOLDER_LABEL_ID" class="content-fields_item">
+    <ps-container-panel id="customization_label_panel" [options]="placeholderPanelOptions">
+        <ps-keyin-input class="panel_keyin_input" [options]="object.defalutPlaceholderOption"> </ps-keyin-input> 
+        <ps-entity-dropdown-languages [options]="object.placeholderKeyOptions" id="place_holder_key_cust"></ps-entity-dropdown-languages>
+    </ps-container-panel>
+  </div>
+  <!-- Added by Aftab.Ali  TP# 997503 start -->
+  <div *ngIf="availableOptions?.SERVICE_MAPPING" class="service_mapping">
+    <ps-container-panel id="customization_service_mapping" [options]="serviceMappingPanelOptions">
+      <div class="customization-page_footer container-fluid">
+        <div class="row">
+          <ng-container *ngIf="custData[type].screenDispVO.SERVICE_MAPPING_ID">
+            <ps-button-standard id="remove_service_mapping_btn_id" class="col-4 reset-cust"
+              [options]="removeServicMappingBtnOptions" (onClick)="confirmResetServiceMapping(type)">
+            </ps-button-standard>
+          </ng-container>
+          <ps-button-standard id="service_mapping_btn_id" class="col-4 offset-4" [options]="servicMappingBtnOptions"
+            (onClick)="serviceMappingAction(type)"></ps-button-standard>
+        </div>
+      </div>
+    </ps-container-panel>
+  </div>
+  <!-- Added by Aftab.Ali  TP# 997503 end -->
+
+</ng-template>

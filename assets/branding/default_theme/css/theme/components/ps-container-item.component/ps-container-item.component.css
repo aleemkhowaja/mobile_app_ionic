@@ -1,0 +1,200 @@
+:root {
+    --ps-valid-field-color: hsl(120, 73%, 75%);
+    --ps-invalid-field-color: hsl(0, 85%, 60%);
+    --ps-focused-field-color: hsl(240, 97%, 26%);
+    --ps-default-field-color: rgba(0, 0, 0, 0.102);
+    --ps-default-font-color: black;
+}
+
+ps-container-item {
+    display: block;
+}
+
+ps-container-item .item {
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    --highlight-background: none !important;
+    margin-top: 22px;
+    border-radius: var(--ps-fields-border-radius) !important;
+    --background: var(--ps-background-color-container-item) !important;
+    font-size: var(--ps-lg-font) !important;
+
+}
+
+ps-container-item .ps-container-item-img-img ion-img {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 50px;
+}
+
+ps-container-item .ps-container-item-img-img * {
+    height: 100%;
+}
+
+ps-container-item .ps-item-icon-image {
+    padding-inline-start: 10px !important;
+}
+
+ps-container-item .item:not(.item-has-focus) {
+    border-bottom: var(--ps-default-field-color) 2px solid;
+}
+
+ps-container-item ion-item.item-has-focus ion-label,
+ps-container-item ion-item.ion-touched.ion-dirty ion-label {
+    color: var(--ps-focused-field-color) !important;
+}
+
+ps-container-item .item.item-has-focus {
+    --highlight-background: inherit !important;
+    border-bottom: 2px solid var(--ps-focused-field-color) !important;
+}
+
+/* .item.item-has-value.ion-dirty {
+    border-bottom: none !important;
+}
+ */
+
+ps-container-item .item.item-has-value.ion-valid.ion-dirty:not(.item-has-focus) {
+    border-bottom: var(--ps-valid-field-color) 2px solid !important
+}
+
+ps-container-item .item.item-has-value.ion-invalid.ion-dirty:not(.item-has-focus) {
+    --highlight-background: var(--ps-invalid-field-color) !important;
+    border-bottom: var(--ps-invalid-field-color) 2px solid !important
+}
+
+
+ps-container-item .ps-disabled ion-label,
+ps-container-item ion-item.item-has-focus.ps-disabled ion-label,
+ps-container-item ion-item.ion-touched.ion-dirty.ps-disabled ion-label,
+ps-input-display-only ion-label,
+ps-input-display-only ion-item.item-has-focus.ps-disabled ion-label,
+ps-input-display-only ion-item.ion-touched.ion-dirty.ps-disabled ion-label {
+    color: var(--ps-default-font-color) !important;
+}
+
+ps-container-item .ps-disabled {
+    --background: hsla(var(--ps-secondary-hue), var(--ps-secondary-saturation), var(--ps-secondary-light), 0.8) !important;
+    color: var(--ps-font-color-opp-secondary-color) !important;
+}
+
+ps-input-display-only ps-container-item .ps-disabled {
+    --background: hsla(var(--ps-secondary-hue), var(--ps-secondary-saturation), var(--ps-secondary-light), 0.8) !important;
+    color: var(--ps-font-color-opp-secondary-color) !important;
+}
+
+
+/* ps-container-item .ps-container-item-img-icon ion-icon,
+ps-container-item .ps-container-item-img-icon img {
+    margin: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: black !important;
+} */
+
+ps-container-item .ps-item-wrapper {
+    --border-style: none;
+}
+
+ps-container-item ps-base-container-body .ps-container-item-img-icon {
+    padding: 0px 5px !important;
+    margin-bottom: 6px !important;
+    -webkit-box-flex: 0;
+    flex: 0 0 8.333333%;
+    max-width: 8.333333%;
+}
+
+
+ps-container-item ps-base-container-body .ps-container-item-img-icon ps-action-icon {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+ps-container-item.ps-field-item-wrapper ps-label {
+    /* margin-bottom: 10px !important; */
+    display: block;
+}
+
+ps-container-item.ps-field-item-wrapper .ps-container-item-main-content {
+    /* margin-bottom: 10px !important; */
+    display: block;
+}
+
+
+
+/*
+    The below code is for inline item (item inside item, ex: complex phone number ...
+*/
+ps-container-item.ps-field-item-wrapper .item ps-container-item.ps-field-item-wrapper .item {
+    margin-top: 0em !important;
+    border-radius: 0px !important;
+}
+
+/* ps-container-item .ps-container-item-main-content>ps-base-container-body>.container-fluid>.row>* {
+    padding-bottom: 2.5px !important;
+    padding-top: 2.5px !important;
+} */
+
+ps-container-item ps-container-item .ps-container-item-main-content>ps-base-container-body>.container-fluid>.row>* {
+    padding: 0px !important;
+}
+
+ps-container-item ps-base-container-body .ps-container-item-service-img-icon {
+    padding: 2px 5px !important;
+}
+
+
+.ps-container-lookup-option-details {
+    background: var(--ps-background-color-container-item-details) !important;
+}
+
+.isWeb-Layout .main-section-page ion-item.item-label,
+.isWeb-Layout .main-section-page ion-item.item-input{
+  border: 2px solid #e0e0e0;
+  border-bottom: 2px solid #e0e0e0 !important;
+}
+.isWeb-Layout ion-card{
+  border-radius: 0px !important;
+  box-shadow: unset !important
+}
+
+.isWeb-Layout .main-section-page ps-complex-amount ion-item ion-item.item-label,
+.isWeb-Layout .main-section-page ps-select-toggle ion-item.item-label,
+.isWeb-Layout .main-section-page ps-complex-terms-and-conditions ion-item.item-label
+{
+  border: 0px;
+  border-bottom: 0px !important;
+}
+
+
+.ps-container-item-main-content-no-image-no-icon {
+    -webkit-box-flex: 0;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.ps-container-item-main-content-icon {
+    -webkit-box-flex: 0;
+    flex: 0 0 91.666667%;
+    max-width: 91.666667%;
+}
+
+.ps-container-item-main-content-image {
+    -webkit-box-flex: 0;
+    flex: 0 0 83.333333%;
+    max-width: 83.333333%;
+}
+
+.ps-container-item-img-img {
+    -webkit-box-flex: 0;
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+}

@@ -1,0 +1,24 @@
+<ps-template-form [options]="options">
+  <ps-container-panel [options]="panelOptions" id="contact_panel">
+
+    <ps-keyin-input [options]="nameOptions"></ps-keyin-input>
+
+
+    <ps-entity-phone-number [options]="phoneNumberOptions"></ps-entity-phone-number>
+
+
+    <ps-input-email [options]="emailOptions"></ps-input-email>
+
+
+    <ps-keyin-input [options]="subjectOptions"></ps-keyin-input>
+
+
+    <ps-file-upload [options]="fileUploadOptions" id="ps-file-upload">
+    </ps-file-upload>
+
+
+    <ps-keyin-textarea [options]="commentsOptions">
+    </ps-keyin-textarea>
+
+  </ps-container-panel>
+</ps-template-form>

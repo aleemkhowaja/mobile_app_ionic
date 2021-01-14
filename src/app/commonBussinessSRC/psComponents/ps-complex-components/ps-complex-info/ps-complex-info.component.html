@@ -1,0 +1,10 @@
+<ps-container-complex class="ps-complex-info">
+  <ps-container-list [options]="options" class="ps-complex-info-container-list" [id]="'complex_info' + id"
+    [ngClass]="{'tree-view': isTreeView, 'widget-view': !isTreeView}">
+    <ps-container-item class="ps-animation ps-info-animation" *ngFor="let item of complexInfo; let i = index"
+      [ngStyle]="commonService.animationDelay(i)" [options]="{hideImageAndIconIfNotPresent: true}">
+      <ps-hyperlink-anchor id="complex_info_hyperlink" [options]="item" (click)="item.handler? item.handler():null">
+      </ps-hyperlink-anchor>
+    </ps-container-item>
+  </ps-container-list>
+</ps-container-complex>

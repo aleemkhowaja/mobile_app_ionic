@@ -1,0 +1,32 @@
+<ps-template-view [options]="templateViewOptions">
+  <ps-select-segment (segmentButtonClicked)="onClickSegment($event)" [options]="segmentOptions"></ps-select-segment>
+  <ng-container *ngIf="!requestWasSent">
+    <div *ngIf="showInternalBeneficiaries && showInternalBeneficiary">
+      <ps-internal-beneficiary [options]="internalBeneficiaryOptions"
+        (reloadFct)="loadBeneficiaries(commonProv.translate('internal_beneficiary_key'))"></ps-internal-beneficiary>
+      <div *ngIf="noInternalBeneficiariesFound" class="no-beneficiary-found-text">
+        <ps-label [options]="noInternalOptions"></ps-label>
+      </div>
+    </div>
+    <div *ngIf="showLocalBeneficiaries && showLocalBeneficiary">
+      <ps-local-beneficiary [options]="localBeneficiaryOptions"
+        (reloadFct)="loadBeneficiaries(commonProv.translate('local_beneficiary_key'))"></ps-local-beneficiary>
+      <div *ngIf="noLocalBeneficiariesFound" class="no-beneficiary-found-text">
+        <ps-label [options]="noLocalOptions"></ps-label>
+      </div>
+    </div>
+    <div *ngIf="showInternationalBeneficiaries && showInternationalBeneficiary">
+      <ps-international-beneficiary [options]="internationalBeneficiaryOptions"
+        (reloadFct)="loadBeneficiaries(commonProv.translate('international_beneficiary_key'))">
+      </ps-international-beneficiary>
+      <div *ngIf="noInternationalBeneficiariesFound" class="no-beneficiary-found-text">
+        <ps-label [options]="noInternationalOptions"></ps-label>
+      </div>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="requestWasSent">
+    <div class="inline-loading-image">
+      <ps-action-image [options]="actionImageOptions"></ps-action-image>
+    </div>
+  </ng-container>
+</ps-template-view>

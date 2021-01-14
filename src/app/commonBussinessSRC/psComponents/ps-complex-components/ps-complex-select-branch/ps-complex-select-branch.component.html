@@ -1,0 +1,11 @@
+<ps-container-complex class="ps-complex-swift-benef-creation">
+
+  <ps-complex-country-regions-cities [id]="id" [options]="defaultOptions.countryRegionCityOptions"
+    (onPsChange)="onCityChange($event)"></ps-complex-country-regions-cities>
+
+
+  <ps-dropdown-branches [id]="id" [options]="defaultOptions.branchesOptions" (onPsChange)="onSelectBranch($event)">
+  </ps-dropdown-branches>
+
+
+</ps-container-complex>

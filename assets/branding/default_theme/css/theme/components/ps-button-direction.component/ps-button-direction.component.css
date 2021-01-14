@@ -1,0 +1,4 @@
+.ps-complex-card-details-branch-button-directions {
+    --background: var(--ps-highlight-background-color);
+    --background-hover: var(--ps-highlight-background-color-hover);
+}

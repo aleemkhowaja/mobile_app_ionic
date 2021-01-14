@@ -1,0 +1,82 @@
+:root {
+    --ps-button-background-color: hsl(0, 0%, 100%);
+    --ps-button-font-color: hsl(0, 0%, 100%);
+    --ps-button-background-color-hover: hsl(0, 0%, 100%);
+    --ps-button-border-radius: 10pt;
+    --ps-button-border-width: 0px;
+    --ps-button-border-color: #454545;
+
+    --ps-button-cancel-background-color: var(--ps-secondary-degree-3-color);
+    --ps-button-cancel-font-color: white;
+    --ps-button-cancel-border-color: var(--ps-secondary-degree-3-color);
+    --ps-button-cancel-background-color-hover: var(--ps-secondary-degree-4-color);
+
+
+    --ps-button-next-background-color: var(--ps-secondary-degree-1-color);
+    --ps-button-next-font-color: white;
+    --ps-button-next-border: var(--ps-secondary-degree-1-color);
+    --ps-button-next-background-color-hover: var(--ps-secondary-degree-2-color);
+
+    --ps-button-previous-background-color: var(--ps-secondary-degree-2-color);
+    --ps-button-previous-font-color: white;
+    --ps-button-previous-border: var(--ps-secondary-degree-2-color);
+    --ps-button-previous-background-color-hover: var(--ps-secondary-degree-3-color);
+
+    --ps-button-submit-background-color: var(--ps-secondary-color);
+    --ps-button-submit-font-color: white;
+    --ps-button-submit-border-color: var(--ps-secondary-color);
+    --ps-button-submit-background-color-hover: var(--ps-secondary-degree-1-color);
+
+    --ps-button-logout-background-color: var(--ps-secondary-color);
+    --ps-button-logout-font-color: white;
+    --ps-button-logout-border: var(--ps-secondary-color);
+    --ps-button-logout-background-color-hover: var(--ps-secondary-degree-1-color);
+}
+
+.ps-default-button {
+    display: block;
+    --border-style: solid;
+    --border-width: var(--ps-button-border-width);
+    --border-radius: var(--ps-button-border-radius) !important;
+    /* DK */
+    height: 45px;
+    /* margin: 0px 4px; */
+    text-transform: uppercase;
+    font-size: var(--ps-md-font);
+    /* DK */
+}
+
+
+.ps-button-cancel {
+    --background: var(--ps-button-cancel-background-color);
+    --color: var(--ps-button-cancel-font-color);
+    --background-hover: var(--ps-button-cancel-background-color-hover) !important;
+    --background-activated: var(--ps-secondary-color) !important;
+}
+
+.ps-button-submit {
+    --background: var(--ps-button-submit-background-color) !important;
+    --color: var(--ps-button-submit-font-color) !important;
+    --border: var(--ps-button-submit-border) !important;
+    --background-hover: var(--ps-button-submit-background-color-hover) !important;
+    --background-activated: var(--ps-secondary-color) !important;
+    /* text-transform: none !important; */
+}
+
+.ps-button-next {
+    --background: var(--ps-button-next-background-color) !important;
+    --color: var(--ps-button-next-font-color) !important;
+    --border: var(--ps-button-next-border) !important;
+    --background-hover: var(--ps-button-next-background-color-hover) !important;
+    --background-activated: var(--ps-secondary-color) !important;
+}
+
+
+
+.ps-button-back {
+    --background: var(--ps-button-previous-background-color) !important;
+    --color: var(--ps-button-previous-font-color) !important;
+    --border: var(--ps-button-previous-border) !important;
+    --background-hover: var(--ps-button-previous-background-color-hover) !important;
+    --background-activated: var(--ps-secondary-color) !important;
+}

@@ -1,0 +1,14 @@
+<ps-container-complex class="ps-complex-financial-calculator">
+
+	<ps-lov-settlement-type [options]="options.settlementTypesOptions" (onPsChange)="onSettlementTypesChanged($event)">
+    </ps-lov-settlement-type>
+
+
+    <ps-input-numeric [options]="options.payableInput"></ps-input-numeric>
+
+
+    <ps-input-numeric [options]="options.daysInput"></ps-input-numeric>
+
+
+
+</ps-container-complex>

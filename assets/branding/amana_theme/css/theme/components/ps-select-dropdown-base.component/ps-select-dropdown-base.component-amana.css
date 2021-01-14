@@ -1,0 +1,17 @@
+.mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+    color: #f772f4;
+}
+
+ps-select-dropdown-base ps-label-input {
+    display: none !important;
+}
+
+.mat-select-panel {
+    border-radius: var(--ps-fields-border-radius) !important;
+    background-color: var(--ps-highlight-background-color) !important;
+}
+
+.mat-option {
+    padding-bottom: 8px !important;
+    padding-top: 8px !important;
+}

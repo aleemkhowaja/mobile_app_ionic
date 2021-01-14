@@ -1,0 +1,103 @@
+:root {
+    --ps-panel-padding: calc(10px * var(--ps-form-container-padding-ratio-initial));
+}
+
+ps-container-panel .ps-container-panel-description-icon {
+    padding: 5px;
+}
+
+ps-container-panel .ps-container-panel-item ion-item {
+    margin-top: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    --background: var(--ps-secondary-color) !important;
+    --inner-padding-end: 0px !important;
+}
+
+ps-container-panel .ps-container-panel-content {
+    padding: var(--ps-panel-padding);
+    overflow-y: auto;
+    border: none !important;
+    background: var( --container-panel-content-background-color);
+}
+
+ps-container-panel ion-card {
+    margin: 0px !important;
+    margin-bottom: var(--ps-section-padding) !important;
+}
+
+ps-container-panel .ps-container-panel-description-icon .arrowClr {
+    color: var(--ps-font-light-color) !important;
+    font-size: 1.6rem !important;
+    vertical-align: middle;
+}
+
+ps-container-panel ps-label-nav.col-10 {
+    padding-inline-start: 5px !important;
+    padding-inline-end: 5px !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+}
+
+ps-container-panel .ps-container-panel-item.is-expanded ion-item {
+    --background: var(--ps-panel-expanded-header-background-color) !important;
+}
+
+ps-container-panel .ps-container-panel-item.is-collapsed ion-item {
+    --background: var(--ps-panel-collapsed-header-background-color) !important;
+}
+
+ps-container-panel .number-of-invalid-inputs {
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--ps-invalid-field-color);
+    font-weight: bold;
+    animation-name: pulse;
+    animation-iteration-count: infinite;
+    animation-duration: 0.5s;
+}
+
+
+ps-container-panel .ps-container-panel-expand-icon,
+ps-container-panel .ps-container-panel-icon,
+ps-container-panel .ps-container-panel-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ps-container-panel .ps-container-panel-title ps-label {
+    width: 100%;
+}
+
+ps-container-panel .ps-container-panel-title ps-label ion-label {
+    white-space: normal !important;
+}
+
+ps-container-panel .ps-container-panel-expand-icon ps-action-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ps-container-panel .ps-container-panel-expand-icon {
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    max-width: 100%;
+}
+
+ps-container-panel .ps-container-panel-icon {
+    -webkit-box-flex: 0;
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+}
+
+ps-container-panel .ps-container-panel-title {
+    -webkit-box-flex: 0;
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+}

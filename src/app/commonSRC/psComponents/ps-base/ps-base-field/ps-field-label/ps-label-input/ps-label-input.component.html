@@ -1,0 +1,6 @@
+<!-- <ion-label class="ps-label-input" [ngClass]="options.psClass" [position]="position">
+    {{ options.labelKey | translate }}
+</ion-label>
+ -->
+ <ps-label *ngIf="options?.labelKey" [options]="options">
+</ps-label>

@@ -1,0 +1,80 @@
+<ng-template #header>
+    <ps-complex-profile *ngIf="options.isWideLayout" class="profile-animate-left"
+        [options]='options.optionsComplexProfile'>
+    </ps-complex-profile>
+
+    <ps-complex-menu-header-container id="menu_header_land" *ngIf="!options.isWideLayout" [options]="menuHeaderoptions">
+    </ps-complex-menu-header-container>
+</ng-template>
+
+<ps-template-base>
+    <div class="widget-banner" psHeader>
+        <ng-container *ngIf="!omniCommon.isAgent()">
+            <ng-container *ngTemplateOutlet="header"></ng-container>
+        </ng-container>
+        <ng-container *ngIf="omniCommon.isAgent()">
+            <div *ngIf="!commonProv.isWebLayout()">
+                <ng-container *ngTemplateOutlet="header"></ng-container>
+            </div>
+            <div class="container-fluid cif-switcher-container" *ngIf="commonProv.isWebLayout()">
+                <div class="cif-switcher-row row">
+                    <div class="col-12 container-fluid complex-flip-base ">
+                        <ps-container-flip [options]="psContainerFlipHeader">
+                            <ng-container visibleSection>
+                                <ng-container *ngTemplateOutlet="header"></ng-container>
+                            </ng-container>
+
+                            <ng-container hiddenSection>
+                                <div class="container-fluid">
+                                    <div class="row ps-complex-cif-row">
+                                        <div class="col-12 ps-complex-profile-info complex-find-CIF">
+                                            <ps-complex-find-CIF id="ps-complex-find-CIF" [options]="findCIFOptions">
+                                            </ps-complex-find-CIF>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ng-container>
+                        </ps-container-flip>
+                    </div>
+                    <div class="offset-11 col-1 cif-switcher">
+                        <ps-action-icon [options]="switchOptions" (onClick)="switchContent()"
+                            [ngClass]="{'cif-switcher-switched':this.psContainerFlipHeader.isFlipped}">
+                        </ps-action-icon>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+    <div class="ps-template-landing">
+        <div class="container-fluid ps-template-landing-body">
+            <div class="row">
+                <div class="col-9 menu-container">
+                    <ps-container-flip [options]="psContainerFlip">
+                        <ps-complex-menu visibleSection></ps-complex-menu>
+
+                        <div class="container-fluid hidden-content-wrapper" hiddenSection>
+                            <div header class="row opened-screen-title"
+                                *ngIf="previousComponent?.title && psContainerFlip.isFlipped">
+                                <ps-action-icon class="col-10 current-opened-page"
+                                    [options]="{labelOptions:{labelKey: previousComponent.title} }">
+                                </ps-action-icon>
+                                <!-- <ps-label [options]="{labelKey:previousComponent.title}"></ps-label> -->
+                            </div>
+                            <ng-template #hiddenComponent></ng-template>
+                        </div>
+                        <!-- <ps-complex-info hiddenSection></ps-complex-info> -->
+                    </ps-container-flip>
+                </div>
+                <div class="col-3 menu-slider-reach">
+                    <ps-complex-menu-reach class="ps-menu-reach-pos" (onClick)="changeContent($event)">
+                    </ps-complex-menu-reach>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ng-container psFooter>
+
+        <ps-button-logout></ps-button-logout>
+
+    </ng-container>
+</ps-template-base>

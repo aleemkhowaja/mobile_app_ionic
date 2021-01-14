@@ -1,0 +1,16 @@
+<ng-content select="[floatingPart]"></ng-content>
+<div class="container-fluid template-base-container">
+    <div class="row template-base-row" #mainSection>
+        <div id="main-header" class="main-header" #mainHeader>
+            <ng-content select="[psHeader]"></ng-content>
+        </div>
+        <div id="main-content" class="main-content" #mainContent>
+            <ng-content></ng-content>
+        </div>
+        <div id="main-footer" class="main-footer" #mainFooter>
+            <ps-container-footer>
+                <ng-content select="[psFooter]"></ng-content>
+            </ps-container-footer>
+        </div>
+    </div>
+</div>

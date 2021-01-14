@@ -1,0 +1,97 @@
+<!-- @author: GRadwan Userstory: 925625 Date: 11122019  -->
+
+<ps-container-complex [id]="'ps-complex-prayer-time-' + id">
+
+	<ng-container *ngIf="prayers?.length>0">
+		<div class="container-fluid">
+			<div class="row ps-complex-prayer-time-body">
+				<div class="ps-complex-prayer-time-progressBar">
+					<div class="countdown-wrapper" *ngIf="nextPrayer">
+						<round-progress [current]="nextPrayer?.progress" max="1" responsive="true" stroke="15"
+							color="null" background="#e4e4e4" class="important-stroke-color">
+						</round-progress>
+						<div class="countdown">
+							<div class="full-height-width">
+								<div *ngIf="!ready">
+								</div>
+								<ng-container *ngIf="ready">
+
+									<div class="nextPrayer">
+										<ps-label [options]='upcomingPrayerLabelOptions'></ps-label>:
+										<ps-label class="prayer-title" ion-text color="primary"
+											[options]='{labelKey:nextPrayer?.id +"_key", translate: true}'></ps-label>
+									</div>
+
+									<div class="prayerTime">
+										<ps-label [options]='{labelKey:nextPrayer?.formattedTime, previewMode:true}'>
+										</ps-label>
+									</div>
+									<div class="prayer-remaining" ion-text color="dark">
+										<ps-label [options]="inLabel"></ps-label>
+										<ps-label [options]='{labelKey:nextPrayer?.remaining, previewMode:true}'>
+										</ps-label>
+									</div>
+									<div color="primary" class="gregorianDate">
+										<ps-label [options]='gregorianDateLabelOptions'></ps-label>
+
+									</div>
+									<div color="primary" class="hijiridate">
+										<ps-label [options]='{labelKey:hijriDate, previewMode:true}'></ps-label>
+									</div>
+									<div class="prayer-current-time" ion-text>
+										<ps-label [options]='{labelKey:time, previewMode:true}'></ps-label>
+									</div>
+
+								</ng-container>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="ps-complex-prayer-time-prayerTiming">
+
+					<div class="prayer-wrapper">
+						<ps-container-item class="set-reminder" [options]="{hideImageAndIconIfNotPresent:true}">
+							<!-- GRadwan 16/03/2020, showning timer button only on mobile  -->
+							<div class="notfiction-icon" *ngIf='isMobile'>
+								<ps-action-icon id='notificationStatus' [options]='notfictionIconOptions'
+									(onClick)="changeNotficStatue()">
+								</ps-action-icon>
+							</div>
+
+							<div class="prayer-button-wrapper" *ngIf='!isMobile'>
+								<ps-label [options]='todayLabelOptions'></ps-label>
+							</div>
+
+						</ps-container-item>
+						<ps-container-item *ngFor="let prayer of prayers" class="items"
+							[ngClass]="{'selectedItem' :prayer?.id===nextPrayer?.id}">
+
+							<div class="prayer-icon">
+								<ps-action-icon [ngClass]="{'selectedPrayer' :prayer?.id===nextPrayer?.id}"
+									[options]="{iconName:(prayer?.id |lowercase)}" class="prayer-icon">
+								</ps-action-icon>
+							</div>
+
+							<div class="prayer-name">
+								<ps-label [ngClass]="{'selectedPrayer' :prayer?.id===nextPrayer?.id}"
+									[options]='{labelKey:prayer?.id +"_key", translate: true}'></ps-label>
+							</div>
+							<div class="prayer-time">
+								<ps-label [ngClass]="{'selectedPrayer' :prayer?.id===nextPrayer?.id}"
+									class="prayer-time" [options]='{labelKey:prayer?.formattedTime, previewMode:true}'>
+								</ps-label>
+							</div>
+							<div class="prayer-notific-icon" *ngIf='isMobile'>
+								<ps-action-icon [id]="prayer.id+'_alarm_id'"
+									[options]="{iconName: (prayersNotificationStat[prayer?.id]) ? 'bell-slash-o1' : 'bell-o1'}"
+									(onClick)="setSinglePrayerNotific(prayer)">
+								</ps-action-icon>
+							</div>
+						</ps-container-item>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</ng-container>
+</ps-container-complex>

@@ -1,0 +1,7 @@
+
+  <div [ngClass]="options.actionImageOptions.psClass" (click)=selectImages()>
+    <ps-action-image class="profile-image" [options]="options.actionImageOptions" >
+    </ps-action-image>
+    <ps-label class="upload-profile-overlay" *ngIf="options.labelOptions"  [options]="options.labelOptions" > </ps-label>
+  </div>
+

@@ -1,0 +1,9 @@
+  <ps-template-view [options]="templateViewOptions">
+        <ps-ipo-securities-list [options]="ipoSecuritiesOptions"></ps-ipo-securities-list>
+        <div *ngIf="noIpoSecuritiesListFound" class="no-account-text">
+          <ps-label [options]="{labelKey: 'no_ipo_available_key'}"></ps-label>
+        </div>
+        <div *ngIf="noIpoListFound" class="no-account-text">
+          <ps-label [options]="{labelKey: 'no_securities_found_key'}"></ps-label>
+        </div>
+  </ps-template-view>

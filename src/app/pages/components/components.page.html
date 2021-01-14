@@ -1,0 +1,424 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Components List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content> 
+  <p>ps-complex-file-upload</p>
+  <ion-row>
+    <ion-col>
+      <ps-file-upload id="ps-file-upload" [options]="fileUploadOptions"></ps-file-upload>
+    </ion-col>
+  </ion-row>
+  <p>ps-complex-find-CIF</p>
+  <ion-row>
+    <ion-col>
+      <ps-complex-find-CIF id="ps-complex-find-CIF" [options]="findCIFOptions"></ps-complex-find-CIF>
+    </ion-col>
+  </ion-row>
+  <p>ps-complex-purpose</p>
+  <ion-row>
+    <ion-col>
+      <ps-complex-purpose id="complex_purpose" (onPsChange)="onInitialPurposeChange($event)" [options]="purposeComplexOptions"></ps-complex-purpose>
+    </ion-col>
+  </ion-row>
+  <p>ps-complex-recurring-scheduler</p>
+  <ion-row>
+    <ion-col>
+      <ps-complex-recurring-scheduler [options]="schedulerOptions"></ps-complex-recurring-scheduler>
+    </ion-col>
+  </ion-row> 
+    
+  <p>ps-complex-own-account</p>
+    <ion-row>
+       <ion-col>
+          <ps-lookup-own-accounts [options]="lookupOwnAccountsOptions"></ps-lookup-own-accounts>
+       </ion-col>
+    </ion-row> 
+ <p>ps-dropdown-country</p>
+    <ion-row>
+       <ion-col>
+          <ps-dropdown-country [options]="countriesOptions"></ps-dropdown-country>
+       </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+            <ps-dropdown-regions [options]="regionsOptions"></ps-dropdown-regions>
+     </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+         <ps-dropdown-cities [options]="citiesOptions"></ps-dropdown-cities>
+    </ion-col>
+    </ion-row>
+
+    <p>ps-dropdown-currenicies</p>
+    <ps-dropdown-currencies [options]="currenciesOptions" ></ps-dropdown-currencies>
+
+  <!-- <p>ps-dropdown-account-types</p> -->
+  <!-- <ion-row>
+    <ion-col>
+        <ps-dropdown-account-types [options]="accountTypeOptions"></ps-dropdown-account-types>
+    </ion-col>
+  </ion-row>
+  <p>ps-label-cif-branch</p>
+  <ion-row>
+    <ion-col>
+        <ps-label-cif-branch [options]="cifBranchOtpions"></ps-label-cif-branch>
+    </ion-col>
+  </ion-row> -->
+ <ps-complex-menu-reach [options]="psMenuReachOptions"></ps-complex-menu-reach>
+<div style="margin-top: 20px;"></div>
+  <p>ps-button-email-us</p>
+  <ion-row>
+    <ion-col>
+    <ps-email-us-defaulted [options]="emailUsOptions"></ps-email-us-defaulted>
+    </ion-col>
+  </ion-row>
+
+  <div style="background-color: #fff;">
+    <p>Test Component :</p>
+    <ion-row>
+      <ion-col>
+        <component-test></component-test>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <div style="background-color: chartreuse;">
+    <p>The ps-anchor icon Component</p>
+    <ion-row>
+      <ion-col>
+        <!-- <ps-action-anchor id="ps-action-anchor" [options]="psanchor">
+        </ps-action-anchor> -->
+      </ion-col>
+    </ion-row>
+    <p>The ps-anchor image Component</p>
+    <ion-row>
+      <ion-col>
+        <!-- <ps-action-anchor id="ps-action-anchor" [options]="psanchorimg">
+        </ps-action-anchor> -->
+      </ion-col>
+    </ion-row>
+    <p>The ps-anchor-switcher Component</p>
+    <ion-row>
+      <ion-col>
+        <ps-anchor-switcher id="ps-anchor-switcher" [options]="psSwitcher">
+        </ps-anchor-switcher>
+      </ion-col>
+    </ion-row>
+    <p>The ps-anchor-switcher image Component</p>
+    <!-- <ion-row>
+      <ion-col>
+        <ps-anchor-switcher id="ps-anchor-switcher" [options]="psSwitcherImage">
+        </ps-anchor-switcher>
+      </ion-col>
+    </ion-row> -->
+  </div>
+  <ion-grid>
+    <p>ps-button-call / ps-button-direction :</p>
+    <ion-row>
+      <ion-col>
+        <ps-button-call id="button_call" [options]="callOptions" (onClick)="onCall()"></ps-button-call>
+        <!-- <ps-button-direction id="button_direction" [options]="directionOptions" (onClick)="onDirection()"></ps-button-direction> -->
+      </ion-col>
+    </ion-row>
+    <p>ps-button-submit / ps-button-reset / ps-button-back / ps-button-next / ps-button-standard / ps-button-cancel :</p>
+    <ion-row>
+      <ion-col>
+        <ps-button-submit id="button_submit" [options]="submitOptions" (onClick)="onSubmit()"></ps-button-submit>
+      </ion-col>
+      <ion-col>
+        <ps-button-reset id="button_reset" [options]="resetoptions" (onClick)="onReset()"></ps-button-reset>
+      </ion-col>
+      <!-- <ion-col>
+        <ps-button-back id="button_back" [options]="backOptions" (onClick)="onBack()"></ps-button-back>
+      </ion-col> -->
+      <ion-col>
+        <ps-button-next id="button_next" [options]="nextOptions" (onClick)="onNext()"></ps-button-next>
+      </ion-col>
+      <ion-col>
+        <ps-button-standard id="button_standard" [options]="standardOptions" (onClick)="onPress()"></ps-button-standard>
+      </ion-col>
+      <!-- <ion-col>
+        <ps-button-cancel id="button_cancel" [options]="cancelOptions" (onClick)="onCancel()"></ps-button-cancel>
+      </ion-col>  -->
+    </ion-row>
+
+    <p>ps-select-checkbox :</p>
+    <ion-row>
+      <ion-col>
+        <ps-select-checkbox id="select_checkbox" [options]="checkboxOptions" (onPsChange)="onChange($event)">
+        </ps-select-checkbox>
+      </ion-col>
+    </ion-row>
+
+    <p>ps-select-radio :</p>
+    <ion-row>
+      <ion-col>
+        <ps-select-radio id="select_radio" [options]="radioOptions" name="RadioListComponent"
+          (onPsChange)="onChange($event)">
+        </ps-select-radio>
+      </ion-col>
+    </ion-row>
+
+    <p>ps-select-dropdown :</p>
+
+    <ion-row>
+      <ion-col>
+        <ps-select-dropdown id="keyin_select_dropdown" [options]="selectDropDwnOptions" (onPsChange)="onChange($event)">
+        </ps-select-dropdown>
+      </ion-col>
+    </ion-row>
+
+    <p>ps-keyin-input :</p>
+    <ion-row>
+      <ion-col>
+        <ps-keyin-input id="keyin_input" [options]="inputOptions" (onPsChange)="onChange($event)"
+         >
+        </ps-keyin-input>
+      </ion-col>
+    </ion-row>
+    <p>ps-input-amount :</p>
+    <ion-row>
+      <ion-col>
+        <ps-input-amount id="input_amount" [options]="inputAmountOptions" (onPsChange)="onChange($event)"
+         >
+        </ps-input-amount>
+      </ion-col>
+    </ion-row> 
+    <!-- <ion-row>
+      <ion-col>
+        <ps-complex-file-upload [options]="psComplexFileUpload"></ps-complex-file-upload>
+      </ion-col>
+
+    </ion-row> -->
+
+    <p>ps-complex-id-details :</p>
+    <ion-row>
+      <ion-col>
+        <ps-complex-id-details id="complex_id_details" [options]="complexIdDetailsOptions"
+          (onPsChange)="onChange($event)">
+        </ps-complex-id-details>
+      </ion-col>
+    </ion-row>
+
+    <p>ps-input-free-text :</p>
+    <ion-row>
+      <ion-col>
+        <ps-input-free-text id="input_free_text" [options]="freeInputTextOptions" (onPsChange)="onChange($event)">
+        </ps-input-free-text>
+      </ion-col>
+    </ion-row>
+
+    <p>ps-input-varchar :</p>
+    <ion-row>
+      <ion-col>
+        <ps-input-varchar id="input_varchar" [options]="freeInputTextVarchar" (onPsChange)="onChange($event)">
+        </ps-input-varchar>
+      </ion-col>
+    </ion-row>
+
+    <!-- <p>ps-lov-id-types :</p>
+    <ion-row>
+      <ion-col>
+        <ps-lov-id-types id="lov-id_types" [options]="lovIdTypesOptions" (onPsChange)="onChange($event)">
+        </ps-lov-id-types>
+      </ion-col>
+    </ion-row> -->
+
+    <p>ps-lov-delivery-options :</p>
+    <ion-row>
+      <ion-col>
+        <ps-lov-delivery-options id="lov_delivery_options" [options]="lovDevlieryOptions"
+          (onPsChange)="onChange($event)">
+        </ps-lov-delivery-options>
+      </ion-col>
+    </ion-row>
+
+    <p>ps-lov-preferred-language :</p>
+    <ion-row>
+      <ion-col>
+        <ps-lov-preferred-language id="lov_preferred_language" [options]="preferredLanguageOptions"
+          (onPsChange)="onChange($event)">
+        </ps-lov-preferred-language>
+      </ion-col>
+    </ion-row>
+
+    <p>ps-container-panel :</p>
+    <ion-row>
+      <ion-col>
+        <ps-container-panel id="container_panel" [options]="panelOptions">
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <p>From the components page</p>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ps-container-panel>
+      </ion-col>
+    </ion-row>
+
+    <p>ps-container-card :</p>
+    <ion-row>
+      <ion-col>
+        <ps-container-card id="container_card">
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <h1>From the components screen</h1>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ps-container-card>
+      </ion-col>
+    </ion-row>
+
+    <p>The ps-action-image Component</p>
+    <ion-row>
+      <ion-col>
+        <ps-action-image id="action_image" [options]="actionImageOptions" (onClick)="onActionImageClick($event)">
+        </ps-action-image>
+      </ion-col>
+    </ion-row>
+
+    <p>ps-keyin-textarea :</p>
+    <ion-row>
+      <ion-col>
+        <ps-keyin-textarea id="keyin_textarea" [options]="textareaOptions" (onPsChange)="onChange($event)">
+        </ps-keyin-textarea>
+      </ion-col>
+    </ion-row>
+
+    <p>ps-input-email :</p>
+    <ion-row>
+      <ion-col>
+        <ps-input-email id="input_email" [options]="emailOptions" (onPsChange)="onChange($event)"></ps-input-email>
+      </ion-col>
+    </ion-row>
+
+    <p>ps-input-account-number :</p>
+    <ion-row>
+      <ion-col>
+        <ps-input-account-number id="input_account_number" [options]="acNumOptions"></ps-input-account-number>
+      </ion-col>
+    </ion-row>
+
+    <p>The ps-complex-password-confirm Component</p>
+    <ion-row>
+      <ion-col>
+        <ps-complex-password-confirm id="complex_password_confirm" [options]="confirmPasswordOptions"
+          (onPasswordChange)="onConfirmNewPasswordChange($event)"
+          (onConfirmPasswordChanged)="onConfirmPasswordChange($event)"></ps-complex-password-confirm>
+      </ion-col>
+    </ion-row>
+
+
+    <p>The ps-complex-security-questions Component</p>
+    <ion-row>
+      <ion-col>
+        <ps-complex-security-questions id="complex_security_questions" [options]="securityQuestionOptions"
+          (onSecurityQuestionChange)="onSecurityQuestionChange($event)" (onAnswerChange)="onAnswerChange($event)">
+        </ps-complex-security-questions>
+      </ion-col>
+    </ion-row>
+
+    <p>The ps-input-card-number Component</p>
+    <ion-row>
+      <ion-col>
+        <ps-input-card-number id="input_card_number" [options]="inputCardNumberOptions" (onPsChange)="onChange($event)">
+        </ps-input-card-number>
+      </ion-col>
+    </ion-row>
+
+
+    <p>The ps-input-card-cvv Component</p>
+    <ion-row>
+      <ion-col>
+        <ps-input-card-cvv id="input_card_cvv" [options]="inputCardCvvOptions" (onPsChange)="onChange($event)">
+        </ps-input-card-cvv>
+      </ion-col>
+    </ion-row>
+
+    <p>The ps-complex-credit-card Component</p>
+    <ion-row>
+      <ion-col>
+        <ps-complex-credit-card id="complex_credit_card" [options]="cardOptions" (onCardNumberChange)="onChange($event)"
+          (onCardOwnerChange)="onChange($event)" (onCardDateChange)="onChange($event)"
+          (onCardCvvChange)="onChange($event)"></ps-complex-credit-card>
+      </ion-col>
+    </ion-row>
+
+    <p>ps-complex-bank-authentication :</p>
+    <ion-row>
+      <ion-col>
+        <ps-complex-bank-authentication id="complex_bank-auth" [options]="bankAuthOptions">
+        </ps-complex-bank-authentication>
+      </ion-col>
+    </ion-row>
+
+
+    <p>The ps-complex-user-credentials Component</p>
+    <ion-row>
+      <ion-col>
+        <ps-complex-user-credentials id="complex_user_credentials" [options]="userCredentialsOptions"
+          (onSecurityQuestionChange)="onChange($event)" (onSecurityAnswerChange)="onChange($event)"
+          (onComplexPasswordChange)="onChange($event)" (onComplexConfirmPasswordChange)="onChange($event)"
+          (onComplexPinChange)="onChange($event)" (onComplexConfirmPinChange)="onChange($event)"
+          (onUsernameChange)="onChange($event)">
+        </ps-complex-user-credentials>
+      </ion-col>
+    </ion-row>
+
+    <!-- <p>The ps-gallery-verification-images Component</p>
+    <ion-row>
+      <ion-col>
+        <ps-gallery-verification-images [id]="'verification_images'" [options]="verificationImageOptions">
+        </ps-gallery-verification-images>
+      </ion-col>
+    </ion-row> -->
+    <!-- <p>The ps-anchor-switcher Component</p>
+    <ion-row>
+      <ion-col>
+        <ps-anchor-switcher id="ps-anchor-switcher" [options]="psSwitcher">
+        </ps-anchor-switcher>
+      </ion-col>
+    </ion-row> -->
+
+
+    <p>ps-template-stepper :</p>
+    <ion-row>
+      <ion-col>
+        <ps-template-stepper id="template_stepper" [options]="stepperOptions">
+          <ps-form-step step1>
+            <ion-col size-md="6" size-lg="6" size-xl="6" size-sm="10" size="10">
+              <ps-input-username id="step_input_username" [options]="userNameOptions">
+              </ps-input-username>
+            </ion-col>
+          </ps-form-step>
+
+          <ps-form-step step2>
+
+            <ion-col size-md="6" size-lg="6" size-xl="6" size-sm="10" size="10">
+              <ps-input-password id="step_input_password" [options]="passwordOptions">
+              </ps-input-password>
+            </ion-col>
+
+          </ps-form-step>
+        </ps-template-stepper>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <section1-components></section1-components>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+</ion-content>

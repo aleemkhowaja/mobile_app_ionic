@@ -1,0 +1,70 @@
+/**
+  ps-template-landing Theming
+**/
+
+ps-template-landing .menu-container {
+    overflow: overlay;
+    padding-inline-end: var(--ps-section-padding) !important;
+}
+
+ps-template-landing .ps-complex-menu-reach .ps-container-complex .container-fluid .row {
+    justify-content: space-around;
+}
+
+/* ps-template-landing .ps-template-landing-body,
+ps-template-landing .menu-container,
+ps-template-landing .ps-complex-menu-reach .ps-container-complex .container-fluid .row {
+    height: 100% !important;
+} */
+
+ps-template-landing .menu-container .flip-card {
+    background: var(--ps-app-opaque-background-color);
+    border-radius: var(--ps-section-border-radius) !important;
+}
+
+ps-template-landing .ps-complex-menu-reach .ps-container-complex .container-fluid .row {
+    align-items: center;
+}
+
+/* ps-template-landing ps-container-footer ion-footer {
+    margin-top: var(--ps-section-padding) !important;
+}
+*/
+.ps-template-landing {
+    height: 100% !important;
+}
+
+ps-template-landing .widget-banner {
+    height: 100% !important;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+ps-template-landing .cif-switcher-container,
+ps-template-landing .cif-switcher-row {
+    height: 100% !important;
+}
+
+ps-template-landing .cif-switcher {
+    align-self: flex-end !important;
+    padding-block-end: 5px;
+    /* give 5px padding to the profile switcher */
+}
+
+
+ps-template-landing .cif-switcher ion-icon {
+    color: var(--ps-highlight-background-color) !important;
+}
+
+.isMobile-app ps-template-landing ps-container-flip {
+    background: #1f4971;
+}
+
+ps-template-landing .cif-switcher-row .complex-flip-base {
+    position: absolute !important;
+}
+
+ps-template-landing .cif-switcher-container .ps-complex-cif-row {
+    align-items: center !important;
+}

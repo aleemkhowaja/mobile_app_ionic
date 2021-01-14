@@ -1,0 +1,67 @@
+<ps-template-stepper [options]="stepperOptions" [id]="stepperOptions.stepperName">
+  <ps-form-step step1 [id]="stepperOptions.namesofSteps[0]">
+    <ps-container-panel [options]="panelOptions1Step1" id="acc_open_fix_mat_acc_panel1">
+
+
+      <ps-input-display-only *ngIf="enableCifBranch" id="'accountCifBranch' + id" [options]="branchOptions">
+
+      </ps-input-display-only>
+
+
+      <ps-complex-account-types [options]="accountTypesOptions" (onPsChange)='onChangeItem($event)'>
+      </ps-complex-account-types>
+
+
+      <ps-label-input *ngIf="enablePeriodicity" [options]="lblPeriodicityOptions"></ps-label-input>
+
+
+      <ps-complex-amount [options]="psComplexAmountOptions" (onAmountChanged)="onBalancAmountChange($event)"
+        (onCurrencyChange)="onCurrencyChange($event)"></ps-complex-amount>
+
+
+      <!-- <ps-label [options]="{labelKey: 'profit_rate_key'}"></ps-label> : <span>{{profitRate}}</span> -->
+      <ps-input-display-only *ngIf="profitRate" id="'profitRate' + id" [options]="profitRateOptions">
+      </ps-input-display-only>
+
+
+      <ps-lookup-own-accounts id="'transferFrom'+ id" [options]="accountListOptions"
+        (onAccountChange)="onAccountChange($event)"></ps-lookup-own-accounts>
+
+
+
+      <ps-select-toggle *ngIf="!showLabel" [id]="'accOpenFMid'" [options]="mainOptions.toggleOptions"
+        (onPsChange)="onChange($event)" class="ps-toggle-acc-open fixed-maturity-account-toggle">
+      </ps-select-toggle>
+
+
+      <ps-lookup-own-accounts id="'maturitrytransfer'+ id" [options]="maturityTransferOptions"
+        (onAccountChange)="onMaturityAccountChange($event)" [hidden]="enableMaturityTransfer===false">
+      </ps-lookup-own-accounts>
+
+
+      <ps-select-toggle [id]="'accprofitFMid'" [options]="mainOptions.toggleProfitOptions"
+        (onPsChange)="onProfitChange($event)" class="ps-toggle-acc-open-2" [hidden]="enableMaturityTransfer===true">
+      </ps-select-toggle>
+
+
+      <ps-lookup-own-accounts id="'profitAccount'+ id" [options]="profitAccOptions"
+        (onAccountChange)="onProfitAccountChange($event)" [hidden]="enableProfit===false"></ps-lookup-own-accounts>
+
+      <div class="account-deactivation-warning" *ngIf="showLabel">
+        <ps-action-image class="image-warning-account-deactivation" [options]="actionImageOptions">
+        </ps-action-image>
+        <ps-label class="text-waring-account-dactivation" [options]="instructMsgLabelOptions"></ps-label>
+      </div>
+
+
+    </ps-container-panel>
+    <ps-container-panel *ngIf="!enableCifBranch" [options]="panelOptions2Step1" id="acc_open_fix_mat_acc_panel2">
+      <ps-complex-select-branch [options]="selectBranchOptions" (onPsChange)="onSelectBranch($event)">
+      </ps-complex-select-branch>
+    </ps-container-panel>
+  </ps-form-step>
+  <ps-form-step step2 [id]="stepperOptions.namesofSteps[1]">
+    <ps-map-atm-branches class="component-map-container" [options]="mapAtmBranchesOptions"></ps-map-atm-branches>
+  </ps-form-step>
+
+</ps-template-stepper>

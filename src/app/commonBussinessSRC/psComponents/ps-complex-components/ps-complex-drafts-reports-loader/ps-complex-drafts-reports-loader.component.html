@@ -1,0 +1,13 @@
+<ng-container saveAsDraftButton>
+  <div class="saveAsDraftButton" (click)='loadDrafts()'>
+    <ps-action-icon class="save-as-draft" [options]='headerIconOptions'>
+    </ps-action-icon>
+  </div>
+</ng-container>
+<ng-container extraHeader *ngIf="showReport">
+  <!-- <div class="row draftReportModal"> -->
+  <ps-drafts-report (onPsChange)="loadDrafts()" [options]="draftsOptions"
+    [ngClass]="(showReportFlag)?'isOpened':'isClosed'" #report>
+  </ps-drafts-report>
+  <!-- </div> -->
+</ng-container>

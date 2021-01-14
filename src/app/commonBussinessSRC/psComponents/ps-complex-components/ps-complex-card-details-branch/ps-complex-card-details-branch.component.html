@@ -1,0 +1,119 @@
+<ps-container-complex class="ps-complex-card-details-branch" [id]="id" (swipe)="onSwipe()">
+    <div class="container-fluid modal-close-icon-container">
+        <div class="row modal-close-icon-row">
+            <div class="widget-menu-icon-back">
+                <ps-action-icon class="modal-close-icon" [options]="closeIcon" (onClick)="dismissPopover()">
+                </ps-action-icon>
+            </div>
+            <div class="card-title widget-header-title">
+                <ps-label [options]="cardDetailsTitle"></ps-label>
+            </div>
+        </div>
+    </div>
+    <ps-label class="selected-branch" [options]="selectedBranchLabelOptions" *ngIf="options.selectedBranch"></ps-label>
+    <ps-container-panel [options]="panel1Options" [id]="id + '_panel1'" (swipe)="onSwipe()"
+        *ngIf="options.countryName !== undefined || options.managerName !== undefined || options.telephoneNumber !== undefined || options.faxNumber !== undefined">
+        <ng-container *ngIf="options.countryName !== undefined && options.countryName !== ''">
+            <div class="ps-complex-card-details-branch-item ion-float-start">
+                <ps-label class="ps-complex-card-details-branch-item-label ion-float-start"
+                    [options]="branchLabelOptions"></ps-label>
+                <span class="ion-float-start">: </span>
+                <ps-label class="ps-complex-card-details-branch-item-value ion-float-start"
+                    [options]="branchLabelValueOptions"></ps-label>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="options.managerName !== undefined && options.managerName !== ''">
+            <div class="ps-complex-card-details-branch-item ion-float-start">
+                <ps-label class="ps-complex-card-details-branch-item-label ion-float-start"
+                    [options]="managerLabelOptions"></ps-label>
+                <span class="ion-float-start">: </span>
+                <ps-label class="ps-complex-card-details-branch-item-value ion-float-start"
+                    [options]="managerLabelValueOptions"></ps-label>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="options.telephoneNumber !== undefined && options.telephoneNumber !== ''">
+            <div class="ps-complex-card-details-branch-item ion-float-start">
+                <ps-label class="ps-complex-card-details-branch-item-label ion-float-start"
+                    [options]="telephoneNumberLabelOptions"></ps-label>
+                <span class="ion-float-start">: </span>
+                <ps-label class="ps-complex-card-details-branch-item-value ion-float-start"
+                    [options]="telephoneNumberLabelValueOptions"></ps-label>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="options.faxNumber !== undefined && options.faxNumber !== ''">
+            <div class="ps-complex-card-details-branch-item ion-float-start">
+                <ps-label class="ps-complex-card-details-branch-item-label ion-float-start" [options]="faxLabelOptions">
+                </ps-label>
+                <span class="ion-float-start">: </span>
+                <ps-label class="ps-complex-card-details-branch-item-value ion-float-start"
+                    [options]="faxLabelValueOptions"></ps-label>
+            </div>
+        </ng-container>
+    </ps-container-panel>
+    <ps-container-panel [options]="panel2Options" [id]="id + '_panel2'" (swipe)="onSwipe()"
+        *ngIf="options.locationDetails !== undefined || concatLocationLabelValueOptions.labelKey !== undefined">
+        <ng-container>
+            <div class="ps-complex-card-details-branch-item ion-float-start">
+                <ps-label class="ps-complex-card-details-branch-item-value ion-float-start"
+                    [options]="locationDetailsLabelValueOptions"></ps-label>
+                <ps-label class="ps-complex-card-details-branch-item-value ion-float-start"
+                    [options]="concatLocationLabelValueOptions"
+                    *ngIf="concatLocationLabelValueOptions.labelKey !== undefined"></ps-label>
+            </div>
+        </ng-container>
+    </ps-container-panel>
+    <ps-container-panel [options]="panel3Options" [id]="id + '_panel3'" (swipe)="onSwipe()">
+        <ng-container>
+            <div *ngIf="options.openingHours.length > 0" class="branch-details-opening-hours">
+                <ps-container-list [options]="openingHoursOptions"
+                    class="ps-complex-card-details-branch-opening-hours-list">
+                    <div *ngFor="let eachDay of listOfDays"
+                        class="ps-complex-card-details-branch-opening-hours-list-item">
+                        <span class="col-3">
+                            <ps-icon-unavailable *ngIf="eachDay.closingYN == 'Y'" [options]="iconUnAvailableOption">
+                            </ps-icon-unavailable>
+                            <ps-icon-available *ngIf="eachDay.closingYN == 'N'" [options]="iconAvailableOption">
+                            </ps-icon-available>
+                            <ps-label [options]="eachDay.dayLabel"
+                                class="ps-complex-card-details-branch-opening-hours-list-item-day"></ps-label>
+                        </span>
+                        <span *ngIf="eachDay.closingYN == 'N'"
+                            class="ps-complex-card-details-branch-opening-hours-list-item-opening-closing col-9">
+                            <ion-label *ngIf="eachDay.openingHourLabel.labelKey !== ''"
+                                class="ps-complex-card-details-branch-opening-hours-list-item-opening">
+                                {{eachDay.openingHourLabel.labelKey}} -</ion-label>
+                            <ion-label *ngIf="eachDay.closingHourLabel.labelKey !== ''"
+                                class="ps-complex-card-details-branch-opening-hours-list-item-closing">
+                                {{eachDay.closingHourLabel.labelKey}} </ion-label>
+                        </span>
+                        <span *ngIf="eachDay.closingYN == 'Y'"
+                            class="ps-complex-card-details-branch-opening-hours-list-item-opening-closing text-center col-9">
+                            <ion-label *ngIf="eachDay.closingHourLabel.labelKey !== ''"
+                                class="ps-complex-card-details-branch-opening-hours-list-item-closing ps-complex-card-details-branch-closed-day">
+                                {{eachDay.closingHourLabel.labelKey}} </ion-label>
+                        </span>
+                    </div>
+                </ps-container-list>
+            </div>
+
+            <ps-label [options]="erroOpeningHoursOptions" *ngIf="options.openingHours.length === 0" class="text-center">
+            </ps-label>
+        </ng-container>
+    </ps-container-panel>
+
+    <div class="item-divider"></div>
+
+    <div class="container map-atm-branch-details-bottom">
+        <div class="row">
+
+            <ps-button-direction [id]="id + '_btn_direction'" [options]="directionOptions">
+            </ps-button-direction>
+
+
+            <ps-button-call [id]="id + '_button_call'" [options]="callOptions"></ps-button-call>
+
+        </div>
+    </div>
+
+
+</ps-container-complex>

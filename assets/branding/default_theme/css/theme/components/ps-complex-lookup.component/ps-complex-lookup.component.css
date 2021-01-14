@@ -1,0 +1,115 @@
+ps-complex-lookup .ps-complex-lookup .select-card-dropDown .ps-label {
+    opacity: 1 !important;
+}
+
+.ps-complex-lookup .select-card-dropDown ion-input input {
+    opacity: 1 !important;
+}
+
+ps-complex-lookup .ps-complex-lookup .select-card-dropDown {
+    display: flex;
+}
+
+ps-complex-lookup .ps-complex-lookup .select-card-dropDown .dropdown-arrow {
+    position: relative;
+    color: inherit !important;
+    margin-top: 2.8em !important;
+    margin-left: -2.1em !important;
+}
+
+.lookup-dropdown-content {
+    display: none;
+    /* position: absolute; */
+    background-color: #f1f1f1b5;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    width: 90%;
+    /* margin-top: 0em;
+    margin-left: -0.7em; */
+}
+
+.lookup-dropdown-content-show {
+    display: block;
+    border-radius: 0.3em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0.2em;
+    border-top-left-radius: 1em;
+    width: 100%;
+    margin-top: -1em;
+    /* margin-left: -0.3em;
+    position: unset; */
+}
+
+.lookup-dropdown-content-show-popup {
+    height: 20%;
+    z-index: 500;
+}
+
+.lookup-card-margin-bottom {
+    margin-bottom: 0.5em !important;
+    /* margin-left: -0.2em; */
+}
+
+.ps-complex-lookup .select-card-dropDown .label ps-keyin-input {
+    pointer-events: none !important;
+}
+
+.ps-complex-lookup .select-card-dropDown .labelSelected ps-keyin-input p {
+    display: none;
+}
+
+.container-currency-iso {
+    display: flex;
+    width: 100%;
+}
+
+.container-currency-iso .card-title-label {
+    color: inherit;
+    flex: 1;
+}
+
+.ps-container-lookup-option-details .lookup-details-header .lookup-details-title ps-action-image .ps-action-image-row .ps-action-image-image ion-img {
+    height: 1em;
+    width: 1em;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 1px 1px 15px -5px black;
+    margin-right: 0.2em;
+    margin-top: 0.1em;
+}
+
+.ps-dynamic-edit {
+    display: flex;
+}
+[dir="rtl"] .ps-dynamic-edit {
+        flex-direction: row-reverse;
+}
+.ps-dynamic-edit .dynmaic-edit-label {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    /* width: 11em; */
+    white-space: nowrap;
+}
+
+.ps-dynamic-edit .edit-button {
+    font-size: var(--ps-lg-font);
+    margin: 0.1em 0.5em;
+}
+
+.ps-dynamic-edit .save-button {
+    font-size: var(--ps-xxl-font);
+    color: var(--ps-primary-color);
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+ps-complex-lookup .label {
+    width: 100% !important;
+}
+
+ps-complex-lookup .lookup-details-card {
+    padding: 15px !important;
+}

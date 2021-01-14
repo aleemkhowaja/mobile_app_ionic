@@ -1,0 +1,5 @@
+ps-template-base .main-header,
+ps-template-base .main-footer {
+    background: linear-gradient(to right, var(--ps-secondary-degree-2-color), var(--ps-secondary-degree-2-color)) !important;
+    border-radius: var(--ps-section-border-radius) !important;
+}

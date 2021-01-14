@@ -1,0 +1,11 @@
+<ps-container-complex [id]="'terms_and_conditions' + id" class="ps-complex-terms-and-conditions">
+    <div class="ps-terms-cond-file">
+        <ps-container-html-viewer [options]="options.htmlViewerOptions">
+        </ps-container-html-viewer>
+        <div class="ps-terms-cond-checkbox">
+            <ps-select-checkbox [id]="'terms_and_conditions' + id" [options]="options.checkBoxOptions"
+                (onPsChange)="onChange($event)">
+            </ps-select-checkbox>
+        </div>
+    </div>
+</ps-container-complex>

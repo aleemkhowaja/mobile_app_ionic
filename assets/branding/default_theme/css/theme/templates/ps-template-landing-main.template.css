@@ -1,0 +1,93 @@
+ps-template-landing-main .opened-screen-title.row {
+    height: var(--ps-opened-screen-title-height) !important;
+    font-weight: 600;
+    font-size: var(--ps-xl-font);
+    color: white !important;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+ps-template-landing-main ps-template-landing-menu-web .opened-screen-title.row {
+    padding-inline-start: 10px !important;
+}
+
+ps-template-landing-main .opened-screen-title .back-button,
+ps-template-landing-main .opened-screen-title .current-opened-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+ps-template-landing-main .opened-screen-title .current-opened-page ion-icon {
+    font-size: 2rem;
+}
+
+ps-template-landing-main .opened-screen-title .current-opened-page .ps-action-image-row {
+    align-items: center;
+    padding-inline-start: 15px !important;
+}
+
+ps-template-landing-main .opened-screen-title .current-opened-page .ps-action-icon-icon ion-icon {
+    font-size: var(--ps-leaf-font-size);
+}
+
+ps-template-landing-main .opened-screen-title+* {
+    display: flex;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+ps-template-landing-main ps-container-flip .flip-card.isFlipped .flip-card-inner.verticalFlip {
+    transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+}
+
+ps-template-landing-main ps-container-flip .flip-card-back.verticalFlip {
+    transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+}
+
+ps-template-landing-main .cif-switcher ion-icon {
+    transform: translate(100%) rotate(90deg) !important;
+    -webkit-transform: translate(100%) rotate(90deg) !important;
+    transform-origin: left top !important;
+    -webkit-transform-origin: left top !important;
+}
+
+
+.isMobile-Layout ps-template-landing-main .main-header.flipped {
+    display: none;
+}
+
+ps-template-landing-main ps-complex-menu .opened-screen-title {
+    background: transparent;
+}
+
+ps-template-landing-main ps-complex-menu .opened-screen-title.parent-page {
+    display: none;
+}
+
+.isMobile-Layout ps-template-landing-main .opened-screen-title {
+    background: var(--ps-header-background-color);
+}
+
+.isMobile-Layout ps-template-landing-main ps-template-landing-fab-ui ps-complex-profile ps-dropdown-allowed-languages .mat-select-arrow,
+.isMobile-Layout ps-template-landing-main ps-template-landing-menu-web ps-complex-profile ps-dropdown-allowed-languages .mat-select-arrow {
+    display: none;
+}
+
+.isMobile-Layout ps-template-landing-main ps-template-landing-fab-ui ps-complex-profile ps-dropdown-allowed-languages .mat-select-value,
+.isMobile-Layout ps-template-landing-main ps-template-landing-menu-web ps-complex-profile ps-dropdown-allowed-languages .mat-select-value {
+    padding: 5px !important;
+    border-radius: 50%;
+    background: var(--ps-selected-language-background-color);
+}
+
+.isMobile-Layout ps-template-landing-main ps-template-landing-fab-ui ps-complex-profile ps-dropdown-allowed-languages .dropdown-selected-image,
+.isMobile-Layout ps-template-landing-main ps-template-landing-menu-web ps-complex-profile ps-dropdown-allowed-languages .dropdown-selected-image {
+    display: none;
+}

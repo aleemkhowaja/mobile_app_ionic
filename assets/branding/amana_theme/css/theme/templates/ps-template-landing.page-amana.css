@@ -1,0 +1,41 @@
+ps-template-landing .menu-container {
+    padding-inline-end: 0px !important;
+}
+
+ps-template-landing .menu-container .flip-card {
+    background: transparent !important;
+}
+
+.isMobile-app ps-template-landing ps-container-flip {
+    background: transparent !important;
+}
+
+ps-template-landing .main-footer {
+    order: -1 !important;
+    margin: var(--ps-section-padding) 0px;
+}
+
+ps-template-landing .main-footer ps-container-footer .ps-container-footer {
+    width: 25% !important;
+    order: -1 !important;
+}
+
+ps-template-landing .main-footer ps-container-footer .ps-base-row {
+    justify-content: flex-end;
+}
+
+
+ps-template-landing .menu-slider-reach {
+    position: sticky;
+    bottom: 0;
+    background: var(--ps-highlight-background-color) !important;
+    -webkit-box-flex: 0;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+ps-template-landing .menu-container {
+    -webkit-box-flex: 0;
+    flex: 0 0 100%;
+    max-width: 100%;
+}

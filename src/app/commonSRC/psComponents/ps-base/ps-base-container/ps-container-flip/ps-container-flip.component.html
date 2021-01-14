@@ -1,0 +1,14 @@
+<div class="flip-card" [ngClass]="{'isFlipped':mainOptions?.isFlipped}">
+    <div class="flip-card-inner"
+        [ngClass]="(mainOptions?.animationClass)?mainOptions.animationClass:'flip-card-inner-default-animation'">
+        <div class="flip-card-front" [ngClass]="{'hideVisibleArea':mainOptions?.hideVisibleArea}">
+            <ng-content select="[header]"></ng-content>
+            <ng-content select="[visibleSection]"></ng-content>
+        </div>
+        <div class="flip-card-back" [ngClass]="checkClasses()">
+            <ng-content select="[header]"></ng-content>
+            <ng-content select="[hiddenSection]"></ng-content>
+        </div>
+    </div>
+</div>
+<ng-content select="[footer]"></ng-content>

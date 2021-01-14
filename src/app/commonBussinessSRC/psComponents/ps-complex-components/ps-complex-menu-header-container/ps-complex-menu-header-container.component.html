@@ -1,0 +1,16 @@
+<ps-container-complex>
+
+    <ps-gallery-banners [id]="id + '_banner'" class="ps-complex-menu-header-container-banner profile-animate-left"
+        [options]='bannersOptions'>
+    </ps-gallery-banners>
+
+
+    <div class="row profile-menu-main" *ngIf="options.showProfile && isUserLoggedIn"
+        [ngClass]="{'profile-menu-main-show':presentProfile}">
+        <ps-action-icon class="sliderIcon" [options]="sliderButtonOptions" (onClick)="handleSlider();">
+        </ps-action-icon>
+        <ps-complex-profile class="ps-complex-profile profile-animate-left" [options]='optionsComplexProfile'>
+        </ps-complex-profile>
+    </div>
+
+</ps-container-complex>

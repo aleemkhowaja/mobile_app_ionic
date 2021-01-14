@@ -1,0 +1,27 @@
+.ps-button-logout {
+    /* Removed by DK 
+    --border-width: 1px !important;
+    font-weight: bold !important;
+    font-size: var(--ps-md-font) !important;
+    margin: 0px !important;
+    --border: red;
+    --border-style: solid;
+	--border-width: 3px !important;
+	--border-radius: var(--ps-section-border-radius) !important; */
+
+    /* Newly Added by DK */
+    --background: var(--ps-button-logout-background-color) !important;
+    --color: var(--ps-button-logout-font-color) !important;
+    --border: var(--ps-button-logout-border) !important;
+    --background-hover: var(--ps-secondary-color) !important;
+    --background-activated: var(--ps-secondary-color) !important;
+}
+
+ps-button-logout .ps-button-cancel .ps-action-icon-icon ion-icon,
+ps-button-logout .ps-button-cancel ion-label {
+    color: var(--ps-button-logout-font-color) !important;
+}
+
+ps-button-logout ion-icon {
+    font-size: 25px !important;
+}

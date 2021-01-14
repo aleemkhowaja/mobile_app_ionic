@@ -1,0 +1,9 @@
+<ps-template-view [options]="templateViewOptions">
+   <ng-container *ngIf="!requestWasSent">
+         <ps-scheduled-transfers-list [options]="sheduledTransferListOptions" (reloadFct)="loadScheduledTransfers()">
+         </ps-scheduled-transfers-list>
+         <div *ngIf="noTransfersFound" class="no-transfers-text">
+            <ps-label [options]="noTransfersOptions"></ps-label>
+          </div>
+   </ng-container>
+</ps-template-view>

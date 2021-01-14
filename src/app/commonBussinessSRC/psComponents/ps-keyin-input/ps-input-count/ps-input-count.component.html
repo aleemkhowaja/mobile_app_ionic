@@ -1,0 +1,20 @@
+<ps-container-item class="ps-field-item-wrapper main-container col-12" [options]="containerItemOptions">
+
+    <div [hidden]="!showDefaultOptions" class="inputDefaultOptions" *ngIf="options.inputDefaultOptions"
+        (click)="unSetDefaultValues()">
+        <ps-keyin-input [id]="id" [options]="options.inputDefaultOptions">
+        </ps-keyin-input>
+    </div>
+    <ps-input-numeric [hidden]="showDefaultOptions" (onPsChange)="onChangeCount($event)"
+        (onPsEmpty)="onEmptyCounter($event)" [id]="id" [options]="options.inputCountOptions">
+    </ps-input-numeric>
+
+
+    <div class="count-span">
+        <ps-action-icon id="countMinus" name="arrow-dropdown-circle" [options]="decrementIconOptions"
+            class="count-minus" (click)="doCrements('decrement')"></ps-action-icon>
+        <ps-action-icon id="countAdd" name="arrow-dropup-circle" [options]="incrementIconOptions" class="count-add"
+            (click)="doCrements('increment')"></ps-action-icon>
+    </div>
+
+</ps-container-item>

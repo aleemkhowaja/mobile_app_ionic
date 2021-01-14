@@ -1,0 +1,110 @@
+<ps-template-stepper [options]="stepperOptions" [id]="stepperOptions.stepperName">
+  <ps-form-step step1 [id]="stepperOptions.namesofSteps[0]">
+
+    <ps-container-panel [options]="panelIdDetailsOptions">
+      <!--
+        <ps-dropdown-cif-types [options]="cifTypeOptions"></ps-dropdown-cif-types>
+       -->
+      <!-- <ps-complex-id-details id="complex_id_details" [options]="complexIdDetailsOptions">
+        </ps-complex-id-details> -->
+      <ps-complex-cif-id-types [options]="cifOptions" (onPsChange)="onCifTypeSelected($event)">
+      </ps-complex-cif-id-types>
+      <ps-input-numeric id="input_free_text" [options]="tinNumberOptions">
+      </ps-input-numeric>
+    </ps-container-panel>
+
+
+    <ps-container-panel [options]="panelCifInformationOptions">
+      <ng-container *ngIf="!isInstitutionType">
+        <ps-input-varchar [options]="firstNameOptions" (onPsChange)="onNameChange($event)"></ps-input-varchar>
+        <ps-input-varchar [options]="middleNameOptions"></ps-input-varchar>
+        <ps-input-varchar [options]="lastNameOptions" (onPsChange)="onNameChange($event)"></ps-input-varchar>
+      </ng-container>
+      <ng-container *ngIf="isInstitutionType">
+        <ps-input-varchar [options]="longNameOptions"></ps-input-varchar>
+        <ps-input-varchar [options]="shortNameOptions"></ps-input-varchar>
+      </ng-container>
+
+      <ps-input-varchar [options]="shortNameArabicOptions"></ps-input-varchar>
+
+      <ps-input-varchar [options]="longNameArabicOptions"></ps-input-varchar>
+      <ps-input-varchar [options]="customerNameValOptions"></ps-input-varchar>
+
+    </ps-container-panel>
+
+
+
+    <ps-container-panel [options]="panelAditionalInformationOptions">
+
+      <ps-complex-personal-details [options]="defaultPersonalDetailsOptions"></ps-complex-personal-details>
+
+      <ps-lov-gender [options]="genderOptions"></ps-lov-gender>
+
+      <ps-dropdown-legal-status id="'lstatus' + id" [options]="lstatusOptions"></ps-dropdown-legal-status>
+
+      <ps-dropdown-country *ngIf="!isInstitutionType" id="countries" [options]="birthCountriesOptions">
+      </ps-dropdown-country>
+
+      <ps-dropdown-ranking [options]="rankingOptions"></ps-dropdown-ranking>
+
+      <ps-complex-eco-sector id="ps-complex-eco-sector-id" [options]="complexEcoSectorOptions">
+      </ps-complex-eco-sector>
+
+    </ps-container-panel>
+
+    <ps-container-panel [options]="panelCifAddressOptions">
+
+      <ps-lov-residency id="residencies" [options]="residencyOptions" (onPsChange)="onResidencyChange($event)">
+      </ps-lov-residency>
+
+      <ps-dropdown-country id="countries" [options]="countriesOptions"></ps-dropdown-country>
+
+      <ps-complex-cif-details [options]="defaultCifDetailsOptions"></ps-complex-cif-details>
+
+      <ps-keyin-input [options]="moreAddressDetailsInputOptions"></ps-keyin-input>
+
+      <ps-entity-phone-number [options]="mobileNumberOptions"></ps-entity-phone-number>
+
+    </ps-container-panel>
+
+    <ps-container-panel *ngIf="!enableCifBranch" [options]="panelSelectBranch" id="cif_opening_panel3">
+      <ps-complex-select-branch [options]="selectBranchOptions" (onPsChange)="onSelectBranch($event)">
+      </ps-complex-select-branch>
+    </ps-container-panel>
+  </ps-form-step>
+
+  <ps-form-step step2 [id]="stepperOptions.namesofSteps[1]">
+    <ps-container-panel [options]="panelEmployementDetailsOptions" id="cif_open_employment_details_panel">
+
+      <ps-complex-employment-details [options]="defaultEmployeeOptions"></ps-complex-employment-details>
+
+    </ps-container-panel>
+
+    <ps-container-panel [options]="panelBankRegisterOptions" id="panel_bank_register">
+
+      <ps-complex-user-contact [options]="userContactOptions"></ps-complex-user-contact>
+
+    </ps-container-panel>
+
+    <ps-container-panel [options]="panelAccountOptions" *ngIf="enableCifBranch">
+
+      <ps-input-display-only id="'accountCifBranch' + id" [options]="branchOptions">
+
+      </ps-input-display-only>
+
+    </ps-container-panel>
+    <ps-container-panel [options]="panelAttachementOptions">
+
+      <ps-file-upload id="ps-file-upload" [options]="fileUploadOptions"></ps-file-upload>
+
+      <ps-input-varchar [options]="commentOptions"></ps-input-varchar>
+
+    </ps-container-panel>
+  </ps-form-step>
+
+  <ps-form-step step3 [id]="stepperOptions.namesofSteps[2]">
+    <ps-map-atm-branches class="component-map-container" [options]="mapAtmBranchesOptions">
+    </ps-map-atm-branches>
+  </ps-form-step>
+
+</ps-template-stepper>

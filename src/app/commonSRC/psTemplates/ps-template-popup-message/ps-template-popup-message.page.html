@@ -1,0 +1,19 @@
+<div class="popup-modal" [ngClass]="className" *ngIf="alertOptions">
+    <div class="popup-modal-img" *ngIf="actionImageOptions.imageName">
+        <div class="popup-modal-gif">
+            <ps-action-image [options]="actionImageOptions"></ps-action-image>
+        </div>
+    </div>
+    <div class="popup-modal-title" *ngIf="titleLabel.labelKey">
+        <ps-label class="popup-modal-title-label" [options]="titleLabel"></ps-label>
+    </div>
+    <div class="popup-modal-message" *ngIf="alertOptions.message">
+        <ps-label class="popup-modal-message-label" [options]="messageLabel"></ps-label>
+    </div>
+    <div class="popup-modal-button" *ngIf="!alertOptions.noButtons && !alertOptions.autoHide">
+        <ng-container *ngFor="let button of alertOptions.buttonsArray">
+            <ps-button-standard class="ps-popup-modal-button" [options]="button" (click)="button.handler()">
+            </ps-button-standard>
+        </ng-container>
+    </div>
+</div>

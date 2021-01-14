@@ -1,0 +1,29 @@
+.ps-complex-exchange-component {
+    margin-bottom: 0.5em;
+}
+
+.ps-complex-exchange-component .exchange-rate {
+    text-align: center;
+    display: flex;
+    margin: 1.5em 3em -0.5em 3em;
+}
+
+.ps-complex-exchange-component .exchange-rate span:nth-child(1) {
+    font-weight: 500;
+    color: var(--ps-highlight-background-color) !important;
+}
+
+.ps-complex-exchange-component .exchange-rate .exchange-rate-icon ion-icon {
+    color: var(--ps-highlight-background-color) !important;
+    font-size: var(--ps-lg-font);
+}
+
+.ps-complex-exchange-component .exchange-rate span:nth-child(2) {
+    margin: 0em 1em;
+    color: var(--ps-highlight-background-color) !important;
+}
+
+.ps-complex-exchange-component .exchange-rate span:nth-child(3) {
+    font-weight: 500;
+    color: var(--ps-highlight-background-color) !important;
+}

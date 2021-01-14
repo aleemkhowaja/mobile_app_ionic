@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "934583921494",
+    "firebase_url": "https://my-omni-test-app.firebaseio.com",
+    "project_id": "my-omni-test-app",
+    "storage_bucket": "my-omni-test-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:934583921494:android:d1d1496c5953c4233744f7",
+        "android_client_info": {
+          "package_name": "com.path.omnibk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "934583921494-dcof69hgmeomboc51oao45p95h7i8sgu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyqCz5knBy7byKC-KFGbrEyklHhOwmuwE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "934583921494-dcof69hgmeomboc51oao45p95h7i8sgu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
